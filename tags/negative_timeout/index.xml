@@ -13,10 +13,10 @@
     
     <item>
       <title>System hang with timeout call with negative time.</title>
-      <link>https://dyiwu.github.io/2008/10/hang-negative-timeout/</link>
+      <link>https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-negative-timeout/</link>
       <pubDate>Mon, 20 Oct 2008 09:25:46 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/2008/10/hang-negative-timeout/</guid>
+      <guid>https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-negative-timeout/</guid>
       <description>mpt driver timeout call with negative time.</description>
     </item>
     

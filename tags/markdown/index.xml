@@ -13,10 +13,10 @@
     
     <item>
       <title>Tips for using Hugo with academic theme</title>
-      <link>https://dyiwu.github.io/2019/04/tip_hugo_academic_theme/</link>
+      <link>https://dyiwu.github.io/post/tech/tip_hugo_academic_theme/</link>
       <pubDate>Mon, 22 Apr 2019 20:23:07 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/2019/04/tip_hugo_academic_theme/</guid>
+      <guid>https://dyiwu.github.io/post/tech/tip_hugo_academic_theme/</guid>
       <description>shortcode
  {{&amp;lt; list_tags &amp;gt;}}
  {{&amp;lt; list_categories &amp;gt;}}
@@ -27,19 +27,19 @@
     
     <item>
       <title>Escaping Hugo Shortcode</title>
-      <link>https://dyiwu.github.io/2019/04/escape-hugo-shortcode/</link>
+      <link>https://dyiwu.github.io/post/tech/escape-hugo-shortcode/</link>
       <pubDate>Sun, 21 Apr 2019 00:39:53 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/2019/04/escape-hugo-shortcode/</guid>
+      <guid>https://dyiwu.github.io/post/tech/escape-hugo-shortcode/</guid>
       <description>Escaping Hugo Shortcode</description>
     </item>
     
     <item>
       <title>MathJax</title>
-      <link>https://dyiwu.github.io/2019/03/mathjax/</link>
+      <link>https://dyiwu.github.io/post/tech/mathjax/</link>
       <pubDate>Fri, 29 Mar 2019 07:14:22 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/2019/03/mathjax/</guid>
+      <guid>https://dyiwu.github.io/post/tech/mathjax/</guid>
       <description>MathJax, a JavaScript engine to display mathematics equations in browsers.</description>
     </item>
     

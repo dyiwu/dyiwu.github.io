@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Data page fault panicon tcp_wput() - Chaos - 一個老碼農的筆記</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Dyi-Wu Liu " /><meta name="description" content="A null pointer de-reference on tcp_wput() routine." /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.4 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://dyiwu.github.io/post/tech/hpux-kernel-dump/panic-data-page-fault-tcp-wput/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Data page fault panicon tcp_wput()" />
+<meta property="og:description" content="A null pointer de-reference on tcp_wput() routine." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dyiwu.github.io/post/tech/hpux-kernel-dump/panic-data-page-fault-tcp-wput/" />
+<meta property="article:published_time" content="2006-04-09T02:30:57&#43;08:00"/>
+<meta property="article:modified_time" content="2006-04-09T02:30:57&#43;08:00"/>
+
+<meta itemprop="name" content="Data page fault panicon tcp_wput()">
+<meta itemprop="description" content="A null pointer de-reference on tcp_wput() routine.">
+
+
+<meta itemprop="datePublished" content="2006-04-09T02:30:57&#43;08:00" />
+<meta itemprop="dateModified" content="2006-04-09T02:30:57&#43;08:00" />
+<meta itemprop="wordCount" content="603">
+
+
+
+<meta itemprop="keywords" content="hp-ux,kernel,panic,de-reference," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Data page fault panicon tcp_wput()"/>
+<meta name="twitter:description" content="A null pointer de-reference on tcp_wput() routine."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Chaos</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Chaos</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Data page fault panicon tcp_wput()</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2006-04-09 </span>
+        <div class="post-category">
+            <a href="/categories/tech/"> tech </a>
+            </div>
+          <span class="more-meta"> 603 words </span>
+          <span class="more-meta"> 3 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#data-page-fault-panic">Data page fault panic.</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h2 id="data-page-fault-panic">Data page fault panic.</h2>
+
+<p>A null pointer de-reference on tcp_wput() routine.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">System crash dump analysis report
+=================================
+Symptom
+-------
+System panic with
+   Panic string : Data page fault
+   Eent #0  : proc_list{359} pid=7623 tid=1213865
+              cmd=&#34;/opt/omni/lbin/vbda -bmaname L&#34;
+   Stack trace :
+    ==============  EVENT  ============================
+    FUNC
+    panic+0x6c
+    report_trap_or_int_and_panic+0x94
+    trap+0xefc
+    thandler+0xd20
+    +-------------  TRAP  ----------------------------
+    |  Trap type 15 in KERNEL mode at 0x14be40 (tcp_wput+0x48)
+    |  p struct save_state 0x9af000.0x400003ffffff1708
+    +-------------  TRAP  ----------------------------
+    FUNC
+    tcp_wput+0x48   // panic here
+    putnext+0xcc
+    streams_write_uio+0x210
+    sosend+0x1674
+    soo_rw+0x80
+    write+0x108
+    syscall+0x750
+    syscallinit+0x55c
+
+
+Root Cause
+----------
+  A null pointer de-reference on tcp_wput() routine.
+
+Action Plan
+-----------
+ Please apply the ARPA Transport patch and dependencies.  (14 patches 5680KB)
+
+PHNE_33159  cumulative ARPA Transport patch
+PHKL_25652  thread nostop for NFS, rlimit max value fix
+PHKL_27096  VxVM,EMC,Psets,vPar,slpq1,earlyKRS
+PHKL_28122  signals,threads enhancement,Psets Enablement
+PHKL_29696  data page fault, use new STREAMS functions
+PHKL_29704  Psets Enablement, SCHED_NOAGE, FSS
+PHKL_30034  Psets Enablement Patch; FSS cap
+PHKL_30035  Psets Enablement; FSS iCOD; callback; FSS
+PHKL_30373  select(2) delay/hang and poll(2) hang
+PHKL_30516  Buffercache performance; select_enh tunable
+PHKL_31993  Core PM, vPar, Psets, slpq1, FSS, rtprio
+PHKL_32061  detach;NOSTOP,Abrt,Psets;slpq1;FSS;getlwp
+PHKL_33408  RTSCHED performance enablement patch
+PHNE_33729  Cumulative STREAMS Patch
+
+
+Detail Analysis
+---------------
+
+Dump time Sun Apr  9 02:30:57 2006 UTC-8
+System has been up 20 days, 15 hours, 43 minutes.
+
+System Name      : HP-UX
+Node Name        : localhost
+Model            : 9000/800/K580
+HP-UX version    : B.11.11 (64-bit Kernel)
+Number of CPU&#39;s  : 4
+Disabled CPU&#39;s   : 0
+CPU type         : PCXU (240 Mhz)
+CPU Architecture : PA-RISC 2.0
+Load average     : 0.30  0.29  0.19  
+
+A null pointer de-reference on tcp_wput() routine.
+
+Type 15: Data TLB Miss Fault/Data Page Fault
+
+Interruption Instruction Register:
+	IIR = 0x40370022
+
+Interruption Space and Offset Registers:
+	ISR.IOR = 0x0.0x11   // ---- ISR value is incorrect
+
+Interruption Instruction Address Queue:
+	PCSQ.PCOQ = 0x0.0x14be40 = tcp_wput+0x48
+
+Interrupt Instruction at tcp_wput+0x48:
+	ldb  0x11(r1),arg3
+
+Stack Trace for Crash event 0 with all args
+===========================================
+
+==============  EVENT  ============================
+= Event #0 is PANIC on CPU #3
+= p crash_event_t 0xaaa000
+= p rpb_t 0xaa3100
+= Using pc from pim.wide.rp_rp_hi = 0x214ca4
+==============  EVENT  ============================
+SR5=0x009af000
+                SP         RP Return Name
+0x400003ffffff1f08 0x00214ca4 panic+0x6c
+0x400003ffffff1e68 0x00269d54 report_trap_or_int_and_panic+0x94
+         arg0: 0x0000000000000001
+         arg1: 0x000000000000000f
+         arg2: 0x400003ffffff1708
+         arg3: 0x000000000094ad48
+0x400003ffffff1dc8 0x0016a5d4 trap+0xefc
+         ....  --------n/a-------
+         arg1: 0x400003ffffff1708
+0x400003ffffff1bd8 0x0016c8dc thandler+0xd20
++-------------  TRAP  ----------------------------
+|  Trap type 15 in KERNEL mode at 0x14be40 (tcp_wput+0x48)
+|  p struct save_state 0x9af000.0x400003ffffff1708
++-------------  TRAP  ----------------------------
+SR5=0x009af000
+                SP         RP Return Name
+0x400003ffffff1708 0x0014be40 tcp_wput+0x48
+         arg0: 0x000000004a3c3d80
+         arg1: 0x000000004f772080
+0x400003ffffff1508 0x0014ede4 putnext+0xcc
+         arg0: 0x0000000056b875c0
+         arg1: 0x000000004f772080
+0x400003ffffff1428 0x0014f168 streams_write_uio+0x210
+         arg0: 0x0000000056fe5400
+         arg1: 0x400003ffffff0de8
+         ....  --------n/a-------
+         arg3: 0x400003ffffff1078
+0x400003ffffff11f8 0x001536b4 sosend+0x1674
+         ....  --------n/a-------
+         arg1: 0x0000000000000000
+         ....  --------n/a-------
+         arg3: 0x0000000000000000
+         arg4: 0x0000000000000000
+         arg5: 0x0000000000000000
+         arg6: 0x0000000000000000
+0x400003ffffff0f68 0x004705a0 soo_rw+0x80
+         arg0: 0x000000000716cc60
+         arg1: 0x0000000000000002
+         arg2: 0x400003ffffff0de8
+         ....  --------n/a-------
+         arg6: 0x0000000000470520
+0x400003ffffff0ed8 0x00128d20 write+0x108
+         arg0: 0x400003ffffff03a0
+         ....  --------n/a-------
+         arg2: 0x0000000000903840
+0x400003ffffff0dd8 0x00150918 syscall+0x750
+0x400003ffffff0c78 0x00033f64 syscallinit+0x55c</pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/hp-ux/">hp-ux</a>
+          <a href="/tags/kernel/">kernel</a>
+          <a href="/tags/panic/">panic</a>
+          <a href="/tags/de-reference/">de-reference</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/tech/hpux-kernel-dump/mca-bus-check/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Bus check MCA</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/tech/hpux-kernel-dump/hang-memory-starvation-oracle/">
+            <span class="next-text nav-default">System hang with memory starvation.</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://dyiwu.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Dyi-Wu Liu </span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

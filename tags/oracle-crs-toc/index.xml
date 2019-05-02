@@ -13,10 +13,10 @@
     
     <item>
       <title>Oracle CRS initiated INIT on cpu 2.</title>
-      <link>https://dyiwu.github.io/2010/01/hang-oracle-crs-toc/</link>
+      <link>https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-oracle-crs-toc/</link>
       <pubDate>Wed, 20 Jan 2010 04:31:03 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/2010/01/hang-oracle-crs-toc/</guid>
+      <guid>https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-oracle-crs-toc/</guid>
       <description>Unexpected node reboot on death of &amp;lsquo;init.cssd fatal&amp;rsquo;</description>
     </item>
     

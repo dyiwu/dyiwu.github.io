@@ -13,10 +13,10 @@
     
     <item>
       <title>Unaligned Reference Fault in SCSI driver when narrow device connected.</title>
-      <link>https://dyiwu.github.io/2004/07/panic-scsi-alignment-fault/</link>
+      <link>https://dyiwu.github.io/post/tech/hpux-kernel-dump/panic-scsi-alignment-fault/</link>
       <pubDate>Thu, 08 Jul 2004 16:16:13 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/2004/07/panic-scsi-alignment-fault/</guid>
+      <guid>https://dyiwu.github.io/post/tech/hpux-kernel-dump/panic-scsi-alignment-fault/</guid>
       <description>Unaligned Reference Fault in SCSI driver when narrow device connected.</description>
     </item>
     

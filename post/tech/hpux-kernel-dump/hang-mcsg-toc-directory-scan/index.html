@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>MC/SG TOC system due to heavy CPU loading on directory scan. - Chaos - 一個老碼農的筆記</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Dyi-Wu Liu " /><meta name="description" content="Heavy CPU loading on directory scan leads MC/SG TOC system due to safety timer timedout." /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.4 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-mcsg-toc-directory-scan/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="MC/SG TOC system due to heavy CPU loading on directory scan." />
+<meta property="og:description" content="Heavy CPU loading on directory scan leads MC/SG TOC system due to safety timer timedout." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-mcsg-toc-directory-scan/" />
+<meta property="article:published_time" content="2008-05-17T12:33:17&#43;08:00"/>
+<meta property="article:modified_time" content="2008-05-17T12:33:17&#43;08:00"/>
+
+<meta itemprop="name" content="MC/SG TOC system due to heavy CPU loading on directory scan.">
+<meta itemprop="description" content="Heavy CPU loading on directory scan leads MC/SG TOC system due to safety timer timedout.">
+
+
+<meta itemprop="datePublished" content="2008-05-17T12:33:17&#43;08:00" />
+<meta itemprop="dateModified" content="2008-05-17T12:33:17&#43;08:00" />
+<meta itemprop="wordCount" content="2299">
+
+
+
+<meta itemprop="keywords" content="hp-ux,kernel,hang,mc-sg," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="MC/SG TOC system due to heavy CPU loading on directory scan."/>
+<meta name="twitter:description" content="Heavy CPU loading on directory scan leads MC/SG TOC system due to safety timer timedout."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Chaos</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Chaos</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">MC/SG TOC system due to heavy CPU loading on directory scan.</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2008-05-17 </span>
+        <div class="post-category">
+            <a href="/categories/tech/"> tech </a>
+            </div>
+          <span class="more-meta"> 2299 words </span>
+          <span class="more-meta"> 11 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#mc-sg-toc-system-due-to-heavy-cpu-loading-on-directory-scan">MC/SG TOC system due to heavy CPU loading on directory scan.</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h2 id="mc-sg-toc-system-due-to-heavy-cpu-loading-on-directory-scan">MC/SG TOC system due to heavy CPU loading on directory scan.</h2>
+
+<p>NFSv3 server nfsktcpd (multi-threaded nfs/tcp server kernel daemon)
+takes much CPU times and following MC/SG TOC system due to safety timer
+timedout.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span><span class="lnt">232
+</span><span class="lnt">233
+</span><span class="lnt">234
+</span><span class="lnt">235
+</span><span class="lnt">236
+</span><span class="lnt">237
+</span><span class="lnt">238
+</span><span class="lnt">239
+</span><span class="lnt">240
+</span><span class="lnt">241
+</span><span class="lnt">242
+</span><span class="lnt">243
+</span><span class="lnt">244
+</span><span class="lnt">245
+</span><span class="lnt">246
+</span><span class="lnt">247
+</span><span class="lnt">248
+</span><span class="lnt">249
+</span><span class="lnt">250
+</span><span class="lnt">251
+</span><span class="lnt">252
+</span><span class="lnt">253
+</span><span class="lnt">254
+</span><span class="lnt">255
+</span><span class="lnt">256
+</span><span class="lnt">257
+</span><span class="lnt">258
+</span><span class="lnt">259
+</span><span class="lnt">260
+</span><span class="lnt">261
+</span><span class="lnt">262
+</span><span class="lnt">263
+</span><span class="lnt">264
+</span><span class="lnt">265
+</span><span class="lnt">266
+</span><span class="lnt">267
+</span><span class="lnt">268
+</span><span class="lnt">269
+</span><span class="lnt">270
+</span><span class="lnt">271
+</span><span class="lnt">272
+</span><span class="lnt">273
+</span><span class="lnt">274
+</span><span class="lnt">275
+</span><span class="lnt">276
+</span><span class="lnt">277
+</span><span class="lnt">278
+</span><span class="lnt">279
+</span><span class="lnt">280
+</span><span class="lnt">281
+</span><span class="lnt">282
+</span><span class="lnt">283
+</span><span class="lnt">284
+</span><span class="lnt">285
+</span><span class="lnt">286
+</span><span class="lnt">287
+</span><span class="lnt">288
+</span><span class="lnt">289
+</span><span class="lnt">290
+</span><span class="lnt">291
+</span><span class="lnt">292
+</span><span class="lnt">293
+</span><span class="lnt">294
+</span><span class="lnt">295
+</span><span class="lnt">296
+</span><span class="lnt">297
+</span><span class="lnt">298
+</span><span class="lnt">299
+</span><span class="lnt">300
+</span><span class="lnt">301
+</span><span class="lnt">302
+</span><span class="lnt">303
+</span><span class="lnt">304
+</span><span class="lnt">305
+</span><span class="lnt">306
+</span><span class="lnt">307
+</span><span class="lnt">308
+</span><span class="lnt">309
+</span><span class="lnt">310
+</span><span class="lnt">311
+</span><span class="lnt">312
+</span><span class="lnt">313
+</span><span class="lnt">314
+</span><span class="lnt">315
+</span><span class="lnt">316
+</span><span class="lnt">317
+</span><span class="lnt">318
+</span><span class="lnt">319
+</span><span class="lnt">320
+</span><span class="lnt">321
+</span><span class="lnt">322
+</span><span class="lnt">323
+</span><span class="lnt">324
+</span><span class="lnt">325
+</span><span class="lnt">326
+</span><span class="lnt">327
+</span><span class="lnt">328
+</span><span class="lnt">329
+</span><span class="lnt">330
+</span><span class="lnt">331
+</span><span class="lnt">332
+</span><span class="lnt">333
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">System crash dump analysis report
+=================================
+Symptom
+=======
+  NFSv3 server nfsktcpd (multi-threaded nfs/tcp server kernel daemon)
+  takes much CPU times and following MC/SG TOC system due to safety timer
+  timedout.
+
+Root cause
+==========
+  Cmcld is starved for cpu, but cpu spends too much time in vx_dirscan()
+
+Action plan
+===========
+  Directory rearrangement (to reduce number of files in each directories)
+  are suggested.  (/dc_home/[mntpt]/ft/summary/fleft/summary)
+
+Detail analysis
+===============
+			=======================
+			= General Information =
+			=======================
+
+Dump time Sat May 17 12:33:17 2008 UTC-8
+System has been up 1 day, 15 hours, 46 minutes.
+
+Node Name         : localhost
+Model             : server rx2620
+BIOS revision     : 04.27
+HP-UX version     : B.11.23
+Kernel whatstring : @(#) $Revision: vmunix:    
+                    B11.23_LR FLAVOR=perf Fri Aug 29 22:35:38 PDT 2003 $
+Number of CPU&#39;s   : 2
+Disabled CPU&#39;s    : 0
+CPU type          : IA64 (1.6 Ghz)
+CPU Architecture  : IA-64 0
+Load average      : 36.88  21.37  10.69  
+
+			================
+			= Crash Events =
+			================
+
+This is a Service Guard INIT !
+
+Stack Trace for crash event 0
+=============================
+
+==============  EVENT  ============================
+= Event #0 is CT_INIT on CPU #0;
+= p crash_event_t 0xe000000100007000
+= p rpb_t 0xe000000100fb8090
+= Process at 0xe00000012d752000, pid 10, &#34;nfsktcpd&#34;
+==============  EVENT  ============================
+RR0=0x00ffff31  RR1=0x00ffff31  RR2=0x00ffff31  RR3=0x00ffff31
+RR4=0x07ff0031  RR5=0x00ffff31  RR6=0x00ffff31  RR7=0x00dead31
+               BSP                 SP                 IP
+0x9fffffff7f729490 0x9fffffff7f7274d0 0xe00000000068d211 vx_dirscan+0x4d1
+0x9fffffff7f7293b0 0x9fffffff7f727510 0xe000000000664e80 vx_dirlook+0x360
+0x9fffffff7f729300 0x9fffffff7f727530 0xe000000000633c90 vx_lookup+0x310
+0x9fffffff7f729270 0x9fffffff7f727550 0xe0000000012e5050 rfs3_lookup+0x190
+0x9fffffff7f729198 0x9fffffff7f727690 0xe0000000012f1a00 rfsexp_dispatch+0x460
+0x9fffffff7f729100 0x9fffffff7f727980 0xe000000001428130 tcp_svc_getreq+0x1f0
+0x9fffffff7f729010 0x9fffffff7f727a30 0xe000000000733c80 tcp_svc_run+0x3e0
+0x9fffffff7f729000 0x9fffffff7f727bf0 0xe0000000013c6f50 kthread_daemon_startup+0x40
+------------------------------------------------------
+tid = 279095  kt_stat = TSRUN
+local operation on vnodep = 0xe00000016f6705c0
+ (/dc_home/[mntpt]/ft/summary/fleft/summary)
+
+local vnode belongs to vfsp = 0xe00000012a8ddac0  mnt_pt = &#39;/dc_home&#39;
+
+local component being looked up =
+ &#39;FLEX04_SC74899ADW_Hot_FT_BRX_SC74899ADW_W_HOT_XG632AQU00_FINAL_TEST1_95&#39;C_Aug19_21_33_SUM.txt.Z&#39;
+SVCXPRT used = 0xe000000163ff2040
+NFS filehandle corresponds to inode = 14534 of filesystem &#39;/dc_home&#39; 
+vfsp = 0xe00000012a8ddac0
+--------------------------------------------------------
+
+Processor #1
+
+==============  EVENT  ============================
+= Event #1 is CT_INIT on CPU #1;
+= p crash_event_t 0xe000000100007030
+= p rpb_t 0xe0000001015fb4c0
+= Process at 0xe00000012d752000, pid 10, &#34;nfsktcpd&#34;
+==============  EVENT  ============================
+RR0=0x00ffff31  RR1=0x00ffff31  RR2=0x00ffff31  RR3=0x00ffff31
+RR4=0x07ff0031  RR5=0x00ffff31  RR6=0x00ffff31  RR7=0x00dead31
+               BSP                 SP                 IP
+0xe0000001017c47e8 0xe0000001017d7ae0 0xe000000001465df0 send_INIT_monarch+0x70
+0xe0000001017c47d0 0xe0000001017d7ae0 0xe000000001465e40 Send_Monarch_TOC+0x40
+0xe0000001017c4760 0xe0000001017d7ae0 0xe000000001062b20 safety_time_check+0x280
+0xe0000001017c4740 0xe0000001017d7b10 0xe0000000006acb80 perform_clock_ints+0x60
+0xe0000001017c4630 0xe0000001017d7b10 0xe0000000006acd90 per_spu_hardclock+0x1d0
+0xe0000001017c4500 0xe0000001017d7b60 0xe0000000006aeae0 clock_int+0xd20
+0xe0000001017c43e8 0xe0000001017d7bc0 0xe000000000800610 external_interrupt+0x3b0
+0xe0000001017c43c0 0xe0000001017d7bf0 0xe000000000c2c780 bubbleup+0x880
++-------------  TRAP  ----------------------------
+|  External Interrupt in KERNEL mode
+|    IIP=0xe0000000016aa0b0:0
+|  p struct save_state 0xdead31.0xe0000001017d7c00
++-------------  TRAP  ----------------------------
+               BSP                 SP                 IP
+0x9fffffff7f7c9af0 0x9fffffff7f7c7310 0xe0000000016aa0b0 vx_bread_typed+0x80
+0x9fffffff7f7c9978 0x9fffffff7f7c7310 0xe00000000077dda0 vx_do_bmap_typed+0xaa0
+0x9fffffff7f7c9808 0x9fffffff7f7c7340 0xe00000000077dd30 vx_do_bmap_typed+0xa30
+0x9fffffff7f7c97c0 0x9fffffff7f7c7370 0xe00000000079e1e0 vx_bmap_typed+0xc0
+0x9fffffff7f7c9738 0x9fffffff7f7c7410 0xe000000000629120 vx_bmap_lockheld2+0x120
+0x9fffffff7f7c96b8 0x9fffffff7f7c7410 0xe00000000062e0c0 vx_bmap+0x140
+0x9fffffff7f7c95d8 0x9fffffff7f7c7430 0xe0000000006894a0 vx_dirbread+0xb0
+0x9fffffff7f7c9490 0x9fffffff7f7c74d0 0xe00000000068d800 vx_dirscan+0xac0
+0x9fffffff7f7c93b0 0x9fffffff7f7c7510 0xe000000000664e80 vx_dirlook+0x360
+0x9fffffff7f7c9300 0x9fffffff7f7c7530 0xe000000000633c90 vx_lookup+0x310
+0x9fffffff7f7c9270 0x9fffffff7f7c7550 0xe0000000012e5050 rfs3_lookup+0x190
+0x9fffffff7f7c9198 0x9fffffff7f7c7690 0xe0000000012f1a00 rfsexp_dispatch+0x460
+0x9fffffff7f7c9100 0x9fffffff7f7c7980 0xe000000001428130 tcp_svc_getreq+0x1f0
+0x9fffffff7f7c9010 0x9fffffff7f7c7a30 0xe000000000733c80 tcp_svc_run+0x3e0
+0x9fffffff7f7c9000 0x9fffffff7f7c7bf0 0xe0000000013c6f50 kthread_daemon_startup+0x40
+--------------------------------------------------------
+tid = 278662  kt_stat = TSRUN
+local operation on vnodep = 0xe00000016f6705c0 
+(/dc_home/[mntpt]/ft/summary/fleft/summary)
+local vnode belongs to vfsp = 0xe00000012a8ddac0  mnt_pt = &#39;/dc_home&#39;
+local component being looked up = 
+&#39;FLEX07-CSR_1_bc4_pugwash_f_3v06a_x8_LCHS1-F_25C_RT0_GP5530XAAM_FT_GP5530.1_FT_Jan10_09_02.summary.Z&#39;
+SVCXPRT used = 0xe000000163ff2040
+NFS filehandle corresponds to inode = 14534 of filesystem &#39;/dc_home&#39; 
+vfsp = 0xe00000012a8ddac0
+--------------------------------------------------------
+
+=================
+= Load Averages =
+=================
+
+avenrun
+=======
+36.88  21.37  10.69  
+
+mp_avenrun
+==========
+cpu0 : 37.311754  21.748574  10.940800  
+cpu1 : 40.747521  22.928449  11.411689  
+
+Running Threads (TSRUNPROC) 
+===========================
+
+                   TICKS TICKS                I TICKS
+                   SINCE SINCE                C SINCE NREADY
+TID    PID   PPID  RUN   IDLE  PRI  SPU STATE S MIGR  FR LO AL COMMAND
+------ ----- ----- ----- ----- ---- --- ----- - ----- -- -- -- -------
+279095 10    0     4415  4509  143  0   SYS   N 4509  43 4  0  nfsktcpd
+278662 10    0     5187  16415 138  1   SYS   Y 16416 44 2  0  nfsktcpd
+
+Note: 
+FR: free to run on any processor (candidate for thread migration).
+LO: locked (via processor affinity/mpctl) to this processor).
+AL: Alpha semaphores misses (special scheduling when miss a sema).
+
+Threads waiting on cpu (TSRUN) - sorted by cpu/pri/ticks-since-run
+==================================================================
+
+TID    PID   PPID  TICKS    PRI  SPU BND  GRP SYSCALL        COMMAND
+------ ----- ----- -------- ---- --- ---- --- -------------- -------
+45     29    0     5192     -32  0   N    -1  n/a            ipmid
+3395   3053  3052  4415     -27  0   N    -1  sigwait        cmcld
+3398   3053  3052  4515     -27  0   N    -1  select         cmcld
+1590   1476  1     4415     -16  0   LDOM -1  ki_call        midaemon
+3397   3057  3056  4415     -14  0   N    -1  select         cmlogd
+3399   3053  3052  4515     -14  0   N    -1  select         cmcld
+57     40    0     5194     100  0   N    -1  n/a            smpsched
+1442   1328  1     4415     120  0   N    -1  sigsuspend     xntpd
+0      0     0     4415     127  0   N    -1  n/a            swapper
+724    641   640   4510     127  0   N    -1  sigtimedwait   netfmt
+1641   1515  1     5190     127  0   N    -1  write          scopeux
+3      3     0     4415     128  0   N    -1  n/a            statdaemon
+4      4     0     4415     128  0   N    -1  n/a            unhashdaemon
+63     37    0     4510     128  0   N    -1  n/a            schedcpu
+64     37    0     4510     128  0   N    -1  n/a            schedcpu
+483    19    0     4415     133  0   CPU  0   n/a            ksyncer_daemon
+36     20    0     5193     133  0   N    -1  n/a            lvmdevd
+79     51    0     4415     134  0   N    -1  n/a            vxfsd
+84     51    0     4415     134  0   N    -1  n/a            vxfsd
+278661 10    0     4509     134  0   N    -1  n/a            nfsktcpd
+35     19    0     5193     134  0   N    -1  n/a            ksyncer_daemon
+279967 10321 10320 5191     137  0   N    -1  ksleep         java
+75     51    0     4415     138  0   N    -1  n/a            vxfsd
+280253 51    0     16415    138  0   N    -1  n/a            vxfsd
+280256 51    0     22515    138  0   N    -1  n/a            vxfsd
+280258 51    0     22515    138  0   N    -1  n/a            vxfsd
+14     12    0     4510     147  0   N    -1  n/a            lvmkd
+15     13    0     4510     147  0   N    -1  n/a            lvmkd
+16     14    0     4510     147  0   N    -1  n/a            lvmkd
+17     15    0     4510     147  0   N    -1  n/a            lvmkd
+18     16    0     4510     147  0   N    -1  n/a            lvmkd
+19     17    0     4510     147  0   N    -1  n/a            lvmkd
+20     18    0     4510     148  0   N    -1  n/a            lvmschedd
+12921  7440  0     4515     148  0   N    -1  n/a            lvmdevd
+10     10    0     4515     152  0   N    -1  n/a            nfsktcpd
+55     39    0     4515     152  0   N    -1  n/a            cmcd
+502    421   1     4511     154  0   N    0   ksleep         utmpd
+1632   1507  1     4512     154  0   N    -1  select         spagent
+2202   1870  1863  4512     154  0   N    -1  ksleep         agent
+1513   1399  1     4513     154  0   N    -1  select         diagmond
+1395   1303  1     5193     154  0   N    -1  ksleep         dced
+2637   2307  1485  5193     154  0   N    -1  ksleep         rep_server
+2670   2362  1485  5193     154  0   N    -1  ksleep         agdbserver
+2402   2129  1399  4515     158  0   N    -1  read           diaglogd
+19987  10321 10320 4509     168  0   N    -1  nanosleep      java
+20346  10387 10386 4509     168  0   N    -1  nanosleep      java
+20359  10387 10386 4509     168  0   N    -1  nanosleep      java
+500    421   1     4512     168  0   N    0   sigtimedwait   utmpd
+2061   1881  1     4514     168  0   N    -1  sigtimedwait   cimserverd
+653    572   1     4515     168  0   N    -1  sigtimedwait   ipmon
+1276   1192  1     4515     168  0   N    -1  select         sendmail
+2040   1870  1863  4515     168  0   N    -1  sigtimedwait   agent
+65     38    0     4510     255* 0   CPU  0   n/a            pagezerod
+43     27    0     5195     -32  1   CPU  1   n/a            progressdaemon
+1592   1476  1     5195     -16  1   LDOM -1  nanosleep      midaemon
+484    19    0     5194     133  1   CPU  1   n/a            ksyncer_daemon
+280957 10321 10320 5190     137  1   N    -1  stat64         java
+279840 10321 10320 5191     137  1   N    -1  ksleep         java
+281123 25535 1871  5191     138  1   N    -1  unlink         ls
+281086 25516 908   5192     148  1   N    -1  execve         inetd
+2850   2548  1     4509     152  1   N    -1  ioctl          ia64_corehw
+281184 25553 1384  4512     152  1   N    -1  fork           cron
+281182 25551 7475  4514     152  1   N    -1  fork           nfs.mon
+281183 25552 7516  4514     152  1   N    -1  fork           samba.mon
+281178 10321 10320 14321923 152  1   N    -1  lwp_detached_e java
+281185 10321 10320 14321923 152  1   N    -1  lwp_detached_e java
+281186 10321 10320 14321923 152  1   N    -1  lwp_detached_e java
+281187 10321 10320 14321923 152  1   N    -1  lwp_detached_e java
+19975  10321 10320 4509     154  1   N    -1  read           java
+281156 10321 10320 4509     154  1   N    -1  read           java
+281157 10321 10320 4509     154  1   N    -1  read           java
+274336 10321 10320 4510     154  1   N    -1  poll           java
+2204   1870  1863  4512     154  1   N    -1  read           agent
+682    601   1     4514     154  1   N    -1  select         syslogd
+1420   1313  1     4515     154  1   N    -1  select         cimserver
+1479   1365  1     4515     154  1   N    -1  poll           pwgrd
+2081   1650  1     4515     154  1   N    -1  poll           vxsvc
+2628   2307  1485  5188     154  1   N    -1  ksleep         rep_server
+503    421   1     5189     154  1   N    -1  ksleep         utmpd
+280950 10321 10320 5189     154  1   N    -1  ksleep         java
+1311   1224  1     5190     154  1   N    -1  select         ipv6agt
+1320   1233  1     5190     154  1   N    -1  select         mib2agt
+2403   2130  1399  5192     154  1   N    -1  select         psmctd
+18475  9744  7510  5192     154  1   N    -1  select         smbd
+281125 10321 10320 5192     154  1   N    -1  read           java
+497    421   1     5193     154  1   N    -1  ksleep         utmpd
+1658   1528  1     5193     154  1   N    -1  ksleep         swagentd
+2041   1871  1     5193     154  1   N    -1  select         prngd
+2646   1485  1     5193     154  1   N    -1  ksleep         perflbd
+2687   2379  2362  5193     154  1   N    -1  ksleep         alarmgen
+13033  7508  1     5193     154  1   N    -1  select         nmbd
+281001 10321 10320 5193     154  1   N    -1  poll           java
+19980  10321 10320 5194     154  1   N    -1  ksleep         java
+280952 10321 10320 10503    154  1   N    -1  ksleep         java
+2671   2362  1485  32899    154  1   N    -1  select         agdbserver
+20345  10387 10386 38407    154  1   N    -1  ksleep         java
+482    417   1     5191     168  1   N    -1  sigtimedwait   syncer
+1976   1650  1     5191     168  1   N    -1  nanosleep      vxsvc
+2079   1650  1     5191     168  1   N    -1  nanosleep      vxsvc
+2985   1303  1     5188     178  1   N    -1  sched*         dced
+54     38    0     16452    255* 1   CPU  1   n/a            pagezerod
+
+
+Top 10 threads sorted by %cpu
+=============================
+tid    pid   ticks    pri cpu state %cpu   command
+===    ===   =====    === === ===== ====   =======
+278662 10    5187     138 1   RUN   87.50  nfsktcpd
+278663 10    5193     138 0   ZOMB  60.35  nfsktcpd
+278661 10    4509     134 0   RUN   56.00  nfsktcpd
+279095 10    4415     143 0   RUN   45.59  nfsktcpd
+280703 10387 10502    154 0   SLEEP 13.26  java
+2637   2307  5193     154 0   RUN   3.70   rep_server
+3393   3053  5194     -27 1   SLEEP 3.29   cmcld
+281063 10387 22119    154 0   SLEEP 1.49   java
+281075 10387 22119    154 0   SLEEP 1.41   java
+274134 10321 4510     154 0   SLEEP 1.32   java
+
+==============================
+= NFS Server side statistics =
+==============================
+Server rpc:
+Connection oriented:
+calls                   badcalls                nullrecv                
+5167284                 0                       0                       
+badlen                  xdrcall                 dupchecks               
+0                       0                       78                      
+dupreqs                 
+0                       
+Connectionless oriented:
+calls                   badcalls                nullrecv                
+9713                    0                       0                       
+badlen                  xdrcall                 dupchecks               
+0                       0                       0                       
+dupreqs                 
+0                       
+
+Server nfs:
+calls                   badcalls                
+5176998                 0                       
+Version 2: (9713 calls)
+null                    getattr                 setattr                 
+9713 100%               0 0%                    0 0%                    
+root                    lookup                  readlink                
+0 0%                    0 0%                    0 0%                    
+read                    wrcache                 write                   
+0 0%                    0 0%                    0 0%                    
+create                  remove                  rename                  
+0 0%                    0 0%                    0 0%                    
+link                    symlink                 mkdir                   
+0 0%                    0 0%                    0 0%                    
+rmdir                   readdir                 statfs                  
+0 0%                    0 0%                    0 0%                    
+Version 3: (5167288 calls)
+null                    getattr                 setattr                 
+0 0%                    71921 1%                0 0%                    
+lookup                  access                  readlink                
+5072559 98%             81 0%                   0 0%                    
+read                    write                   create                  
+54 0%                   78 0%                   0 0%                    
+mkdir                   symlink                 mknod                   
+0 0%                    0 0%                    0 0%                    
+remove                  rmdir                   rename                  
+0 0%                    0 0%                    0 0%                    
+link                    readdir                 readdir+                
+0 0%                    0 0%                    21926 0%                
+fsstat                  fsinfo                  pathconf                
+669 0%                  0 0%                    0 0%                    
+commit                  
+0 0%                    </pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/hp-ux/">hp-ux</a>
+          <a href="/tags/kernel/">kernel</a>
+          <a href="/tags/hang/">hang</a>
+          <a href="/tags/mc-sg/">mc-sg</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/tech/hpux-kernel-dump/hang-swap-reservation-fail/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Application hang with slow login on console access.</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/tech/hpux-kernel-dump/hang-mcsg-toc-cmcld-aborted/">
+            <span class="next-text nav-default">MC/SG TOC system due to MC/ServiceGuard daemon cmcld aborted.</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://dyiwu.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Dyi-Wu Liu </span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

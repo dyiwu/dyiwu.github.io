@@ -13,10 +13,10 @@
     
     <item>
       <title>System hang in the LVM POWERFAIL queue.</title>
-      <link>https://dyiwu.github.io/2005/04/hang-lvm-powerfail/</link>
+      <link>https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-lvm-powerfail/</link>
       <pubDate>Thu, 28 Apr 2005 09:58:01 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/2005/04/hang-lvm-powerfail/</guid>
+      <guid>https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-lvm-powerfail/</guid>
       <description>System hang in the LVM POWERFAIL queue.</description>
     </item>
     

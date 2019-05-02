@@ -13,10 +13,10 @@
     
     <item>
       <title>Data page fault panicon tcp_wput()</title>
-      <link>https://dyiwu.github.io/2006/04/panic-data-page-fault-tcp-wput/</link>
+      <link>https://dyiwu.github.io/post/tech/hpux-kernel-dump/panic-data-page-fault-tcp-wput/</link>
       <pubDate>Sun, 09 Apr 2006 02:30:57 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/2006/04/panic-data-page-fault-tcp-wput/</guid>
+      <guid>https://dyiwu.github.io/post/tech/hpux-kernel-dump/panic-data-page-fault-tcp-wput/</guid>
       <description>A null pointer de-reference on tcp_wput() routine.</description>
     </item>
     

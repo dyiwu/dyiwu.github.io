@@ -13,10 +13,10 @@
     
     <item>
       <title>System panic with Key Permission Fault in KERNEL mode.</title>
-      <link>https://dyiwu.github.io/2010/01/panic-key-permission-fault/</link>
+      <link>https://dyiwu.github.io/post/tech/hpux-kernel-dump/panic-key-permission-fault/</link>
       <pubDate>Mon, 25 Jan 2010 04:28:07 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/2010/01/panic-key-permission-fault/</guid>
+      <guid>https://dyiwu.github.io/post/tech/hpux-kernel-dump/panic-key-permission-fault/</guid>
       <description>System panic with Key Permission Fault in KERNEL mode.</description>
     </item>
     

@@ -13,10 +13,10 @@
     
     <item>
       <title>Time services process xnptd monopolize CPU 0 in kernel mode.</title>
-      <link>https://dyiwu.github.io/2004/01/hang-xntpd-monopolize/</link>
+      <link>https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-xntpd-monopolize/</link>
       <pubDate>Tue, 13 Jan 2004 15:51:00 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/2004/01/hang-xntpd-monopolize/</guid>
+      <guid>https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-xntpd-monopolize/</guid>
       <description>xnptd monopolize CPU 0 in kernel mode.</description>
     </item>
     

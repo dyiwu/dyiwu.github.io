@@ -13,10 +13,10 @@
     
     <item>
       <title>System hang with memory starvation.</title>
-      <link>https://dyiwu.github.io/2005/11/hang-memory-starvation-oracle/</link>
+      <link>https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-memory-starvation-oracle/</link>
       <pubDate>Tue, 29 Nov 2005 08:53:35 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/2005/11/hang-memory-starvation-oracle/</guid>
+      <guid>https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-memory-starvation-oracle/</guid>
       <description>System went to memory starvation situation</description>
     </item>
     

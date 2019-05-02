@@ -13,10 +13,10 @@
     
     <item>
       <title>After LPMC event, monarch processor have had clock interrupts held off.</title>
-      <link>https://dyiwu.github.io/2004/04/hang-monarc-lpmc/</link>
+      <link>https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-monarc-lpmc/</link>
       <pubDate>Mon, 12 Apr 2004 09:58:01 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/2004/04/hang-monarc-lpmc/</guid>
+      <guid>https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-monarc-lpmc/</guid>
       <description>After LPMC event, monarch processor have had clock interrupts held off.</description>
     </item>
     

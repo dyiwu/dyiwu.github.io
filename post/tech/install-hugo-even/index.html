@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Install Hugo with Even theme - Chaos - 一個老碼農的筆記</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Dyi-Wu Liu " /><meta name="description" content="Install Hugo with Even theme
+Create a new site named it as chaos in my case." /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.4 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://dyiwu.github.io/post/tech/install-hugo-even/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Install Hugo with Even theme" />
+<meta property="og:description" content="Install Hugo with Even theme
+
+Create a new site named it as chaos in my case." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dyiwu.github.io/post/tech/install-hugo-even/" />
+<meta property="article:published_time" content="2019-05-01T14:53:00&#43;08:00"/>
+<meta property="article:modified_time" content="2019-05-01T14:53:00&#43;08:00"/>
+
+<meta itemprop="name" content="Install Hugo with Even theme">
+<meta itemprop="description" content="Install Hugo with Even theme
+
+Create a new site named it as chaos in my case.">
+
+
+<meta itemprop="datePublished" content="2019-05-01T14:53:00&#43;08:00" />
+<meta itemprop="dateModified" content="2019-05-01T14:53:00&#43;08:00" />
+<meta itemprop="wordCount" content="579">
+
+
+
+<meta itemprop="keywords" content="hugo,even,setup," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Install Hugo with Even theme"/>
+<meta name="twitter:description" content="Install Hugo with Even theme
+
+Create a new site named it as chaos in my case."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Chaos</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Chaos</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Install Hugo with Even theme</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-05-01 </span>
+        <div class="post-category">
+            <a href="/categories/tech/"> tech </a>
+            </div>
+          <span class="more-meta"> 579 words </span>
+          <span class="more-meta"> 3 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#create-a-new-site-named-it-as-chaos-in-my-case">Create a new site named it as chaos in my case.</a></li>
+<li><a href="#install-even-theme">Install even theme</a></li>
+<li><a href="#update-theme">Update theme</a></li>
+<li><a href="#deploy-to-github">Deploy to github</a></li>
+<li><a href="#maintance-scripts">Maintance scripts</a></li>
+<li><a href="#customization-and-tips">Customization and Tips</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>Install Hugo with Even theme</p>
+
+<h2 id="create-a-new-site-named-it-as-chaos-in-my-case">Create a new site named it as chaos in my case.</h2>
+
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ cd ~/Hugo/Sites
+$ hugo new site chaos
+Congratulations! Your new Hugo site is created in /home/dyiwu/Hugo/Sites/chaos.
+
+Just a few more steps and you&#39;re ready to go:
+
+1. Download a theme into the same-named folder.
+   Choose a theme from https://themes.gohugo.io/, or
+   create your own with the &#34;hugo new theme &lt;THEMENAME&gt;&#34; command.
+2. Perhaps you want to add some content. You can add single files
+   with &#34;hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&#34;.
+3. Start the built-in live server via &#34;hugo server&#34;.
+
+Visit https://gohugo.io/ for quickstart guide and full documentation.</pre></td></tr></table>
+</div>
+</div>
+<h2 id="install-even-theme">Install even theme</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ cd ~/Hugo/Sites/chaos
+$ git clone https://github.com/olOwOlo/hugo-theme-even themes/even
+$ cp themes/even/exampleSite/config.toml .</pre></td></tr></table>
+</div>
+</div>
+<h2 id="update-theme">Update theme</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ cd ~/Hugo/Sites/chaos/themes/even
+$ git pull</pre></td></tr></table>
+</div>
+</div>
+<h2 id="deploy-to-github">Deploy to github</h2>
+
+<ol>
+<li>Create two repostories on github, named it as chaos and dyiwu.github.io</li>
+
+<li><p>Generate the web site which will be saved under ~/Hugo/Sites/chaos/public directory.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ cd ~/Hugo/Sites/chaos
+$ hugo</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>link the generated web site (/public) folder to github</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ cd ~/Hugo/Sites/chaos/public
+$ git init
+$ git remote add origin https://github.com/dyiwu/dyiwu.github.io.git
+$ git add .
+$ git commit -m &#34;Initial commit&#34;
+$ git push -u origin master</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>Link the whole chaos site to github</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ cd ~/Hugo/Sites/chaos
+$ git init
+$ git remote add origin https://github.com/dyiwu/chaos.git
+$ git add .
+$ git commit -m &#34;Initial commit&#34;
+$ git push -u origin master</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>Web site will hosted on Github as <a href="https://dyiwu.github.io/">https://dyiwu.github.io/</a></p></li>
+</ol>
+
+<h2 id="maintance-scripts">Maintance scripts</h2>
+
+<ol>
+<li><p>Script to deploy chaos.git repo from local to github</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ cat deploy_chaos.sh 
+<span class="cp">#!/bin/bash
+</span><span class="cp"></span><span class="nb">echo</span> -e <span class="s2">&#34;Deploying ~/Hugo/Sites/chaos updates to GitHub...&#34;</span>
+<span class="nb">cd</span> ~/Hugo/Sites/chaos
+<span class="c1"># Add changes to git.</span>
+git add -A
+<span class="c1"># Commit changes.</span>
+<span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site `date`&#34;</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">]</span>
+<span class="k">then</span> <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+<span class="k">fi</span>
+git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+<span class="c1"># Push source and build repos.</span>
+git push origin master</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>Script to deploy dyiwu.github.io.git from local to github</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ cat deploy_public.sh
+<span class="cp">#!/bin/bash
+</span><span class="cp"></span><span class="nb">echo</span> -e <span class="s2">&#34;Deploying ~/Hugo/Sites/chaos/public updates to GitHub...&#34;</span>
+<span class="c1"># Build the project.</span>
+<span class="nb">cd</span> ~/Hugo/Sites/chaos
+hugo
+<span class="c1"># Go To Public folder</span>
+<span class="nb">cd</span> public
+<span class="c1"># Add changes to git.</span>
+git add -A
+<span class="c1"># Commit changes.</span>
+<span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site `date`&#34;</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">]</span>
+<span class="k">then</span> <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+<span class="k">fi</span>
+git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+<span class="c1"># Push source and build repos.</span>
+git push origin master
+<span class="c1"># Come Back</span>
+<span class="nb">cd</span> ..</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>Script to clone chaos.git repo from github to local</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ cat clone_chaos.sh 
+<span class="cp">#!/bin/bash
+</span><span class="cp"></span><span class="nb">echo</span> -e <span class="s2">&#34;Clone chaos.git repo from GitHub to local...&#34;</span>
+<span class="nb">cd</span> ~/Hugo/Sites
+git clone https://github.com/dyiwu/chaos.git
+<span class="nb">cd</span> chaos</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>Script to clone dyiwu.github.io.git repo from github to local</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ cat clone_public.sh 
+<span class="cp">#!/bin/bash
+</span><span class="cp"></span><span class="nb">echo</span> -e <span class="s2">&#34;Clone dyiwu.github.io.git repo from GitHub to local...&#34;</span>
+<span class="c1"># Build the project.</span>
+<span class="nb">cd</span> ~/Hugo/Sites/chaos
+git clone https://github.com/dyiwu/dyiwu.github.io.git public</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>Script to clone themes/even repo from github to local</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ cat clone_themes.sh 
+<span class="cp">#!/bin/bash
+</span><span class="cp"></span>$ <span class="nb">cd</span> ~/Hugo/Sites/chaos
+$ git clone https://github.com/olOwOlo/hugo-theme-even themes/even</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>Script to update themes/even</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ cat update_theme.sh 
+<span class="cp">#!/bin/bash
+</span><span class="cp"></span><span class="nb">cd</span> ~/Hugo/Sites/chaos/themes/even
+git pull</pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+
+<h2 id="customization-and-tips">Customization and Tips</h2>
+
+<ul>
+<li><p>Manual Summary Splitting<br />
+Add the <code>&lt;!--more--&gt;</code> summary divider where you want to split the article.</p></li>
+
+<li><p>Setup Permlinks in config.toml</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[permalinks]
+post = &#34;/:year/:month/:filename/&#34;</pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/hugo/">hugo</a>
+          <a href="/tags/even/">even</a>
+          <a href="/tags/setup/">setup</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/examplesite/even-preview/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Theme preview</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/life/changing/">
+            <span class="next-text nav-default">我正在改變 - I am changing</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://dyiwu.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Dyi-Wu Liu </span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -13,10 +13,10 @@
     
     <item>
       <title>Lock contention leads system hang.</title>
-      <link>https://dyiwu.github.io/2008/11/hang-lock-contention/</link>
+      <link>https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-lock-contention/</link>
       <pubDate>Tue, 11 Nov 2008 04:50:36 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/2008/11/hang-lock-contention/</guid>
+      <guid>https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-lock-contention/</guid>
       <description>Lock contention (shm_lock/vmtotal_lock) leads system hang.</description>
     </item>
     
