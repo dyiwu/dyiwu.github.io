@@ -6,10 +6,19 @@
     <description>Recent content in bookmark on Chaos - 一個老碼農的筆記</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 30 Mar 2019 19:33:39 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 May 2019 17:34:39 +0800</lastBuildDate>
     
 	<atom:link href="https://dyiwu.github.io/tags/bookmark/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>大腕、網紅</title>
+      <link>https://dyiwu.github.io/post/bookmarks/guru/</link>
+      <pubDate>Thu, 02 May 2019 17:34:39 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/bookmarks/guru/</guid>
+      <description>&lt;p&gt;大腕、網紅的網站。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Finance bookmarks</title>

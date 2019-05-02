@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Chaos - 一個老碼農的筆記</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 01 May 2019 14:53:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 May 2019 17:34:39 +0800</lastBuildDate>
     
 	<atom:link href="https://dyiwu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>bookmark</title>
+      <link>https://dyiwu.github.io/tags/bookmark/</link>
+      <pubDate>Thu, 02 May 2019 17:34:39 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/bookmark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>guru</title>
+      <link>https://dyiwu.github.io/tags/guru/</link>
+      <pubDate>Thu, 02 May 2019 17:34:39 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/guru/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>even</title>
@@ -125,15 +143,6 @@
       <pubDate>Sun, 31 Mar 2019 06:45:57 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/tags/social/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>bookmark</title>
-      <link>https://dyiwu.github.io/tags/bookmark/</link>
-      <pubDate>Sat, 30 Mar 2019 19:33:39 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/bookmark/</guid>
       <description></description>
     </item>
     

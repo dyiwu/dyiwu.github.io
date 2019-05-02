@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Chaos - 一個老碼農的筆記</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 01 May 2019 14:53:00 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 02 May 2019 17:34:39 +0800</lastBuildDate>
     
 	<atom:link href="https://dyiwu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -20,6 +20,15 @@
       <description>&lt;blockquote&gt;
 &lt;p&gt;Based on &lt;a href=&#34;https://github.com/facelessuser/MarkdownPreview/blob/master/examples/test.md&#34;&gt;MarkdownPreview test.md&lt;/a&gt;.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
+    </item>
+    
+    <item>
+      <title>大腕、網紅</title>
+      <link>https://dyiwu.github.io/post/bookmarks/guru/</link>
+      <pubDate>Thu, 02 May 2019 17:34:39 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/bookmarks/guru/</guid>
+      <description>&lt;p&gt;大腕、網紅的網站。&lt;/p&gt;</description>
     </item>
     
     <item>
