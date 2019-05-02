@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>de-reference on Chaos - 一個老碼農的筆記</title>
+    <link>https://dyiwu.github.io/tags/de-reference/</link>
+    <description>Recent content in de-reference on Chaos - 一個老碼農的筆記</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 09 Apr 2006 02:30:57 +0800</lastBuildDate>
+    
+	<atom:link href="https://dyiwu.github.io/tags/de-reference/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Data page fault panicon tcp_wput()</title>
+      <link>https://dyiwu.github.io/2006/04/panic-data-page-fault-tcp-wput/</link>
+      <pubDate>Sun, 09 Apr 2006 02:30:57 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/2006/04/panic-data-page-fault-tcp-wput/</guid>
+      <description>A null pointer de-reference on tcp_wput() routine.</description>
+    </item>
+    
+  </channel>
+</rss>

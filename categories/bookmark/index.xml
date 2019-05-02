@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bookmark on Chaos - 一個老碼農的筆記</title>
+    <link>https://dyiwu.github.io/categories/bookmark/</link>
+    <description>Recent content in bookmark on Chaos - 一個老碼農的筆記</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 30 Mar 2019 19:33:39 +0800</lastBuildDate>
+    
+	<atom:link href="https://dyiwu.github.io/categories/bookmark/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Finance bookmarks</title>
+      <link>https://dyiwu.github.io/2019/03/finance-bookmarks/</link>
+      <pubDate>Sat, 30 Mar 2019 19:33:39 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/2019/03/finance-bookmarks/</guid>
+      <description>This page keep the frequently used bookmark about finance.
+ 銀行匯率比較·匯率查詢·匯率換算 FindRate.TW 手機版 - 銀行匯率比較·匯率查詢·匯率換算 FindRate.TW Nasdaq Quotes Investopedia  </description>
+    </item>
+    
+    <item>
+      <title>Hugo bookmarks</title>
+      <link>https://dyiwu.github.io/2019/03/hugo-bookmarks/</link>
+      <pubDate>Sat, 30 Mar 2019 06:55:19 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/2019/03/hugo-bookmarks/</guid>
+      <description>This page keep the Hugo framework related bookmarks.
+ Hugo Documentation Academic Theme Documentation Hugo Discussion  </description>
+    </item>
+    
+  </channel>
+</rss>

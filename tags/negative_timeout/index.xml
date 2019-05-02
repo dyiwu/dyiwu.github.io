@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>negative_timeout on Chaos - 一個老碼農的筆記</title>
+    <link>https://dyiwu.github.io/tags/negative_timeout/</link>
+    <description>Recent content in negative_timeout on Chaos - 一個老碼農的筆記</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 Oct 2008 09:25:46 +0800</lastBuildDate>
+    
+	<atom:link href="https://dyiwu.github.io/tags/negative_timeout/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>System hang with timeout call with negative time.</title>
+      <link>https://dyiwu.github.io/2008/10/hang-negative-timeout/</link>
+      <pubDate>Mon, 20 Oct 2008 09:25:46 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/2008/10/hang-negative-timeout/</guid>
+      <description>mpt driver timeout call with negative time.</description>
+    </item>
+    
+  </channel>
+</rss>

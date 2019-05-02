@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>I-Cache Parity Error on CPU 3 lead spinlock deadlock - Chaos - 一個老碼農的筆記</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Dyi-Wu Liu " /><meta name="description" content="Spinlock deadlock failure with LPMC I-cache errors CPU 3 failure." /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.4 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://dyiwu.github.io/2004/04/panic-icache-cpu3-error-spinlock/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="I-Cache Parity Error on CPU 3 lead spinlock deadlock" />
+<meta property="og:description" content="Spinlock deadlock failure with LPMC I-cache errors CPU 3 failure." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dyiwu.github.io/2004/04/panic-icache-cpu3-error-spinlock/" />
+<meta property="article:published_time" content="2004-04-12T09:58:01&#43;08:00"/>
+<meta property="article:modified_time" content="2004-04-12T09:58:01&#43;08:00"/>
+
+<meta itemprop="name" content="I-Cache Parity Error on CPU 3 lead spinlock deadlock">
+<meta itemprop="description" content="Spinlock deadlock failure with LPMC I-cache errors CPU 3 failure.">
+
+
+<meta itemprop="datePublished" content="2004-04-12T09:58:01&#43;08:00" />
+<meta itemprop="dateModified" content="2004-04-12T09:58:01&#43;08:00" />
+<meta itemprop="wordCount" content="1055">
+
+
+
+<meta itemprop="keywords" content="hp-ux,kernel,panic,spinlock," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="I-Cache Parity Error on CPU 3 lead spinlock deadlock"/>
+<meta name="twitter:description" content="Spinlock deadlock failure with LPMC I-cache errors CPU 3 failure."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Chaos</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Chaos</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">I-Cache Parity Error on CPU 3 lead spinlock deadlock</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2004-04-12 </span>
+        <div class="post-category">
+            <a href="/categories/tech/"> tech </a>
+            </div>
+          <span class="more-meta"> 1055 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#i-cache-parity-error-on-cpu-3">I-Cache Parity Error on CPU 3</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h2 id="i-cache-parity-error-on-cpu-3">I-Cache Parity Error on CPU 3</h2>
+
+<p>Spinlock deadlock failure with LPMC I-cache errors CPU 3 failure.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">System Crash Dump Analysis Report
+=================================
+
+Symptom
+-------
+ System panic with panic string : Spinlock deadlock
+
+Root Cause
+----------
+ I-Cache Parity Error on CPU 3.
+
+Action Plan
+-----------
+ Please replace CPU 3 at path 166, hpa: fffffffffffa6000
+
+Delay Analysis
+--------------
+
+p4&gt;hpa2cpu
+hpa 0xfffffffffffa0000 : cpu 0
+hpa 0xfffffffffffa2000 : cpu 1
+hpa 0xfffffffffffa4000 : cpu 2
+hpa 0xfffffffffffa6000 : cpu 3
+
+p4&gt;Lpmc
+lpmc_count = 90
+
+Last LPMC PIM data :
+
+0x052fd250 struct pim2_0_lpmc_data {
+0x052fd250   unsigned int  check_type;             0x80000000
+0x052fd254   unsigned int  hversion;               0x00000000
+0x052fd258   unsigned int  cache_check;            0x80000000 
+                            LPMC type : I-Cache Parity Error. 
+0x052fd25c   unsigned int  tlb_check;              0x00000000
+0x052fd260   unsigned int  bus_check;              0x00000000
+0x052fd264   unsigned int  assists_check;          0x00000000
+0x052fd268   unsigned int  assist_state;           0x00000000
+0x052fd26c   unsigned int  path_info;              0x00000000
+0x052fd270   u_long  sys_resp_addr;                0x00000000_00000000
+0x052fd278   u_long  sys_req_addr;                 0x00000000_00000000
+0x052fd280 };
+
+LPMC log buffer for I/D-cache parity error :
+
+load diag_lpmc_log_type @lpmc_log max 8
+hversion   hpa        pim_size   pim_ptr            
+0x00005c40 0xfffa6000 0x000004a0 0x00000000052fd8b0 
+0x00005c40 0xfffa6000 0x000004a0 0x00000000052fdd50 
+0x00005c40 0xfffa6000 0x000004a0 0x00000000052fe1f0 
+0x00005c40 0xfffa6000 0x000004a0 0x00000000052fe690 
+0x00005c40 0xfffa6000 0x000004a0 0x00000000052feb30 
+0x00005c40 0xfffa6000 0x000004a0 0x00000000052fefd0 
+0x00005c40 0xfffa6000 0x000004a0 0x00000000052ff470 
+0x00005c40 0xfffa6000 0x000004a0 0x00000000052ff910 
+
+Dump time Mon Apr 12 09:58:01 2004 UTC-8
+System has been up 155 days, 4 hours, 48 minutes.
+
+System Name      : HP-UX
+Node Name        : localhost
+Model            : 9000/800/L2000-44
+HP-UX version    : B.11.00 (64-bit Kernel)
+Number of CPU&#39;s  : 4
+Disabled CPU&#39;s   : 0
+CPU type         : PCXW (440 Mhz)
+CPU Architecture : PA-RISC 2.0
+Load average     : 0.62  0.60  0.68  
+
+			================
+			= Crash Events =
+			================
+
+Panic string : Spinlock deadlock!
+
+Lock structure
+--------------
+
+0x00b7b700 lock_t {
+0x00b7b700   u_int   sl_lock;                      0x00000000
+0x00b7b704   u_int   sl_owner;                     0x00eed858
+0x00b7b708   u_int   sl_flag;                      0x00000001
+0x00b7b70c   u_int   sl_next_cpu;                  0x00000000
+0x00b7b710   u_int   sl_indirect:0:1;              0x0
+0x00b7b710   u_int   sl_name_ptr:1:23;             0x1ad4b4
+0x00b7b714   u_int   sl_pad[3];                    0x00000000
+0x00b7b720 };
+lock name : callout_lock
+
+Stack trace of lock holder (cpu 3)
+-----------------------------------
+
+Processor #3
+==============  EVENT  ============================
+= Event #2 is TOC on CPU #3
+= p crash_event_t 0x22060
+= p rpb_t 0xee3130
+= Using pc from pim.wide.rp_pcoq_head_hi = 0xf0f005a3e4 (failed)
+= Using pc from pim.wide.rp_rp_hi = 0xf0f005a3cc (failed)
+= Using pc from pim.wide.rp_gr31_hi = 0x301030000812204
+==============  EVENT  ============================
+Can&#39;t unwind
+
+Stack trace of lock holder (cpu 3) with all args
+-------------------------------------------------
+
+Processor #3
+==============  EVENT  ============================
+= Event #2 is TOC on CPU #3
+= p crash_event_t 0x22060
+= p rpb_t 0xee3130
+= Using pc from pim.wide.rp_pcoq_head_hi = 0xf0f005a3e4 (failed)
+= Using pc from pim.wide.rp_rp_hi = 0xf0f005a3cc (failed)
+= Using pc from pim.wide.rp_gr31_hi = 0x301030000812204
+==============  EVENT  ============================
+Can&#39;t unwind
+
+		=======================================
+		= Global Error Counters / kmem_writes =
+		=======================================
+
+lpmc_count      = 90
+
+Note:  we have LPMC&#39;s
+Attempting to print lpmc_log data LPMC&#39;s
+
+lpmc_log
+========
+
+hversion   hpa                cpu pim_size pim_ptr
+--------   ------------------ --- -------- -------
+0x5c40     0x00000000fffa6000 3   1184     0x52fd8b0         
+
+pim data
+========
+
+check_type  :  0x80000000
+hversion    :  0x0       
+cache_check :  0x80000000
+tlb_check   :  0x0       
+bus_check   :  0x0       
+assts_check :  0x0       
+assts_state :  0x0       
+path_info   :  0x0       
+resp_addr   :  0x0       
+req_addr    :  0x0       
+
+		=======================================
+		= Crash Event / Processor Information =
+		=======================================
+
+Number of processors = 4
+
+        s
+        t
+        a       spin reg eiem/spl         eirr             ipsw            
+evt cpu t type  dpth src cr15             cr23             cr22            
+--- --- - ----- ---- --- ---------------- ---------------- ----------------
+0   0   E PANIC 0    rpb c600000000000000 0800000000000100 0800001b WRQDI
+          4          s_s fffffff0ffffffff N/A              0804f81f WCRQPDI
+1   1   E TOC   0    rpb c700000000000000 0800000900000080 0804ff08 WCQ
+          4          s_s fffffff0ffffffff N/A              0804001f WCRQPDI
+2   3   E TOC   2    rpb c600000000000000 0800000100000800 08000008 WQ
+                     mpi ffffff00ffffffff
+3   2   E TOC   0    rpb c700000000000000 0800000100000400 0804ff08 WCQ
+          4          s_s fffffff0ffffffff N/A              0804f61f WCRQPDI
+
+Trap Types :
+
+Trap type 4 = External Interrupt (I_EXT_INTP)
+Note:  PSW_I bit on processor 1 is off ! (Interrupts are disabled)
+Note:  PSW_I bit on processor 3 is off ! (Interrupts are disabled)
+Note:  PSW_I bit on processor 2 is off ! (Interrupts are disabled)
+
+SPL/EIEM values:
+0xfffffffeffffffff = SPLPREEMPTOK - Default user mode SPL level.
+0xfffffff0ffffffff = SPLNOPREEMPT - Disable kernel preemption (scheduling interrupt off).
+0xffffff00ffffffff = SPL2 - Disable software interrupt (software triggers off).
+0xef00080000000000 = SPL5 - Disable IO modules.
+0xc700000000000000 = SPL6+CLOCK_RESYNC - Disable hardclock+enable clock-resync.
+0xc600000000000000 = SPL6 - Disable hardclock.
+0x0000000700000000 = SPL7/PSW_I=0 - Disable the world.
+
+			========================
+			= Processor Clock Info =
+			========================
+
+hardclock_late = 7
+itick_per_tick = 4400000
+lbolt          = 1340969121 (0x4fed90a1)
+
+    event mpi                rpb                delta      clk eiem eirr PSW
+cpu type  timeinval          interval timer     secs:ticks od  0,4  0,4  I
+--- ----- ------------------ ------------------ ---------- --- ---- ---- ---
+0   PANIC 0x14f66312d7eb77   0x14f669382ca430      -59:-99 7   1 0  0 1  1 
+1   TOC   0x14f663123a6cfd   0x14f66941e3a730      -60:-38 7   1 0  0 1  0 
+2   TOC   0x14f663123064ad   0x14f6694197096f      -60:-37 8   1 0  0 1  0 
+3   TOC   0x14f663110810ce   0x14f66940f46060      -60:-39 7   1 0  0 1  0 
+
+WARNING: Processor 1 appears to have had clock interrupts held off for 
+approx 60 seconds. Current SPL = 0xc700000000000000 (SPL6+CLOCK_RESYNC).
+
+WARNING: Processor 2 appears to have had clock interrupts held off for 
+approx 60 seconds. Current SPL = 0xc700000000000000 (SPL6+CLOCK_RESYNC).
+
+WARNING: Processor 3 appears to have had clock interrupts held off for 
+approx 60 seconds. Current SPL = 0xc600000000000000 (SPL6).</pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/hp-ux/">hp-ux</a>
+          <a href="/tags/kernel/">kernel</a>
+          <a href="/tags/panic/">panic</a>
+          <a href="/tags/spinlock/">spinlock</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/2004/04/hang-monarc-lpmc/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">After LPMC event, monarch processor have had clock interrupts held off.</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/2004/04/hang-long-run-queue/">
+            <span class="next-text nav-default">System mini hang when long run queue.</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://dyiwu.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Dyi-Wu Liu </span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

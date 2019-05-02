@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>System panic with data page fault in ATQ_F_dequeue - Chaos - 一個老碼農的筆記</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Dyi-Wu Liu " /><meta name="description" content="data page fault in ATQ_F_dequeue routine." /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.4 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://dyiwu.github.io/2004/04/panic-data-page-fault-atq-f-dequeue/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="System panic with data page fault in ATQ_F_dequeue" />
+<meta property="og:description" content="data page fault in ATQ_F_dequeue routine." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dyiwu.github.io/2004/04/panic-data-page-fault-atq-f-dequeue/" />
+<meta property="article:published_time" content="2004-04-01T05:30:29&#43;08:00"/>
+<meta property="article:modified_time" content="2004-04-01T05:30:29&#43;08:00"/>
+
+<meta itemprop="name" content="System panic with data page fault in ATQ_F_dequeue">
+<meta itemprop="description" content="data page fault in ATQ_F_dequeue routine.">
+
+
+<meta itemprop="datePublished" content="2004-04-01T05:30:29&#43;08:00" />
+<meta itemprop="dateModified" content="2004-04-01T05:30:29&#43;08:00" />
+<meta itemprop="wordCount" content="1965">
+
+
+
+<meta itemprop="keywords" content="hp-ux,kernel,panic,data_page_fault," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="System panic with data page fault in ATQ_F_dequeue"/>
+<meta name="twitter:description" content="data page fault in ATQ_F_dequeue routine."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Chaos</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Chaos</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">System panic with data page fault in ATQ_F_dequeue</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2004-04-01 </span>
+        <div class="post-category">
+            <a href="/categories/tech/"> tech </a>
+            </div>
+          <span class="more-meta"> 1965 words </span>
+          <span class="more-meta"> 10 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#data-page-fault-panic">Data page fault panic</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h2 id="data-page-fault-panic">Data page fault panic</h2>
+
+<p>data page fault in ATQ_F_dequeue routine</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span><span class="lnt">232
+</span><span class="lnt">233
+</span><span class="lnt">234
+</span><span class="lnt">235
+</span><span class="lnt">236
+</span><span class="lnt">237
+</span><span class="lnt">238
+</span><span class="lnt">239
+</span><span class="lnt">240
+</span><span class="lnt">241
+</span><span class="lnt">242
+</span><span class="lnt">243
+</span><span class="lnt">244
+</span><span class="lnt">245
+</span><span class="lnt">246
+</span><span class="lnt">247
+</span><span class="lnt">248
+</span><span class="lnt">249
+</span><span class="lnt">250
+</span><span class="lnt">251
+</span><span class="lnt">252
+</span><span class="lnt">253
+</span><span class="lnt">254
+</span><span class="lnt">255
+</span><span class="lnt">256
+</span><span class="lnt">257
+</span><span class="lnt">258
+</span><span class="lnt">259
+</span><span class="lnt">260
+</span><span class="lnt">261
+</span><span class="lnt">262
+</span><span class="lnt">263
+</span><span class="lnt">264
+</span><span class="lnt">265
+</span><span class="lnt">266
+</span><span class="lnt">267
+</span><span class="lnt">268
+</span><span class="lnt">269
+</span><span class="lnt">270
+</span><span class="lnt">271
+</span><span class="lnt">272
+</span><span class="lnt">273
+</span><span class="lnt">274
+</span><span class="lnt">275
+</span><span class="lnt">276
+</span><span class="lnt">277
+</span><span class="lnt">278
+</span><span class="lnt">279
+</span><span class="lnt">280
+</span><span class="lnt">281
+</span><span class="lnt">282
+</span><span class="lnt">283
+</span><span class="lnt">284
+</span><span class="lnt">285
+</span><span class="lnt">286
+</span><span class="lnt">287
+</span><span class="lnt">288
+</span><span class="lnt">289
+</span><span class="lnt">290
+</span><span class="lnt">291
+</span><span class="lnt">292
+</span><span class="lnt">293
+</span><span class="lnt">294
+</span><span class="lnt">295
+</span><span class="lnt">296
+</span><span class="lnt">297
+</span><span class="lnt">298
+</span><span class="lnt">299
+</span><span class="lnt">300
+</span><span class="lnt">301
+</span><span class="lnt">302
+</span><span class="lnt">303
+</span><span class="lnt">304
+</span><span class="lnt">305
+</span><span class="lnt">306
+</span><span class="lnt">307
+</span><span class="lnt">308
+</span><span class="lnt">309
+</span><span class="lnt">310
+</span><span class="lnt">311
+</span><span class="lnt">312
+</span><span class="lnt">313
+</span><span class="lnt">314
+</span><span class="lnt">315
+</span><span class="lnt">316
+</span><span class="lnt">317
+</span><span class="lnt">318
+</span><span class="lnt">319
+</span><span class="lnt">320
+</span><span class="lnt">321
+</span><span class="lnt">322
+</span><span class="lnt">323
+</span><span class="lnt">324
+</span><span class="lnt">325
+</span><span class="lnt">326
+</span><span class="lnt">327
+</span><span class="lnt">328
+</span><span class="lnt">329
+</span><span class="lnt">330
+</span><span class="lnt">331
+</span><span class="lnt">332
+</span><span class="lnt">333
+</span><span class="lnt">334
+</span><span class="lnt">335
+</span><span class="lnt">336
+</span><span class="lnt">337
+</span><span class="lnt">338
+</span><span class="lnt">339
+</span><span class="lnt">340
+</span><span class="lnt">341
+</span><span class="lnt">342
+</span><span class="lnt">343
+</span><span class="lnt">344
+</span><span class="lnt">345
+</span><span class="lnt">346
+</span><span class="lnt">347
+</span><span class="lnt">348
+</span><span class="lnt">349
+</span><span class="lnt">350
+</span><span class="lnt">351
+</span><span class="lnt">352
+</span><span class="lnt">353
+</span><span class="lnt">354
+</span><span class="lnt">355
+</span><span class="lnt">356
+</span><span class="lnt">357
+</span><span class="lnt">358
+</span><span class="lnt">359
+</span><span class="lnt">360
+</span><span class="lnt">361
+</span><span class="lnt">362
+</span><span class="lnt">363
+</span><span class="lnt">364
+</span><span class="lnt">365
+</span><span class="lnt">366
+</span><span class="lnt">367
+</span><span class="lnt">368
+</span><span class="lnt">369
+</span><span class="lnt">370
+</span><span class="lnt">371
+</span><span class="lnt">372
+</span><span class="lnt">373
+</span><span class="lnt">374
+</span><span class="lnt">375
+</span><span class="lnt">376
+</span><span class="lnt">377
+</span><span class="lnt">378
+</span><span class="lnt">379
+</span><span class="lnt">380
+</span><span class="lnt">381
+</span><span class="lnt">382
+</span><span class="lnt">383
+</span><span class="lnt">384
+</span><span class="lnt">385
+</span><span class="lnt">386
+</span><span class="lnt">387
+</span><span class="lnt">388
+</span><span class="lnt">389
+</span><span class="lnt">390
+</span><span class="lnt">391
+</span><span class="lnt">392
+</span><span class="lnt">393
+</span><span class="lnt">394
+</span><span class="lnt">395
+</span><span class="lnt">396
+</span><span class="lnt">397
+</span><span class="lnt">398
+</span><span class="lnt">399
+</span><span class="lnt">400
+</span><span class="lnt">401
+</span><span class="lnt">402
+</span><span class="lnt">403
+</span><span class="lnt">404
+</span><span class="lnt">405
+</span><span class="lnt">406
+</span><span class="lnt">407
+</span><span class="lnt">408
+</span><span class="lnt">409
+</span><span class="lnt">410
+</span><span class="lnt">411
+</span><span class="lnt">412
+</span><span class="lnt">413
+</span><span class="lnt">414
+</span><span class="lnt">415
+</span><span class="lnt">416
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">System Crash Dump Analysis Report
+=================================
+
+Symptom
+-------
+ System panic with data page fault in ATQ_F_dequeue routine
+ while system went to memory presure.
+ 
+Root Cause
+----------
+ It seems there is a bug that results in a data page fault
+ panic when memory allocation has had to be delayed.
+
+Action Plan
+-----------
+Catalog     Text      (16 patches 69MB)
+==========  ===============================================
+PHCO_21187  cumulative SAM/ObAM patch
+PHCO_23651  fsck_vxfs(1M) cumulative patch
+PHCO_23791  LVM commands cumulative patch
+PHKL_18543  PM/VM/UFS/async/scsi/io/DMAPI/JFS/perf patch
+PHKL_20016  2nd CPU not recognized in G70/H70/I70
+PHKL_22589  LOFS, select(), IDS/9000 and umount race fix
+PHKL_23409  NFS, Large Data Space, kernel memory leak
+PHKL_23842  signal,threads,spinlock,scheduler,IDS,q3p
+PHKL_27980  VxFS 3.1 cumulative patch: CR_EIEM
+PHKL_28150  LVM Cumulative Patch w/Performance Upgrades
+PHKL_28766  Probe,IDDS,PM,VM,PA-8700,AIO,T600,FS,PDC,CLK
+PHKL_29385  IDS/9000; syscalls; eventports; dup2() race
+PHKL_29434  POSIX AIO;getdirentries;MVFS;rcp;mmap/IDS;
+PHNE_27902  Cumulative STREAMS Patch
+PHNE_28754  ATM PCI, HSC and HP-PB cumulative patch
+PHNE_29473  cumulative ARPA Transport patch
+
+
+
+Delay Analysis
+--------------
+
+			=======================
+			= General Information =
+			=======================
+
+Dump time Thu Apr  1 05:30:29 2004 UTC-8
+System has been up 77 days, 3 hours, 16 minutes.
+
+System Name      : HP-UX
+Node Name        : localhost
+Model            : 9000/800/N4000-36
+HP-UX version    : B.11.00 (64-bit Kernel)
+Number of CPU&#39;s  : 2
+Disabled CPU&#39;s   : 0
+CPU type         : PCXW (360 Mhz)
+CPU Architecture : PA-RISC 2.0
+Load average     : 56.99  50.96  38.49  
+
+			================
+			= Crash Events =
+			================
+
+Panic string : Data page fault
+Getting trap information from trap marker at 0xf2e7400.0x400003ffffff0c20
+
+Trap information
+================
+
+Type 15: Data TLB Miss Fault/Data Page Fault
+
+Interruption Instruction Register:
+	IIR = 0x53970000
+
+Interruption Space and Offset Registers:
+	ISR.IOR = 0x86400.0x10104937238
+
+Interruption Instruction Address Queue:
+	PCSQ.PCOQ = 0x0.0x25dc7c = ATQ_F_dequeue+0x14
+
+Interrupt Instruction at ATQ_F_dequeue+0x14:
+	ldd  0(ret0),arg3
+
+Virtual address information:
+
+VA 0x86400.0x10104937238 does not have a translation.
+  Hashing details:
+  Primary:
+    pdirhash=0x10965c0=htbl[19246]
+                            vtag=0x00086501 0x00004937
+             hpde2_0_t pde_next   pde_space  pde_vpage
+             0x10965c0 0x0000000 0x00000001 0x00004b2e
+
+
+Stack Trace for Crash event 0
+=============================
+
+==============  EVENT  ============================
+= Event #0 is PANIC on CPU #0
+= p crash_event_t 0x22000
+= p rpb_t 0x993e08
+= Using pc from pim.wide.rp_rp_hi = 0x449e4c
+==============  EVENT  ============================
+SR5=0x0f2e7400
+                SP         RP Return Name
+0x400003ffffff13c0 0x00449e4c panic+0x14
+0x400003ffffff1340 0x0045dac0 report_trap_or_int_and_panic+0x80
+0x400003ffffff12c0 0x0017ade8 trap+0xdb8
+0x400003ffffff10f0 0x00179b54 thandler+0xd20
++-------------  TRAP  ----------------------------
+|  Trap type 15 in KERNEL mode at 0x25dc7c (ATQ_F_dequeue+0x14)
+|  p struct save_state 0xf2e7400.0x400003ffffff0c20
++-------------  TRAP  ----------------------------
+SR5=0x0f2e7400
+                SP         RP Return Name
+0x400003ffffff0c20 0x0025dc7c ATQ_F_dequeue+0x14
+0x400003ffffff0c20 0x00353ef0 ABC_F0_bufcall_handle+0x88
+0x400003ffffff0bb0 0x001658f4 csq_protect+0x2ac
+0x400003ffffff0ad0 0x006f9fa0 bufcall_rsrv+0x90
+0x400003ffffff09f0 0x006f9a10 str_mem_daemon+0x250
+0x400003ffffff0940 0x003d8cc0 main+0x7b0
+0x400003ffffff0840 0x0017171c $vstart+0x48
+0x400003ffffff07f0 0x002bf64c $locore+0x94
+
+Stack Trace for Crash event 0 with all args
+===========================================
+
+==============  EVENT  ============================
+= Event #0 is PANIC on CPU #0
+= p crash_event_t 0x22000
+= p rpb_t 0x993e08
+= Using pc from pim.wide.rp_rp_hi = 0x449e4c
+==============  EVENT  ============================
+SR5=0x0f2e7400
+                SP         RP Return Name
+0x400003ffffff13c0 0x00449e4c panic+0x14
+0x400003ffffff1340 0x0045dac0 report_trap_or_int_and_panic+0x80
+         arg0: 0x0000000000000001
+         arg1: 0x000000000000000f
+         arg2: 0x400003ffffff0c20
+0x400003ffffff12c0 0x0017ade8 trap+0xdb8
+         ....  --------n/a-------
+         arg1: 0x400003ffffff0c20
+0x400003ffffff10f0 0x00179b54 thandler+0xd20
++-------------  TRAP  ----------------------------
+|  Trap type 15 in KERNEL mode at 0x25dc7c (ATQ_F_dequeue+0x14)
+|  p struct save_state 0xf2e7400.0x400003ffffff0c20
++-------------  TRAP  ----------------------------
+SR5=0x0f2e7400
+                SP         RP Return Name
+0x400003ffffff0c20 0x0025dc7c ATQ_F_dequeue+0x14
+         arg0: 0x0000000000aaabe8
+0x400003ffffff0c20 0x00353ef0 ABC_F0_bufcall_handle+0x88
+         arg0: 0x0000000000aaabe0
+0x400003ffffff0bb0 0x001658f4 csq_protect+0x2ac
+         arg0: 0x0000000000000000
+         arg1: 0x0000000000000000
+         arg2: 0x0000000000353e68
+         arg3: 0x0000000000aaabe0
+         arg4: 0x400003ffffff0a38
+         arg5: 0x0000000000000001
+0x400003ffffff0ad0 0x006f9fa0 bufcall_rsrv+0x90
+0x400003ffffff09f0 0x006f9a10 str_mem_daemon+0x250
+0x400003ffffff0940 0x003d8cc0 main+0x7b0
+0x400003ffffff0840 0x0017171c $vstart+0x48
+0x400003ffffff07f0 0x002bf64c $locore+0x94
+
+			==================
+			= Memory Globals =
+			==================
+
+Physical Memory     = 131072 pages (512.00 MB)
+Free Memory         = 0 pages
+Average Free Memory = 0 pages
+gpgslim             = 1024 pages (4.00 MB)
+lotsfree            = 6706 pages (26.20 MB)
+desfree             = 1024 pages (4.00 MB)
+minfree             = 256 pages (1.00 MB)
+
+Note:  Free memory is desperately low (freemem less than minfree) !
+Note:  We have memory sleepers !
+Note:  There are 37 deactivated processes !
+
+deactload: 35.83  25.71  18.76  
+maxpendpageouts = 22
+pageoutrate     = 22    curr_pgrate = 494
+min_pgrate      = 25    max_pgrate  = 25
+lowmemdeact     = 20    thrashdeact = 60
+
+
+			=======================
+			= Kernel Memory Usage =
+			=======================
+
+
+----------------------------------------------------------------------
+Pfdat processing:
+
+Scanning 121711 pfdat entries (be patient) ...
+
+Warning: Found a P_BAD page (pfn 0x118a8, pfd_t 0x2971300)
+Warning: P_BAD is set by the memory diagnostics (dmem scrubbing).
+Warning: Found a P_BAD page (pfn 0x126a9, pfd_t 0x29c9360)
+Warning: Found a P_BAD page (pfn 0x1f01e, pfd_t 0x2eb5f40)
+
+----------------------------------------------------------------------
+Physical memory usage summary (in page/byte/percent):
+
+Physmem             =   131072  512.0m 100%  Physical memory
+  Freemem           =        0    0.0k   0%  Free physical memory
+  Used              =   131072  512.0m 100%  Used physical memory
+    System          =    77204  301.6m  59%  By kernel:
+      text          =     2185    8.5m   2%   text
+      data          =      365    1.4m   0%   data
+      bss           =      936    3.7m   1%   bss
+      Static        =    12818   50.1m  10%   for text/static data
+      Dynamic       =    41076  160.5m  31%   for dynamic data
+      Bufcache      =    23037   90.0m  18%   for buffer cache
+      Eqmem         =       17   68.0k   0%   for equiv. mapped memory
+      SCmem         =      256    1.0m   0%   for critical memory
+    User            =    53815  210.2m  41%  By user processes:
+      Uarea         =     3248   12.7m   2%   for thread uareas
+    Disowned        =       47  188.0k   0%  Disowned pages
+    Bad             =        3   12.0k   0%  Bad
+
+----------------------------------------------------------------------
+Kernel dynamic memory usage (in page/byte/percent):
+
+Dynamic             =    41076  160.5m  31%  Kernel dynamic memory
+  MALLOC            =    35701  139.5m  27%  Memory buckets
+    bucket[5]       =     9515   37.2m   7%   size    32 bytes
+    bucket[6]       =       94  376.0k   0%   size    64 bytes
+    bucket[7]       =     1225    4.8m   1%   size   128 bytes
+    bucket[8]       =     1415    5.5m   1%   size   256 bytes
+    bucket[9]       =     1709    6.7m   1%   size   512 bytes
+    bucket[10]      =     1127    4.4m   1%   size  1024 bytes
+    bucket[11]      =     5506   21.5m   4%   size  2048 bytes
+    bucket[12]      =    12289   48.0m   9%   size  4096 bytes
+    bucket[13]      =      208  832.0k   0%   size     2 pages
+    bucket[14]      =       24   96.0k   0%   size     3 pages
+    bucket[15]      =       56  224.0k   0%   size     4 pages
+    bucket[16]      =       20   80.0k   0%   size     5 pages
+    bucket[17]      =       66  264.0k   0%   size     6 pages
+    bucket[18]      =        7   28.0k   0%   size     7 pages
+    bucket[19]      =       40  160.0k   0%   size     8 pages
+    bucket[20]      =     2400    9.4m   2%   size &gt;   8 pages
+  Reserved          =       12   48.0k   0%  Reserved pools
+  Kalloc            =     5329   20.8m   4%  kalloc()
+    SuperPagePool   =        0    0.0k   0%    Kernel superpage cache
+    BufcacheBufs    =     4015   15.7m   3%    Buffer cache bufs
+    BufcacheHash    =      320    1.2m   0%    Buffer cache hash heads
+    Other           =      994    3.9m   1%    Other...
+  Eqalloc           =       34  136.0k   0%  eqalloc()
+
+			=====================
+			= User Memory Usage =
+			=====================
+
+
+Top 10 Processes sorted by physical size (in pages):
+
+pid   command        virtual  physical
+----- -------------- -------- --------
+13282 notificationSe 8702     5108    
+19772 NotifyLog      152165   4880    
+19773 NotifyLog      152173   4596    
+5408  fxaCompress    137921   4198    
+18426 rpc.ldmd       136372   3938    
+19782 pqact          136293   3674    
+20417 NpqFwd         138524   3669    
+18437 pqexpire       136179   3657    
+2388  proAgent       2679     890     
+2030  midaemon       3125     888     
+
+			========================
+			= Buffer Cache Globals =
+			========================
+
+dbc_max_pct           = 30 %
+dbc_min_pct           = 5 %
+dbc current pct       = 17.6 %
+bufpages              = 23037 pages (89.99 MB)
+Number of buf headers = 28161
+
+fixed_size_cache = 0 
+dbc_parolemem    = 0 
+dbc_stealavg     = 2289 
+dbc_ceiling      = 39321 pages (153.60 MB)
+dbc_nbuf         = 3276 
+dbc_bufpages     = 6553 pages (25.60 MB)
+dbc_vhandcredit  = 73269499 
+orignbuf         = 0 
+origbufpages     = 0 pages
+
+			====================
+			= Swap Information =
+			====================
+
+swapinfo -mt emulation
+======================
+
+             Mb      Mb      Mb   PCT  START/      Mb
+TYPE      AVAIL    USED    FREE  USED   LIMIT RESERVE  PRI  NAME
+dev        1024     261     763   25%       0       -    1  LVM vg00/lv2
+reserve       -     249    -249
+memory      362     231     131   64%
+total      1386     741     645   53%       -       0    -
+
+
+			========================
+			= Processor Clock Info =
+			========================
+
+hardclock_late = 0
+itick_per_tick = 3600000
+lbolt          = 666465743 (0x27b975cf)
+
+    event mpi                rpb                delta      clk eiem eirr PSW
+cpu type  timeinval          interval timer     secs:ticks od  0,4  0,4  I
+--- ----- ------------------ ------------------ ---------- --- ---- ---- ---
+0   PANIC 0x88630cb6438e0    0x8862d64383a75        40:59  0   1 0  0 0  1 
+1   TOC   0x88630cb646d11    0x88630cb4f5320         0:0   0   1 1  0 0  1 
+
+
+			=================
+			= Syswait Array =
+			=================
+
+cpu iowait
+--- ------
+0   23
+1   11
+
+
+			=================
+			= Load Averages =
+			=================
+
+
+avenrun
+=======
+56.99  50.96  38.49  
+
+real_run
+========
+1.395185  1.030932  0.830037  
+
+pwrun (&#34;fast&#34; io wait)
+======================
+100.243308  94.528341  73.443166  
+
+mp_avenrun
+==========
+cpu0 : 75.019541  67.054208  49.600715  
+cpu1 : 38.969246  34.864238  27.387605  
+
+			======================
+			= Thread Information =
+			======================
+
+25 Threads ran in the last second
+29 Threads ran in the last 5 seconds
+30 Threads ran in the last 10 seconds
+58 Threads ran in the last minute
+296 Threads ran in the last hour
+
+statdaemon ran 87 ticks ago
+
+
+Most Common Wait Channels
+=========================
+                                                          ticks since run:
+Wait Channel                                       count  longest    shortest
+------------                                       -----  ---------- ----------
+selwait                                            37     666442388  119       
+vx_rwsleep_lock(0x100c99fa1)                       20     98393      65362     
+async_bufhead                                      16     505479013  505479013 
+vx_inactive_thread_sv                              16     31835      1835      
+memory_sleepers                                    14     66201      32227     
+vx_rwsleep_lock(0x104e8df20)                       13     292544     292512    
+freemem                                            12     60200      6000      
+vx_inactive_thread_sv+0x8                          11     24435      4435      
+LVM vg01/lv1                                       9      320445     77098     
+ogetblk(0x1007f46d8)                               9      242897     122883    
+proc[104]                                          8      666423235  666422190 
+vx_svar_sleep_unlock(0x102222c78)                  8      294081     4057      
+ogetblk(0x1004d8248)                               5      272863     152799    
+lvmkd_q                                            5      1887       1887      
+streams_blk_sync                                   2      666457356  666457356 
+*uptr+0                                            2      205938694  122608    
+locklist+0x13e8                                    2      305846     305164    
+streams_mp_sync                                    2      159        59        
+
+
+Most Common Sleep Callers
+=========================
+                                                          ticks since run:
+Sleep Caller                                       count  longest    shortest
+------------                                       -----  ---------- ----------
+ksleep()                                           75     666423444  8         
+vx_rwsleep_lock()                                  35     310228     65362     
+wait1()                                            34     666423235  122813    
+vx_inactive_thread()                               29     31835      1835      
+select()                                           28     666442388  119       
+ogetblk()                                          27     320445     122733    
+sysmemreserve()                                    26     66201      6000      
+hpstreams_read_int()                               24     666423219  666421952 
+vx_event_wait()                                    23     4060       1         
+async_daemon()                                     16     505479013  505479013 
+sosleep()                                          14     666421499  58504     
+biowait()                                          12     320594     74113     
+poll()                                             11     666438672  1033      
+fifo_rdwr()                                        8      302836     98394     
+vx_svar_sleep_unlock()                             8      294081     4057      
+lvmkd_daemon()                                     5      1887       1887      
+getmsg_subr()                                      3      666446198  666421778 
+streams_getmsg()                                   3      666423197  666422158 
+pm_sigwait()                                       3      15084      66        
+locked()                                           2      305846     305164    </pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/hp-ux/">hp-ux</a>
+          <a href="/tags/kernel/">kernel</a>
+          <a href="/tags/panic/">panic</a>
+          <a href="/tags/data_page_fault/">data_page_fault</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/2004/04/hang-long-run-queue/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">System mini hang when long run queue.</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/2004/01/hang-monopolize-monarch-midaemon/">
+            <span class="next-text nav-default">System hang due to midaemon is monopolizing the monarch.</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="http://localhost:1313" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="http://localhost:1313" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="http://localhost:1313" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="http://localhost:1313" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="http://localhost:1313" class="iconfont icon-google" title="google"></a>
+      <a href="http://localhost:1313" class="iconfont icon-github" title="github"></a>
+      <a href="http://localhost:1313" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="http://localhost:1313" class="iconfont icon-zhihu" title="zhihu"></a>
+      <a href="http://localhost:1313" class="iconfont icon-douban" title="douban"></a>
+      <a href="http://localhost:1313" class="iconfont icon-pocket" title="pocket"></a>
+      <a href="http://localhost:1313" class="iconfont icon-tumblr" title="tumblr"></a>
+      <a href="http://localhost:1313" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="http://localhost:1313" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="http://localhost:1313" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https://dyiwu.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Dyi-Wu Liu </span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
