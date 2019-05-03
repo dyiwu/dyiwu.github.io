@@ -29,9 +29,7 @@
       <pubDate>Fri, 26 Apr 2019 20:03:10 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/post/tech/install_hugo_academic_kickstart/</guid>
-      <description>Install Hugo with Academic theme kickstart  File location:  Local repository saved under ~/Hugo/Site/chaos Generated web site saved under ~/Hugo/Site/chaos/public directory and deploy to github as https://dyiwu.github.io/   Fork the Academic Kickstart repository from sourcethemes/academic-kickstart as dyiwu/academic-kickstart repo (https://github.com/sourcethemes/academic-kickstart)
- rename the forked repo from academic-kickstart to chaos
- clone your dyiwu/chaos repo into local file system: 1 2 3 4  $ cd ~/Hugo/Site $ git clone https://github.</description>
+      <description>Install Hugo with Academic theme kickstart File location: Local repository saved under ~/Hugo/Site/chaos Generated web site saved under ~/Hugo/Site/chaos/public directory and deploy to github as https://dyiwu.github.io/ Fork the Academic Kickstart repository from sourcethemes/academic-kickstart as dyiwu/academic-kickstart repo (https://github.com/sourcethemes/academic-kickstart) rename the forked repo from academic-kickstart to chaos clone your dyiwu/chaos repo into local file system: 1 2 3 4 $ cd ~/Hugo/Site $ git clone https://github.com/dyiwu/chaos.git $ cd chaos $ git submodule</description>
     </item>
     
     <item>
