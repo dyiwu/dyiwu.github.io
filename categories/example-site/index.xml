@@ -223,6 +223,15 @@ Andrew-&amp;gt;&amp;gt;China: I am good thanks!&lt;/code&gt;&lt;/pre&gt;&lt;/td&
     </item>
     
     <item>
+      <title>test JS Sequence Diagrams</title>
+      <link>https://dyiwu.github.io/post/examplesite/test/</link>
+      <pubDate>Wed, 04 Mar 2015 21:57:45 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/examplesite/test/</guid>
+      <description> Usage 1 2 3 4  Andrew-&amp;gt;China: Says Hello Note right of China: China thinks\nabout it China--&amp;gt;Andrew: How are you? Andrew-&amp;gt;&amp;gt;China: I am good thanks!   Examples 1 2 3 4 5  Title: Here is a title A-&amp;gt;B: Normal line B--&amp;gt;C: Dashed line C-&amp;gt;&amp;gt;D: Open arrow D--&amp;gt;&amp;gt;A: Dashed open arrow   1 2 3 4 5  # Example of a comment. Note left of A: Note to the\n left of A Note right of A: Note to the\n right of A Note over A: Note over A Note over A,B: Note over both A and B  </description>
+    </item>
+    
+    <item>
       <title>Syntax Highlighting</title>
       <link>https://dyiwu.github.io/post/examplesite/syntax-highlighting/</link>
       <pubDate>Tue, 30 Aug 2011 16:01:23 +0800</pubDate>

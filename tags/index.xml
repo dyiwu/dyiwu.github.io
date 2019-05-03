@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Dyi-Wu Liu &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 02 May 2019 17:34:39 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 03 May 2019 11:00:16 +0800</lastBuildDate>
     
 	<atom:link href="https://dyiwu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>修身</title>
+      <link>https://dyiwu.github.io/tags/%E4%BF%AE%E8%BA%AB/</link>
+      <pubDate>Fri, 03 May 2019 11:00:16 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/%E4%BF%AE%E8%BA%AB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>心靈雞湯</title>
+      <link>https://dyiwu.github.io/tags/%E5%BF%83%E9%9D%88%E9%9B%9E%E6%B9%AF/</link>
+      <pubDate>Fri, 03 May 2019 11:00:16 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/%E5%BF%83%E9%9D%88%E9%9B%9E%E6%B9%AF/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>bookmark</title>
@@ -54,24 +72,6 @@
       <pubDate>Wed, 01 May 2019 14:53:00 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/tags/setup/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>修身</title>
-      <link>https://dyiwu.github.io/tags/%E4%BF%AE%E8%BA%AB/</link>
-      <pubDate>Tue, 30 Apr 2019 13:07:33 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/%E4%BF%AE%E8%BA%AB/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>心靈雞湯</title>
-      <link>https://dyiwu.github.io/tags/%E5%BF%83%E9%9D%88%E9%9B%9E%E6%B9%AF/</link>
-      <pubDate>Tue, 30 Apr 2019 13:07:33 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/%E5%BF%83%E9%9D%88%E9%9B%9E%E6%B9%AF/</guid>
       <description></description>
     </item>
     
