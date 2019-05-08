@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>財經 on Chaos - 一個老碼農的筆記</title>
-    <link>https://dyiwu.github.io/tags/%E8%B2%A1%E7%B6%93/</link>
-    <description>Recent content in 財經 on Chaos - 一個老碼農的筆記</description>
+    <title>臺股 on Chaos - 一個老碼農的筆記</title>
+    <link>https://dyiwu.github.io/tags/%E8%87%BA%E8%82%A1/</link>
+    <description>Recent content in 臺股 on Chaos - 一個老碼農的筆記</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Dyi-Wu Liu &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
     <lastBuildDate>Thu, 09 May 2019 01:49:05 +0800</lastBuildDate>
     
-	<atom:link href="https://dyiwu.github.io/tags/%E8%B2%A1%E7%B6%93/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dyiwu.github.io/tags/%E8%87%BA%E8%82%A1/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -34,24 +34,6 @@
       
       <guid>https://dyiwu.github.io/post/life/tw-stock-market-rule/</guid>
       <description>&lt;h3 id=&#34;臺股交易時發生的費用&#34;&gt;臺股交易時發生的費用&lt;/h3&gt;</description>
-    </item>
-    
-    <item>
-      <title>財經詞彙</title>
-      <link>https://dyiwu.github.io/post/life/short_interest/</link>
-      <pubDate>Thu, 25 Apr 2019 16:27:39 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/life/short_interest/</guid>
-      <description>財經詞彙 空單餘額 (Short Interest) 什麼是空單餘額 (Short Interest)？ 市場上未回補的空頭數量，也就是交易者借券賣出、仍未買回的總數量。 Investopedia 的解釋 空單餘額一般</description>
-    </item>
-    
-    <item>
-      <title>Finance bookmarks</title>
-      <link>https://dyiwu.github.io/post/bookmarks/finance-bookmarks/</link>
-      <pubDate>Sat, 30 Mar 2019 19:33:39 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/bookmarks/finance-bookmarks/</guid>
-      <description>This page keep the frequently used bookmark about finance. 銀行匯率比較·匯率查詢·匯率換算 FindRate.TW 手機版 - 銀行匯率比較·匯率查詢·匯率換算 FindRate.TW Nasdaq Quotes Investopedia</description>
     </item>
     
   </channel>

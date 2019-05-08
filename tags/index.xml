@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Dyi-Wu Liu &lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 03 May 2019 11:00:16 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 09 May 2019 01:49:05 +0800</lastBuildDate>
     
 	<atom:link href="https://dyiwu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>臺股</title>
+      <link>https://dyiwu.github.io/tags/%E8%87%BA%E8%82%A1/</link>
+      <pubDate>Thu, 09 May 2019 01:49:05 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/%E8%87%BA%E8%82%A1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>財經</title>
+      <link>https://dyiwu.github.io/tags/%E8%B2%A1%E7%B6%93/</link>
+      <pubDate>Thu, 09 May 2019 01:49:05 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/%E8%B2%A1%E7%B6%93/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>修身</title>
@@ -103,15 +121,6 @@
     </item>
     
     <item>
-      <title>財經</title>
-      <link>https://dyiwu.github.io/tags/%E8%B2%A1%E7%B6%93/</link>
-      <pubDate>Thu, 25 Apr 2019 16:27:39 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/%E8%B2%A1%E7%B6%93/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>markdown</title>
       <link>https://dyiwu.github.io/tags/markdown/</link>
       <pubDate>Mon, 22 Apr 2019 20:23:07 +0800</pubDate>
@@ -184,15 +193,6 @@
     </item>
     
     <item>
-      <title>tag-3</title>
-      <link>https://dyiwu.github.io/tags/tag-3/</link>
-      <pubDate>Tue, 10 Jul 2018 00:00:00 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/tag-3/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>English</title>
       <link>https://dyiwu.github.io/tags/english/</link>
       <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
@@ -202,38 +202,11 @@
     </item>
     
     <item>
-      <title>tag-2</title>
-      <link>https://dyiwu.github.io/tags/tag-2/</link>
-      <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/tag-2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tag-4</title>
-      <link>https://dyiwu.github.io/tags/tag-4/</link>
-      <pubDate>Wed, 30 Aug 2017 01:53:34 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/tag-4/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>日本語</title>
       <link>https://dyiwu.github.io/tags/%E6%97%A5%E6%9C%AC%E8%AA%9E/</link>
       <pubDate>Wed, 30 Aug 2017 01:53:34 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/tags/%E6%97%A5%E6%9C%AC%E8%AA%9E/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tag-1</title>
-      <link>https://dyiwu.github.io/tags/tag-1/</link>
-      <pubDate>Wed, 30 Aug 2017 01:37:56 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/tag-1/</guid>
       <description></description>
     </item>
     
@@ -297,15 +270,6 @@
       <pubDate>Tue, 30 Aug 2011 16:01:23 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/tags/syntax-highlighting/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tag-5</title>
-      <link>https://dyiwu.github.io/tags/tag-5/</link>
-      <pubDate>Tue, 30 Aug 2011 16:01:23 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/tag-5/</guid>
       <description></description>
     </item>
     
