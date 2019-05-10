@@ -10,31 +10,50 @@
   
   <url>
     <loc>https://dyiwu.github.io/categories/</loc>
-    <lastmod>2019-05-09T01:49:05+08:00</lastmod>
+    <lastmod>2019-05-10T14:27:47+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/</loc>
-    <lastmod>2019-05-09T01:49:05+08:00</lastmod>
+    <lastmod>2019-05-10T14:27:47+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://dyiwu.github.io/post/life/daily-exercise/</loc>
+    <lastmod>2019-05-10T14:27:47+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dyiwu.github.io/post/</loc>
-    <lastmod>2019-05-09T01:49:05+08:00</lastmod>
+    <lastmod>2019-05-10T14:27:47+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/tags/</loc>
-    <lastmod>2019-05-09T01:49:05+08:00</lastmod>
+    <lastmod>2019-05-10T14:27:47+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/categories/life/</loc>
-    <lastmod>2019-05-09T01:49:05+08:00</lastmod>
+    <lastmod>2019-05-10T14:27:47+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/%E6%97%A5%E8%AA%B2/</loc>
+    <lastmod>2019-05-10T14:27:47+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/%E9%A4%8A%E7%94%9F/</loc>
+    <lastmod>2019-05-10T14:27:47+08:00</lastmod>
     <priority>0</priority>
   </url>
   
