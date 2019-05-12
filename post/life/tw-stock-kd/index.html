@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>KD 指標 - Chaos - 一個老碼農的筆記</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Dyi-Wu Liu" /><meta name="description" content="KD指標 KD指標是使用RSV的加權移動平均來計算的， RSV數據表達的是「與最近9天相比，今天的股價是強還是弱?」。 收盤價、KD 數值 KD數值越" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.4 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://dyiwu.github.io/post/life/tw-stock-kd/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="KD 指標" />
+<meta property="og:description" content="KD指標 KD指標是使用RSV的加權移動平均來計算的， RSV數據表達的是「與最近9天相比，今天的股價是強還是弱?」。 收盤價、KD 數值 KD數值越" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dyiwu.github.io/post/life/tw-stock-kd/" />
+<meta property="article:published_time" content="2019-05-12T23:43:05&#43;08:00"/>
+<meta property="article:modified_time" content="2019-05-12T23:43:05&#43;08:00"/>
+
+<meta itemprop="name" content="KD 指標">
+<meta itemprop="description" content="KD指標 KD指標是使用RSV的加權移動平均來計算的， RSV數據表達的是「與最近9天相比，今天的股價是強還是弱?」。 收盤價、KD 數值 KD數值越">
+
+
+<meta itemprop="datePublished" content="2019-05-12T23:43:05&#43;08:00" />
+<meta itemprop="dateModified" content="2019-05-12T23:43:05&#43;08:00" />
+<meta itemprop="wordCount" content="1245">
+
+
+
+<meta itemprop="keywords" content="財經,臺股,技術分析," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="KD 指標"/>
+<meta name="twitter:description" content="KD指標 KD指標是使用RSV的加權移動平均來計算的， RSV數據表達的是「與最近9天相比，今天的股價是強還是弱?」。 收盤價、KD 數值 KD數值越"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Chaos</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Chaos</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">KD 指標</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-05-12 </span>
+        <div class="post-category">
+            <a href="/categories/life/"> life </a>
+            </div>
+          <span class="more-meta"> 1245 words </span>
+          <span class="more-meta"> 3 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#kd指標">KD指標</a></li>
+<li><a href="#rsv計算方式">RSV計算方式</a></li>
+<li><a href="#kd-指標的應用">KD 指標的應用</a></li>
+<li><a href="#施昇輝0050的操作秘訣">施昇輝0050的操作秘訣</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h3 id="kd指標">KD指標</h3>
+
+<p>KD指標是使用RSV的加權移動平均來計算的，
+RSV數據表達的是「與最近9天相比，今天的股價是強還是弱?」。
+<div class="admonition tip"><p class="admonition-title">收盤價、KD 數值</p></p>
+
+<p>KD數值越高代表個股的收盤價接近最近幾天的最高價。<br />
+反之KD數值越低代表個股的收盤價接近最近幾天的最低價。</p>
+
+<p></div></p>
+
+<h3 id="rsv計算方式">RSV計算方式</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">(今日收盤價 - 最近九天的最低價)/(最近九天的最高價 - 最近九天最低價)</pre></td></tr></table>
+</div>
+</div>
+<p>K值 是 RSV 和前一日的 K 的加權平均</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">K = 2/3 X (昨日K值) + 1/3 X (今日RSV)</pre></td></tr></table>
+</div>
+</div>
+<p>D值 是 K 和前一日的 D 的加權平均</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">D = 2/3 X (昨日D值) + 1/3 X (今日K值)</pre></td></tr></table>
+</div>
+</div>
+<h3 id="kd-指標的應用">KD 指標的應用</h3>
+
+<p>由於KD值可以靈敏地反映價格變化所以一般而言：
+<div class="admonition tip"><p class="admonition-title">KD值&gt;80 , KD值&lt;20</p></p>
+
+<p>KD值&gt;80表示：高檔鈍化，股價表現強勢，再上漲機率高。<br />
+KD值&lt;20表示：低檔鈍化，股價表現弱勢，下跌機率高。</p>
+
+<p></div></p>
+
+<p>而KD值另外一個常使用的判斷方式是根據公式KD值都會朝向同一個趨勢發展，但K值反應市場價格的速度較D值來的快，波動亦較D值來的大，所以當K值與D值交叉時被稱為黃金交叉或死亡交叉，是買進或賣出的指標訊號。</p>
+
+<div class="admonition tip"><p class="admonition-title">判斷方法如下</p>
+  
+K值由下而上穿越D值 為黃金交叉，行情看好。<br>              
+K值由上而下穿越D值 為死亡交叉，行情看差。
+
+</div>
+
+<p>RSV 是英文Raw Stochastic Value的縮寫，中文意思是未成熟隨機值。是股票裡面的一個概念。RSV 指標主要用來分析市場是處於&rdquo;超買&rdquo;還是&rdquo;超賣&rdquo;狀態。以9日為周期的KD線為例：
+<div class="admonition tip"><p class="admonition-title">出倉、加倉</p></p>
+
+<p>KD 高於80%的時候，市場為超買狀況，行情即將見頂，此時應當考慮出倉。<br />
+KD 低於20%的時候，市場為超賣狀況，行情即將見底，此時可以考慮加倉。</p>
+
+<p></div></p>
+
+<h3 id="施昇輝0050的操作秘訣">施昇輝0050的操作秘訣</h3>
+
+<p>施昇輝買賣的依據，說穿了，簡單到不可置信，就是依照日KD值操作：<br />
+若日KD值在20以下就大力買進；高於80，就大力賣出。</p>
+
+<ul>
+<li>若日KD值在20以下，代表股票超跌，逢低買進。</li>
+<li>若日KD值在80以上，代表股票超漲，逢高賣出。</li>
+<li>若日KD值在20以下，且K線向上超過D線，代表黃金交叉，上漲效果更好。</li>
+<li>若日KD值在80以上，且K線向下穿過D線，代表死亡交叉，下跌會更嚴重。</li>
+</ul>
+
+<p>施昇輝表示，利用KD值買賣，當然並非鐵板一塊，
+如果手上資金充裕，不用非得等到日KD值20才買進，
+在30或40以下，就可以買進，越跌越買，建立部位；
+若是手頭資金不多，那才要等到20再買進。</p>
+
+<p>至於賣出，施昇輝表示，他通常看到日K值往下，尚未穿過D值，形成「死亡交叉」時，
+就開始執行賣出。施昇輝並強調，尤其大盤跌破季線，就代表進入空頭，
+一旦反彈到季線時，就要開始賣出，不要等到死亡交叉才賣，否則可能來去又是一場空。</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">KD值落點</th>
+<th align="center">施施昇輝的操作方法</th>
+<th align="center">韋恩史達克的操作方法</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">90 以上</td>
+<td align="center">每週賣 5-8 張</td>
+<td align="center">每週賣 3 張</td>
+</tr>
+
+<tr>
+<td align="left">90 - 80</td>
+<td align="center">每週賣 3-5 張</td>
+<td align="center">每週賣 2 張</td>
+</tr>
+
+<tr>
+<td align="left">79 - 60</td>
+<td align="center">每週賣 2-3 張</td>
+<td align="center">每週賣 1 張</td>
+</tr>
+
+<tr>
+<td align="left">59 - 40</td>
+<td align="center">每週買 2-3 張</td>
+<td align="center">每週買 1 張</td>
+</tr>
+
+<tr>
+<td align="left">39 - 20</td>
+<td align="center">每週買 3-5 張</td>
+<td align="center">每週買 2 張</td>
+</tr>
+
+<tr>
+<td align="left">20 以下</td>
+<td align="center">每週買 5-8 張</td>
+<td align="center">每週買 3 張</td>
+</tr>
+</tbody>
+</table>
+
+<div class="admonition tip"><p class="admonition-title">KD指標 &#43; MACD指標的雙重判定法</p>
+  
+
+便是加入MACD柱狀由綠翻紅，且DIF值向上黃金交叉穿過MACD值的條件，
+藉以提高波段操作的準確性。
+
+</div>
+
+<p>Reference:<br />
+<a href="http://stock2012.pixnet.net/blog/post/107565208-%E5%8F%B0%E7%81%A350-0050-etf-kd-macd">KD指標 + MACD指標的雙重判定法</a></p>
+
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E8%B2%A1%E7%B6%93/">財經</a>
+          <a href="/tags/%E8%87%BA%E8%82%A1/">臺股</a>
+          <a href="/tags/%E6%8A%80%E8%A1%93%E5%88%86%E6%9E%90/">技術分析</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/life/tw-stock-which/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">臺股選股123</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/life/zhu-family-instructions-2/">
+            <span class="next-text nav-default">朱熹紫陽朱子家訓</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:dyiwu.liu@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/dyiwu" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/dyiwu.liu" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="https://linkedin.com/in/dyi-wu-liu-aaa4698" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/dyiwu" class="iconfont icon-github" title="github"></a>
+
+  <a href="https://dyiwu.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Dyi-Wu Liu &nbsp;&nbsp;&nbsp;<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a></span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

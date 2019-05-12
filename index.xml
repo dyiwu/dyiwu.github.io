@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 10 May 2019 14:27:47 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 12 May 2019 23:49:05 +0800</lastBuildDate>
     
 	<atom:link href="https://dyiwu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -22,21 +22,48 @@
     </item>
     
     <item>
+      <title>臺股選股123</title>
+      <link>https://dyiwu.github.io/post/life/tw-stock-which/</link>
+      <pubDate>Sun, 12 May 2019 23:49:05 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/life/tw-stock-which/</guid>
+      <description>以主力進出買賣超表爲基準選股 這份主力買超表很珍貴，是從每天全台灣所有券商分公司買賣紀錄統計分析出來的，可以直接從這張表裡面找到市場上主力正在</description>
+    </item>
+    
+    <item>
+      <title>KD 指標</title>
+      <link>https://dyiwu.github.io/post/life/tw-stock-kd/</link>
+      <pubDate>Sun, 12 May 2019 23:43:05 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/life/tw-stock-kd/</guid>
+      <description>KD指標 KD指標是使用RSV的加權移動平均來計算的， RSV數據表達的是「與最近9天相比，今天的股價是強還是弱?」。 收盤價、KD 數值 KD數值越</description>
+    </item>
+    
+    <item>
+      <title>朱熹紫陽朱子家訓</title>
+      <link>https://dyiwu.github.io/post/life/zhu-family-instructions-2/</link>
+      <pubDate>Sun, 12 May 2019 16:47:05 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/life/zhu-family-instructions-2/</guid>
+      <description>朱熹紫陽朱子家訓 原文錄自《紫陽朱氏宗譜》 白話文註釋 君之所貴者，仁也。 臣之所貴者，忠也。 父之所貴者，慈也。 子之所貴者，孝也。 兄之所貴者，友也。</description>
+    </item>
+    
+    <item>
+      <title>朱子家訓</title>
+      <link>https://dyiwu.github.io/post/life/zhu-family-instructions-1/</link>
+      <pubDate>Sun, 12 May 2019 15:31:05 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/life/zhu-family-instructions-1/</guid>
+      <description>朱柏廬治家格言 原文(不計標點題目共524字) 白話註釋 黎明即起，灑掃庭除，要內外整潔；既昏便息，關鎖門戶，必親自檢點。 一粥一飯，當思來處不易；</description>
+    </item>
+    
+    <item>
       <title>Daily Exercise - 日課</title>
       <link>https://dyiwu.github.io/post/life/daily-exercise/</link>
       <pubDate>Fri, 10 May 2019 14:27:47 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/post/life/daily-exercise/</guid>
       <description>&lt;h3 id=&#34;日課-武術養生-筋骨功法&#34;&gt;日課-武術養生-筋骨功法&lt;/h3&gt;</description>
-    </item>
-    
-    <item>
-      <title>臺股選股123</title>
-      <link>https://dyiwu.github.io/post/life/tw-stock-which/</link>
-      <pubDate>Thu, 09 May 2019 01:49:05 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/life/tw-stock-which/</guid>
-      <description>&lt;h3 id=&#34;以主力進出買賣超表爲基準選股&#34;&gt;以主力進出買賣超表爲基準選股&lt;/h3&gt;</description>
     </item>
     
     <item>
