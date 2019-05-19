@@ -14,10 +14,10 @@
     
     <item>
       <title>plugin-example</title>
-      <link>https://dyiwu.github.io/post/talks/plugin-example/</link>
+      <link>https://dyiwu.github.io/talks/plugin-example/</link>
       <pubDate>Thu, 16 May 2019 21:15:41 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/post/talks/plugin-example/</guid>
+      <guid>https://dyiwu.github.io/talks/plugin-example/</guid>
       <description>plugin-example This presentation demonstrates how a Reveal.js plugin can be added.
 The plugin is called revealjs-simple-gallery.
 It can make any slide an image gallery. Here are a few examples.
@@ -28,10 +28,10 @@ These were the steps to use this plugin for this reveal-hugo presentation.
     
     <item>
       <title>Logo presentation example</title>
-      <link>https://dyiwu.github.io/post/talks/logo-example/</link>
+      <link>https://dyiwu.github.io/talks/logo-example/</link>
       <pubDate>Thu, 16 May 2019 21:07:41 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/post/talks/logo-example/</guid>
+      <guid>https://dyiwu.github.io/talks/logo-example/</guid>
       <description>logo-example This presentation shows how to add a logo to each slide, like the GitHub one you see above.
 You can generalize the concept to add any additional markup to your presentations.
 See the code for this presentation
@@ -41,10 +41,10 @@ First, create a partial called body.html and put it in this directory:
     
     <item>
       <title>Section presentation example</title>
-      <link>https://dyiwu.github.io/post/talks/section-example/</link>
+      <link>https://dyiwu.github.io/talks/section-example/</link>
       <pubDate>Thu, 16 May 2019 19:21:02 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/post/talks/section-example/</guid>
+      <guid>https://dyiwu.github.io/talks/section-example/</guid>
       <description>Section Presentation This is an example of a section presentation.
 Section presentations are completely separate from the root presentation and each other.
 Additional content files can be placed in the section and will be added to the presentation in the order of their weight.</description>
@@ -52,33 +52,20 @@ Additional content files can be placed in the section and will be added to the p
     
     <item>
       <title>About talks</title>
-      <link>https://dyiwu.github.io/post/talks/abut_talks/</link>
+      <link>https://dyiwu.github.io/talks/abut_talks/</link>
       <pubDate>Thu, 16 May 2019 19:20:41 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/post/talks/abut_talks/</guid>
+      <guid>https://dyiwu.github.io/talks/abut_talks/</guid>
       <description>&lt;p&gt;Here are tech talks, presentations etc.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Chinese slide test</title>
-      <link>https://dyiwu.github.io/post/talks/chinese-test/</link>
+      <link>https://dyiwu.github.io/talks/chinese-test/</link>
       <pubDate>Thu, 16 May 2019 19:20:41 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/post/talks/chinese-test/</guid>
+      <guid>https://dyiwu.github.io/talks/chinese-test/</guid>
       <description>Hello world! This is my first slide. 中文字 知者減半、省者全無。 莫忘初心 知者減半、省者全無。 莫忘初心。 Hello Mars! This is my second slide. date: 2019-05-16T01:40:27+08:00 outputs = [&amp;ldquo;Reveal&amp;rdquo;] Page 3 of 4 Page 4 of 4</description>
-    </item>
-    
-    <item>
-      <title>Template presentation</title>
-      <link>https://dyiwu.github.io/post/talks/template-example/</link>
-      <pubDate>Thu, 16 May 2019 19:20:41 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/talks/template-example/</guid>
-      <description>Template Example This presentation shows how to take advantage of reveal-hugo&amp;rsquo;s slide template feature.
-Slide templates let you specify groups of slide attributes in one place and reuse them throughout the presentation.
-Here&amp;rsquo;s an example of using a template called blue, defined in the front matter of this presentation&amp;rsquo;s _index.md file.
-The template can contain any valid slide customization params:
-1 2 3  [reveal_hugo.templates.blue] background = &amp;#34;#0011DD&amp;#34; transition = &amp;#34;zoom&amp;#34;   Then add it to any slide using the slide shortcode:</description>
     </item>
     
   </channel>
