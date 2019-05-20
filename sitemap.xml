@@ -10,85 +10,78 @@
   
   <url>
     <loc>https://dyiwu.github.io/categories/</loc>
-    <lastmod>2019-05-16T21:15:41+08:00</lastmod>
+    <lastmod>2019-05-20T15:30:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/</loc>
-    <lastmod>2019-05-16T21:15:41+08:00</lastmod>
+    <lastmod>2019-05-20T15:30:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://dyiwu.github.io/talks/section-shortcode-example/</loc>
+    <lastmod>2019-05-20T15:30:03+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/talks/note-shortcode-example/</loc>
+    <lastmod>2019-05-20T15:30:03+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dyiwu.github.io/tags/</loc>
-    <lastmod>2019-05-16T21:15:41+08:00</lastmod>
+    <lastmod>2019-05-20T15:30:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/talks/</loc>
-    <lastmod>2019-05-16T21:15:41+08:00</lastmod>
+    <lastmod>2019-05-20T15:30:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/tags/hugo/</loc>
-    <lastmod>2019-05-16T21:15:41+08:00</lastmod>
+    <lastmod>2019-05-20T15:30:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/talks/plugin-example/</loc>
-    <lastmod>2019-05-16T21:15:41+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://dyiwu.github.io/tags/reveal.js/</loc>
-    <lastmod>2019-05-16T21:15:41+08:00</lastmod>
+    <lastmod>2019-05-20T15:30:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/categories/talk/</loc>
-    <lastmod>2019-05-16T21:15:41+08:00</lastmod>
+    <lastmod>2019-05-20T15:30:03+08:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/talks/logo-example/</loc>
-    <lastmod>2019-05-16T21:07:41+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/talks/section-example/</loc>
-    <lastmod>2019-05-16T19:21:02+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/talks/abut_talks/</loc>
-    <lastmod>2019-05-16T19:20:41+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/talks/chinese-test/</loc>
-    <lastmod>2019-05-16T19:20:41+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/categories/tech/</loc>
-    <lastmod>2019-05-16T19:20:41+08:00</lastmod>
+    <lastmod>2019-05-20T15:30:03+08:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/talks/about_talks/</loc>
+    <lastmod>2019-05-16T19:20:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/talks/chinese-slide-example/</loc>
+    <lastmod>2019-05-16T19:20:41+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
@@ -227,13 +220,13 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/categories/bookmark/</loc>
+    <loc>https://dyiwu.github.io/tags/bookmark/</loc>
     <lastmod>2019-05-02T17:34:39+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/tags/bookmark/</loc>
+    <loc>https://dyiwu.github.io/categories/bookmark/</loc>
     <lastmod>2019-05-02T17:34:39+08:00</lastmod>
     <priority>0</priority>
   </url>
