@@ -7,28 +7,36 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 20 May 2019 15:30:03 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 26 May 2019 08:02:41 +0800</lastBuildDate>
     
 	<atom:link href="https://dyiwu.github.io/tags/reveal.js/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Section shortcode usage</title>
-      <link>https://dyiwu.github.io/talk/section-shortcode-example/</link>
-      <pubDate>Mon, 20 May 2019 15:30:03 +0800</pubDate>
+      <title>About Slides</title>
+      <link>https://dyiwu.github.io/post/slides-index/about_talks/</link>
+      <pubDate>Sun, 26 May 2019 08:02:41 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/talk/section-shortcode-example/</guid>
-      <description>Vertical slide 1-1 Vertical slide 1-2 Vertical slide 1-3  Transition slide between section 1 and 2
-Vertical slide 2-1 Vertical slide 2-2 Vertical slide 2-3  Transition slide between section 2 and 3
-Vertical slide 3-1 Vertical slide 3-2 Vertical slide 3-3  </description>
+      <guid>https://dyiwu.github.io/post/slides-index/about_talks/</guid>
+      <description>&lt;p&gt;Things about the presentation slides.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Speaker Note shortcode usage</title>
-      <link>https://dyiwu.github.io/talk/note-shortcode-example/</link>
-      <pubDate>Mon, 20 May 2019 15:30:03 +0800</pubDate>
+      <title>Slide: Speaker node shortcode example</title>
+      <link>https://dyiwu.github.io/post/slides-index/slide-speaker-node-shortcode-example/</link>
+      <pubDate>Sun, 26 May 2019 07:30:03 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/talk/note-shortcode-example/</guid>
+      <guid>https://dyiwu.github.io/post/slides-index/slide-speaker-node-shortcode-example/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://dyiwu.github.io/slide/slide-speaker-note-shortcode-example/&#34; target=&#34;_blank&#34;&gt;
+Slide: Speaker node shortcode example&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Speaker Note shortcode example</title>
+      <link>https://dyiwu.github.io/slide/slide-speaker-note-shortcode-example/</link>
+      <pubDate>Sun, 26 May 2019 07:00:03 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/slide/slide-speaker-note-shortcode-example/</guid>
       <description>Vertical slide 1-1 Welcome message to the audience.
  Vertical slide 1-2 Speaker note of slide page 1-2
  Vertical slide 1-3 Speaker note of slide page 1-3
@@ -39,20 +47,40 @@ Speaker note of Transition slide between section 1 and 2  Vertical slide 2-1 Spe
     </item>
     
     <item>
-      <title>About talks</title>
-      <link>https://dyiwu.github.io/talk/about_talks/</link>
-      <pubDate>Thu, 16 May 2019 19:20:41 +0800</pubDate>
+      <title>Section shortcode usage</title>
+      <link>https://dyiwu.github.io/slide/slide-section-shortcode-example/</link>
+      <pubDate>Sun, 26 May 2019 01:20:03 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/talk/about_talks/</guid>
-      <description>&lt;p&gt;Here are varying tech talks, presentations.&lt;/p&gt;</description>
+      <guid>https://dyiwu.github.io/slide/slide-section-shortcode-example/</guid>
+      <description>Vertical slide 1-1 Vertical slide 1-2 Vertical slide 1-3  Transition slide between section 1 and 2
+Vertical slide 2-1 Vertical slide 2-2 Vertical slide 2-3  Transition slide between section 2 and 3
+Vertical slide 3-1 Vertical slide 3-2 Vertical slide 3-3  </description>
+    </item>
+    
+    <item>
+      <title>Slide: Chinese example</title>
+      <link>https://dyiwu.github.io/post/slides-index/slide-chinese-example/</link>
+      <pubDate>Sun, 26 May 2019 01:14:22 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/slides-index/slide-chinese-example/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://dyiwu.github.io/slide/slide-chinese-example/&#34; target=&#34;_blank&#34;&gt;Slide: Chinese example&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Slide: Section shortcode example</title>
+      <link>https://dyiwu.github.io/post/slides-index/slide-section-shortcode-example/</link>
+      <pubDate>Sun, 26 May 2019 01:14:22 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/slides-index/slide-section-shortcode-example/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://dyiwu.github.io/slide/slide-section-shortcode-example/&#34; target=&#34;_blank&#34;&gt;Slide: Section shortcode example&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Chinese slide example</title>
-      <link>https://dyiwu.github.io/talk/chinese-slide-example/</link>
-      <pubDate>Thu, 16 May 2019 19:20:41 +0800</pubDate>
+      <link>https://dyiwu.github.io/slide/slide-chinese-example/</link>
+      <pubDate>Sat, 25 May 2019 19:20:41 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/talk/chinese-slide-example/</guid>
+      <guid>https://dyiwu.github.io/slide/slide-chinese-example/</guid>
       <description>Hello world! This is my first slide. 中文字 知者減半、省者全無。 莫忘初心 知者減半、省者全無。 莫忘初心。 Hello Mars! This is my second slide. date: 2019-05-16T01:40:27+08:00 outputs = [&amp;ldquo;Reveal&amp;rdquo;] Page 3 of 4 Page 4 of 4</description>
     </item>
     

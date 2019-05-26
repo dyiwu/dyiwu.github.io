@@ -7,10 +7,47 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 15 May 2019 14:18:27 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 26 May 2019 08:02:41 +0800</lastBuildDate>
     
 	<atom:link href="https://dyiwu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About Slides</title>
+      <link>https://dyiwu.github.io/post/slides-index/about_talks/</link>
+      <pubDate>Sun, 26 May 2019 08:02:41 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/slides-index/about_talks/</guid>
+      <description>&lt;p&gt;Things about the presentation slides.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Slide: Speaker node shortcode example</title>
+      <link>https://dyiwu.github.io/post/slides-index/slide-speaker-node-shortcode-example/</link>
+      <pubDate>Sun, 26 May 2019 07:30:03 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/slides-index/slide-speaker-node-shortcode-example/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://dyiwu.github.io/slide/slide-speaker-note-shortcode-example/&#34; target=&#34;_blank&#34;&gt;
+Slide: Speaker node shortcode example&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Slide: Chinese example</title>
+      <link>https://dyiwu.github.io/post/slides-index/slide-chinese-example/</link>
+      <pubDate>Sun, 26 May 2019 01:14:22 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/slides-index/slide-chinese-example/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://dyiwu.github.io/slide/slide-chinese-example/&#34; target=&#34;_blank&#34;&gt;Slide: Chinese example&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Slide: Section shortcode example</title>
+      <link>https://dyiwu.github.io/post/slides-index/slide-section-shortcode-example/</link>
+      <pubDate>Sun, 26 May 2019 01:14:22 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/slides-index/slide-section-shortcode-example/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://dyiwu.github.io/slide/slide-section-shortcode-example/&#34; target=&#34;_blank&#34;&gt;Slide: Section shortcode example&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>50年以前,50年以後 -- Before After 50 Years</title>
