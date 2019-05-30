@@ -7,17 +7,39 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Sun, 26 May 2019 08:02:41 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 26 May 2019 12:43:22 +0800</lastBuildDate>
     
 	<atom:link href="https://dyiwu.github.io/tags/reveal.js/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Slide: Bundle example</title>
+      <link>https://dyiwu.github.io/post/slides-index/slide-bundle-example/</link>
+      <pubDate>Sun, 26 May 2019 12:43:22 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/slides-index/slide-bundle-example/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://dyiwu.github.io/slide/slide-bundle-example/&#34; target=&#34;_blank&#34;&gt;Slide: Bundle example&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Slide: Bundle example</title>
+      <link>https://dyiwu.github.io/slide/slide-bundle-example/</link>
+      <pubDate>Sun, 26 May 2019 12:37:03 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/slide/slide-bundle-example/</guid>
+      <description>Page Bundles Hugo page bundles are a useful way to organize content.
+To create a reveal-hugo presentation from the index.md file of a leaf page bundle, you need to specify the layout manually in the front matter.
+layout = &amp;ldquo;bundle&amp;rdquo;
+Why? By default, reveal-hugo doesn&amp;rsquo;t create pages for single template types (foo.md), only for list template types (_index.md).
+This technique can also be used to output an HTML file for any section of a presentation, should you need to.</description>
+    </item>
+    
+    <item>
       <title>About Slides</title>
-      <link>https://dyiwu.github.io/post/slides-index/about_talks/</link>
+      <link>https://dyiwu.github.io/post/slides-index/about_slides/</link>
       <pubDate>Sun, 26 May 2019 08:02:41 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/post/slides-index/about_talks/</guid>
+      <guid>https://dyiwu.github.io/post/slides-index/about_slides/</guid>
       <description>&lt;p&gt;Things about the presentation slides.&lt;/p&gt;</description>
     </item>
     
@@ -37,13 +59,14 @@ Slide: Speaker node shortcode example&lt;/a&gt;&lt;/p&gt;</description>
       <pubDate>Sun, 26 May 2019 07:00:03 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/slide/slide-speaker-note-shortcode-example/</guid>
-      <description>Vertical slide 1-1 Welcome message to the audience.
+      <description>Vertical slide 1-1 Hit the S key to open speaker notes view.
+Hit the ? key to show keyboard shortcuts.
+See the whole Keyboard shortcuts.
+Welcome message to the audience.
  Vertical slide 1-2 Speaker note of slide page 1-2
  Vertical slide 1-3 Speaker note of slide page 1-3
   Transition slide between section 1 and 2
-Speaker note of Transition slide between section 1 and 2  Vertical slide 2-1 Speaker note of slide page 2-1
- Vertical slide 2-2 Speaker note of slide page 2-2
- Vertical slide 2-3 Speaker note of slide page 2-3</description>
+Speaker note of Transition slide between section 1 and 2  Vertical slide 2-1 Speaker note of slide page 2-1</description>
     </item>
     
     <item>
