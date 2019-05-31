@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Sun, 26 May 2019 12:43:22 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 31 May 2019 19:36:03 +0800</lastBuildDate>
     
 	<atom:link href="https://dyiwu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,15 @@
       
       <guid>https://dyiwu.github.io/about/</guid>
       <description>一個老碼農的筆記 Chaos is an old coding peasant&amp;rsquo;s note book. Which is build on top of Hugo with Even and Reveal-Hugo themes and hosted on GitHub. Hugo is a static site engine written in Go. Even is a super concise theme for Hugo. Eveal-Hugo is a Hugo theme for Reveal.js, which can turn any properly-formatted Hugo content into a HTML presentation. Listen Commit Ownership</description>
+    </item>
+    
+    <item>
+      <title>Full name</title>
+      <link>https://dyiwu.github.io/post/tech/programming/fullname/</link>
+      <pubDate>Fri, 31 May 2019 19:36:03 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/tech/programming/fullname/</guid>
+      <description>&lt;p&gt;This awk script translates the format of full name list in input file from the first name first format to the last name first format.&lt;/p&gt;</description>
     </item>
     
     <item>

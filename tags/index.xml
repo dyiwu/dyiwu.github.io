@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Sun, 26 May 2019 12:43:22 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 31 May 2019 19:36:03 +0800</lastBuildDate>
     
 	<atom:link href="https://dyiwu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>awk</title>
+      <link>https://dyiwu.github.io/tags/awk/</link>
+      <pubDate>Fri, 31 May 2019 19:36:03 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/awk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming</title>
+      <link>https://dyiwu.github.io/tags/programming/</link>
+      <pubDate>Fri, 31 May 2019 19:36:03 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/programming/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>hugo</title>

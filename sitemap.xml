@@ -10,19 +10,50 @@
   
   <url>
     <loc>https://dyiwu.github.io/categories/</loc>
-    <lastmod>2019-05-26T12:43:22+08:00</lastmod>
+    <lastmod>2019-05-31T19:36:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/</loc>
-    <lastmod>2019-05-26T12:43:22+08:00</lastmod>
+    <lastmod>2019-05-31T19:36:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://dyiwu.github.io/post/tech/programming/fullname/</loc>
+    <lastmod>2019-05-31T19:36:03+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dyiwu.github.io/post/</loc>
-    <lastmod>2019-05-26T12:43:22+08:00</lastmod>
+    <lastmod>2019-05-31T19:36:03+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/</loc>
+    <lastmod>2019-05-31T19:36:03+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/awk/</loc>
+    <lastmod>2019-05-31T19:36:03+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/programming/</loc>
+    <lastmod>2019-05-31T19:36:03+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/categories/tech/</loc>
+    <lastmod>2019-05-31T19:36:03+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -34,12 +65,6 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/tags/</loc>
-    <lastmod>2019-05-26T12:43:22+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://dyiwu.github.io/tags/hugo/</loc>
     <lastmod>2019-05-26T12:43:22+08:00</lastmod>
     <priority>0</priority>
@@ -47,12 +72,6 @@
   
   <url>
     <loc>https://dyiwu.github.io/tags/reveal.js/</loc>
-    <lastmod>2019-05-26T12:43:22+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/categories/tech/</loc>
     <lastmod>2019-05-26T12:43:22+08:00</lastmod>
     <priority>0</priority>
   </url>
