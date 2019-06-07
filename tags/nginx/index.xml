@@ -13,12 +13,14 @@
     
     
     <item>
-      <title>Install Nginx, PHP-FPM on Linux Mint 19</title>
-      <link>https://dyiwu.github.io/post/tech/install-nginx/</link>
+      <title>Install Nginx and PHP-FPM on Linux Mint 19</title>
+      <link>https://dyiwu.github.io/post/tech/install-nginx-php-fpm/</link>
       <pubDate>Thu, 06 Jun 2019 20:15:32 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/post/tech/install-nginx/</guid>
-      <description>Install Nginx Download the Nginx signing key from the official site, and the add the signning key into system. 1 2  $ wget http://nginx.org/keys/nginx_signing.key $ cat nginx_signing.key | sudo apt-key add -    Add Nginx repository to the system using the below commands. 1 2 3  $ echo &amp;#34;deb [arch=amd64] http://nginx.org/packages/ubuntu/ bionic nginx&amp;#34; | sudo tee /etc/apt/sources.list.d/nginx.list $ echo &amp;#34;deb-src [arch=amd64] http://nginx.org/packages/ubuntu/ bionic nginx&amp;#34; | sudo tee -a /etc/apt/sources.</description>
+      <guid>https://dyiwu.github.io/post/tech/install-nginx-php-fpm/</guid>
+      <description>&lt;h2 id=&#34;install-nginx&#34;&gt;&lt;em&gt;Install Nginx&lt;/em&gt;&lt;/h2&gt;
+
+&lt;h3 id=&#34;download-the-nginx-signing-key-from-nginx-official-site-and-them-add-it-into-system&#34;&gt;Download the Nginx signing key from Nginx official site, and them add it into system.&lt;/h3&gt;</description>
     </item>
     
   </channel>
