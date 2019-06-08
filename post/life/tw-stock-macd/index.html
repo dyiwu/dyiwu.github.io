@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>MACD 指標的用法 - Chaos - 一個老碼農的筆記</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Dyi-Wu Liu" /><meta name="description" content="MACD指標是非常非常實用的一個技術指標，他也是在這個股市上千個技術指標里比較少見的僅僅使用一個技術指標就能夠選到操作性比較強的個股的技術指標；
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.6 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://dyiwu.github.io/post/life/tw-stock-macd/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.37dbd179.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="MACD 指標的用法" />
+<meta property="og:description" content="MACD指標是非常非常實用的一個技術指標，他也是在這個股市上千個技術指標里比較少見的僅僅使用一個技術指標就能夠選到操作性比較強的個股的技術指標；" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dyiwu.github.io/post/life/tw-stock-macd/" />
+<meta property="article:published_time" content="2019-06-08T11:28:07&#43;08:00"/>
+<meta property="article:modified_time" content="2019-06-08T11:28:07&#43;08:00"/>
+
+<meta itemprop="name" content="MACD 指標的用法">
+<meta itemprop="description" content="MACD指標是非常非常實用的一個技術指標，他也是在這個股市上千個技術指標里比較少見的僅僅使用一個技術指標就能夠選到操作性比較強的個股的技術指標；">
+
+
+<meta itemprop="datePublished" content="2019-06-08T11:28:07&#43;08:00" />
+<meta itemprop="dateModified" content="2019-06-08T11:28:07&#43;08:00" />
+<meta itemprop="wordCount" content="2797">
+
+
+
+<meta itemprop="keywords" content="財經,臺股,選股," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="MACD 指標的用法"/>
+<meta name="twitter:description" content="MACD指標是非常非常實用的一個技術指標，他也是在這個股市上千個技術指標里比較少見的僅僅使用一個技術指標就能夠選到操作性比較強的個股的技術指標；"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Chaos</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/slide/">
+        <li class="mobile-menu-item">Slides</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Chaos</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/slide/">Slides</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">MACD 指標的用法</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-06-08 </span>
+        <div class="post-category">
+            <a href="/categories/life/"> life </a>
+            </div>
+          <span class="more-meta"> 2797 words </span>
+          <span class="more-meta"> 6 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#一-macd指標的原理">一、MACD指標的原理</a></li>
+<li><a href="#二-macd指標的一般研判標準">二、MACD指標的一般研判標準</a></li>
+<li><a href="#reference">Reference</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>MACD指標是非常非常實用的一個技術指標，他也是在這個股市上千個技術指標里比較少見的僅僅使用一個技術指標就能夠選到操作性比較強的個股的技術指標；</p>
+
+<p>而且利用該指標的優點還在於能夠大致的了解行情的熱點，並依據該指標的細微變化來區分那個個股有望成為熱點中的熱點；</p>
+
+<h2 id="一-macd指標的原理">一、MACD指標的原理</h2>
+
+<p>MACD指標是根據均線的構造原理，對股票價格的收盤價進行平滑處理，求出算術平均值以後再進行計算，是一種趨向類指標。MACD指標是運用快速（短期）和慢速（長期）移動平均線及其聚合與分離的徵兆，加以雙重平滑運算。而根據移動平均線原理髮展出來的MACD，一則去除了移動平均線頻繁發出假信號的缺陷，二則保留了移動平均線的效果，因此，MACD指標具有均線趨勢性、穩重性、安定性等特點，是用來研判買賣股票的時機，預測股票價格漲跌的技術分析指標 。</p>
+
+<p>MACD指標主要是通過EMA、DIF和DEA（或叫MACD、DEM）這三值之間關係的研判，DIF和DEA連接起來的移動平均線的研判以及DIF減去DEM值而繪製成的柱狀圖（BAR）的研判等來分析判斷行情，預測股價中短期趨勢的主要的股市技術分析指標。其中，DIF是核心，DEA是輔助。DIF是快速平滑移動平均線（EMA1）和慢速平滑移動平均線（EMA2）的差。BAR柱狀圖在股市技術軟體上是用紅柱和綠柱的收縮來研判行情。</p>
+
+<h2 id="二-macd指標的一般研判標準">二、MACD指標的一般研判標準</h2>
+
+<p>MACD指標是市場上絕大多數投資者熟知的分析工具，但在具體運用時，投資者可能會覺得MACD指標的運用的準確性、實效性、可操作性上有很多茫然的地方，有時會發現用從書上學來的MACD指標的分析方法和技巧去研判股票走勢，所得出的結論往往和實際走勢存在著特別大的差異，甚至會得出相反的結果。</p>
+
+<p>這其中的主要原因是市場上絕大多數論述股市技術分析的書中關於MACD的論述只局限在表面的層次，只介紹MACD的一般分析原理和方法，而對MACD分析指標的一些特定的內涵和分析技巧的介紹鮮有涉及。本節將在介紹MACD指標的一般研判技巧和分析方法基礎上，詳細闡述MACD的特殊研判原理和功能。</p>
+
+<p>MACD指標的一般研判標準主要是圍繞快速和慢速兩條均線及紅、綠柱線狀況和它們的形態展開。一般分析方法主要包括DIF和MACD值及它們所處的位置、DIF和MACD的交叉情況、紅柱狀的收縮情況和MACD圖形的形態這四個大的方面分析。</p>
+
+<p>1、DIF和MACD的值及線的位置：</p>
+
+<ul>
+<li>當DIF和MACD均大於0（即在圖形上表示為它們處於零線以上）並向上移動時，一般表示為股市處於多頭行情中，可以買入或持股；<br /></li>
+<li>當DIF和MACD均小於0（即在圖形上表示為它們處於零線以下）並向下移動時，一般表示為股市處於空頭行情中，可以賣出股票或觀望。</li>
+<li>當DIF和MACD均大於0（即在圖形上表示為它們處於零線以上）但都向下移動時，一般表示為股票行情處於退潮階段，股票將下跌，可以賣出股票和觀望；</li>
+<li>當DIF和MACD均小於0時（即在圖形上表示為它們處於零線以下）但向上移動時，一般表示為行情即將啟動，股票將上漲，可以買進股票或持股待漲。</li>
+</ul>
+
+<p>2、DIF和MACD的交叉情況：</p>
+
+<ul>
+<li>當DIF與MACD都在零線以上，而DIF向上突破MACD時，表明股市處於一種強勢之中，股價將再次上漲，可以加碼買進股票或持股待漲，這就是MACD指標「黃金交叉」的一種形式。</li>
+<li>當DIF和MACD都在零線以下，而DIF向上突破MACD時，表明股市即將轉強，股價跌勢已盡將止跌朝上，可以開始買進股票或持股，這是MACD指標「黃金交叉」的另一種形式。</li>
+<li>當DIF與MACD都在零線以上，而DIF卻向下突破MACD時，表明股市即將由強勢轉為弱勢，股價將大跌，這時應賣出大部分股票而不能買股票，這就是MACD指標的「死亡交叉」的一種形式。</li>
+<li>當DIF和MACD都在零線以上，而DIF向下突破MACD時，表明股市將再次進入極度弱市中，股價還將下跌，可以再賣出股票或觀望，這是MACD指標「死亡交叉」的另一種形式。</li>
+</ul>
+
+<p>3、MACD指標中的柱狀圖分析：</p>
+
+<p>在股市電腦分析軟體中（如錢龍軟體）通常採用DIF值減DEA（即MACD、DEM）值而繪製成柱狀圖，用紅柱狀和綠柱狀表示，紅柱表示正值，綠柱表示負值。用紅綠柱狀來分析行情，既直觀明了又實用可靠。 當紅柱狀持續放大時，表明股市處於牛市行情中，股價將繼續上漲，這時應持股待漲或短線買入股票，直到紅柱無法再放大時才考慮賣出。</p>
+
+<ul>
+<li>當綠柱狀持續放大時，表明股市處於熊市行情之中，股價將繼續下跌，這時應持幣觀望或賣出股票，直到綠柱開始縮小時才可以考慮少量買入股票。</li>
+<li>當紅柱狀開始縮小時，表明股市牛市即將結束（或要進入調整期），股價將大幅下跌，這時應賣出大部分股票而不能買入股票。</li>
+<li>當綠柱狀開始收縮時，表明股市的大跌行情即將結束，股價將止跌向上（或進入盤整），這時可以少量進行長期戰略建倉而不要輕易賣出股票。</li>
+<li>當紅柱開始消失、綠柱開始放出時，這是股市轉市信號之一，表明股市的上漲行情（或高位盤整行情）即將結束，股價將開始加速下跌，這時應開始賣出大部分股票而不能買入股票。</li>
+<li>當綠柱開始消失、紅柱開始放出時，這也是股市轉市信號之一，表明股市的下跌行情（或低位盤整）已經結束，股價將開始加速上升，這時應開始加碼買入股票或持股待漲。</li>
+</ul>
+
+<p>4、MACD的特殊分析方法： 形態法則：M頭W底等形態</p>
+
+<p>MACD指標的研判還可以從MACD圖形的形態來幫助研判行情。 當MACD的紅柱或綠柱構成的圖形雙重頂底（即M頭和W底）、三重頂底等形態時，也可以按照形態理論的研判方法來加以分析研判。例如：</p>
+
+<ul>
+<li><p>頂背離和底背離</p>
+
+<p>MACD指標的背離就是指MACD指標的圖形的走勢正好和K線圖的走勢方向正好相反。MACD指標的背離有頂背離和底背離兩種。</p></li>
+
+<li><p>頂背離</p>
+
+<p>當股價K線圖上的股票走勢一峰比一峰高，股價一直在向上漲，而MACD指標圖形上的由紅柱構成的圖形的走勢是一峰比一峰低，即當股價的高點比前一次的高點高、而MACD指標的高點比指標的前一次高點低，這叫頂背離現象。頂背離現象一般是股價在高位即將反轉轉勢的信號，表明股價短期內即將下跌，是賣出股票的信號。</p></li>
+
+<li><p>底背離</p>
+
+<p>底背離一般出現在股價的低位區。當股價K線圖上的股票走勢，股價還在下跌，而MACD指標圖形上的由綠柱構成的圖形的走勢是一底比一底高，即當股價的低點比前一次低點底，而指標的低點卻比前一次的低點高，這叫底背離現象。底背離現象一般是預示股價在低位可能反轉向上的信號，表明股價短期內可能反彈向上，是短期買入股票的信號。</p>
+
+<p>在實踐中，MACD指標的背離一般出現在強勢行情中比較可靠，股價在高價位時，通常只要出現一次背離的形態即可確認位股價即將反轉，而股價在低位時，一般要反覆出現幾次背離後才能確認。因此，MACD指標的頂背離研判的準確性要高於底背離，這點投資者要加以留意。</p></li>
+</ul>
+
+<h2 id="reference">Reference</h2>
+
+<ul>
+<li><a href="https://kknews.cc/finance/rr3g8qv.html">MACD指標超實用技巧</a></li>
+<li><a href="https://kknews.cc/finance/jqk83ay.html">MACD指標（完整板 珍藏版）</a></li>
+<li><a href="https://kknews.cc/zh-tw/finance/qyj34ng.html">MACD頂背離和底背離在實戰中最經典的用法（圖解）</a></li>
+</ul>
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E8%B2%A1%E7%B6%93/">財經</a>
+          <a href="/tags/%E8%87%BA%E8%82%A1/">臺股</a>
+          <a href="/tags/%E9%81%B8%E8%82%A1/">選股</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/tech/programming/phpinfo/">
+            <span class="next-text nav-default">phpinfo script</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:dyiwu.liu@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/dyiwu" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/dyiwu.liu" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="https://linkedin.com/in/dyi-wu-liu-aaa4698" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/dyiwu" class="iconfont icon-github" title="github"></a>
+
+  <a href="https://dyiwu.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io" target=_new>Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even" target="_new">Even</a>
+,
+    <a class="theme-link" href="https://themes.gohugo.io/reveal-hugo/" target=_new>Reveal-Hugo</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Dyi-Wu Liu &nbsp;&nbsp;&nbsp;<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a></span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
