@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.4 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.55.6 with even 4.0.0" />
 
 
 <link rel="canonical" href="https://dyiwu.github.io/post/tech/install-chrome/" />
@@ -34,7 +34,7 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link href="/dist/even.37dbd179.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -51,7 +51,7 @@
 
 <meta itemprop="datePublished" content="2019-06-13T18:28:32&#43;08:00" />
 <meta itemprop="dateModified" content="2019-06-13T18:28:32&#43;08:00" />
-<meta itemprop="wordCount" content="65">
+<meta itemprop="wordCount" content="69">
 
 
 
@@ -136,7 +136,7 @@
         <div class="post-category">
             <a href="/categories/tech/"> tech </a>
             </div>
-          <span class="more-meta"> 65 words </span>
+          <span class="more-meta"> 69 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -152,16 +152,29 @@
       <p>Setup Google Chrome Repository and then install it.</p>
 
 <ul>
-<li>Download Google signing key and install it.
-<code>
-$ wget -q -O - https://dl.google.com/linux/linux_signing_key.pub \
-| sudo apt-key add -
-</code></li>
-<li>Set up the Google Chrome repository.
-<code>
-$ echo &quot;deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main&quot; \
-| sudo tee /etc/apt/sources.list.d/google-chrome.list
-</code></li>
+<li><p>Download Google signing key and install it.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ wget -q -O - https://dl.google.com/linux/linux_signing_key.pub \
+| sudo apt-key add -</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>Set up the Google Chrome repository.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ echo &#34;deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main&#34; \
+| sudo tee /etc/apt/sources.list.d/google-chrome.list</pre></td></tr></table>
+</div>
+</div></li>
 
 <li><p>Update repository index.</p>
 <div class="highlight"><div class="chroma">
@@ -173,8 +186,7 @@ $ echo &quot;deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
 </div>
 </div></li>
 
-<li><p>Install Google Chrome Stable version.</p></li>
-</ul>
+<li><p>Install Google Chrome Stable version.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
@@ -182,7 +194,8 @@ $ echo &quot;deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
 <td class="lntd">
 <pre class="chroma">$ sudo apt install -y google-chrome-stable</pre></td></tr></table>
 </div>
-</div>
+</div></li>
+</ul>
     </div>
 
     
@@ -194,7 +207,7 @@ $ echo &quot;deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
       <nav class="post-nav">
         <a class="prev" href="/post/life/world-views/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">World Views 三觀</span>
+            <span class="prev-text nav-default">World Views - 三觀</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         <a class="next" href="/post/life/tw-stock-treasury-stock/">
