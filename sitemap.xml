@@ -10,13 +10,44 @@
   
   <url>
     <loc>https://dyiwu.github.io/categories/</loc>
-    <lastmod>2019-06-13T18:28:32+08:00</lastmod>
+    <lastmod>2019-06-16T20:02:29+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/</loc>
-    <lastmod>2019-06-13T18:28:32+08:00</lastmod>
+    <lastmod>2019-06-16T20:02:29+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/post/</loc>
+    <lastmod>2019-06-16T20:02:29+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/</loc>
+    <lastmod>2019-06-16T20:02:29+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/post/life/world-views/</loc>
+    <lastmod>2019-06-16T20:02:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/categories/life/</loc>
+    <lastmod>2019-06-16T20:02:29+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/%E4%BF%AE%E8%BA%AB/</loc>
+    <lastmod>2019-06-16T20:02:29+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -25,18 +56,6 @@
     <lastmod>2019-06-13T18:28:32+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/post/</loc>
-    <lastmod>2019-06-13T18:28:32+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/</loc>
-    <lastmod>2019-06-13T18:28:32+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -58,12 +77,6 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/categories/life/</loc>
-    <lastmod>2019-06-13T18:01:06+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://dyiwu.github.io/post/life/tw-stock-treasury-stock/</loc>
     <lastmod>2019-06-13T18:01:06+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -71,19 +84,7 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/tags/%E8%87%BA%E8%82%A1/</loc>
-    <lastmod>2019-06-13T18:01:06+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://dyiwu.github.io/tags/%E8%B2%A1%E7%B6%93/</loc>
-    <lastmod>2019-06-13T18:01:06+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/%E9%81%B8%E8%82%A1/</loc>
     <lastmod>2019-06-13T18:01:06+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -261,18 +262,6 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/tags/%E6%8A%80%E8%A1%93%E5%88%86%E6%9E%90/</loc>
-    <lastmod>2019-05-12T23:43:05+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/%E4%BF%AE%E8%BA%AB/</loc>
-    <lastmod>2019-05-12T16:47:05+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://dyiwu.github.io/tags/%E5%9C%8B%E5%AD%B8/</loc>
     <lastmod>2019-05-12T16:47:05+08:00</lastmod>
     <priority>0</priority>
@@ -406,12 +395,6 @@
   <url>
     <loc>https://dyiwu.github.io/tags/academic/</loc>
     <lastmod>2019-04-26T20:03:10+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/%E8%A9%9E%E5%BD%99/</loc>
-    <lastmod>2019-04-25T16:27:39+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -644,9 +627,10 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/tags/%E4%B8%AD%E6%96%87/</loc>
+    <loc>https://dyiwu.github.io/post/life/a-song-of-immortal-regret/</loc>
     <lastmod>2017-08-30T01:37:56+08:00</lastmod>
-    <priority>0</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
