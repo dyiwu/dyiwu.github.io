@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Install Docker Engine - Community on Centos7 - Chaos - 一個老碼農的筆記</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Dyi-Wu Liu" /><meta name="description" content="Install Docker Engine - Community on CentOS 7
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.57.2 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://dyiwu.github.io/post/tech/install-docker-ce-centos7/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Install Docker Engine - Community on Centos7" />
+<meta property="og:description" content="Install Docker Engine - Community on CentOS 7" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dyiwu.github.io/post/tech/install-docker-ce-centos7/" />
+<meta property="article:published_time" content="2019-09-01T17:56:12+08:00" />
+<meta property="article:modified_time" content="2019-09-01T17:56:12+08:00" />
+<meta itemprop="name" content="Install Docker Engine - Community on Centos7">
+<meta itemprop="description" content="Install Docker Engine - Community on CentOS 7">
+
+
+<meta itemprop="datePublished" content="2019-09-01T17:56:12&#43;08:00" />
+<meta itemprop="dateModified" content="2019-09-01T17:56:12&#43;08:00" />
+<meta itemprop="wordCount" content="904">
+
+
+
+<meta itemprop="keywords" content="docker,centos7," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Install Docker Engine - Community on Centos7"/>
+<meta name="twitter:description" content="Install Docker Engine - Community on CentOS 7"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Chaos</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/slide/">
+        <li class="mobile-menu-item">Slides</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Chaos</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/slide/">Slides</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Install Docker Engine - Community on Centos7</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-09-01 </span>
+        <div class="post-category">
+            <a href="/categories/tech/"> tech </a>
+            </div>
+          <span class="more-meta"> 904 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#uninstall-old-versions">Uninstall old versions</a></li>
+<li><a href="#install-docker-engine-community">Install Docker Engine - Community</a>
+<ul>
+<li><a href="#set-up-the-repository">Set up the repository</a></li>
+<li><a href="#install-docker-engine-community-1">Install docker engine - community</a></li>
+</ul></li>
+<li><a href="#post-installation-for-linux">Post-installation for Linux</a>
+<ul>
+<li><a href="#manage-docker-as-a-non-root-user">Manage Docker as a non-root user</a></li>
+<li><a href="#configure-docker-to-start-on-boot">Configure Docker to start on boot</a></li>
+<li><a href="#configure-where-the-docker-daemon-listens-for-connections">Configure where the Docker daemon listens for connections</a></li>
+</ul></li>
+<li><a href="#release-info">Release Info</a>
+<ul>
+<li><a href="#centos-release">CentOS release</a></li>
+<li><a href="#docker-info">Docker Info</a></li>
+</ul></li>
+<li><a href="#reference">Reference:</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>Install Docker Engine - Community on CentOS 7</p>
+
+<h2 id="uninstall-old-versions">Uninstall old versions</h2>
+
+<p>Older versions of Docker were called <strong><em>docker</em></strong> or <strong><em>docker-engine</em></strong>. If these are installed, uninstall them, along with associated dependencies.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine</pre></td></tr></table>
+</div>
+</div>
+<h2 id="install-docker-engine-community">Install Docker Engine - Community</h2>
+
+<h3 id="set-up-the-repository">Set up the repository</h3>
+
+<ol>
+<li><p>Install required packages. <strong><em>yum-utils</em></strong> provides the <strong><em>yum-config-manager</em></strong> utility, and <strong><em>device-mapper-persistent-data</em></strong> and <strong><em>lvm2</em></strong> are required by the <strong><em>devicemapper</em></strong> storage driver.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ sudo yum install -y yum-utils \
+device-mapper-persistent-data \
+lvm2</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>Use the following command to set up the stable repository.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ sudo yum-config-manager \
+--add-repo \
+https://download.docker.com/linux/centos/docker-ce.repo</pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+
+<h3 id="install-docker-engine-community-1">Install docker engine - community</h3>
+
+<ol>
+<li><p>Install the latest version of Docker Engine - Community and containerd.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ sudo yum install docker-ce docker-ce-cli containerd.io</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>List the available versions in the repo</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ yum list docker-ce --showduplicates | sort -r</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>Start Docker</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ sudo systemctl start docker</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>Verify that Docker Engine - Community is installed correctly by running the hello-world image.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ sudo docker run hello-world
+Unable to find image &#39;hello-world:latest&#39; locally
+latest: Pulling from library/hello-world
+1b930d010525: Pull complete 
+Digest: sha256:451ce787d12369c5df2a32c85e5a03d52cbcef6eb3586dd03075f3034f10adcd
+Status: Downloaded newer image for hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+1. The Docker client contacted the Docker daemon.
+2. The Docker daemon pulled the &#34;hello-world&#34; image from the Docker Hub.
+(amd64)
+3. The Docker daemon created a new container from that image which runs the
+executable that produces the output you are currently reading.
+4. The Docker daemon streamed that output to the Docker client, which sent it
+to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+$ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+https://hub.docker.com/
+
+For more examples and ideas, visit:
+https://docs.docker.com/get-started/</pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+
+<h2 id="post-installation-for-linux">Post-installation for Linux</h2>
+
+<h3 id="manage-docker-as-a-non-root-user">Manage Docker as a non-root user</h3>
+
+<p>The Docker daemon binds to a Unix socket instead of a TCP port.
+By default that Unix socket is owned by the user root and other users can
+only access it using sudo. The Docker daemon always runs as the root user.</p>
+
+<p>If you don’t want to preface the docker command with sudo,
+create a Unix group called <strong><em>docker</em></strong> and add users to it.
+When the Docker daemon starts, it creates a Unix socket
+accessible by members of the docker group.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ sudo groupadd docker
+$ sudo usermod -aG docker $USER
+
+$ sudo chown &#34;$USER&#34;:&#34;$USER&#34; /home/&#34;$USER&#34;/.docker -R
+$ sudo chmod g+rwx &#34;$HOME/.docker&#34; -R</pre></td></tr></table>
+</div>
+</div>
+<h3 id="configure-docker-to-start-on-boot">Configure Docker to start on boot</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ sudo systemctl enable docker</pre></td></tr></table>
+</div>
+</div>
+<h3 id="configure-where-the-docker-daemon-listens-for-connections">Configure where the Docker daemon listens for connections</h3>
+
+<p>Configuring Docker to accept remote connections can be done with the
+docker.service systemd unit file for Linux distributions using systemd,
+such as recent versions of RedHat, CentOS, Ubuntu and SLES, or with the
+daemon.json file which is recommended for Linux distributions that
+do not use systemd.</p>
+
+<div class="admonition warning"><p class="admonition-title">systemd vs daemn,json</p>
+  
+Configuring Docker to listen for connections using both the systemd 
+unit file and the daemon.json file causes a conflict that prevents 
+Docker from starting.
+
+</div>
+
+<p>Configuring remote access with systemd unit file
+Open an override file for docker.service in a text editor.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ sudo vi /etc/systemd/system/multi-user.target.wants/docker.service</pre></td></tr></table>
+</div>
+</div>
+<p>Add or modify the following lines, substituting your own values.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[Service]
+ExecStart=
+ExecStart=/usr/bin/dockerd -H fd:// -H tcp://127.0.0.1:2375</pre></td></tr></table>
+</div>
+</div>
+<p>Reload the systemctl configuration.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ sudo systemctl daemon-reload</pre></td></tr></table>
+</div>
+</div>
+<p>Restart Docker.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ sudo systemctl restart docker.service</pre></td></tr></table>
+</div>
+</div>
+<p>Check to see whether the change was honored by reviewing the output
+of netstat to confirm dockerd is listening on the configured port.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ sudo netstat -lntp | grep dockerd
+tcp        0      0 127.0.0.1:2375          0.0.0.0:*               LISTEN      3758/dockerd</pre></td></tr></table>
+</div>
+</div>
+<h2 id="release-info">Release Info</h2>
+
+<h3 id="centos-release">CentOS release</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ cat /etc/centos-release
+CentOS Linux release 7.6.1810 (Core) </pre></td></tr></table>
+</div>
+</div>
+<h3 id="docker-info">Docker Info</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ docker info
+Client:
+ Debug Mode: false
+
+Server:
+ Containers: 3
+  Running: 0
+  Paused: 0
+  Stopped: 3
+ Images: 1
+ Server Version: 19.03.1
+ Storage Driver: overlay2
+  Backing Filesystem: xfs
+  Supports d_type: true
+  Native Overlay Diff: true
+ Logging Driver: json-file
+ Cgroup Driver: cgroupfs
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog
+ Swarm: inactive
+ Runtimes: runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 894b81a4b802e4eb2a91d1ce216b8817763c29fb
+ runc version: 425e105d5a03fabd737a126ad93d62a9eeede87f
+ init version: fec3683
+ Security Options:
+  seccomp
+   Profile: default
+ Kernel Version: 3.10.0-957.27.2.el7.x86_64
+ Operating System: CentOS Linux 7 (Core)
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 4
+ Total Memory: 3.683GiB
+ Name: dcecent7.example.com
+ ID: WSLV:PXIO:QPMS:HN3G:G6O4:6GMA:X3AK:LVDO:GPQF:KJE6:LUND:QWRT
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ Registry: https://index.docker.io/v1/
+ Labels:
+ Experimental: false
+ Insecure Registries:
+  127.0.0.0/8
+ Live Restore Enabled: false
+
+WARNING: API is accessible on http://127.0.0.1:2375 without encryption.
+         Access to the remote API is equivalent to root access on the host. Refer
+         to the &#39;Docker daemon attack surface&#39; section in the documentation for
+         more information: https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface
+WARNING: bridge-nf-call-iptables is disabled
+WARNING: bridge-nf-call-ip6tables is disabled</pre></td></tr></table>
+</div>
+</div>
+<h2 id="reference">Reference:</h2>
+
+<ul>
+<li><a href="https://docs.docker.com/install/linux/docker-ce/centos/">https://docs.docker.com/install/linux/docker-ce/centos/</a></li>
+</ul>
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/docker/">docker</a>
+          <a href="/tags/centos7/">centos7</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/life/world-views/">
+            <span class="next-text nav-default">World Views - 三觀</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+  
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:dyiwu.liu@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://twitter.com/dyiwu" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/dyiwu.liu" class="iconfont icon-facebook" title="facebook"></a>
+      <a href="https://linkedin.com/in/dyi-wu-liu-aaa4698" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/dyiwu" class="iconfont icon-github" title="github"></a>
+
+  <a href="https://dyiwu.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io" target=_new>Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even" target="_new">Even</a>
+,
+    <a class="theme-link" href="https://themes.gohugo.io/reveal-hugo/" target=_new>Reveal-Hugo</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Dyi-Wu Liu &nbsp;&nbsp;&nbsp;<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a></span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
