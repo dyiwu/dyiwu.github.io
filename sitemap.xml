@@ -9,21 +9,63 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/categories/</loc>
-    <lastmod>2019-09-01T17:56:12+08:00</lastmod>
+    <loc>https://dyiwu.github.io/post/life/22-cooking-tips/</loc>
+    <lastmod>2019-09-03T19:53:20+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/tags/centos7/</loc>
-    <lastmod>2019-09-01T17:56:12+08:00</lastmod>
+    <loc>https://dyiwu.github.io/categories/</loc>
+    <lastmod>2019-09-03T19:53:20+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/</loc>
+    <lastmod>2019-09-03T19:53:20+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/categories/life/</loc>
+    <lastmod>2019-09-03T19:53:20+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/post/</loc>
+    <lastmod>2019-09-03T19:53:20+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/recipe/</loc>
+    <lastmod>2019-09-03T19:53:20+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/</loc>
+    <lastmod>2019-09-03T19:53:20+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/%E9%A3%9F/</loc>
+    <lastmod>2019-09-03T19:53:20+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/centos7/</loc>
     <lastmod>2019-09-01T17:56:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -44,29 +86,8 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/post/</loc>
-    <lastmod>2019-09-01T17:56:12+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/</loc>
-    <lastmod>2019-09-01T17:56:12+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://dyiwu.github.io/categories/tech/</loc>
     <lastmod>2019-09-01T17:56:12+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/categories/life/</loc>
-    <lastmod>2019-06-16T20:02:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -429,13 +450,6 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/tags/%E9%A3%9F/</loc>
-    <lastmod>2019-04-29T16:45:17+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://dyiwu.github.io/tags/academic/</loc>
     <lastmod>2019-04-26T20:03:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -466,13 +480,6 @@
   <url>
     <loc>https://dyiwu.github.io/post/tech/tip_hugo_academic_theme/</loc>
     <lastmod>2019-04-22T20:23:07+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/recipe/</loc>
-    <lastmod>2019-04-21T23:58:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -556,6 +563,20 @@
   
   <url>
     <loc>https://dyiwu.github.io/post/bookmarks/hugo-bookmarks/</loc>
+    <lastmod>2019-03-30T06:55:19+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/live/</loc>
+    <lastmod>2019-03-30T06:55:19+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/post/bookmarks/live-in-taiwan-bookmarks/</loc>
     <lastmod>2019-03-30T06:55:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

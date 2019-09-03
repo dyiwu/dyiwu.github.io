@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Sun, 01 Sep 2019 17:56:12 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Sep 2019 19:53:20 +0800</lastBuildDate>
     
 	<atom:link href="https://dyiwu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>recipe</title>
+      <link>https://dyiwu.github.io/tags/recipe/</link>
+      <pubDate>Tue, 03 Sep 2019 19:53:20 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/recipe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>食</title>
+      <link>https://dyiwu.github.io/tags/%E9%A3%9F/</link>
+      <pubDate>Tue, 03 Sep 2019 19:53:20 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/%E9%A3%9F/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>centos7</title>
@@ -202,15 +220,6 @@
     </item>
     
     <item>
-      <title>食</title>
-      <link>https://dyiwu.github.io/tags/%E9%A3%9F/</link>
-      <pubDate>Mon, 29 Apr 2019 16:45:17 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/%E9%A3%9F/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>academic</title>
       <link>https://dyiwu.github.io/tags/academic/</link>
       <pubDate>Fri, 26 Apr 2019 20:03:10 +0800</pubDate>
@@ -229,20 +238,20 @@
     </item>
     
     <item>
-      <title>recipe</title>
-      <link>https://dyiwu.github.io/tags/recipe/</link>
-      <pubDate>Sun, 21 Apr 2019 23:58:18 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/recipe/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>social</title>
       <link>https://dyiwu.github.io/tags/social/</link>
       <pubDate>Sun, 31 Mar 2019 06:45:57 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/tags/social/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>live</title>
+      <link>https://dyiwu.github.io/tags/live/</link>
+      <pubDate>Sat, 30 Mar 2019 06:55:19 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/live/</guid>
       <description></description>
     </item>
     
