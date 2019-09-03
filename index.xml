@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 03 Sep 2019 19:53:20 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Sep 2019 20:36:19 +0800</lastBuildDate>
     
 	<atom:link href="https://dyiwu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,15 @@
       
       <guid>https://dyiwu.github.io/about/</guid>
       <description>一個老碼農的筆記 Chaos is an old coding peasant&amp;rsquo;s note book. Which is build on top of Hugo with Even and Reveal-Hugo themes and hosted on GitHub. Hugo is a static site engine written in Go. Even is a super concise theme for Hugo. Eveal-Hugo is a Hugo theme for Reveal.js, which can turn any properly-formatted Hugo content into a HTML presentation. Listen Commit Ownership</description>
+    </item>
+    
+    <item>
+      <title>Live in Taiwan bookmarks</title>
+      <link>https://dyiwu.github.io/post/bookmarks/live-in-taiwan-bookmarks/</link>
+      <pubDate>Tue, 03 Sep 2019 20:36:19 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/bookmarks/live-in-taiwan-bookmarks/</guid>
+      <description>This page keep the useful bookmarks for living in Taiwan. 這是台灣路口交通即時畫面</description>
     </item>
     
     <item>
@@ -458,15 +467,6 @@ Vertical slide 3-1 Vertical slide 3-2 Vertical slide 3-3  </description>
       <guid>https://dyiwu.github.io/post/bookmarks/hugo-bookmarks/</guid>
       <description>This page keep the Hugo framework related bookmarks.
  Hugo Documentation Hugo Discussion reveal-hugo theme @ gohugo dzello/reveal-hugo @ github hakimel/reveal.js @ github Academic Theme Documentation  </description>
-    </item>
-    
-    <item>
-      <title>Live in Taiwan bookmarks</title>
-      <link>https://dyiwu.github.io/post/bookmarks/live-in-taiwan-bookmarks/</link>
-      <pubDate>Sat, 30 Mar 2019 06:55:19 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/bookmarks/live-in-taiwan-bookmarks/</guid>
-      <description>This page keep the useful bookmarks for living in Taiwan. 這是台灣路口交通即時畫面</description>
     </item>
     
     <item>

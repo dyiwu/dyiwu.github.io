@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 03 Sep 2019 19:53:20 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Sep 2019 20:36:19 +0800</lastBuildDate>
     
 	<atom:link href="https://dyiwu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>bookmark</title>
+      <link>https://dyiwu.github.io/tags/bookmark/</link>
+      <pubDate>Tue, 03 Sep 2019 20:36:19 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/bookmark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>live</title>
+      <link>https://dyiwu.github.io/tags/live/</link>
+      <pubDate>Tue, 03 Sep 2019 20:36:19 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/live/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>recipe</title>
@@ -193,15 +211,6 @@
     </item>
     
     <item>
-      <title>bookmark</title>
-      <link>https://dyiwu.github.io/tags/bookmark/</link>
-      <pubDate>Thu, 02 May 2019 17:34:39 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/bookmark/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>guru</title>
       <link>https://dyiwu.github.io/tags/guru/</link>
       <pubDate>Thu, 02 May 2019 17:34:39 +0800</pubDate>
@@ -243,15 +252,6 @@
       <pubDate>Sun, 31 Mar 2019 06:45:57 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/tags/social/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>live</title>
-      <link>https://dyiwu.github.io/tags/live/</link>
-      <pubDate>Sat, 30 Mar 2019 06:55:19 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/live/</guid>
       <description></description>
     </item>
     
