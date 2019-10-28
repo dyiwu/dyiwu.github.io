@@ -8,7 +8,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="/reveal-js/css/reveal.css"><link rel="stylesheet" href="/reveal-js/css/theme/night.css" id="theme">
+    <link rel="stylesheet" href="/reveal-js/css/reset.css">
+<link rel="stylesheet" href="/reveal-js/css/reveal.css"><link rel="stylesheet" href="/reveal-js/css/theme/night.css" id="theme">
 <link rel="stylesheet" href="/highlight-js/default.min.css">
     
   </head>
@@ -16,7 +17,8 @@
     <div class="reveal">
       <div class="slides">
   
-<section>
+
+    <section>
 
 <h1 id="page-bundles">Page Bundles</h1>
 
@@ -40,7 +42,8 @@
 </section>
 
   
-<section>
+
+    <section>
 
 <p>If more markdown files are present in the bundle, their contents will be added to the presentation.</p>
 
@@ -77,7 +80,6 @@ in the front matter instead of <code>layout = &quot;bundle&quot;</code>.</p>
 <script type="application/json" id="reveal-hugo-site-params">{"history":true,"templates":{"grey":{"background":"#424242","transition":"convex"}}}</script>
 <script type="application/json" id="reveal-hugo-page-params">{"margin":0.2,"slide_number":"c/t","theme":"night"}</script>
 
-<script src="/reveal-js/lib/js/head.min.js"></script>
 <script src="/reveal-js/js/reveal.js"></script>
 
 <script type="text/javascript">
@@ -107,26 +109,22 @@ in the front matter instead of <code>layout = &quot;bundle&quot;</code>.</p>
   Reveal.initialize(options);
 </script>
 
-<script type="text/javascript" src="/reveal-js/lib/js/classList.js"></script>
+
+  
+  
+  <script type="text/javascript" src="/reveal-js/plugin/markdown/marked.js"></script>
+  
+  <script type="text/javascript" src="/reveal-js/plugin/markdown/markdown.js"></script>
+  
+  <script type="text/javascript" src="/reveal-js/plugin/highlight/highlight.js"></script>
+  
+  <script type="text/javascript" src="/reveal-js/plugin/zoom-js/zoom.js"></script>
+  
+  
+  <script type="text/javascript" src="/reveal-js/plugin/notes/notes.js"></script>
 
 
-<script type="text/javascript" src="/reveal-js/plugin/markdown/marked.js"></script>
 
-<script type="text/javascript" src="/reveal-js/plugin/markdown/markdown.js"></script>
-
-<script type="text/javascript" src="/reveal-js/plugin/highlight/highlight.js"></script>
-
-<script type="text/javascript" src="/reveal-js/plugin/zoom-js/zoom.js"></script>
-
-
-<script type="text/javascript" src="/reveal-js/plugin/notes/notes.js"></script>
-
-
-
-<script type="text/javascript">
-if (hljs)
-  hljs.initHighlightingOnLoad();
-</script>
     
     
   </body>
