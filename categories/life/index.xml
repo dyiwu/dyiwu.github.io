@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 03 Sep 2019 19:53:20 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 29 Oct 2019 20:30:05 +0800</lastBuildDate>
     
 	<atom:link href="https://dyiwu.github.io/categories/life/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>臺股證券下單、委託與撮合成交時間</title>
+      <link>https://dyiwu.github.io/post/life/tw-stock-openhour/</link>
+      <pubDate>Tue, 29 Oct 2019 20:30:05 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/life/tw-stock-openhour/</guid>
+      <description>證券下單、委託與撮合成交時間 集中市場交易時間 盤別/交易名稱 盤中單 預約單 一般交易 08:30-13:30 13:40-翌日08:30 盤後定價 14:00-14:30 09:00-14:00 零股交易 13:40-14:30 09:00-13:40 興櫃 09:00~15:00 15</description>
+    </item>
     
     <item>
       <title>22 Cooking Tips</title>
