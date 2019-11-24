@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Chaos - 一個老碼農的筆記</title>
@@ -27,7 +27,7 @@
       <pubDate>Tue, 03 Sep 2019 20:36:19 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/post/bookmarks/live-in-taiwan-bookmarks/</guid>
-      <description>This page keep some useful bookmarks for living in Taiwan. 這是台灣路口交通即時畫面 統一發票中獎號碼單 財政部稅務入口網站</description>
+      <description>This page keep some useful bookmarks for living in Taiwan. 台灣路口交通即時畫面 台灣新聞直播 美麗台灣新境界- Beauty of Formosa TAIWAN 統一發票中獎號碼單 財政部稅務入口網站</description>
     </item>
     
     <item>
@@ -672,6 +672,17 @@ Andrew-&amp;gt;&amp;gt;China: I am good thanks!&lt;/code&gt;&lt;/pre&gt;&lt;/td&
       
       <guid>https://dyiwu.github.io/post/examplesite/test/</guid>
       <description> Usage 1 2 3 4  Andrew-&amp;gt;China: Says Hello Note right of China: China thinks\nabout it China--&amp;gt;Andrew: How are you? Andrew-&amp;gt;&amp;gt;China: I am good thanks!   Examples 1 2 3 4 5  Title: Here is a title A-&amp;gt;B: Normal line B--&amp;gt;C: Dashed line C-&amp;gt;&amp;gt;D: Open arrow D--&amp;gt;&amp;gt;A: Dashed open arrow   1 2 3 4 5  # Example of a comment. Note left of A: Note to the\n left of A Note right of A: Note to the\n right of A Note over A: Note over A Note over A,B: Note over both A and B  </description>
+    </item>
+    
+    <item>
+      <title>Talk: Frist Pass Linux Kernel Dump</title>
+      <link>https://dyiwu.github.io/post/talk/fplkd/</link>
+      <pubDate>Thu, 24 Jul 2014 15:14:34 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/talk/fplkd/</guid>
+      <description>&lt;p&gt;Kdump is a kernel crash dumping mechanism that allows you to save the contents of the system’s memory for later analysis. A kernel crash dump can be the only information available in the event of a failure, the importance of having this data in a business critical environment cannot be underestimated.&lt;/p&gt;
+
+&lt;p&gt;This presentation is a preliminary talk about 3W1H for kdump in linux environment.&lt;/p&gt;</description>
     </item>
     
     <item>

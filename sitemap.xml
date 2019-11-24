@@ -772,6 +772,34 @@
   </url>
   
   <url>
+    <loc>https://dyiwu.github.io/tags/kernel/</loc>
+    <lastmod>2014-07-24T15:14:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/linux/</loc>
+    <lastmod>2014-07-24T15:14:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/categories/talk/</loc>
+    <lastmod>2014-07-24T15:14:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/post/talk/fplkd/</loc>
+    <lastmod>2014-07-24T15:14:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dyiwu.github.io/tags/syntax-highlighting/</loc>
     <lastmod>2018-11-05T16:01:23+08:00</lastmod>
     <changefreq>weekly</changefreq>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>talk on Chaos - 一個老碼農的筆記</title>
@@ -7,53 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 20 May 2019 15:30:03 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 24 Jul 2014 15:14:34 +0800</lastBuildDate>
     
 	<atom:link href="https://dyiwu.github.io/categories/talk/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Section shortcode usage</title>
-      <link>https://dyiwu.github.io/talk/section-shortcode-example/</link>
-      <pubDate>Mon, 20 May 2019 15:30:03 +0800</pubDate>
+      <title>Talk: Frist Pass Linux Kernel Dump</title>
+      <link>https://dyiwu.github.io/post/talk/fplkd/</link>
+      <pubDate>Thu, 24 Jul 2014 15:14:34 +0800</pubDate>
       
-      <guid>https://dyiwu.github.io/talk/section-shortcode-example/</guid>
-      <description>Vertical slide 1-1 Vertical slide 1-2 Vertical slide 1-3  Transition slide between section 1 and 2
-Vertical slide 2-1 Vertical slide 2-2 Vertical slide 2-3  Transition slide between section 2 and 3
-Vertical slide 3-1 Vertical slide 3-2 Vertical slide 3-3  </description>
-    </item>
-    
-    <item>
-      <title>Speaker Note shortcode usage</title>
-      <link>https://dyiwu.github.io/talk/note-shortcode-example/</link>
-      <pubDate>Mon, 20 May 2019 15:30:03 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/talk/note-shortcode-example/</guid>
-      <description>Vertical slide 1-1 Welcome message to the audience.
- Vertical slide 1-2 Speaker note of slide page 1-2
- Vertical slide 1-3 Speaker note of slide page 1-3
-  Transition slide between section 1 and 2
-Speaker note of Transition slide between section 1 and 2  Vertical slide 2-1 Speaker note of slide page 2-1
- Vertical slide 2-2 Speaker note of slide page 2-2
- Vertical slide 2-3 Speaker note of slide page 2-3</description>
-    </item>
-    
-    <item>
-      <title>About talks</title>
-      <link>https://dyiwu.github.io/talk/about_talks/</link>
-      <pubDate>Thu, 16 May 2019 19:20:41 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/talk/about_talks/</guid>
-      <description>&lt;p&gt;Here are varying tech talks, presentations.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Chinese slide example</title>
-      <link>https://dyiwu.github.io/talk/chinese-slide-example/</link>
-      <pubDate>Thu, 16 May 2019 19:20:41 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/talk/chinese-slide-example/</guid>
-      <description>Hello world! This is my first slide. 中文字 知者減半、省者全無。 莫忘初心 知者減半、省者全無。 莫忘初心。 Hello Mars! This is my second slide. date: 2019-05-16T01:40:27+08:00 outputs = [&amp;ldquo;Reveal&amp;rdquo;] Page 3 of 4 Page 4 of 4</description>
+      <guid>https://dyiwu.github.io/post/talk/fplkd/</guid>
+      <description>&lt;p&gt;Kdump is a kernel crash dumping mechanism that allows you to save the contents of the system’s memory for later analysis. A kernel crash dump can be the only information available in the event of a failure, the importance of having this data in a business critical environment cannot be underestimated.&lt;/p&gt;
+
+&lt;p&gt;This presentation is a preliminary talk about 3W1H for kdump in linux environment.&lt;/p&gt;</description>
     </item>
     
   </channel>

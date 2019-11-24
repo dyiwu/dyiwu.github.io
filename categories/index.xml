@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Chaos - 一個老碼農的筆記</title>
@@ -54,6 +54,15 @@
       <pubDate>Tue, 10 Jul 2018 00:00:00 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/categories/example-site/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>talk</title>
+      <link>https://dyiwu.github.io/categories/talk/</link>
+      <pubDate>Thu, 24 Jul 2014 15:14:34 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/categories/talk/</guid>
       <description></description>
     </item>
     

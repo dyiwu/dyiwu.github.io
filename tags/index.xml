@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Chaos - 一個老碼農的筆記</title>
@@ -324,6 +324,24 @@
       <pubDate>Sat, 01 Aug 2015 21:29:34 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/tags/panic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kernel</title>
+      <link>https://dyiwu.github.io/tags/kernel/</link>
+      <pubDate>Thu, 24 Jul 2014 15:14:34 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/kernel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://dyiwu.github.io/tags/linux/</link>
+      <pubDate>Thu, 24 Jul 2014 15:14:34 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
