@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Chaos - 一個老碼農的筆記</title>
@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Sun, 24 Nov 2019 21:47:22 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Dec 2019 18:40:11 +0800</lastBuildDate>
     
 	<atom:link href="https://dyiwu.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My practice on review TED talk video clip</title>
+      <link>https://dyiwu.github.io/post/tech/tip_ted_talk/</link>
+      <pubDate>Sat, 14 Dec 2019 18:40:11 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/tech/tip_ted_talk/</guid>
+      <description>No matter what reasons I am interested in TED talks, either the interesting subject maters or the excellent English speech style. When I am learning from a desired TED talk, I always need to review it many times to cache the whole things especially when I use it as training material to improve my English ability.
+TED talk is in 18 minutes length limit usually, but which need the Internet connection to access it.</description>
+    </item>
     
     <item>
       <title>陶朱公生意經</title>
