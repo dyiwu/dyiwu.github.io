@@ -175,24 +175,6 @@
     </item>
     
     <item>
-      <title>hugo</title>
-      <link>https://dyiwu.github.io/tags/hugo/</link>
-      <pubDate>Sun, 26 May 2019 12:43:22 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>reveal.js</title>
-      <link>https://dyiwu.github.io/tags/reveal.js/</link>
-      <pubDate>Sun, 26 May 2019 12:43:22 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/reveal.js/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>心靈雞湯</title>
       <link>https://dyiwu.github.io/tags/%E5%BF%83%E9%9D%88%E9%9B%9E%E6%B9%AF/</link>
       <pubDate>Wed, 15 May 2019 14:18:27 +0800</pubDate>
@@ -243,6 +225,15 @@
       <pubDate>Wed, 01 May 2019 14:53:00 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/tags/even/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://dyiwu.github.io/tags/hugo/</link>
+      <pubDate>Wed, 01 May 2019 14:53:00 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/hugo/</guid>
       <description></description>
     </item>
     
