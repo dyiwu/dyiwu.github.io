@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://dyiwu.github.io/" />
 
-<meta property="og:updated_time" content="2019-12-14T18:40:11+08:00" />
+<meta property="og:updated_time" content="2020-02-12T14:42:05+08:00" />
 <meta itemprop="name" content="Chaos - 一個老碼農的筆記">
 <meta itemprop="description" content="Hugo theme even example site.">
 
@@ -120,6 +120,29 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/tech/hpux-kernel-dump/panic-icache-cpu3-error-spinlock/">I-Cache Parity Error on CPU 3 lead spinlock deadlock</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2004-04-12 </span>
+      <div class="post-category">
+          <a href="/categories/tech/"> tech </a>
+          </div>
+        <span class="more-meta"> 1055 words </span>
+        <span class="more-meta"> 5 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Spinlock deadlock failure with LPMC I-cache errors CPU 3 failure.
+    </div>
+    <div class="read-more">
+      <a href="/post/tech/hpux-kernel-dump/panic-icache-cpu3-error-spinlock/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/tech/hpux-kernel-dump/hang-long-run-queue/">System mini hang when long run queue.</a></h1>
@@ -212,29 +235,6 @@
   </div>
 </article>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/tech/hpux-kernel-dump/panic-illegal-instruction-trap/">System panic with Illegal instruction trap</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2004-01-01 </span>
-      <div class="post-category">
-          <a href="/categories/tech/"> tech </a>
-          </div>
-        <span class="more-meta"> 760 words </span>
-        <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      System panic with Illegal instruction trap 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151  System crash dump analysis report ================================= Symptom ======= System panic with panic string : Illegal instruction trap Root cause ========== Cpu 1 with HPA 0xfffffffffffa2000 didn&#39;t check in, and the IIR (CR19) from the savestate and the instruction pointed to by PCOQ are not consistent !
-    </div>
-    <div class="read-more">
-      <a href="/post/tech/hpux-kernel-dump/panic-illegal-instruction-trap/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
     </section>
   
   <nav class="pagination">
@@ -242,7 +242,10 @@
         <i class="iconfont icon-left"></i>
         <span class="prev-text">Prev</span>
       </a>
-    
+    <a class="next" href="/page/19/">
+        <span class="next-text">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
   </nav>
         </div>
         
@@ -276,7 +279,8 @@
 
   <span class="copyright-year">
     &copy; 
-    2019
+    2019 - 
+    2020
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
