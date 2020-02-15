@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Chaos - 一個老碼農的筆記</title>
@@ -283,20 +283,20 @@
     </item>
     
     <item>
-      <title>Theme preview</title>
-      <link>https://dyiwu.github.io/tags/theme-preview/</link>
-      <pubDate>Tue, 10 Jul 2018 00:00:00 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/theme-preview/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>preview</title>
       <link>https://dyiwu.github.io/tags/preview/</link>
       <pubDate>Tue, 10 Jul 2018 00:00:00 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/tags/preview/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Theme preview</title>
+      <link>https://dyiwu.github.io/tags/theme-preview/</link>
+      <pubDate>Tue, 10 Jul 2018 00:00:00 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/theme-preview/</guid>
       <description></description>
     </item>
     
