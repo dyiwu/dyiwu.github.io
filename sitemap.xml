@@ -11,15 +11,13 @@
   <url>
     <loc>https://dyiwu.github.io/categories/</loc>
     <lastmod>2020-02-12T14:42:05+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/</loc>
     <lastmod>2020-02-12T14:42:05+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -30,31 +28,27 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/categories/life/</loc>
-    <lastmod>2020-02-12T14:42:05+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://dyiwu.github.io/post/</loc>
     <lastmod>2020-02-12T14:42:05+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/tags/</loc>
     <lastmod>2020-02-12T14:42:05+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/categories/life/</loc>
+    <lastmod>2020-02-12T14:42:05+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/tags/%E8%B2%A1%E7%B6%93/</loc>
     <lastmod>2020-02-12T14:42:05+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -65,31 +59,27 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/categories/tech/</loc>
+    <loc>https://dyiwu.github.io/tags/ted/</loc>
     <lastmod>2019-12-14T18:40:11+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/tags/ted/</loc>
+    <loc>https://dyiwu.github.io/categories/tech/</loc>
     <lastmod>2019-12-14T18:40:11+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/tags/tool/</loc>
     <lastmod>2019-12-14T18:40:11+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/tags/%E5%9C%8B%E5%AD%B8/</loc>
     <lastmod>2019-11-24T21:47:22+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -107,31 +97,28 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/categories/bookmark/</loc>
+    <loc>https://dyiwu.github.io/post/bookmarks/live-in-taiwan-bookmarks/</loc>
     <lastmod>2019-09-03T20:36:19+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/categories/bookmark/</loc>
+    <lastmod>2019-09-03T20:36:19+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/tags/bookmark/</loc>
     <lastmod>2019-09-03T20:36:19+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/tags/live/</loc>
     <lastmod>2019-09-03T20:36:19+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/post/bookmarks/live-in-taiwan-bookmarks/</loc>
-    <lastmod>2019-09-03T20:36:19+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -144,29 +131,13 @@
   <url>
     <loc>https://dyiwu.github.io/tags/recipe/</loc>
     <lastmod>2019-09-03T19:53:20+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/tags/%E9%A3%9F/</loc>
     <lastmod>2019-09-03T19:53:20+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/centos7/</loc>
-    <lastmod>2019-09-01T17:56:12+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/docker/</loc>
-    <lastmod>2019-09-01T17:56:12+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -174,6 +145,18 @@
     <lastmod>2019-09-01T17:56:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/centos7/</loc>
+    <lastmod>2019-09-01T17:56:12+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/docker/</loc>
+    <lastmod>2019-09-01T17:56:12+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -186,15 +169,7 @@
   <url>
     <loc>https://dyiwu.github.io/tags/%E4%BF%AE%E8%BA%AB/</loc>
     <lastmod>2019-06-16T20:02:29+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/chrome/</loc>
-    <lastmod>2019-06-13T18:28:32+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -205,10 +180,15 @@
   </url>
   
   <url>
+    <loc>https://dyiwu.github.io/tags/chrome/</loc>
+    <lastmod>2019-06-13T18:28:32+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://dyiwu.github.io/tags/setup/</loc>
     <lastmod>2019-06-13T18:28:32+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -228,8 +208,7 @@
   <url>
     <loc>https://dyiwu.github.io/tags/php/</loc>
     <lastmod>2019-06-07T19:31:03+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -242,8 +221,7 @@
   <url>
     <loc>https://dyiwu.github.io/tags/programming/</loc>
     <lastmod>2019-06-07T19:31:03+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -256,22 +234,13 @@
   <url>
     <loc>https://dyiwu.github.io/tags/nginx/</loc>
     <lastmod>2019-06-06T20:15:32+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/tags/php-fpm/</loc>
     <lastmod>2019-06-06T20:15:32+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/awk/</loc>
-    <lastmod>2019-05-31T19:36:03+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -279,6 +248,12 @@
     <lastmod>2019-05-31T19:36:03+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/awk/</loc>
+    <lastmod>2019-05-31T19:36:03+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -291,8 +266,7 @@
   <url>
     <loc>https://dyiwu.github.io/tags/%E5%BF%83%E9%9D%88%E9%9B%9E%E6%B9%AF/</loc>
     <lastmod>2019-05-15T14:18:27+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -319,8 +293,7 @@
   <url>
     <loc>https://dyiwu.github.io/tags/%E9%BD%8A%E5%AE%B6/</loc>
     <lastmod>2019-05-12T16:47:05+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -340,15 +313,13 @@
   <url>
     <loc>https://dyiwu.github.io/tags/%E6%97%A5%E8%AA%B2/</loc>
     <lastmod>2019-05-10T14:27:47+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/tags/%E9%A4%8A%E7%94%9F/</loc>
     <lastmod>2019-05-10T14:27:47+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -375,8 +346,7 @@
   <url>
     <loc>https://dyiwu.github.io/tags/guru/</loc>
     <lastmod>2019-05-02T17:34:39+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -387,24 +357,22 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/tags/even/</loc>
+    <loc>https://dyiwu.github.io/post/tech/install-hugo-even/</loc>
     <lastmod>2019-05-01T14:53:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/even/</loc>
+    <lastmod>2019-05-01T14:53:00+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/tags/hugo/</loc>
     <lastmod>2019-05-01T14:53:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/post/tech/install-hugo-even/</loc>
-    <lastmod>2019-05-01T14:53:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -422,17 +390,16 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/tags/academic/</loc>
+    <loc>https://dyiwu.github.io/post/tech/install_hugo_academic_kickstart/</loc>
     <lastmod>2019-04-26T20:03:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/post/tech/install_hugo_academic_kickstart/</loc>
+    <loc>https://dyiwu.github.io/tags/academic/</loc>
     <lastmod>2019-04-26T20:03:10+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -443,17 +410,16 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/tags/markdown/</loc>
+    <loc>https://dyiwu.github.io/post/tech/tip_hugo_academic_theme/</loc>
     <lastmod>2019-04-22T20:23:07+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/post/tech/tip_hugo_academic_theme/</loc>
+    <loc>https://dyiwu.github.io/tags/markdown/</loc>
     <lastmod>2019-04-22T20:23:07+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -515,8 +481,7 @@
   <url>
     <loc>https://dyiwu.github.io/tags/social/</loc>
     <lastmod>2019-03-31T06:45:57+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -550,8 +515,7 @@
   <url>
     <loc>https://dyiwu.github.io/tags/web/</loc>
     <lastmod>2019-03-29T07:14:22+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -585,8 +549,7 @@
   <url>
     <loc>https://dyiwu.github.io/tags/%E9%9A%A8%E7%AD%86/</loc>
     <lastmod>2019-03-08T15:41:33+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -597,24 +560,9 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/categories/example-site/</loc>
-    <lastmod>2018-11-05T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/preview/</loc>
-    <lastmod>2018-11-05T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://dyiwu.github.io/tags/theme-preview/</loc>
     <lastmod>2018-07-10T00:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -622,6 +570,18 @@
     <lastmod>2018-07-10T00:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/categories/example-site/</loc>
+    <lastmod>2018-11-05T16:01:23+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/preview/</loc>
+    <lastmod>2018-11-05T16:01:23+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -648,8 +608,7 @@
   <url>
     <loc>https://dyiwu.github.io/tags/%E6%97%A5%E6%9C%AC%E8%AA%9E/</loc>
     <lastmod>2017-08-30T01:53:34+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -676,15 +635,7 @@
   <url>
     <loc>https://dyiwu.github.io/tags/shortcodes/</loc>
     <lastmod>2018-02-01T18:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/hpux-kernel-dump/</loc>
-    <lastmod>2015-08-01T21:29:34+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -695,10 +646,15 @@
   </url>
   
   <url>
+    <loc>https://dyiwu.github.io/tags/hpux-kernel-dump/</loc>
+    <lastmod>2015-08-01T21:29:34+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://dyiwu.github.io/tags/panic/</loc>
     <lastmod>2015-08-01T21:29:34+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -723,27 +679,6 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/tags/kernel/</loc>
-    <lastmod>2014-07-24T15:14:34+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/linux/</loc>
-    <lastmod>2014-07-24T15:14:34+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/categories/talk/</loc>
-    <lastmod>2014-07-24T15:14:34+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://dyiwu.github.io/post/talk/fplkd/</loc>
     <lastmod>2014-07-24T15:14:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -751,10 +686,27 @@
   </url>
   
   <url>
+    <loc>https://dyiwu.github.io/tags/kernel/</loc>
+    <lastmod>2014-07-24T15:14:34+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/linux/</loc>
+    <lastmod>2014-07-24T15:14:34+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/categories/talk/</loc>
+    <lastmod>2014-07-24T15:14:34+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://dyiwu.github.io/tags/syntax-highlighting/</loc>
     <lastmod>2018-11-05T16:01:23+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -772,17 +724,16 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/tags/hang/</loc>
+    <loc>https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-disk-array-failure/</loc>
     <lastmod>2010-03-04T11:05:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-disk-array-failure/</loc>
+    <loc>https://dyiwu.github.io/tags/hang/</loc>
     <lastmod>2010-03-04T11:05:16+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -872,8 +823,7 @@
   <url>
     <loc>https://dyiwu.github.io/tags/mca/</loc>
     <lastmod>2006-05-23T21:25:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0</priority>
   </url>
   
   <url>
