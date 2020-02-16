@@ -10,41 +10,62 @@
   
   <url>
     <loc>https://dyiwu.github.io/categories/</loc>
-    <lastmod>2020-02-12T14:42:05+08:00</lastmod>
+    <lastmod>2020-02-16T11:45:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/</loc>
-    <lastmod>2020-02-12T14:42:05+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/post/life/tw-stock-etf/</loc>
-    <lastmod>2020-02-12T14:42:05+08:00</lastmod>
+    <lastmod>2020-02-16T11:45:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/categories/life/</loc>
-    <lastmod>2020-02-12T14:42:05+08:00</lastmod>
+    <lastmod>2020-02-16T11:45:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/post/</loc>
-    <lastmod>2020-02-12T14:42:05+08:00</lastmod>
+    <lastmod>2020-02-16T11:45:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/recipe/</loc>
+    <lastmod>2020-02-16T11:45:18+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/tags/</loc>
+    <lastmod>2020-02-16T11:45:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/post/life/porkribs/</loc>
+    <lastmod>2020-02-16T11:45:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/%E9%A3%9F/</loc>
+    <lastmod>2020-02-16T11:45:18+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/post/life/tw-stock-etf/</loc>
     <lastmod>2020-02-12T14:42:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -136,20 +157,6 @@
   
   <url>
     <loc>https://dyiwu.github.io/post/life/22-cooking-tips/</loc>
-    <lastmod>2019-09-03T19:53:20+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/recipe/</loc>
-    <lastmod>2019-09-03T19:53:20+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/%E9%A3%9F/</loc>
     <lastmod>2019-09-03T19:53:20+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
