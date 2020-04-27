@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://dyiwu.github.io/post/tech/mathjax/" />
@@ -34,7 +34,8 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -46,16 +47,13 @@
 <meta property="article:modified_time" content="2019-03-29T07:14:22+08:00" />
 <meta itemprop="name" content="MathJax">
 <meta itemprop="description" content="MathJax, a JavaScript engine to display mathematics equations in browsers.">
-
-
 <meta itemprop="datePublished" content="2019-03-29T07:14:22&#43;08:00" />
 <meta itemprop="dateModified" content="2019-03-29T07:14:22&#43;08:00" />
-<meta itemprop="wordCount" content="192">
+<meta itemprop="wordCount" content="191">
 
 
 
-<meta itemprop="keywords" content="web,markdown," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="web,markdown," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="MathJax"/>
 <meta name="twitter:description" content="MathJax, a JavaScript engine to display mathematics equations in browsers."/>
 
@@ -135,7 +133,7 @@
         <div class="post-category">
             <a href="/categories/tech/"> tech </a>
             </div>
-          <span class="more-meta"> 192 words </span>
+          <span class="more-meta"> 191 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -145,58 +143,50 @@
     <div class="post-content">
       <p>MathJax, a JavaScript engine to display mathematics equations in browsers.
 It can translate expressions written in AsciiMath, LaTeX or MathML.</p>
-
-<p>Enable global LaTeX math rendering by set <code>math = true</code> in <code>config/_default/params.toml</code>.<br />
-Enable per page basis LaTex math rendering by set <code>math = true</code> in <code>front matter</code> of desired page.</p>
-
+<p>Enable global LaTeX math rendering by set <code>math = true</code> in <code>config/_default/params.toml</code>.<br>
+Enable per page basis LaTex math rendering by set <code>math = true </code> in <code>front matter</code> of desired page.</p>
 <p>Example 1:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">一元二次方程式 $\(ax^2 + bx + c = 0\)$ 的兩個根為：  
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">一元二次方程式 $\(ax^2 + bx + c = 0\)$ 的兩個根為：  
 
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$$</pre></td></tr></table>
+$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$$
+</code></pre></td></tr></table>
 </div>
-</div>
-<blockquote>
+</div><blockquote>
 <p>一元二次方程式 $(ax^2 + bx + c = 0)$ 的兩個根為：</p>
-
 <p>$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}$$</p>
 </blockquote>
-
 <p>Example 2:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">This is inline: $\mathbf{y} = \mathbf{X}\boldsymbol\beta + \boldsymbol\varepsilon$</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">This is inline: $\mathbf{y} = \mathbf{X}\boldsymbol\beta + \boldsymbol\varepsilon$
+</code></pre></td></tr></table>
 </div>
-</div>
-<blockquote>
+</div><blockquote>
 <p>This is inline: $\mathbf{y} = \mathbf{X}\boldsymbol\beta + \boldsymbol\varepsilon$</p>
 </blockquote>
-
 <p>Example 3:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$$\left [ – \frac{\hbar^2}{2 m} \frac{\partial^2}{\partial x^2} + V \right ] \Psi = i \hbar \frac{\partial}{\partial t} \Psi$$</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$$\left [ – \frac{\hbar^2}{2 m} \frac{\partial^2}{\partial x^2} + V \right ] \Psi = i \hbar \frac{\partial}{\partial t} \Psi$$
+</code></pre></td></tr></table>
 </div>
-</div>
-<blockquote>
+</div><blockquote>
 <p>$$\left [ – \frac{\hbar^2}{2 m} \frac{\partial^2}{\partial x^2} + V \right ] \Psi = i \hbar \frac{\partial}{\partial t} \Psi$$</p>
 </blockquote>
-
-<p><small>
-Reference:</p>
-
+<!-- raw HTML omitted -->
 <ul>
 <li><a href="https://gohugo.io/content-management/formats/#mathjax-with-hugo">MathJax with HUGO</a></li>
 <li><a href="https://docs.mathjax.org/en/latest/">MathJax Documentation</a></li>
@@ -281,7 +271,10 @@ Reference:</p>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.cddea96674a99fd8cea50d36fb19d9c91f497feea4af5ce4596afd2dbaab9202.js"></script>
 
 
 

@@ -55,7 +55,6 @@
       
       <guid>https://dyiwu.github.io/post/life/tao-business-rule/</guid>
       <description>&lt;p&gt;根據陶朱公的經商思想加工整理而成的《陶朱公生意經》，又稱《陶朱公商經》、《陶朱公商訓》或《陶朱公經商十八則》，至今仍在定陶一帶流傳。&lt;/p&gt;
-
 &lt;p&gt;陶朱公，本名範蠡，字少伯，楚國宛城三戶（今河南省南陽淅川縣）人，是春秋末期的政治家、軍事家和經營思想家。&lt;/p&gt;</description>
     </item>
     
@@ -65,7 +64,7 @@
       <pubDate>Tue, 29 Oct 2019 20:30:05 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/post/life/tw-stock-openhour/</guid>
-      <description>證券下單、委託與撮合成交時間 集中市場交易時間 盤別/交易名稱 盤中單 預約單 一般交易 08:30-13:30 13:40-翌日08:30 盤後定價 14:00-14:30 09:00-14:00 零股交易 13:40-14:30 09:00-13:40 興櫃 09:00~15:00 15</description>
+      <description>證券下單、委託與撮合成交時間 盤別/交易名稱 盤中單 預約單 一般交易 08:30-13:30 13:40-翌日08:30 盤後定價 14:00-14:30 09:00-14:00 零股交易 13:40-14:30 09:00-13:40 興櫃 09:00~15:00 15:10~次一營業</description>
     </item>
     
     <item>
@@ -130,7 +129,7 @@
       <pubDate>Sun, 12 May 2019 23:43:05 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/post/life/tw-stock-kd/</guid>
-      <description>KD指標 KD指標是使用RSV的加權移動平均來計算的， RSV數據表達的是「與最近9天相比，今天的股價是強還是弱?」。 收盤價、KD 數值 KD數值越</description>
+      <description>KD指標 KD指標是使用RSV的加權移動平均來計算的， RSV數據表達的是「與最近9天相比，今天的股價是強還是弱?」。 KD數值越高代表個股的收盤</description>
     </item>
     
     <item>
@@ -186,7 +185,6 @@
       <guid>https://dyiwu.github.io/post/life/concessions/</guid>
       <description>&lt;p&gt;「成人之美」與「趁人之危」距離有多遠呢？
 (轉載一篇值得省思的故事)&lt;/p&gt;
-
 &lt;p&gt;英國回來，有朋友問，台灣和英國的發展相差多少年？
 還真的回答不了這個問題——
 這涉及到歷史，政治，經濟，文化和教育等等諸多因素。&amp;hellip;&amp;hellip;
@@ -199,8 +197,7 @@
       <pubDate>Tue, 30 Apr 2019 13:07:33 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/post/life/changing/</guid>
-      <description>&lt;h4 id=&#34;作者-清華出版社兼職總編-馬慧&#34;&gt;作者：清華出版社兼職總編 馬慧&lt;/h4&gt;
-
+      <description>&lt;h4 id=&#34;作者清華出版社兼職總編-馬慧&#34;&gt;作者：清華出版社兼職總編 馬慧&lt;/h4&gt;
 &lt;p&gt;有位朋友過了六十歲，我問他有何改變？  他回答說：&lt;/p&gt;</description>
     </item>
     
@@ -210,7 +207,7 @@
       <pubDate>Mon, 29 Apr 2019 16:45:17 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/post/life/iron-kettle/</guid>
-      <description>&lt;h3 id=&#34;鐵鍋使用重點-火槍牌30公分平底深炒鍋&#34;&gt;鐵鍋使用重點：火槍牌30公分平底深炒鍋&lt;/h3&gt;</description>
+      <description>&lt;h3 id=&#34;鐵鍋使用重點火槍牌30公分平底深炒鍋&#34;&gt;鐵鍋使用重點：火槍牌30公分平底深炒鍋&lt;/h3&gt;</description>
     </item>
     
     <item>
@@ -301,8 +298,9 @@
       
       <guid>https://dyiwu.github.io/post/life/thousand-character-classic/</guid>
       <description>&lt;blockquote&gt;
-&lt;p&gt;女慕貞絜， 男效才良。知過必改， 得能莫忘。&lt;br&gt;罔談彼短， 靡恃己長。信使可覆， 器欲難量。&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;p&gt;女慕貞絜， 男效才良。知過必改， 得能莫忘。&lt;!-- raw HTML omitted --&gt;罔談彼短， 靡恃己長。信使可覆， 器欲難量。&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
     </item>
     
     <item>

@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-vhand-loop-superpages/" />
@@ -34,7 +34,8 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -46,16 +47,13 @@
 <meta property="article:modified_time" content="2004-05-21T15:10:55+08:00" />
 <meta itemprop="name" content="Vhand loops in unlock superpages lead system hang.">
 <meta itemprop="description" content="Vhand loops in unlock superpages lead system hang.">
-
-
 <meta itemprop="datePublished" content="2004-05-21T15:10:55&#43;08:00" />
 <meta itemprop="dateModified" content="2004-05-21T15:10:55&#43;08:00" />
-<meta itemprop="wordCount" content="20125">
+<meta itemprop="wordCount" content="20127">
 
 
 
-<meta itemprop="keywords" content="hpux-kernel-dump,hang," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="hpux-kernel-dump,hang," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vhand loops in unlock superpages lead system hang."/>
 <meta name="twitter:description" content="Vhand loops in unlock superpages lead system hang."/>
 
@@ -135,7 +133,7 @@
         <div class="post-category">
             <a href="/categories/tech/"> tech </a>
             </div>
-          <span class="more-meta"> 20125 words </span>
+          <span class="more-meta"> 20127 words </span>
           <span class="more-meta"> 95 mins read </span>
         
       </div>
@@ -143,12 +141,10 @@
 
     
     <div class="post-content">
-      
-
-<h2 id="vhand-run-in-a-loop-to-unlock-a-superpage-and-monopolizes-the-cpu-for-a-while">Vhand run in a loop to unlock a superpage and monopolizes the cpu for a while.</h2>
+      <h2 id="vhand-run-in-a-loop-to-unlock-a-superpage-and-monopolizes-the-cpu-for-a-while">Vhand run in a loop to unlock a superpage and monopolizes the cpu for a while.</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">   1
+<pre class="chroma"><code><span class="lnt">   1
 </span><span class="lnt">   2
 </span><span class="lnt">   3
 </span><span class="lnt">   4
@@ -2513,9 +2509,12 @@
 </span><span class="lnt">2363
 </span><span class="lnt">2364
 </span><span class="lnt">2365
-</span></pre></td>
+</span><span class="lnt">2366
+</span><span class="lnt">2367
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">System crash dump analysis report
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+System crash dump analysis report
 =================================
 
 Symptom
@@ -4879,7 +4878,9 @@ PHKL_27757	PHKL_27992	PHKL_28410	PHNE_22878	PHNE_23465
 PHNE_23502	PHNE_23594	PHNE_23932	PHNE_24035	PHNE_24131
 PHNE_24211	PHNE_24473	PHNE_24492	PHNE_24506	PHNE_24910
 PHNE_25083	PHNE_25388	PHNE_25627	PHNE_25644	PHNE_26326
-PHNE_26710	PHNE_26728	PHNE_26939	PHNE_27218	</pre></td></tr></table>
+PHNE_26710	PHNE_26728	PHNE_26939	PHNE_27218	
+
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -4959,7 +4960,10 @@ PHNE_26710	PHNE_26728	PHNE_26939	PHNE_27218	</pre></td></tr></table>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.cddea96674a99fd8cea50d36fb19d9c91f497feea4af5ce4596afd2dbaab9202.js"></script>
 
 
 

@@ -19,7 +19,6 @@
       
       <guid>https://dyiwu.github.io/post/tech/install-hugo-even/</guid>
       <description>&lt;p&gt;Install Hugo with Even theme&lt;/p&gt;
-
 &lt;h2 id=&#34;create-a-new-site-named-it-as-chaos-in-my-case&#34;&gt;Create a new site named it as chaos in my case.&lt;/h2&gt;</description>
     </item>
     
@@ -29,7 +28,7 @@
       <pubDate>Fri, 26 Apr 2019 20:03:10 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/post/tech/install_hugo_academic_kickstart/</guid>
-      <description>Install Hugo with Academic theme kickstart File location: Local repository saved under ~/Hugo/Site/chaos Generated web site saved under ~/Hugo/Site/chaos/public directory and deploy to github as https://dyiwu.github.io/ Fork the Academic Kickstart repository from sourcethemes/academic-kickstart as dyiwu/academic-kickstart repo (https://github.com/sourcethemes/academic-kickstart) rename the forked repo from academic-kickstart to chaos clone your dyiwu/chaos repo into local file system: 1 2 3 4 $ cd ~/Hugo/Site $ git clone https://github.com/dyiwu/chaos.git $ cd chaos $ git submodule</description>
+      <description>Install Hugo with Academic theme kickstart File location: Local repository saved under ~/Hugo/Site/chaos Generated web site saved under ~/Hugo/Site/chaos/public directory and deploy to github as https://dyiwu.github.io/ rename the forked repo from academic-kickstart to chaos clone your dyiwu/chaos repo into local file system: 1 2 3 4 $ cd ~/Hugo/Site $ git clone https://github.com/dyiwu/chaos.git $ cd chaos $ git submodule update --init --recursive Update Academic Kickstart by execute the theme updater</description>
     </item>
     
     <item>
@@ -39,10 +38,10 @@
       
       <guid>https://dyiwu.github.io/post/tech/tip_hugo_academic_theme/</guid>
       <description>shortcode
- {{&amp;lt; list_tags &amp;gt;}}
- {{&amp;lt; list_categories &amp;gt;}}
- High light code block with line number
-1{{&amp;lt; highlight plaintext &amp;#34;linenos=inline&amp;#34; &amp;gt;}} 2code block here 3{{&amp;lt; /highlight &amp;gt;}}  Reference:
+  {{&amp;lt; list_tags &amp;gt;}}
+  {{&amp;lt; list_categories &amp;gt;}}
+  High light code block with line number
+1{{&amp;lt; highlight plaintext &amp;#34;linenos=inline&amp;#34; &amp;gt;}} 2code block here 3{{&amp;lt; /highlight &amp;gt;}}   Reference:
  https://lmyint.github.io/post/hugo-academic-tips/ https://highlightjs.org/ https://liatas.com/posts/escaping-hugo-shortcodes/ http://abitofcode.com/post/2017/04/customizing_a_hugo_site/  </description>
     </item>
     

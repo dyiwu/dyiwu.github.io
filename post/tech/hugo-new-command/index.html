@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://dyiwu.github.io/post/tech/hugo-new-command/" />
@@ -34,7 +34,8 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -46,16 +47,13 @@
 <meta property="article:modified_time" content="2019-04-06T20:34:37+08:00" />
 <meta itemprop="name" content="Hugo New Command Usage">
 <meta itemprop="description" content="hugo new command usage">
-
-
 <meta itemprop="datePublished" content="2019-04-06T20:34:37&#43;08:00" />
 <meta itemprop="dateModified" content="2019-04-06T20:34:37&#43;08:00" />
-<meta itemprop="wordCount" content="131">
+<meta itemprop="wordCount" content="132">
 
 
 
-<meta itemprop="keywords" content="hugo," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="hugo," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Hugo New Command Usage"/>
 <meta name="twitter:description" content="hugo new command usage"/>
 
@@ -135,7 +133,7 @@
         <div class="post-category">
             <a href="/categories/tech/"> tech </a>
             </div>
-          <span class="more-meta"> 131 words </span>
+          <span class="more-meta"> 132 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -144,40 +142,40 @@
     
     <div class="post-content">
       <p><code>hugo new</code> create a new content file and automatically set the date and title. It will guess which kind of file to create based on the path provided. The <strong>KIND</strong> of new content file can also specify with <code>-k KIND</code> or <code>--kind KIND</code>.</p>
-
 <p>If archetypes are provided in your theme or site, they will be used. The skeleton of content files can be found as follows, path is relative to site root (~/Hugo/Site/chaos/).</p>
-
 <ul>
 <li><strong>post</strong> content type:
-
 <ul>
 <li>archetypes/post.md</li>
 <li>themes/academic/archetypes/default.md</li>
-</ul></li>
+</ul>
+</li>
 <li><strong>talk</strong> content type:
-
 <ul>
 <li>TBD</li>
-</ul></li>
+</ul>
+</li>
 <li><strong>project</strong> content type:
-
 <ul>
 <li>TBD</li>
-</ul></li>
-
-<li><p><strong>publication</strong> content type:</p>
-
+</ul>
+</li>
+<li><strong>publication</strong> content type:
 <ul>
-<li><p>TBD</p>
+<li>TBD</li>
+</ul>
+</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
 </span><span class="lnt">7
+</span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash">Change working directory to site root.
@@ -186,12 +184,11 @@ $
 $ hugo new --kind post post/my-article-name
 $ hugo new --kind talk talk/my-talk-name
 $ hugo new --kind project project/my-project-name
-$ hugo new --kind publication publication/&lt;my-publication&gt;</code></pre></td></tr></table>
-</div>
-</div></li>
-</ul></li>
-</ul>
+$ hugo new --kind publication publication/&lt;my-publication&gt;
 
+</code></pre></td></tr></table>
+</div>
+</div>
     </div>
 
     
@@ -268,7 +265,10 @@ $ hugo new --kind publication publication/&lt;my-publication&gt;</code></pre></t
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.cddea96674a99fd8cea50d36fb19d9c91f497feea4af5ce4596afd2dbaab9202.js"></script>
 
 
 

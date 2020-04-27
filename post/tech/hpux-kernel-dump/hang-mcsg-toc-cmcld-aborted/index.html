@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Dyi-Wu Liu" /><meta name="description" content="MC/SG TOC system due to MC/ServiceGuard daemon cmcld aborted. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66  System crash dump analysis report ================================= Symptom ------- MC/ServiceGuard unable to maintain contact with cmcld daemon." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Dyi-Wu Liu" /><meta name="description" content="MC/SG TOC system due to MC/ServiceGuard daemon cmcld aborted. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68  System crash dump analysis report ================================= Symptom ------- MC/ServiceGuard unable to maintain contact with cmcld daemon." /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-mcsg-toc-cmcld-aborted/" />
@@ -34,30 +34,28 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="MC/SG TOC system due to MC/ServiceGuard daemon cmcld aborted." />
-<meta property="og:description" content="MC/SG TOC system due to MC/ServiceGuard daemon cmcld aborted. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66  System crash dump analysis report ================================= Symptom ------- MC/ServiceGuard unable to maintain contact with cmcld daemon." />
+<meta property="og:description" content="MC/SG TOC system due to MC/ServiceGuard daemon cmcld aborted. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68  System crash dump analysis report ================================= Symptom ------- MC/ServiceGuard unable to maintain contact with cmcld daemon." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-mcsg-toc-cmcld-aborted/" />
 <meta property="article:published_time" content="2008-03-13T13:44:18+08:00" />
 <meta property="article:modified_time" content="2008-03-13T13:44:18+08:00" />
 <meta itemprop="name" content="MC/SG TOC system due to MC/ServiceGuard daemon cmcld aborted.">
-<meta itemprop="description" content="MC/SG TOC system due to MC/ServiceGuard daemon cmcld aborted. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66  System crash dump analysis report ================================= Symptom ------- MC/ServiceGuard unable to maintain contact with cmcld daemon.">
-
-
+<meta itemprop="description" content="MC/SG TOC system due to MC/ServiceGuard daemon cmcld aborted. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68  System crash dump analysis report ================================= Symptom ------- MC/ServiceGuard unable to maintain contact with cmcld daemon.">
 <meta itemprop="datePublished" content="2008-03-13T13:44:18&#43;08:00" />
 <meta itemprop="dateModified" content="2008-03-13T13:44:18&#43;08:00" />
-<meta itemprop="wordCount" content="348">
+<meta itemprop="wordCount" content="350">
 
 
 
-<meta itemprop="keywords" content="hpux-kernel-dump,hang," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="hpux-kernel-dump,hang," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="MC/SG TOC system due to MC/ServiceGuard daemon cmcld aborted."/>
-<meta name="twitter:description" content="MC/SG TOC system due to MC/ServiceGuard daemon cmcld aborted. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66  System crash dump analysis report ================================= Symptom ------- MC/ServiceGuard unable to maintain contact with cmcld daemon."/>
+<meta name="twitter:description" content="MC/SG TOC system due to MC/ServiceGuard daemon cmcld aborted. 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68  System crash dump analysis report ================================= Symptom ------- MC/ServiceGuard unable to maintain contact with cmcld daemon."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -135,7 +133,7 @@
         <div class="post-category">
             <a href="/categories/tech/"> tech </a>
             </div>
-          <span class="more-meta"> 348 words </span>
+          <span class="more-meta"> 350 words </span>
           <span class="more-meta"> 2 mins read </span>
         
       </div>
@@ -143,12 +141,10 @@
 
     
     <div class="post-content">
-      
-
-<h2 id="mc-sg-toc-system-due-to-mc-serviceguard-daemon-cmcld-aborted">MC/SG TOC system due to MC/ServiceGuard daemon cmcld aborted.</h2>
+      <h2 id="mcsg-toc-system-due-to-mcserviceguard-daemon-cmcld-aborted">MC/SG TOC system due to MC/ServiceGuard daemon cmcld aborted.</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -214,9 +210,12 @@
 </span><span class="lnt">64
 </span><span class="lnt">65
 </span><span class="lnt">66
-</span></pre></td>
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">System crash dump analysis report
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+System crash dump analysis report
 =================================
 Symptom
 -------
@@ -281,7 +280,9 @@ localhost-root:/var/tombstones# ll /var/adm/cmcluster total 32326
 drwxr-xr-x   2 bin        bin             96 Aug  8  2000 sharedtape
 
 localhost-root:/var/tombstones# file /var/adm/cmcluster/core
-/var/adm/cmcluster/core:        core file from &#39;cmcld&#39; - received SIGABRT</pre></td></tr></table>
+/var/adm/cmcluster/core:        core file from &#39;cmcld&#39; - received SIGABRT
+
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -361,7 +362,10 @@ localhost-root:/var/tombstones# file /var/adm/cmcluster/core
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.cddea96674a99fd8cea50d36fb19d9c91f497feea4af5ce4596afd2dbaab9202.js"></script>
 
 
 

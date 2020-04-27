@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://dyiwu.github.io/post/tech/install-docker-ce-centos7/" />
@@ -35,7 +35,8 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -47,16 +48,13 @@
 <meta property="article:modified_time" content="2019-09-01T17:56:12+08:00" />
 <meta itemprop="name" content="Install Docker Engine - Community on Centos7">
 <meta itemprop="description" content="Install Docker Engine - Community on CentOS 7">
-
-
 <meta itemprop="datePublished" content="2019-09-01T17:56:12&#43;08:00" />
 <meta itemprop="dateModified" content="2019-09-01T17:56:12&#43;08:00" />
-<meta itemprop="wordCount" content="904">
+<meta itemprop="wordCount" content="901">
 
 
 
-<meta itemprop="keywords" content="docker,centos7," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="docker,centos7," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Install Docker Engine - Community on Centos7"/>
 <meta name="twitter:description" content="Install Docker Engine - Community on CentOS 7"/>
 
@@ -136,7 +134,7 @@
         <div class="post-category">
             <a href="/categories/tech/"> tech </a>
             </div>
-          <span class="more-meta"> 904 words </span>
+          <span class="more-meta"> 901 words </span>
           <span class="more-meta"> 5 mins read </span>
         
       </div>
@@ -145,13 +143,11 @@
     
     <div class="post-content">
       <p>Install Docker Engine - Community on CentOS 7</p>
-
 <h2 id="uninstall-old-versions">Uninstall old versions</h2>
-
-<p>Older versions of Docker were called <strong><em>docker</em></strong> or <strong><em>docker-engine</em></strong>. If these are installed, uninstall them, along with associated dependencies.</p>
+<p>Older versions of Docker were called <em><strong>docker</strong></em> or <em><strong>docker-engine</strong></em>. If these are installed, uninstall them, along with associated dependencies.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -159,89 +155,90 @@
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ sudo yum remove docker \
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo yum remove docker \
                   docker-client \
                   docker-client-latest \
                   docker-common \
                   docker-latest \
                   docker-latest-logrotate \
                   docker-logrotate \
-                  docker-engine</pre></td></tr></table>
+                  docker-engine
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="install-docker-engine-community">Install Docker Engine - Community</h2>
-
+</div><h2 id="install-docker-engine---community">Install Docker Engine - Community</h2>
 <h3 id="set-up-the-repository">Set up the repository</h3>
-
 <ol>
-<li><p>Install required packages. <strong><em>yum-utils</em></strong> provides the <strong><em>yum-config-manager</em></strong> utility, and <strong><em>device-mapper-persistent-data</em></strong> and <strong><em>lvm2</em></strong> are required by the <strong><em>devicemapper</em></strong> storage driver.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ sudo yum install -y yum-utils \
-device-mapper-persistent-data \
-lvm2</pre></td></tr></table>
-</div>
-</div></li>
-
-<li><p>Use the following command to set up the stable repository.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ sudo yum-config-manager \
---add-repo \
-https://download.docker.com/linux/centos/docker-ce.repo</pre></td></tr></table>
-</div>
-</div></li>
+<li>Install required packages. <em><strong>yum-utils</strong></em> provides the <em><strong>yum-config-manager</strong></em> utility, and <em><strong>device-mapper-persistent-data</strong></em> and <em><strong>lvm2</strong></em> are required by the <em><strong>devicemapper</strong></em> storage driver.</li>
 </ol>
-
-<h3 id="install-docker-engine-community-1">Install docker engine - community</h3>
-
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo yum install -y yum-utils \
+  device-mapper-persistent-data \
+  lvm2
+</code></pre></td></tr></table>
+</div>
+</div><ol start="2">
+<li>Use the following command to set up the stable repository.</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="install-docker-engine---community-1">Install docker engine - community</h3>
 <ol>
-<li><p>Install the latest version of Docker Engine - Community and containerd.</p>
+<li>Install the latest version of Docker Engine - Community and containerd.</li>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ sudo yum install docker-ce docker-ce-cli containerd.io</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo yum install docker-ce docker-ce-cli containerd.io
+</code></pre></td></tr></table>
 </div>
-</div></li>
-
-<li><p>List the available versions in the repo</p>
+</div><ol start="2">
+<li>List the available versions in the repo</li>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ yum list docker-ce --showduplicates | sort -r</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ yum list docker-ce --showduplicates | sort -r
+</code></pre></td></tr></table>
 </div>
-</div></li>
-
-<li><p>Start Docker</p>
+</div><ol start="3">
+<li>Start Docker</li>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ sudo systemctl start docker</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo systemctl start docker
+</code></pre></td></tr></table>
 </div>
-</div></li>
-
-<li><p>Verify that Docker Engine - Community is installed correctly by running the hello-world image.</p>
+</div><ol start="4">
+<li>Verify that Docker Engine - Community is installed correctly by running the hello-world image.</li>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -268,9 +265,9 @@ https://download.docker.com/linux/centos/docker-ce.repo</pre></td></tr></table>
 </span><span class="lnt">25
 </span><span class="lnt">26
 </span><span class="lnt">27
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ sudo docker run hello-world
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo docker run hello-world
 Unable to find image &#39;hello-world:latest&#39; locally
 latest: Pulling from library/hello-world
 1b930d010525: Pull complete 
@@ -281,149 +278,138 @@ Hello from Docker!
 This message shows that your installation appears to be working correctly.
 
 To generate this message, Docker took the following steps:
-1. The Docker client contacted the Docker daemon.
-2. The Docker daemon pulled the &#34;hello-world&#34; image from the Docker Hub.
-(amd64)
-3. The Docker daemon created a new container from that image which runs the
-executable that produces the output you are currently reading.
-4. The Docker daemon streamed that output to the Docker client, which sent it
-to your terminal.
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the &#34;hello-world&#34; image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
 
 To try something more ambitious, you can run an Ubuntu container with:
-$ docker run -it ubuntu bash
+ $ docker run -it ubuntu bash
 
 Share images, automate workflows, and more with a free Docker ID:
-https://hub.docker.com/
+ https://hub.docker.com/
 
 For more examples and ideas, visit:
-https://docs.docker.com/get-started/</pre></td></tr></table>
+ https://docs.docker.com/get-started/
+</code></pre></td></tr></table>
 </div>
-</div></li>
-</ol>
-
-<h2 id="post-installation-for-linux">Post-installation for Linux</h2>
-
+</div><h2 id="post-installation-for-linux">Post-installation for Linux</h2>
 <h3 id="manage-docker-as-a-non-root-user">Manage Docker as a non-root user</h3>
-
 <p>The Docker daemon binds to a Unix socket instead of a TCP port.
 By default that Unix socket is owned by the user root and other users can
 only access it using sudo. The Docker daemon always runs as the root user.</p>
-
 <p>If you don’t want to preface the docker command with sudo,
-create a Unix group called <strong><em>docker</em></strong> and add users to it.
+create a Unix group called <em><strong>docker</strong></em> and add users to it.
 When the Docker daemon starts, it creates a Unix socket
 accessible by members of the docker group.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ sudo groupadd docker
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo groupadd docker
 $ sudo usermod -aG docker $USER
 
 $ sudo chown &#34;$USER&#34;:&#34;$USER&#34; /home/&#34;$USER&#34;/.docker -R
-$ sudo chmod g+rwx &#34;$HOME/.docker&#34; -R</pre></td></tr></table>
+$ sudo chmod g+rwx &#34;$HOME/.docker&#34; -R
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="configure-docker-to-start-on-boot">Configure Docker to start on boot</h3>
+</div><h3 id="configure-docker-to-start-on-boot">Configure Docker to start on boot</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ sudo systemctl enable docker</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo systemctl enable docker
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="configure-where-the-docker-daemon-listens-for-connections">Configure where the Docker daemon listens for connections</h3>
-
+</div><h3 id="configure-where-the-docker-daemon-listens-for-connections">Configure where the Docker daemon listens for connections</h3>
 <p>Configuring Docker to accept remote connections can be done with the
 docker.service systemd unit file for Linux distributions using systemd,
 such as recent versions of RedHat, CentOS, Ubuntu and SLES, or with the
 daemon.json file which is recommended for Linux distributions that
 do not use systemd.</p>
-
-<div class="admonition warning"><p class="admonition-title">systemd vs daemn,json</p>
-  
-Configuring Docker to listen for connections using both the systemd 
-unit file and the daemon.json file causes a conflict that prevents 
-Docker from starting.
-
-</div>
-
+<!-- raw HTML omitted -->
+<p>Configuring Docker to listen for connections using both the systemd
+unit file and the daemon.json file causes a conflict that prevents
+Docker from starting.</p>
+<!-- raw HTML omitted -->
 <p>Configuring remote access with systemd unit file
 Open an override file for docker.service in a text editor.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ sudo vi /etc/systemd/system/multi-user.target.wants/docker.service</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo vi /etc/systemd/system/multi-user.target.wants/docker.service
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Add or modify the following lines, substituting your own values.</p>
+</div><p>Add or modify the following lines, substituting your own values.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">[Service]
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">[Service]
 ExecStart=
-ExecStart=/usr/bin/dockerd -H fd:// -H tcp://127.0.0.1:2375</pre></td></tr></table>
+ExecStart=/usr/bin/dockerd -H fd:// -H tcp://127.0.0.1:2375
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Reload the systemctl configuration.</p>
+</div><p>Reload the systemctl configuration.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ sudo systemctl daemon-reload</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo systemctl daemon-reload
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Restart Docker.</p>
+</div><p>Restart Docker.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ sudo systemctl restart docker.service</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo systemctl restart docker.service
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Check to see whether the change was honored by reviewing the output
+</div><p>Check to see whether the change was honored by reviewing the output
 of netstat to confirm dockerd is listening on the configured port.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ sudo netstat -lntp | grep dockerd
-tcp        0      0 127.0.0.1:2375          0.0.0.0:*               LISTEN      3758/dockerd</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo netstat -lntp | grep dockerd
+tcp        0      0 127.0.0.1:2375          0.0.0.0:*               LISTEN      3758/dockerd
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="release-info">Release Info</h2>
-
+</div><h2 id="release-info">Release Info</h2>
 <h3 id="centos-release">CentOS release</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ cat /etc/centos-release
-CentOS Linux release 7.6.1810 (Core) </pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cat /etc/centos-release
+CentOS Linux release 7.6.1810 (Core) 
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="docker-info">Docker Info</h3>
+</div><h3 id="docker-info">Docker Info</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -477,9 +463,9 @@ CentOS Linux release 7.6.1810 (Core) </pre></td></tr></table>
 </span><span class="lnt">52
 </span><span class="lnt">53
 </span><span class="lnt">54
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ docker info
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ docker info
 Client:
  Debug Mode: false
 
@@ -532,11 +518,10 @@ WARNING: API is accessible on http://127.0.0.1:2375 without encryption.
          to the &#39;Docker daemon attack surface&#39; section in the documentation for
          more information: https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface
 WARNING: bridge-nf-call-iptables is disabled
-WARNING: bridge-nf-call-ip6tables is disabled</pre></td></tr></table>
+WARNING: bridge-nf-call-ip6tables is disabled
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="reference">Reference:</h2>
-
+</div><h2 id="reference">Reference:</h2>
 <ul>
 <li><a href="https://docs.docker.com/install/linux/docker-ce/centos/">https://docs.docker.com/install/linux/docker-ce/centos/</a></li>
 </ul>
@@ -617,7 +602,10 @@ WARNING: bridge-nf-call-ip6tables is disabled</pre></td></tr></table>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.cddea96674a99fd8cea50d36fb19d9c91f497feea4af5ce4596afd2dbaab9202.js"></script>
 
 
 

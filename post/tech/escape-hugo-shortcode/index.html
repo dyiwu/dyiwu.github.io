@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://dyiwu.github.io/post/tech/escape-hugo-shortcode/" />
@@ -34,7 +34,8 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -46,16 +47,13 @@
 <meta property="article:modified_time" content="2019-04-21T00:39:53+08:00" />
 <meta itemprop="name" content="Escaping Hugo Shortcode">
 <meta itemprop="description" content="Escaping Hugo Shortcode">
-
-
 <meta itemprop="datePublished" content="2019-04-21T00:39:53&#43;08:00" />
 <meta itemprop="dateModified" content="2019-04-21T00:39:53&#43;08:00" />
-<meta itemprop="wordCount" content="213">
+<meta itemprop="wordCount" content="207">
 
 
 
-<meta itemprop="keywords" content="hugo,markdown," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="hugo,markdown," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Escaping Hugo Shortcode"/>
 <meta name="twitter:description" content="Escaping Hugo Shortcode"/>
 
@@ -135,7 +133,7 @@
         <div class="post-category">
             <a href="/categories/tech/"> tech </a>
             </div>
-          <span class="more-meta"> 213 words </span>
+          <span class="more-meta"> 207 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -143,14 +141,11 @@
 
     
     <div class="post-content">
-      <div class="admonition note">
-  
-This article originally comes from
-[Chris Liatas's web site](https://liatas.com/posts/escaping-hugo-shortcodes/) ,
-just make a copy here for quick reference.
-
-</div>
-
+      <!-- raw HTML omitted -->
+<p>This article originally comes from
+<a href="https://liatas.com/posts/escaping-hugo-shortcodes/">Chris Liatas&rsquo;s web site</a> ,
+just make a copy here for quick reference.</p>
+<!-- raw HTML omitted -->
 <p>In the rare case you might need to escape (i.e., prevent from executing)
 a shortcode in a Hugo markdown (.md) file, and display the shortcode as
 <code>{{&lt; myshortcode &gt;}}</code> you will probably find that escaping the double curly
@@ -158,28 +153,19 @@ braces with <code>\</code> is not working for this, producing a result similar t
 {{&lt; myshortcode &gt;}} or this
 {{&lt; myshortcode &gt;}}
 or that the shortcode is executed nevertheless.</p>
-
 <p>A simple method that works at the time of writing, is adding <code>/*</code> after the
 opening double curly braces and the angle bracket or percent sign
 (i.e., <code>{{&gt;/*</code> or <code>{{%</code> and adding <code>*/</code> after the closing angle bracket
-or percent sign and double curly braces (i.e., <code>*/&gt;</code><code>}}</code> or <code>%}}</code>).
+or percent sign and double curly braces (i.e., <code>*/&gt;``}}</code> or <code>%}}</code>).
 So, if for example, you have the shortcode myshortcode and you want to
 use it to a code highlight without being executed during page building
 from the Hugo engine, you should try including it in your markdown file as:</p>
-
-<pre><code>```md
-{{&lt;/* myshortcode */&gt;}}
-```
-</code></pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>The above will produce an output like the following:</p>
-
-<pre><code>
-{{< myshortcode >}}
-</code></pre>
-
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <p>References for further reading:</p>
-
 <ol>
 <li><a href="https://liatas.com/posts/escaping-hugo-shortcodes/">Escaping Hugo shortcodes</a></li>
 <li><a href="https://discourse.gohugo.io/t/how-is-the-hugo-doc-site-showing-shortcodes-in-code-blocks/9074">How is the Hugo Doc site showing shortcodes in code blocks?</a></li>
@@ -263,7 +249,10 @@ from the Hugo engine, you should try including it in your markdown file as:</p>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.cddea96674a99fd8cea50d36fb19d9c91f497feea4af5ce4596afd2dbaab9202.js"></script>
 
 
 

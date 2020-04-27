@@ -16,13 +16,6 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/</loc>
-    <lastmod>2020-03-08T20:16:20+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://dyiwu.github.io/categories/life/</loc>
     <lastmod>2020-03-08T20:16:20+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -403,6 +396,13 @@
   <url>
     <loc>https://dyiwu.github.io/post/bookmarks/guru/</loc>
     <lastmod>2019-05-02T17:34:39+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/</loc>
+    <lastmod>2019-05-01T15:38:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

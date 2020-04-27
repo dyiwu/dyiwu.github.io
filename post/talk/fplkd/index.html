@@ -25,7 +25,7 @@ This presentation is a preliminary talk about 3W1H for kdump in linux environmen
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://dyiwu.github.io/post/talk/fplkd/" />
@@ -36,13 +36,13 @@ This presentation is a preliminary talk about 3W1H for kdump in linux environmen
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="Talk: Frist Pass Linux Kernel Dump" />
 <meta property="og:description" content="Kdump is a kernel crash dumping mechanism that allows you to save the contents of the system’s memory for later analysis. A kernel crash dump can be the only information available in the event of a failure, the importance of having this data in a business critical environment cannot be underestimated.
-
 This presentation is a preliminary talk about 3W1H for kdump in linux environment." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dyiwu.github.io/post/talk/fplkd/" />
@@ -50,21 +50,16 @@ This presentation is a preliminary talk about 3W1H for kdump in linux environmen
 <meta property="article:modified_time" content="2014-07-24T15:14:34+08:00" />
 <meta itemprop="name" content="Talk: Frist Pass Linux Kernel Dump">
 <meta itemprop="description" content="Kdump is a kernel crash dumping mechanism that allows you to save the contents of the system’s memory for later analysis. A kernel crash dump can be the only information available in the event of a failure, the importance of having this data in a business critical environment cannot be underestimated.
-
 This presentation is a preliminary talk about 3W1H for kdump in linux environment.">
-
-
 <meta itemprop="datePublished" content="2014-07-24T15:14:34&#43;08:00" />
 <meta itemprop="dateModified" content="2014-07-24T15:14:34&#43;08:00" />
 <meta itemprop="wordCount" content="134">
 
 
 
-<meta itemprop="keywords" content="linux,kernel," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="linux,kernel," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Talk: Frist Pass Linux Kernel Dump"/>
 <meta name="twitter:description" content="Kdump is a kernel crash dumping mechanism that allows you to save the contents of the system’s memory for later analysis. A kernel crash dump can be the only information available in the event of a failure, the importance of having this data in a business critical environment cannot be underestimated.
-
 This presentation is a preliminary talk about 3W1H for kdump in linux environment."/>
 
 <!--[if lte IE 9]>
@@ -152,39 +147,33 @@ This presentation is a preliminary talk about 3W1H for kdump in linux environmen
     
     <div class="post-content">
       <p>Kdump is a kernel crash dumping mechanism that allows you to save the contents of the system’s memory for later analysis. A kernel crash dump can be the only information available in the event of a failure, the importance of having this data in a business critical environment cannot be underestimated.</p>
-
 <p>This presentation is a preliminary talk about 3W1H for kdump in linux environment.</p>
-
 <h2 id="frist-pass-linux-kernel-dump">Frist Pass Linux Kernel Dump</h2>
-
-<h3 id="learning-objectives-why-we-are-here">Learning Objectives - Why we are here ?</h3>
-
+<h3 id="learning-objectives---why-we-are-here-">Learning Objectives - Why we are here ?</h3>
 <ul>
-<li>Care Why<br />
-
+<li>Care Why
 <ul>
 <li>Effective action plan development for outage case</li>
-</ul></li>
-<li>Know Why<br />
-
+</ul>
+</li>
+<li>Know Why
 <ul>
 <li>Direct evidence finding instead of the best guess on action plan development</li>
-</ul></li>
-<li>Know How<br />
-
+</ul>
+</li>
+<li>Know How
 <ul>
 <li>Build it and test it</li>
-</ul></li>
-<li>Know What<br />
-
+</ul>
+</li>
+<li>Know What
 <ul>
 <li>What is kdump ?</li>
 <li>How does it work ?</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <h3 id="agenda">Agenda</h3>
-
 <ul>
 <li>How kdump work</li>
 <li>Kdump setup/validation</li>
@@ -192,8 +181,7 @@ This presentation is a preliminary talk about 3W1H for kdump in linux environmen
 <li>First Pass Kdump Analysis</li>
 <li>Labs</li>
 </ul>
-
-<h3 id="silde-pages-fplkd-pdf-https-drive-google-com-open-id-1uk8c2gx3gbhbqfku7at5oqnj3xuuczil">Silde Pages: <a href="https://drive.google.com/open?id=1uk8c2gx3gbHBQfku7aT5oqNj3XUUczIL">fplkd.pdf</a></h3>
+<h3 id="silde-pages-fplkdpdfhttpsdrivegooglecomopenid1uk8c2gx3gbhbqfku7at5oqnj3xuuczil">Silde Pages: <a href="https://drive.google.com/open?id=1uk8c2gx3gbHBQfku7aT5oqNj3XUUczIL">fplkd.pdf</a></h3>
     </div>
 
     
@@ -271,7 +259,10 @@ This presentation is a preliminary talk about 3W1H for kdump in linux environmen
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.cddea96674a99fd8cea50d36fb19d9c91f497feea4af5ce4596afd2dbaab9202.js"></script>
 
 
 

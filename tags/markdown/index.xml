@@ -19,10 +19,10 @@
       
       <guid>https://dyiwu.github.io/post/tech/tip_hugo_academic_theme/</guid>
       <description>shortcode
- {{&amp;lt; list_tags &amp;gt;}}
- {{&amp;lt; list_categories &amp;gt;}}
- High light code block with line number
-1{{&amp;lt; highlight plaintext &amp;#34;linenos=inline&amp;#34; &amp;gt;}} 2code block here 3{{&amp;lt; /highlight &amp;gt;}}  Reference:
+  {{&amp;lt; list_tags &amp;gt;}}
+  {{&amp;lt; list_categories &amp;gt;}}
+  High light code block with line number
+1{{&amp;lt; highlight plaintext &amp;#34;linenos=inline&amp;#34; &amp;gt;}} 2code block here 3{{&amp;lt; /highlight &amp;gt;}}   Reference:
  https://lmyint.github.io/post/hugo-academic-tips/ https://highlightjs.org/ https://liatas.com/posts/escaping-hugo-shortcodes/ http://abitofcode.com/post/2017/04/customizing_a_hugo_site/  </description>
     </item>
     

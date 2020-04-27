@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-lvm-powerfail/" />
@@ -34,7 +34,8 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -46,16 +47,13 @@
 <meta property="article:modified_time" content="2005-04-28T09:58:01+08:00" />
 <meta itemprop="name" content="System hang in the LVM POWERFAIL queue.">
 <meta itemprop="description" content="System hang in the LVM POWERFAIL queue.">
-
-
 <meta itemprop="datePublished" content="2005-04-28T09:58:01&#43;08:00" />
 <meta itemprop="dateModified" content="2005-04-28T09:58:01&#43;08:00" />
-<meta itemprop="wordCount" content="2607">
+<meta itemprop="wordCount" content="2609">
 
 
 
-<meta itemprop="keywords" content="hpux-kernel-dump,hang," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="hpux-kernel-dump,hang," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="System hang in the LVM POWERFAIL queue."/>
 <meta name="twitter:description" content="System hang in the LVM POWERFAIL queue."/>
 
@@ -135,7 +133,7 @@
         <div class="post-category">
             <a href="/categories/tech/"> tech </a>
             </div>
-          <span class="more-meta"> 2607 words </span>
+          <span class="more-meta"> 2609 words </span>
           <span class="more-meta"> 13 mins read </span>
         
       </div>
@@ -143,12 +141,10 @@
 
     
     <div class="post-content">
-      
-
-<h2 id="system-hang-in-the-lvm-powerfail-queue">System hang in the LVM POWERFAIL queue.</h2>
+      <h2 id="system-hang-in-the-lvm-powerfail-queue">System hang in the LVM POWERFAIL queue.</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">  1
+<pre class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -610,9 +606,12 @@
 </span><span class="lnt">460
 </span><span class="lnt">461
 </span><span class="lnt">462
-</span></pre></td>
+</span><span class="lnt">463
+</span><span class="lnt">464
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">System crash dump analysis report
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+System crash dump analysis report
 =================================
 Symptom
 -------
@@ -1073,7 +1072,9 @@ biowait()                                          4      1015664    1015164
 pm_sigwait()                                       3      99         45        
 fifo_rdwr()                                        3      2547529752 980865    
 streams_getmsg()                                   2      190622811  190621512 
-vx_sleep_lock()                                    2      1011346    1011327   </pre></td></tr></table>
+vx_sleep_lock()                                    2      1011346    1011327   
+
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -1153,7 +1154,10 @@ vx_sleep_lock()                                    2      1011346    1011327   <
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.cddea96674a99fd8cea50d36fb19d9c91f497feea4af5ce4596afd2dbaab9202.js"></script>
 
 
 

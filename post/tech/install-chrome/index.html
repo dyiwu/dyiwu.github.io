@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://dyiwu.github.io/post/tech/install-chrome/" />
@@ -34,7 +34,8 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -46,16 +47,13 @@
 <meta property="article:modified_time" content="2019-06-13T18:28:32+08:00" />
 <meta itemprop="name" content="Install Google Chrome on Linux Mint 19 Tara">
 <meta itemprop="description" content="">
-
-
 <meta itemprop="datePublished" content="2019-06-13T18:28:32&#43;08:00" />
 <meta itemprop="dateModified" content="2019-06-13T18:28:32&#43;08:00" />
 <meta itemprop="wordCount" content="69">
 
 
 
-<meta itemprop="keywords" content="setup,chrome," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="setup,chrome," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Install Google Chrome on Linux Mint 19 Tara"/>
 <meta name="twitter:description" content=""/>
 
@@ -144,52 +142,55 @@
     
     <div class="post-content">
       <p>Setup Google Chrome Repository and then install it.</p>
-
 <ul>
-<li><p>Download Google signing key and install it.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ wget -q -O - https://dl.google.com/linux/linux_signing_key.pub \
-| sudo apt-key add -</pre></td></tr></table>
-</div>
-</div></li>
-
-<li><p>Set up the Google Chrome repository.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ echo &#34;deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main&#34; \
-| sudo tee /etc/apt/sources.list.d/google-chrome.list</pre></td></tr></table>
-</div>
-</div></li>
-
-<li><p>Update repository index.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ sudo apt update</pre></td></tr></table>
-</div>
-</div></li>
-
-<li><p>Install Google Chrome Stable version.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ sudo apt install -y google-chrome-stable</pre></td></tr></table>
-</div>
-</div></li>
+<li>Download Google signing key and install it.</li>
 </ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ wget -q -O - https://dl.google.com/linux/linux_signing_key.pub \
+| sudo apt-key add -
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Set up the Google Chrome repository.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ echo &#34;deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main&#34; \
+| sudo tee /etc/apt/sources.list.d/google-chrome.list
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Update repository index.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt update
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>Install Google Chrome Stable version.</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt install -y google-chrome-stable
+</code></pre></td></tr></table>
+</div>
+</div>
     </div>
 
     
@@ -267,7 +268,10 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.cddea96674a99fd8cea50d36fb19d9c91f497feea4af5ce4596afd2dbaab9202.js"></script>
 
 
 

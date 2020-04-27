@@ -27,8 +27,7 @@
       <pubDate>Thu, 06 Jun 2019 20:15:32 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/post/tech/install-nginx-php-fpm/</guid>
-      <description>&lt;h2 id=&#34;install-nginx&#34;&gt;&lt;em&gt;Install Nginx&lt;/em&gt;&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;_install-nginx_&#34;&gt;&lt;em&gt;Install Nginx&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;Download the Nginx signing key from Nginx official site, and them add it into system.&lt;/p&gt;</description>
     </item>
     
@@ -39,7 +38,6 @@
       
       <guid>https://dyiwu.github.io/post/tech/install-hugo-even/</guid>
       <description>&lt;p&gt;Install Hugo with Even theme&lt;/p&gt;
-
 &lt;h2 id=&#34;create-a-new-site-named-it-as-chaos-in-my-case&#34;&gt;Create a new site named it as chaos in my case.&lt;/h2&gt;</description>
     </item>
     
@@ -49,7 +47,7 @@
       <pubDate>Fri, 26 Apr 2019 20:03:10 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/post/tech/install_hugo_academic_kickstart/</guid>
-      <description>Install Hugo with Academic theme kickstart File location: Local repository saved under ~/Hugo/Site/chaos Generated web site saved under ~/Hugo/Site/chaos/public directory and deploy to github as https://dyiwu.github.io/ Fork the Academic Kickstart repository from sourcethemes/academic-kickstart as dyiwu/academic-kickstart repo (https://github.com/sourcethemes/academic-kickstart) rename the forked repo from academic-kickstart to chaos clone your dyiwu/chaos repo into local file system: 1 2 3 4 $ cd ~/Hugo/Site $ git clone https://github.com/dyiwu/chaos.git $ cd chaos $ git submodule</description>
+      <description>Install Hugo with Academic theme kickstart File location: Local repository saved under ~/Hugo/Site/chaos Generated web site saved under ~/Hugo/Site/chaos/public directory and deploy to github as https://dyiwu.github.io/ rename the forked repo from academic-kickstart to chaos clone your dyiwu/chaos repo into local file system: 1 2 3 4 $ cd ~/Hugo/Site $ git clone https://github.com/dyiwu/chaos.git $ cd chaos $ git submodule update --init --recursive Update Academic Kickstart by execute the theme updater</description>
     </item>
     
   </channel>

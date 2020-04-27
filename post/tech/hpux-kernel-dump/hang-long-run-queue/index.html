@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-long-run-queue/" />
@@ -34,7 +34,8 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -46,16 +47,13 @@
 <meta property="article:modified_time" content="2004-04-05T10:18:00+08:00" />
 <meta itemprop="name" content="System mini hang when long run queue.">
 <meta itemprop="description" content="System mini hang when long run queue.">
-
-
 <meta itemprop="datePublished" content="2004-04-05T10:18:00&#43;08:00" />
 <meta itemprop="dateModified" content="2004-04-05T10:18:00&#43;08:00" />
-<meta itemprop="wordCount" content="11950">
+<meta itemprop="wordCount" content="11952">
 
 
 
-<meta itemprop="keywords" content="hpux-kernel-dump,hang," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="hpux-kernel-dump,hang," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="System mini hang when long run queue."/>
 <meta name="twitter:description" content="System mini hang when long run queue."/>
 
@@ -135,7 +133,7 @@
         <div class="post-category">
             <a href="/categories/tech/"> tech </a>
             </div>
-          <span class="more-meta"> 11950 words </span>
+          <span class="more-meta"> 11952 words </span>
           <span class="more-meta"> 57 mins read </span>
         
       </div>
@@ -143,15 +141,12 @@
 
     
     <div class="post-content">
-      
-
-<h2 id="system-mini-hang-when-long-run-queue">System mini hang when long run queue.</h2>
-
+      <h2 id="system-mini-hang-when-long-run-queue">System mini hang when long run queue.</h2>
 <p>Midaemon daemon process was spining in user space, which
 monopolized the SPU, leads system mini-hang.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">   1
+<pre class="chroma"><code><span class="lnt">   1
 </span><span class="lnt">   2
 </span><span class="lnt">   3
 </span><span class="lnt">   4
@@ -1266,9 +1261,12 @@ monopolized the SPU, leads system mini-hang.</p>
 </span><span class="lnt">1113
 </span><span class="lnt">1114
 </span><span class="lnt">1115
-</span></pre></td>
+</span><span class="lnt">1116
+</span><span class="lnt">1117
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">System Crash Dump Analysis Report
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+System Crash Dump Analysis Report
 =================================
 
 Symptom
@@ -2382,7 +2380,9 @@ AL: Alpha semaphores misses (special scheduling when miss a sema).
      4       4 128   1     0        0         0         0        0  0x3fc1bbea unhashdaemon
      2       2 128   1     0        0         0         0        0  0x3fc1bbea vhand
      1       1 168   1     0        0         0         0        0  0x3fc1bbeb init
-     0       0 128   1     0        0         0         0        0  0x3fc1bbea swapper</pre></td></tr></table>
+     0       0 128   1     0        0         0         0        0  0x3fc1bbea swapper
+
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -2462,7 +2462,10 @@ AL: Alpha semaphores misses (special scheduling when miss a sema).
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.cddea96674a99fd8cea50d36fb19d9c91f497feea4af5ce4596afd2dbaab9202.js"></script>
 
 
 

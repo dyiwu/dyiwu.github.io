@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://dyiwu.github.io/post/tech/programming/fullname/" />
@@ -35,7 +35,8 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -47,16 +48,13 @@
 <meta property="article:modified_time" content="2019-05-31T19:36:03+08:00" />
 <meta itemprop="name" content="Full name">
 <meta itemprop="description" content="This awk script translates the format of full name list in input file from the first name first format to the last name first format.">
-
-
 <meta itemprop="datePublished" content="2019-05-31T19:36:03&#43;08:00" />
 <meta itemprop="dateModified" content="2019-05-31T19:36:03&#43;08:00" />
-<meta itemprop="wordCount" content="201">
+<meta itemprop="wordCount" content="202">
 
 
 
-<meta itemprop="keywords" content="awk,programming," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="awk,programming," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Full name"/>
 <meta name="twitter:description" content="This awk script translates the format of full name list in input file from the first name first format to the last name first format."/>
 
@@ -136,7 +134,7 @@
         <div class="post-category">
             <a href="/categories/tech/"> tech </a>
             </div>
-          <span class="more-meta"> 201 words </span>
+          <span class="more-meta"> 202 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -145,11 +143,10 @@
     
     <div class="post-content">
       <p>This awk script translates the format of full name list in input file from the first name first format to the last name first format.</p>
-
 <p>Here is the awk code.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-awk" data-lang="awk"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -196,13 +193,13 @@
       <span class="kr">print</span> <span class="nx">LastName</span><span class="p">,</span><span class="s2">&#34;, &#34;</span><span class="p">,</span><span class="nx">FirstName</span><span class="p">;</span>
       <span class="p">}</span>
   <span class="p">}</span>
-<span class="p">}</span></code></pre></td></tr></table>
+<span class="p">}</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Run time example,</p>
+</div><p>Run time example,</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -227,9 +224,10 @@
 </span><span class="lnt">23
 </span><span class="lnt">24
 </span><span class="lnt">25
-</span></pre></td>
+</span><span class="lnt">26
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ nl -b a namelist.txt
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ nl -b a namelist.txt
      1  Prest Lin
      2  Cereal Mak
      3  Joo kim Chong
@@ -253,7 +251,9 @@ $ nl -b a out.txt
      7  Lim, Poh Leng
      8
      9  Ng, Vincent
-    10  Hsiao, Johnson</pre></td></tr></table>
+    10  Hsiao, Johnson
+
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -333,7 +333,10 @@ $ nl -b a out.txt
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.cddea96674a99fd8cea50d36fb19d9c91f497feea4af5ce4596afd2dbaab9202.js"></script>
 
 
 

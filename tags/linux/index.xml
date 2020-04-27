@@ -19,7 +19,6 @@
       
       <guid>https://dyiwu.github.io/post/talk/fplkd/</guid>
       <description>&lt;p&gt;Kdump is a kernel crash dumping mechanism that allows you to save the contents of the system’s memory for later analysis. A kernel crash dump can be the only information available in the event of a failure, the importance of having this data in a business critical environment cannot be underestimated.&lt;/p&gt;
-
 &lt;p&gt;This presentation is a preliminary talk about 3W1H for kdump in linux environment.&lt;/p&gt;</description>
     </item>
     

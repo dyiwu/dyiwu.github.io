@@ -24,7 +24,7 @@ Create a new site named it as chaos in my case." /><meta name="keywords" content
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://dyiwu.github.io/post/tech/install-hugo-even/" />
@@ -35,13 +35,13 @@ Create a new site named it as chaos in my case." /><meta name="keywords" content
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
 <meta property="og:title" content="Install Hugo with Even theme" />
 <meta property="og:description" content="Install Hugo with Even theme
-
 Create a new site named it as chaos in my case." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dyiwu.github.io/post/tech/install-hugo-even/" />
@@ -49,21 +49,16 @@ Create a new site named it as chaos in my case." />
 <meta property="article:modified_time" content="2019-05-01T14:53:00+08:00" />
 <meta itemprop="name" content="Install Hugo with Even theme">
 <meta itemprop="description" content="Install Hugo with Even theme
-
 Create a new site named it as chaos in my case.">
-
-
 <meta itemprop="datePublished" content="2019-05-01T14:53:00&#43;08:00" />
 <meta itemprop="dateModified" content="2019-05-01T14:53:00&#43;08:00" />
 <meta itemprop="wordCount" content="579">
 
 
 
-<meta itemprop="keywords" content="hugo,even,setup," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="hugo,even,setup," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Install Hugo with Even theme"/>
 <meta name="twitter:description" content="Install Hugo with Even theme
-
 Create a new site named it as chaos in my case."/>
 
 <!--[if lte IE 9]>
@@ -151,12 +146,10 @@ Create a new site named it as chaos in my case."/>
     
     <div class="post-content">
       <p>Install Hugo with Even theme</p>
-
 <h2 id="create-a-new-site-named-it-as-chaos-in-my-case">Create a new site named it as chaos in my case.</h2>
-
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -170,9 +163,9 @@ Create a new site named it as chaos in my case."/>
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ cd ~/Hugo/Sites
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cd ~/Hugo/Sites
 $ hugo new site chaos
 Congratulations! Your new Hugo site is created in /home/dyiwu/Hugo/Sites/chaos.
 
@@ -185,100 +178,104 @@ Just a few more steps and you&#39;re ready to go:
    with &#34;hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&#34;.
 3. Start the built-in live server via &#34;hugo server&#34;.
 
-Visit https://gohugo.io/ for quickstart guide and full documentation.</pre></td></tr></table>
+Visit https://gohugo.io/ for quickstart guide and full documentation.
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="install-even-theme">Install even theme</h2>
+</div><h2 id="install-even-theme">Install even theme</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ cd ~/Hugo/Sites/chaos
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cd ~/Hugo/Sites/chaos
 $ git clone https://github.com/olOwOlo/hugo-theme-even themes/even
-$ cp themes/even/exampleSite/config.toml .</pre></td></tr></table>
+$ cp themes/even/exampleSite/config.toml .
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="update-theme">Update theme</h2>
+</div><h2 id="update-theme">Update theme</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ cd ~/Hugo/Sites/chaos/themes/even
-$ git pull</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cd ~/Hugo/Sites/chaos/themes/even
+$ git pull
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="deploy-to-github">Deploy to github</h2>
-
+</div><h2 id="deploy-to-github">Deploy to github</h2>
 <ol>
-<li>Create two repostories on github, named it as chaos and dyiwu.github.io</li>
-
-<li><p>Generate the web site which will be saved under ~/Hugo/Sites/chaos/public directory.</p>
+<li>
+<p>Create two repostories on github, named it as chaos and dyiwu.github.io</p>
+</li>
+<li>
+<p>Generate the web site which will be saved under ~/Hugo/Sites/chaos/public directory.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ cd ~/Hugo/Sites/chaos
-$ hugo</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cd ~/Hugo/Sites/chaos
+$ hugo
+</code></pre></td></tr></table>
 </div>
 </div></li>
-
-<li><p>link the generated web site (/public) folder to github</p>
+<li>
+<p>link the generated web site (/public) folder to github</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ cd ~/Hugo/Sites/chaos/public
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cd ~/Hugo/Sites/chaos/public
 $ git init
 $ git remote add origin https://github.com/dyiwu/dyiwu.github.io.git
 $ git add .
 $ git commit -m &#34;Initial commit&#34;
-$ git push -u origin master</pre></td></tr></table>
+$ git push -u origin master
+</code></pre></td></tr></table>
 </div>
 </div></li>
-
-<li><p>Link the whole chaos site to github</p>
+<li>
+<p>Link the whole chaos site to github</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ cd ~/Hugo/Sites/chaos
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cd ~/Hugo/Sites/chaos
 $ git init
 $ git remote add origin https://github.com/dyiwu/chaos.git
 $ git add .
 $ git commit -m &#34;Initial commit&#34;
-$ git push -u origin master</pre></td></tr></table>
+$ git push -u origin master
+</code></pre></td></tr></table>
 </div>
 </div></li>
-
-<li><p>Web site will hosted on Github as <a href="https://dyiwu.github.io/">https://dyiwu.github.io/</a></p></li>
+<li>
+<p>Web site will hosted on Github as <a href="https://dyiwu.github.io/">https://dyiwu.github.io/</a></p>
+</li>
 </ol>
-
 <h2 id="maintance-scripts">Maintance scripts</h2>
-
 <ol>
-<li><p>Script to deploy chaos.git repo from local to github</p>
+<li>Script to deploy chaos.git repo from local to github</li>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -292,9 +289,9 @@ $ git push -u origin master</pre></td></tr></table>
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ cat deploy_chaos.sh 
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ cat deploy_chaos.sh 
 <span class="c1">#!/bin/bash</span>
 <span class="nb">echo</span> -e <span class="s2">&#34;Deploying ~/Hugo/Sites/chaos updates to GitHub...&#34;</span>
 <span class="nb">cd</span> ~/Hugo/Sites/chaos
@@ -303,18 +300,19 @@ git add -A
 <span class="c1"># Commit changes.</span>
 <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site `date`&#34;</span>
 <span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">]</span>
-<span class="k">then</span> <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+  <span class="k">then</span> <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
 <span class="k">fi</span>
 git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
 <span class="c1"># Push source and build repos.</span>
-git push origin master</pre></td></tr></table>
+git push origin master
+</code></pre></td></tr></table>
 </div>
-</div></li>
-
-<li><p>Script to deploy dyiwu.github.io.git from local to github</p>
+</div><ol start="2">
+<li>Script to deploy dyiwu.github.io.git from local to github</li>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -334,9 +332,9 @@ git push origin master</pre></td></tr></table>
 </span><span class="lnt">18
 </span><span class="lnt">19
 </span><span class="lnt">20
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ cat deploy_public.sh
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ cat deploy_public.sh
 <span class="c1">#!/bin/bash</span>
 <span class="nb">echo</span> -e <span class="s2">&#34;Deploying ~/Hugo/Sites/chaos/public updates to GitHub...&#34;</span>
 <span class="c1"># Build the project.</span>
@@ -349,107 +347,112 @@ git add -A
 <span class="c1"># Commit changes.</span>
 <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site `date`&#34;</span>
 <span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">]</span>
-<span class="k">then</span> <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+  <span class="k">then</span> <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
 <span class="k">fi</span>
 git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
 <span class="c1"># Push source and build repos.</span>
 git push origin master
 <span class="c1"># Come Back</span>
-<span class="nb">cd</span> ..</pre></td></tr></table>
+<span class="nb">cd</span> ..
+</code></pre></td></tr></table>
 </div>
-</div></li>
-
-<li><p>Script to clone chaos.git repo from github to local</p>
+</div><ol start="3">
+<li>Script to clone chaos.git repo from github to local</li>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ cat clone_chaos.sh 
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ cat clone_chaos.sh 
 <span class="c1">#!/bin/bash</span>
 <span class="nb">echo</span> -e <span class="s2">&#34;Clone chaos.git repo from GitHub to local...&#34;</span>
 <span class="nb">cd</span> ~/Hugo/Sites
 git clone https://github.com/dyiwu/chaos.git
-<span class="nb">cd</span> chaos</pre></td></tr></table>
+<span class="nb">cd</span> chaos
+</code></pre></td></tr></table>
 </div>
-</div></li>
-
-<li><p>Script to clone dyiwu.github.io.git repo from github to local</p>
+</div><ol start="4">
+<li>Script to clone dyiwu.github.io.git repo from github to local</li>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ cat clone_public.sh 
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ cat clone_public.sh 
 <span class="c1">#!/bin/bash</span>
 <span class="nb">echo</span> -e <span class="s2">&#34;Clone dyiwu.github.io.git repo from GitHub to local...&#34;</span>
 <span class="c1"># Build the project.</span>
 <span class="nb">cd</span> ~/Hugo/Sites/chaos
-git clone https://github.com/dyiwu/dyiwu.github.io.git public</pre></td></tr></table>
+git clone https://github.com/dyiwu/dyiwu.github.io.git public
+</code></pre></td></tr></table>
 </div>
-</div></li>
-
-<li><p>Script to clone themes/even repo from github to local</p>
+</div><ol start="5">
+<li>Script to clone themes/even repo from github to local</li>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ cat clone_themes.sh 
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ cat clone_themes.sh 
 <span class="c1">#!/bin/bash</span>
 $ <span class="nb">cd</span> ~/Hugo/Sites/chaos
-$ git clone https://github.com/olOwOlo/hugo-theme-even themes/even</pre></td></tr></table>
+$ git clone https://github.com/olOwOlo/hugo-theme-even themes/even
+</code></pre></td></tr></table>
 </div>
-</div></li>
-
-<li><p>Script to update themes/even</p>
+</div><ol start="6">
+<li>Script to update themes/even</li>
+</ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ cat update_theme.sh 
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ cat update_theme.sh 
 <span class="c1">#!/bin/bash</span>
 <span class="nb">cd</span> ~/Hugo/Sites/chaos/themes/even
-git pull</pre></td></tr></table>
+git pull
+</code></pre></td></tr></table>
 </div>
-</div></li>
-</ol>
-
-<h2 id="customization-and-tips">Customization and Tips</h2>
-
+</div><h2 id="customization-and-tips">Customization and Tips</h2>
 <ul>
-<li><p>Manual Summary Splitting<br />
-Add the <code>&lt;!--more--&gt;</code> summary divider where you want to split the article.</p></li>
-
-<li><p>Setup Permlinks in config.toml</p>
+<li>
+<p>Manual Summary Splitting<br>
+Add the <code>&lt;!--more--&gt;</code> summary divider where you want to split the article.</p>
+</li>
+<li>
+<p>Setup Permlinks in config.toml</p>
+</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">[permalinks]
-post = &#34;/:year/:month/:filename/&#34;</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">[permalinks]
+    post = &#34;/:year/:month/:filename/&#34;
+</code></pre></td></tr></table>
 </div>
-</div></li>
-</ul>
+</div>
     </div>
 
     
@@ -528,7 +531,10 @@ post = &#34;/:year/:month/:filename/&#34;</pre></td></tr></table>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.cddea96674a99fd8cea50d36fb19d9c91f497feea4af5ce4596afd2dbaab9202.js"></script>
 
 
 

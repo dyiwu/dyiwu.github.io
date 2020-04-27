@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.69.2 with theme even" />
 
 
 <link rel="canonical" href="https://dyiwu.github.io/post/tech/hpux-kernel-dump/hang-xntpd-monopolize/" />
@@ -34,7 +34,8 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.78f8f17bab244b9ee62ad16480c9584d5fc2db06ae20681d1ca225cefd80767c.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
@@ -46,16 +47,13 @@
 <meta property="article:modified_time" content="2004-01-13T15:51:00+08:00" />
 <meta itemprop="name" content="Time services process xnptd monopolize CPU 0 in kernel mode.">
 <meta itemprop="description" content="xnptd monopolize CPU 0 in kernel mode.">
-
-
 <meta itemprop="datePublished" content="2004-01-13T15:51:00&#43;08:00" />
 <meta itemprop="dateModified" content="2004-01-13T15:51:00&#43;08:00" />
-<meta itemprop="wordCount" content="1016">
+<meta itemprop="wordCount" content="1018">
 
 
 
-<meta itemprop="keywords" content="hpux-kernel-dump,hang," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="hpux-kernel-dump,hang," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Time services process xnptd monopolize CPU 0 in kernel mode."/>
 <meta name="twitter:description" content="xnptd monopolize CPU 0 in kernel mode."/>
 
@@ -135,7 +133,7 @@
         <div class="post-category">
             <a href="/categories/tech/"> tech </a>
             </div>
-          <span class="more-meta"> 1016 words </span>
+          <span class="more-meta"> 1018 words </span>
           <span class="more-meta"> 5 mins read </span>
         
       </div>
@@ -143,12 +141,10 @@
 
     
     <div class="post-content">
-      
-
-<h2 id="time-services-process-xnptd-monopolize-cpu-0-in-kernel-mode">Time services process xnptd monopolize CPU 0 in kernel mode.</h2>
+      <h2 id="time-services-process-xnptd-monopolize-cpu-0-in-kernel-mode">Time services process xnptd monopolize CPU 0 in kernel mode.</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">  1
+<pre class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -370,9 +366,12 @@
 </span><span class="lnt">220
 </span><span class="lnt">221
 </span><span class="lnt">222
-</span></pre></td>
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">System crash dump analysis report
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+System crash dump analysis report
 =================================
 Symptom
 -------
@@ -593,7 +592,9 @@ TID     PID   PPID  RUN        IDLE       PRI SPU STATE S MIGR       FR LO AL CO
                                0              1   IDLE  N 310        0  0  0  
                                0              2   IDLE  N 112        0  0  0  
                                0              3   IDLE  N 212        0  0  0  
-JAGae26628</pre></td></tr></table>
+JAGae26628
+
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -673,7 +674,10 @@ JAGae26628</pre></td></tr></table>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.cddea96674a99fd8cea50d36fb19d9c91f497feea4af5ce4596afd2dbaab9202.js"></script>
 
 
 
