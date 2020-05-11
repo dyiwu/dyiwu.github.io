@@ -3,7 +3,14 @@
   
   <url>
     <loc>https://dyiwu.github.io/about/</loc>
-    <lastmod>2019-05-01T15:38:52+08:00</lastmod>
+    <lastmod>2020-05-12T02:38:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/</loc>
+    <lastmod>2020-05-12T02:38:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -396,13 +403,6 @@
   <url>
     <loc>https://dyiwu.github.io/post/bookmarks/guru/</loc>
     <lastmod>2019-05-02T17:34:39+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/</loc>
-    <lastmod>2019-05-01T15:38:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
