@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.69.2 with theme even" />
+<meta name="generator" content="Hugo 0.70.0 with theme even" />
 
 
 <link rel="canonical" href="https://dyiwu.github.io/post/tech/escape-hugo-shortcode/" />
@@ -49,7 +49,7 @@
 <meta itemprop="description" content="Escaping Hugo Shortcode">
 <meta itemprop="datePublished" content="2019-04-21T00:39:53&#43;08:00" />
 <meta itemprop="dateModified" content="2019-04-21T00:39:53&#43;08:00" />
-<meta itemprop="wordCount" content="207">
+<meta itemprop="wordCount" content="213">
 
 
 
@@ -133,7 +133,7 @@
         <div class="post-category">
             <a href="/categories/tech/"> tech </a>
             </div>
-          <span class="more-meta"> 207 words </span>
+          <span class="more-meta"> 213 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -141,11 +141,11 @@
 
     
     <div class="post-content">
-      <!-- raw HTML omitted -->
+      <div class="admonition note">
 <p>This article originally comes from
 <a href="https://liatas.com/posts/escaping-hugo-shortcodes/">Chris Liatas&rsquo;s web site</a> ,
 just make a copy here for quick reference.</p>
-<!-- raw HTML omitted -->
+</div>
 <p>In the rare case you might need to escape (i.e., prevent from executing)
 a shortcode in a Hugo markdown (.md) file, and display the shortcode as
 <code>{{&lt; myshortcode &gt;}}</code> you will probably find that escaping the double curly
@@ -160,11 +160,14 @@ or percent sign and double curly braces (i.e., <code>*/&gt;``}}</code> or <code>
 So, if for example, you have the shortcode myshortcode and you want to
 use it to a code highlight without being executed during page building
 from the Hugo engine, you should try including it in your markdown file as:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre><code>```md
+{{&lt;/* myshortcode */&gt;}}
+```
+</code></pre>
 <p>The above will produce an output like the following:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<pre><code>
+{{< myshortcode >}}
+</code></pre>
 <p>References for further reading:</p>
 <ol>
 <li><a href="https://liatas.com/posts/escaping-hugo-shortcodes/">Escaping Hugo shortcodes</a></li>
@@ -252,7 +255,7 @@ from the Hugo engine, you should try including it in your markdown file as:</p>
 
 
 
-<script type="text/javascript" src="/js/main.cddea96674a99fd8cea50d36fb19d9c91f497feea4af5ce4596afd2dbaab9202.js"></script>
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
 
 
 

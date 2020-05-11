@@ -24,7 +24,7 @@ Create a new site named it as chaos in my case." /><meta name="keywords" content
 
 
 
-<meta name="generator" content="Hugo 0.69.2 with theme even" />
+<meta name="generator" content="Hugo 0.70.0 with theme even" />
 
 
 <link rel="canonical" href="https://dyiwu.github.io/post/tech/install-hugo-even/" />
@@ -52,7 +52,7 @@ Create a new site named it as chaos in my case." />
 Create a new site named it as chaos in my case.">
 <meta itemprop="datePublished" content="2019-05-01T14:53:00&#43;08:00" />
 <meta itemprop="dateModified" content="2019-05-01T14:53:00&#43;08:00" />
-<meta itemprop="wordCount" content="579">
+<meta itemprop="wordCount" content="631">
 
 
 
@@ -137,7 +137,7 @@ Create a new site named it as chaos in my case."/>
         <div class="post-category">
             <a href="/categories/tech/"> tech </a>
             </div>
-          <span class="more-meta"> 579 words </span>
+          <span class="more-meta"> 631 words </span>
           <span class="more-meta"> 3 mins read </span>
         
       </div>
@@ -452,6 +452,20 @@ Add the <code>&lt;!--more--&gt;</code> summary divider where you want to split t
     post = &#34;/:year/:month/:filename/&#34;
 </code></pre></td></tr></table>
 </div>
+</div><ul>
+<li><a href="https://gohugo.io/getting-started/configuration-markup/">Configure Markup</a><br>
+<a href="https://github.com/yuin/goldmark/">Goldmark</a> is from Hugo 0.60 the default library used for Markdown. By default, Goldmark does not render raw HTMLs and potentially dangerous links. If you have lots of inline HTML and/or JavaScript, you may need to turn this on by adding these into config.toml</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">[markup.goldmark.renderer]
+      unsafe = true
+</code></pre></td></tr></table>
+</div>
 </div>
     </div>
 
@@ -534,7 +548,7 @@ Add the <code>&lt;!--more--&gt;</code> summary divider where you want to split t
 
 
 
-<script type="text/javascript" src="/js/main.cddea96674a99fd8cea50d36fb19d9c91f497feea4af5ce4596afd2dbaab9202.js"></script>
+<script type="text/javascript" src="/js/main.min.d7b7ada643c9c1a983026e177f141f7363b4640d619caf01d8831a6718cd44ea.js"></script>
 
 
 
