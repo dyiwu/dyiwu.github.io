@@ -9,6 +9,62 @@
   </url>
   
   <url>
+    <loc>https://dyiwu.github.io/categories/</loc>
+    <lastmod>2020-05-15T14:39:39+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/centos8/</loc>
+    <lastmod>2020-05-15T14:39:39+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/homelab/</loc>
+    <lastmod>2020-05-15T14:39:39+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/k8s/</loc>
+    <lastmod>2020-05-15T14:39:39+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/post/tech/homelab-centos8-k8s/</loc>
+    <lastmod>2020-05-15T14:39:39+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/post/</loc>
+    <lastmod>2020-05-15T14:39:39+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/</loc>
+    <lastmod>2020-05-15T14:39:39+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/categories/tech/</loc>
+    <lastmod>2020-05-15T14:39:39+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dyiwu.github.io/</loc>
     <lastmod>2020-05-12T02:38:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -16,28 +72,7 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/categories/</loc>
-    <lastmod>2020-03-08T20:16:20+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://dyiwu.github.io/categories/life/</loc>
-    <lastmod>2020-03-08T20:16:20+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/post/</loc>
-    <lastmod>2020-03-08T20:16:20+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/</loc>
     <lastmod>2020-03-08T20:16:20+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -108,13 +143,6 @@
   
   <url>
     <loc>https://dyiwu.github.io/post/tech/tip_ted_talk/</loc>
-    <lastmod>2019-12-14T18:40:11+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/categories/tech/</loc>
     <lastmod>2019-12-14T18:40:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

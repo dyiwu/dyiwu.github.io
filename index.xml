@@ -22,6 +22,15 @@
     </item>
     
     <item>
+      <title>K8s on Centos8 Home Lab</title>
+      <link>https://dyiwu.github.io/post/tech/homelab-centos8-k8s/</link>
+      <pubDate>Fri, 15 May 2020 14:39:39 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/tech/homelab-centos8-k8s/</guid>
+      <description>&lt;p&gt;This home lab is going to build a CentOS 8 KVM host on bare matel and then 3 KVM guest nodes be form up as a k8s cluster.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>望遠鏡 - Telescope</title>
       <link>https://dyiwu.github.io/post/life/telescope/</link>
       <pubDate>Sun, 08 Mar 2020 20:16:20 +0800</pubDate>
