@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Chaos - 一個老碼農的筆記</title>
+  <title>Marvell Yukon 2 Gigabit Ethernet driver on Centos 8.1 - Chaos - 一個老碼農的筆記</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Dyi-Wu Liu" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Dyi-Wu Liu" /><meta name="description" content="" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,9 +26,7 @@
 <meta name="generator" content="Hugo 0.70.0 with theme even" />
 
 
-<link rel="canonical" href="https://dyiwu.github.io/" />
-  <link href="https://dyiwu.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Chaos - 一個老碼農的筆記" />
-  <link href="https://dyiwu.github.io/index.xml" rel="feed" type="application/rss+xml" title="Chaos - 一個老碼農的筆記" />
+<link rel="canonical" href="https://dyiwu.github.io/post/tech/kmod-sky2/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -41,15 +39,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Chaos - 一個老碼農的筆記" />
-<meta property="og:description" content="Hugo theme even example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://dyiwu.github.io/" />
-<meta property="og:updated_time" content="2020-05-12T02:38:52+08:00" />
-<meta itemprop="name" content="Chaos - 一個老碼農的筆記">
-<meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Chaos - 一個老碼農的筆記"/>
-<meta name="twitter:description" content="Hugo theme even example site."/>
+<meta property="og:title" content="Marvell Yukon 2 Gigabit Ethernet driver on Centos 8.1" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dyiwu.github.io/post/tech/kmod-sky2/" />
+<meta property="article:published_time" content="2020-05-16T18:02:35+08:00" />
+<meta property="article:modified_time" content="2020-05-16T18:02:35+08:00" />
+<meta itemprop="name" content="Marvell Yukon 2 Gigabit Ethernet driver on Centos 8.1">
+<meta itemprop="description" content="">
+<meta itemprop="datePublished" content="2020-05-16T18:02:35&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-16T18:02:35&#43;08:00" />
+<meta itemprop="wordCount" content="60">
+
+
+
+<meta itemprop="keywords" content="centos8,linux-kernel," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Marvell Yukon 2 Gigabit Ethernet driver on Centos 8.1"/>
+<meta name="twitter:description" content=""/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -117,136 +123,104 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <section id="posts" class="posts">
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/life/22-cooking-tips/">22 Cooking Tips</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-09-03 </span>
-      <div class="post-category">
-          <a href="/categories/life/"> life </a>
-          </div>
-        <span class="more-meta"> 997 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>大廚不外傳的22個做菜小訣竅</p>
-    </div>
-    <div class="read-more">
-      <a href="/post/life/22-cooking-tips/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Marvell Yukon 2 Gigabit Ethernet driver on Centos 8.1</h1>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/tech/install-docker-ce-centos7/">Install Docker Engine - Community on Centos7</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-09-01 </span>
-      <div class="post-category">
-          <a href="/categories/tech/"> tech </a>
-          </div>
-        <span class="more-meta"> 904 words </span>
-        <span class="more-meta"> 5 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>Install Docker Engine - Community on CentOS 7</p>
-    </div>
-    <div class="read-more">
-      <a href="/post/tech/install-docker-ce-centos7/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
+      <div class="post-meta">
+        <span class="post-time"> 2020-05-16 </span>
+        <div class="post-category">
+            <a href="/categories/tech/"> tech </a>
+            </div>
+          <span class="more-meta"> 60 words </span>
+          <span class="more-meta"> 1 min read </span>
+        
+      </div>
+    </header>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/life/world-views/">World Views - 三觀</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-06-16 </span>
-      <div class="post-category">
-          <a href="/categories/life/"> life </a>
-          </div>
-        <span class="more-meta"> 1233 words </span>
-        <span class="more-meta"> 3 mins read </span>
+    
+    <div class="post-content">
+      <ul>
+<li>
+<p>Check the PCI-E interface on system by:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ lspci |grep net
+45:00.0 Ethernet controller: Marvell Technology Group Ltd. 
+88E8072 PCI-E Gigabit Ethernet Controller (rev 10)
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><a href="https://centos.pkgs.org/8/elrepo-x86_64/kmod-sky2-1.30-2.el8_1.elrepo.x86_64.rpm.html">Package description</a></p>
+</li>
+<li>
+<p><a href="https://mirror.rackspace.com/elrepo/elrepo/el8/x86_64/RPMS/kmod-sky2-1.30-2.el8_1.elrepo.x86_64.rpm">Binary package</a></p>
+</li>
+<li>
+<p>Download latest driver rpm package file from elrepo-release</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># wget https://mirror.rackspace.com/elrepo/elrepo/el8/x86_64/RPMS/kmod-sky2-1.30-2.el8_1.elrepo.x86_64.rpm
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Install it</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># rpm -Uvh kmod-sky2-1.30-2.el8_1.elrepo.x86_64.rpm
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Install kmod-sky2 rpm package:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># dnf install kmod-sky2
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
     </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>三觀即是人生觀、價值觀、世界觀。</p>
-    </div>
-    <div class="read-more">
-      <a href="/post/life/world-views/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/tech/install-chrome/">Install Google Chrome on Linux Mint 19 Tara</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-06-13 </span>
-      <div class="post-category">
-          <a href="/categories/tech/"> tech </a>
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/centos8/">centos8</a>
+          <a href="/tags/linux-kernel/">linux-kernel</a>
           </div>
-        <span class="more-meta"> 69 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      
-    </div>
-    <div class="read-more">
-      <a href="/post/tech/install-chrome/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/life/tw-stock-treasury-stock/">庫藏股</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-06-13 </span>
-      <div class="post-category">
-          <a href="/categories/life/"> life </a>
-          </div>
-        <span class="more-meta"> 576 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>庫藏股，指的是公司將自己已經發行的股票重新買回，存放於公司，而尚未註銷或重新售出。這樣做可以減少市場上所有已發行股票的總數。</p>
-    </div>
-    <div class="read-more">
-      <a href="/post/life/tw-stock-treasury-stock/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    </section>
-  
-  <nav class="pagination">
-    <a class="prev" href="/page/2/">
-        <i class="iconfont icon-left"></i>
-        <span class="prev-text">Prev</span>
-      </a>
-    <a class="next" href="/page/4/">
-        <span class="next-text">Next</span>
-        <i class="iconfont icon-right"></i>
-      </a>
-  </nav>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/tech/homelab-centos8-k8s/">
+            <span class="next-text nav-default">K8s on Centos 8 Home Lab</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
         </div>
         
+
+  
+
+  
 
       </div>
     </main>

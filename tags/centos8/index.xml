@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 15 May 2020 14:39:39 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2020 18:02:35 +0800</lastBuildDate>
     
 	<atom:link href="https://dyiwu.github.io/tags/centos8/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Marvell Yukon 2 Gigabit Ethernet driver on Centos 8.1</title>
+      <link>https://dyiwu.github.io/post/tech/kmod-sky2/</link>
+      <pubDate>Sat, 16 May 2020 18:02:35 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/tech/kmod-sky2/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>K8s on Centos 8 Home Lab</title>
