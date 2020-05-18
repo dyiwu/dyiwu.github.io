@@ -16,8 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Dyi-Wu Liu" /><meta name="description" content="Install Hugo with Even theme
-Create a new site named it as chaos in my case." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Dyi-Wu Liu" /><meta name="description" content="Install Hugo with Even theme" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -41,25 +40,22 @@ Create a new site named it as chaos in my case." /><meta name="keywords" content
 
 
 <meta property="og:title" content="Install Hugo with Even theme" />
-<meta property="og:description" content="Install Hugo with Even theme
-Create a new site named it as chaos in my case." />
+<meta property="og:description" content="Install Hugo with Even theme" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dyiwu.github.io/post/tech/install-hugo-even/" />
 <meta property="article:published_time" content="2019-05-01T14:53:00+08:00" />
-<meta property="article:modified_time" content="2019-05-01T14:53:00+08:00" />
+<meta property="article:modified_time" content="2020-05-18T18:17:53+08:00" />
 <meta itemprop="name" content="Install Hugo with Even theme">
-<meta itemprop="description" content="Install Hugo with Even theme
-Create a new site named it as chaos in my case.">
+<meta itemprop="description" content="Install Hugo with Even theme">
 <meta itemprop="datePublished" content="2019-05-01T14:53:00&#43;08:00" />
-<meta itemprop="dateModified" content="2019-05-01T14:53:00&#43;08:00" />
-<meta itemprop="wordCount" content="631">
+<meta itemprop="dateModified" content="2020-05-18T18:17:53&#43;08:00" />
+<meta itemprop="wordCount" content="647">
 
 
 
 <meta itemprop="keywords" content="hugo,even,setup," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Install Hugo with Even theme"/>
-<meta name="twitter:description" content="Install Hugo with Even theme
-Create a new site named it as chaos in my case."/>
+<meta name="twitter:description" content="Install Hugo with Even theme"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -137,16 +133,18 @@ Create a new site named it as chaos in my case."/>
         <div class="post-category">
             <a href="/categories/tech/"> tech </a>
             </div>
-          <span class="more-meta"> 631 words </span>
-          <span class="more-meta"> 3 mins read </span>
+          <span class="more-meta"> 647 words </span>
+          <span class="more-meta"> 4 mins read </span>
         
       </div>
     </header>
 
     
     <div class="post-content">
-      <p>Install Hugo with Even theme</p>
-<h2 id="create-a-new-site-named-it-as-chaos-in-my-case">Create a new site named it as chaos in my case.</h2>
+      <h2 id="install-hugo-with-even-theme">Install Hugo with Even theme</h2>
+<ul>
+<li>
+<p>Create a new site named it as chaos in my case.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -181,7 +179,9 @@ Just a few more steps and you&#39;re ready to go:
 Visit https://gohugo.io/ for quickstart guide and full documentation.
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="install-even-theme">Install even theme</h2>
+</div></li>
+<li>
+<p>Install even theme</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -194,7 +194,9 @@ $ git clone https://github.com/olOwOlo/hugo-theme-even themes/even
 $ cp themes/even/exampleSite/config.toml .
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="update-theme">Update theme</h2>
+</div></li>
+<li>
+<p>Update theme</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -205,7 +207,9 @@ $ cp themes/even/exampleSite/config.toml .
 $ git pull
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="deploy-to-github">Deploy to github</h2>
+</div></li>
+</ul>
+<h2 id="deploy-to-github">Deploy to github</h2>
 <ol>
 <li>
 <p>Create two repostories on github, named it as chaos and dyiwu.github.io</p>
@@ -271,8 +275,8 @@ $ git push -u origin master
 </ol>
 <h2 id="maintance-scripts">Maintance scripts</h2>
 <ol>
-<li>Script to deploy chaos.git repo from local to github</li>
-</ol>
+<li>
+<p>Script to deploy chaos.git repo from local to github</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -307,9 +311,9 @@ git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span cla
 git push origin master
 </code></pre></td></tr></table>
 </div>
-</div><ol start="2">
-<li>Script to deploy dyiwu.github.io.git from local to github</li>
-</ol>
+</div></li>
+<li>
+<p>Script to deploy dyiwu.github.io.git from local to github</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -356,9 +360,9 @@ git push origin master
 <span class="nb">cd</span> ..
 </code></pre></td></tr></table>
 </div>
-</div><ol start="3">
-<li>Script to clone chaos.git repo from github to local</li>
-</ol>
+</div></li>
+<li>
+<p>Script to clone chaos.git repo from github to local</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -377,9 +381,9 @@ git clone https://github.com/dyiwu/chaos.git
 <span class="nb">cd</span> chaos
 </code></pre></td></tr></table>
 </div>
-</div><ol start="4">
-<li>Script to clone dyiwu.github.io.git repo from github to local</li>
-</ol>
+</div></li>
+<li>
+<p>Script to clone dyiwu.github.io.git repo from github to local</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -398,9 +402,9 @@ git clone https://github.com/dyiwu/chaos.git
 git clone https://github.com/dyiwu/dyiwu.github.io.git public
 </code></pre></td></tr></table>
 </div>
-</div><ol start="5">
-<li>Script to clone themes/even repo from github to local</li>
-</ol>
+</div></li>
+<li>
+<p>Script to clone themes/even repo from github to local</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -415,9 +419,9 @@ $ <span class="nb">cd</span> ~/Hugo/Sites/chaos
 $ git clone https://github.com/olOwOlo/hugo-theme-even themes/even
 </code></pre></td></tr></table>
 </div>
-</div><ol start="6">
-<li>Script to update themes/even</li>
-</ol>
+</div></li>
+<li>
+<p>Script to update themes/even</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -432,7 +436,9 @@ $ git clone https://github.com/olOwOlo/hugo-theme-even themes/even
 git pull
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="customization-and-tips">Customization and Tips</h2>
+</div></li>
+</ol>
+<h2 id="customization-and-tips">Customization and Tips</h2>
 <ul>
 <li>
 <p>Manual Summary Splitting<br>
@@ -440,8 +446,6 @@ Add the <code>&lt;!--more--&gt;</code> summary divider where you want to split t
 </li>
 <li>
 <p>Setup Permlinks in config.toml</p>
-</li>
-</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -452,10 +456,10 @@ Add the <code>&lt;!--more--&gt;</code> summary divider where you want to split t
     post = &#34;/:year/:month/:filename/&#34;
 </code></pre></td></tr></table>
 </div>
-</div><ul>
-<li><a href="https://gohugo.io/getting-started/configuration-markup/">Configure Markup</a><br>
-<a href="https://github.com/yuin/goldmark/">Goldmark</a> is from Hugo 0.60 the default library used for Markdown. By default, Goldmark does not render raw HTMLs and potentially dangerous links. If you have lots of inline HTML and/or JavaScript, you may need to turn this on by adding these into config.toml</li>
-</ul>
+</div></li>
+<li>
+<p><a href="https://gohugo.io/getting-started/configuration-markup/">Configure Markup</a><br>
+<a href="https://github.com/yuin/goldmark/">Goldmark</a> is from Hugo 0.60 the default library used for Markdown. By default, Goldmark does not render raw HTMLs and potentially dangerous links. If you have lots of inline HTML and/or JavaScript, you may need to turn this on by adding these into config.toml</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -466,7 +470,21 @@ Add the <code>&lt;!--more--&gt;</code> summary divider where you want to split t
       unsafe = true
 </code></pre></td></tr></table>
 </div>
+</div></li>
+<li>
+<p>Open firewall 1313/tcp port</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo firewall-cmd --zone=public --add-port=1313/tcp --permanent
+$ sudo firewall-cmd --reload
+</code></pre></td></tr></table>
 </div>
+</div></li>
+</ul>
     </div>
 
     
