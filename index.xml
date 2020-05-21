@@ -22,6 +22,15 @@
     </item>
     
     <item>
+      <title>Install Raspberry</title>
+      <link>https://dyiwu.github.io/post/tech/install-raspberry/</link>
+      <pubDate>Thu, 21 May 2020 19:53:30 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/tech/install-raspberry/</guid>
+      <description>&lt;h2 id=&#34;install-raspberry&#34;&gt;Install Raspberry&lt;/h2&gt;</description>
+    </item>
+    
+    <item>
       <title>Marvell Yukon 2 Gigabit Ethernet driver on Centos 8.1</title>
       <link>https://dyiwu.github.io/post/tech/kmod-sky2/</link>
       <pubDate>Sat, 16 May 2020 18:02:35 +0800</pubDate>
