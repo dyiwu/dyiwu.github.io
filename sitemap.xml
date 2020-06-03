@@ -10,28 +10,49 @@
   
   <url>
     <loc>https://dyiwu.github.io/categories/</loc>
-    <lastmod>2020-05-29T21:16:24+08:00</lastmod>
+    <lastmod>2020-06-03T14:56:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/diy/</loc>
+    <lastmod>2020-06-03T14:56:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/post/life/diy-woodwork/</loc>
+    <lastmod>2020-06-03T14:56:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/categories/life/</loc>
-    <lastmod>2020-05-29T21:16:24+08:00</lastmod>
+    <lastmod>2020-06-03T14:56:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/post/</loc>
-    <lastmod>2020-05-29T21:16:24+08:00</lastmod>
+    <lastmod>2020-06-03T14:56:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/tags/</loc>
-    <lastmod>2020-05-29T21:16:24+08:00</lastmod>
+    <lastmod>2020-06-03T14:56:24+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/%E4%BD%8F/</loc>
+    <lastmod>2020-06-03T14:56:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
