@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Home Lab - K8s on Centos 8 - Chaos - 一個老碼農的筆記</title>
+  <title>Home Lab - K8s on Centos 8 - VM host - Chaos - 一個老碼農的筆記</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Dyi-Wu Liu" /><meta name="description" content="This home lab is going to build a CentOS 8 KVM host on bare matel and then 3 KVM guest nodes be form up as a k8s cluster.
+<meta name="author" content="Dyi-Wu Liu" /><meta name="description" content="This home lab is going to build a CentOS 8 KVM host on bare matel and then 3 KVM guest nodes be form up as a k8s cluster. The first step is going to craete the KVM host on the bare metal.
 " /><meta name="keywords" content="Hugo, theme, even" />
 
 
@@ -40,23 +40,23 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Home Lab - K8s on Centos 8" />
-<meta property="og:description" content="This home lab is going to build a CentOS 8 KVM host on bare matel and then 3 KVM guest nodes be form up as a k8s cluster." />
+<meta property="og:title" content="Home Lab - K8s on Centos 8 - VM host" />
+<meta property="og:description" content="This home lab is going to build a CentOS 8 KVM host on bare matel and then 3 KVM guest nodes be form up as a k8s cluster. The first step is going to craete the  KVM host on the bare metal." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dyiwu.github.io/post/tech/homelab-centos8-k8s/" />
 <meta property="article:published_time" content="2020-06-13T14:39:39+08:00" />
-<meta property="article:modified_time" content="2020-06-13T21:02:12+08:00" />
-<meta itemprop="name" content="Home Lab - K8s on Centos 8">
-<meta itemprop="description" content="This home lab is going to build a CentOS 8 KVM host on bare matel and then 3 KVM guest nodes be form up as a k8s cluster.">
+<meta property="article:modified_time" content="2020-06-13T21:33:58+08:00" />
+<meta itemprop="name" content="Home Lab - K8s on Centos 8 - VM host">
+<meta itemprop="description" content="This home lab is going to build a CentOS 8 KVM host on bare matel and then 3 KVM guest nodes be form up as a k8s cluster. The first step is going to craete the  KVM host on the bare metal.">
 <meta itemprop="datePublished" content="2020-06-13T14:39:39&#43;08:00" />
-<meta itemprop="dateModified" content="2020-06-13T21:02:12&#43;08:00" />
-<meta itemprop="wordCount" content="2290">
+<meta itemprop="dateModified" content="2020-06-13T21:33:58&#43;08:00" />
+<meta itemprop="wordCount" content="2291">
 
 
 
 <meta itemprop="keywords" content="homelab,k8s,centos8," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Home Lab - K8s on Centos 8"/>
-<meta name="twitter:description" content="This home lab is going to build a CentOS 8 KVM host on bare matel and then 3 KVM guest nodes be form up as a k8s cluster."/>
+<meta name="twitter:title" content="Home Lab - K8s on Centos 8 - VM host"/>
+<meta name="twitter:description" content="This home lab is going to build a CentOS 8 KVM host on bare matel and then 3 KVM guest nodes be form up as a k8s cluster. The first step is going to craete the  KVM host on the bare metal."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -127,14 +127,14 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">Home Lab - K8s on Centos 8</h1>
+      <h1 class="post-title">Home Lab - K8s on Centos 8 - VM host</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2020-06-13 </span>
         <div class="post-category">
             <a href="/categories/tech/"> tech </a>
             </div>
-          <span class="more-meta"> 2290 words </span>
+          <span class="more-meta"> 2291 words </span>
           <span class="more-meta"> 11 mins read </span>
         
       </div>
@@ -145,18 +145,18 @@
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#centos-8-on-bare-metal"><strong>Centos 8 on bare metal</strong></a>
+    <li>
       <ul>
-        <li><a href="#kvm-host-base-environment"><strong>KVM host base environment</strong></a></li>
+        <li><a href="#vm-host-base-environment"><strong>VM host base environment</strong></a></li>
         <li><a href="#enable-community-enterprise-linux-repository-and-extra-packages"><strong>Enable Community Enterprise Linux Repository and extra packages</strong></a></li>
-        <li><a href="#google-chrome-web-browser-installation"><strong>Google Chrome Web Browser installation</strong></a></li>
         <li><a href="#repository-list"><strong>Repository list</strong></a></li>
-        <li><a href="#br0-network-bridge-creation"><strong>br0 Network Bridge creation</strong></a></li>
+        <li><a href="#google-chrome"><strong>Google Chrome</strong></a></li>
+        <li><a href="#br0-network-bridge"><strong>br0 Network Bridge</strong></a></li>
         <li><a href="#install-kvm"><strong>Install KVM</strong></a></li>
         <li><a href="#using-libvirtd-but-dont-want-virbr0"><strong>Using libvirtd but don&rsquo;t want virbr0</strong></a></li>
-        <li><a href="#enable-xrdp-service"><strong>Enable xrdp service</strong></a></li>
-        <li><a href="#cockpit-web-console"><strong>Cockpit Web Console</strong></a></li>
-        <li><a href="#chinese-pinyin-input-method"><strong>Chinese PinYin Input method</strong></a></li>
+        <li><a href="#xrdp-service"><strong>Xrdp service</strong></a></li>
+        <li><a href="#cockpit"><strong>Cockpit</strong></a></li>
+        <li><a href="#chinese-input-method"><strong>Chinese input method</strong></a></li>
       </ul>
     </li>
   </ul>
@@ -164,9 +164,8 @@
   </div>
 </div>
     <div class="post-content">
-      <p>This home lab is going to build a CentOS 8 KVM host on bare matel and then 3 KVM guest nodes be form up as a k8s cluster.</p>
-<h2 id="centos-8-on-bare-metal"><strong>Centos 8 on bare metal</strong></h2>
-<h3 id="kvm-host-base-environment"><strong>KVM host base environment</strong></h3>
+      <p>This home lab is going to build a CentOS 8 KVM host on bare matel and then 3 KVM guest nodes be form up as a k8s cluster. The first step is going to craete the  KVM host on the bare metal.</p>
+<h3 id="vm-host-base-environment"><strong>VM host base environment</strong></h3>
 <ul>
 <li>
 <p>Select <em><strong>Workstation</strong></em> as base environment for this Centos8 VM host with following configuration.</p>
@@ -264,7 +263,39 @@ Filename                Type            Size    Used    Priority
 </div>
 </div></li>
 </ul>
-<h3 id="google-chrome-web-browser-installation"><strong>Google Chrome Web Browser installation</strong></h3>
+<h3 id="repository-list"><strong>Repository list</strong></h3>
+<ul>
+<li>
+<p><em><strong>dnf repolist</strong></em> command can be used to list all enabled repositories. Provides more detailed information when -v option is used.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># dnf repolist
+Last metadata expiration check: 0:17:47 ago on Sat 16 May 2020 12:06:02 PM CST.
+repo id                repo name                                                        status
+AppStream              CentOS-8 - AppStream                                             5,318
+BaseOS                 CentOS-8 - Base                                                  1,661
+elrepo                 ELRepo.org Community Enterprise Linux Repository - el8              90
+extras                 CentOS-8 - Extras                                                   16
+google-chrome          google-chrome      
+
+# dnf repolist -v
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h3 id="google-chrome"><strong>Google Chrome</strong></h3>
 <ul>
 <li>
 <p>Download the latest Chrome 64-bit .rpm package</p>
@@ -319,39 +350,7 @@ gpgkey=https://dl.google.com/linux/linux_signing_key.pub
 </li>
 </ul>
 <h4 id="referencehow-to-install-google-chrome-web-browser-on-centos-8httpslinuxizecomposthow-to-install-google-chrome-web-browser-on-centos-8">Reference：<a href="https://linuxize.com/post/how-to-install-google-chrome-web-browser-on-centos-8/">How to Install Google Chrome Web Browser on CentOS 8</a></h4>
-<h3 id="repository-list"><strong>Repository list</strong></h3>
-<ul>
-<li>
-<p><em><strong>dnf repolist</strong></em> command can be used to list all enabled repositories. Provides more detailed information when -v option is used.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># dnf repolist
-Last metadata expiration check: 0:17:47 ago on Sat 16 May 2020 12:06:02 PM CST.
-repo id                repo name                                                        status
-AppStream              CentOS-8 - AppStream                                             5,318
-BaseOS                 CentOS-8 - Base                                                  1,661
-elrepo                 ELRepo.org Community Enterprise Linux Repository - el8              90
-extras                 CentOS-8 - Extras                                                   16
-google-chrome          google-chrome      
-
-# dnf repolist -v
-</code></pre></td></tr></table>
-</div>
-</div></li>
-</ul>
-<h3 id="br0-network-bridge-creation"><strong>br0 Network Bridge creation</strong></h3>
+<h3 id="br0-network-bridge"><strong>br0 Network Bridge</strong></h3>
 <ul>
 <li>Check connections.
 <div class="highlight"><div class="chroma">
@@ -682,7 +681,7 @@ ens1            492d853c-ab48-4073-9f57-c781b024d0d0  ethernet  ens1
 </div></li>
 </ul>
 <h4 id="reference-how-to-remove-virbr0-and-lxcbr0-interfaces-on-centosrhel-67httpswwwthegeekdiarycomhow-to-remove-virbr0-and-lxcbr0-interfaces-on-centos-rhel-5-and-rhel-7">Reference: <a href="https://www.thegeekdiary.com/how-to-remove-virbr0-and-lxcbr0-interfaces-on-centos-rhel-5-and-rhel-7/">How to Remove virbr0 and lxcbr0 Interfaces on CentOS/RHEL 6,7</a></h4>
-<h3 id="enable-xrdp-service"><strong>Enable xrdp service</strong></h3>
+<h3 id="xrdp-service"><strong>Xrdp service</strong></h3>
 <p>Xrdp is an open-source implementation of the Microsoft Remote Desktop Protocol (RDP) that allows you to graphically control a remote system. With RDP, you can log in to the remote machine and create a real desktop session the same as if you had logged in to a local machine.</p>
 <ul>
 <li>
@@ -807,7 +806,7 @@ Once logged in, you should see the default Gnome desktop. You can now start inte
 </li>
 </ul>
 <h4 id="reference-how-to-install-xrdp-server-remote-desktop-on-centos-8httpslinuxizecomposthow-to-install-xrdp-on-centos-8">Reference: <a href="https://linuxize.com/post/how-to-install-xrdp-on-centos-8/">How to Install Xrdp Server (Remote Desktop) on CentOS 8</a></h4>
-<h3 id="cockpit-web-console"><strong>Cockpit Web Console</strong></h3>
+<h3 id="cockpit"><strong>Cockpit</strong></h3>
 <p>The Cockpit is a web console with an easy to use web-based interface that enables you to carry out administrative tasks on your servers. Also being a web console, it means you can also access it through a mobile device as well.</p>
 <ul>
 <li>
@@ -893,7 +892,13 @@ Remotely with the server’s IP address: https://192.168.1.120:9090
 <p>In the web console login screen, enter your system user name and password.</p>
 </li>
 </ul>
-<h3 id="chinese-pinyin-input-method"><strong>Chinese PinYin Input method</strong></h3>
+<h4 id="reference">Reference:</h4>
+<ul>
+<li><a href="https://www.tecmint.com/install-cockpit-web-console-in-centos-8/">How to Install Cockpit Web Console in CentOS 8</a></li>
+<li><a href="https://cockpit-project.org/">cockpit project</a></li>
+<li><a href="https://cockpit-project.org/guide/latest/feature-virtualmachines.html#feature-virtualmachines-systemaccess">cockpit with Virtual Machines</a></li>
+</ul>
+<h3 id="chinese-input-method"><strong>Chinese input method</strong></h3>
 <ul>
 <li>
 <p>Locate the ibus pinyin package.</p>
@@ -934,12 +939,6 @@ Remotely with the server’s IP address: https://192.168.1.120:9090
 <li>
 <p>Now, going to the Settings —&gt; Region &amp; Language —&gt; Input Sources, click the add botton to have chinese input method.</p>
 </li>
-</ul>
-<h4 id="reference">Reference:</h4>
-<ul>
-<li><a href="https://www.tecmint.com/install-cockpit-web-console-in-centos-8/">How to Install Cockpit Web Console in CentOS 8</a></li>
-<li><a href="https://cockpit-project.org/">cockpit project</a></li>
-<li><a href="https://cockpit-project.org/guide/latest/feature-virtualmachines.html#feature-virtualmachines-systemaccess">cockpit with Virtual Machines</a></li>
 </ul>
 <hr>
 <ul>

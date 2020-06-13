@@ -13,12 +13,12 @@
     
     
     <item>
-      <title>Home Lab - K8s on Centos 8</title>
+      <title>Home Lab - K8s on Centos 8 - VM host</title>
       <link>https://dyiwu.github.io/post/tech/homelab-centos8-k8s/</link>
       <pubDate>Sat, 13 Jun 2020 14:39:39 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/post/tech/homelab-centos8-k8s/</guid>
-      <description>&lt;p&gt;This home lab is going to build a CentOS 8 KVM host on bare matel and then 3 KVM guest nodes be form up as a k8s cluster.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This home lab is going to build a CentOS 8 KVM host on bare matel and then 3 KVM guest nodes be form up as a k8s cluster. The first step is going to craete the  KVM host on the bare metal.&lt;/p&gt;</description>
     </item>
     
     <item>
