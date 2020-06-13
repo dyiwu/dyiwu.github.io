@@ -10,7 +10,56 @@
   
   <url>
     <loc>https://dyiwu.github.io/categories/</loc>
-    <lastmod>2020-06-03T14:56:24+08:00</lastmod>
+    <lastmod>2020-06-13T21:02:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/centos8/</loc>
+    <lastmod>2020-06-13T21:02:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/post/tech/homelab-centos8-k8s/</loc>
+    <lastmod>2020-06-13T21:02:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/homelab/</loc>
+    <lastmod>2020-06-13T21:02:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/k8s/</loc>
+    <lastmod>2020-06-13T21:02:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/post/</loc>
+    <lastmod>2020-06-13T21:02:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/</loc>
+    <lastmod>2020-06-13T21:02:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/categories/tech/</loc>
+    <lastmod>2020-06-13T21:02:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -31,20 +80,6 @@
   
   <url>
     <loc>https://dyiwu.github.io/categories/life/</loc>
-    <lastmod>2020-06-03T14:56:24+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/post/</loc>
-    <lastmod>2020-06-03T14:56:24+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/</loc>
     <lastmod>2020-06-03T14:56:24+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -114,13 +149,6 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/categories/tech/</loc>
-    <lastmod>2020-05-23T12:12:22+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://dyiwu.github.io/post/tech/install-raspberry/</loc>
     <lastmod>2020-05-21T22:45:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -142,13 +170,6 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/tags/centos8/</loc>
-    <lastmod>2020-05-23T12:12:22+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://dyiwu.github.io/tags/linux/</loc>
     <lastmod>2020-05-18T18:17:53+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -165,27 +186,6 @@
   <url>
     <loc>https://dyiwu.github.io/post/tech/kmod-sky2/</loc>
     <lastmod>2020-05-18T18:17:53+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/post/tech/homelab-centos8-k8s/</loc>
-    <lastmod>2020-05-23T12:12:22+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/homelab/</loc>
-    <lastmod>2020-05-23T12:12:22+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/k8s/</loc>
-    <lastmod>2020-05-23T12:12:22+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

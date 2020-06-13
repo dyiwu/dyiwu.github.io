@@ -7,10 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 03 Jun 2020 14:27:21 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jun 2020 14:39:39 +0800</lastBuildDate>
     
 	<atom:link href="https://dyiwu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>centos8</title>
+      <link>https://dyiwu.github.io/tags/centos8/</link>
+      <pubDate>Sat, 13 Jun 2020 14:39:39 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/centos8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>homelab</title>
+      <link>https://dyiwu.github.io/tags/homelab/</link>
+      <pubDate>Sat, 13 Jun 2020 14:39:39 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/homelab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>k8s</title>
+      <link>https://dyiwu.github.io/tags/k8s/</link>
+      <pubDate>Sat, 13 Jun 2020 14:39:39 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/k8s/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>diy</title>
@@ -94,15 +121,6 @@
     </item>
     
     <item>
-      <title>centos8</title>
-      <link>https://dyiwu.github.io/tags/centos8/</link>
-      <pubDate>Sat, 16 May 2020 18:02:35 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/centos8/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>linux</title>
       <link>https://dyiwu.github.io/tags/linux/</link>
       <pubDate>Sat, 16 May 2020 18:02:35 +0800</pubDate>
@@ -117,24 +135,6 @@
       <pubDate>Sat, 16 May 2020 18:02:35 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/tags/linux-kernel/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>homelab</title>
-      <link>https://dyiwu.github.io/tags/homelab/</link>
-      <pubDate>Fri, 15 May 2020 14:39:39 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/homelab/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>k8s</title>
-      <link>https://dyiwu.github.io/tags/k8s/</link>
-      <pubDate>Fri, 15 May 2020 14:39:39 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/k8s/</guid>
       <description></description>
     </item>
     
