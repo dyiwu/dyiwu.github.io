@@ -121,15 +121,6 @@
     </item>
     
     <item>
-      <title>linux</title>
-      <link>https://dyiwu.github.io/tags/linux/</link>
-      <pubDate>Sat, 16 May 2020 18:02:35 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>linux-kernel</title>
       <link>https://dyiwu.github.io/tags/linux-kernel/</link>
       <pubDate>Sat, 16 May 2020 18:02:35 +0800</pubDate>
@@ -414,6 +405,15 @@
       <pubDate>Sat, 01 Aug 2015 21:29:34 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/tags/panic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://dyiwu.github.io/tags/linux/</link>
+      <pubDate>Thu, 24 Jul 2014 15:14:34 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/linux/</guid>
       <description></description>
     </item>
     
