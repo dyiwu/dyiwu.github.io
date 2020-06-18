@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Dyi-Wu Liu" /><meta name="description" content="This home lab is going to build a CentOS 8 KVM host on bare matel and then 3 KVM guest nodes be form up as a k8s cluster. The first step is going to craete the KVM host on the bare metal.
+<meta name="author" content="Dyi-Wu Liu" /><meta name="description" content="This home lab is going to build a CentOS 8 VM host on bare matel and 3 VM guest nodes be form up as a k8s cluster. The first step is going to craete the VM host on the bare metal.
 " /><meta name="keywords" content="Hugo, theme, even" />
 
 
@@ -41,22 +41,22 @@
 
 
 <meta property="og:title" content="Home Lab - K8s on Centos 8 - VM host" />
-<meta property="og:description" content="This home lab is going to build a CentOS 8 KVM host on bare matel and then 3 KVM guest nodes be form up as a k8s cluster. The first step is going to craete the  KVM host on the bare metal." />
+<meta property="og:description" content="This home lab is going to build a CentOS 8 VM host on bare matel and 3 VM guest nodes be form up as a k8s cluster. The first step is going to craete the VM host on the bare metal." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dyiwu.github.io/post/tech/homelab-centos8-k8s-vm-host/" />
-<meta property="article:published_time" content="2020-06-13T14:39:39+08:00" />
-<meta property="article:modified_time" content="2020-06-13T21:35:47+08:00" />
+<meta property="article:published_time" content="2020-06-18T21:22:39+08:00" />
+<meta property="article:modified_time" content="2020-06-18T21:23:11+08:00" />
 <meta itemprop="name" content="Home Lab - K8s on Centos 8 - VM host">
-<meta itemprop="description" content="This home lab is going to build a CentOS 8 KVM host on bare matel and then 3 KVM guest nodes be form up as a k8s cluster. The first step is going to craete the  KVM host on the bare metal.">
-<meta itemprop="datePublished" content="2020-06-13T14:39:39&#43;08:00" />
-<meta itemprop="dateModified" content="2020-06-13T21:35:47&#43;08:00" />
-<meta itemprop="wordCount" content="2291">
+<meta itemprop="description" content="This home lab is going to build a CentOS 8 VM host on bare matel and 3 VM guest nodes be form up as a k8s cluster. The first step is going to craete the VM host on the bare metal.">
+<meta itemprop="datePublished" content="2020-06-18T21:22:39&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-18T21:23:11&#43;08:00" />
+<meta itemprop="wordCount" content="2320">
 
 
 
 <meta itemprop="keywords" content="homelab,k8s,centos8," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Home Lab - K8s on Centos 8 - VM host"/>
-<meta name="twitter:description" content="This home lab is going to build a CentOS 8 KVM host on bare matel and then 3 KVM guest nodes be form up as a k8s cluster. The first step is going to craete the  KVM host on the bare metal."/>
+<meta name="twitter:description" content="This home lab is going to build a CentOS 8 VM host on bare matel and 3 VM guest nodes be form up as a k8s cluster. The first step is going to craete the VM host on the bare metal."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -130,11 +130,11 @@
       <h1 class="post-title">Home Lab - K8s on Centos 8 - VM host</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2020-06-13 </span>
+        <span class="post-time"> 2020-06-18 </span>
         <div class="post-category">
             <a href="/categories/tech/"> tech </a>
             </div>
-          <span class="more-meta"> 2291 words </span>
+          <span class="more-meta"> 2320 words </span>
           <span class="more-meta"> 11 mins read </span>
         
       </div>
@@ -151,9 +151,9 @@
         <li><a href="#enable-community-enterprise-linux-repository-and-extra-packages"><strong>Enable Community Enterprise Linux Repository and extra packages</strong></a></li>
         <li><a href="#repository-list"><strong>Repository list</strong></a></li>
         <li><a href="#google-chrome"><strong>Google Chrome</strong></a></li>
-        <li><a href="#br0-network-bridge"><strong>br0 Network Bridge</strong></a></li>
+        <li><a href="#br0-network-bridge-optional"><strong>br0 Network Bridge</strong> (optional)</a></li>
         <li><a href="#install-kvm"><strong>Install KVM</strong></a></li>
-        <li><a href="#using-libvirtd-but-dont-want-virbr0"><strong>Using libvirtd but don&rsquo;t want virbr0</strong></a></li>
+        <li><a href="#using-libvirtd-but-dont-want-virbr0-optional"><strong>Using libvirtd but don&rsquo;t want virbr0</strong> (optional)</a></li>
         <li><a href="#xrdp-service"><strong>Xrdp service</strong></a></li>
         <li><a href="#cockpit"><strong>Cockpit</strong></a></li>
         <li><a href="#chinese-input-method"><strong>Chinese input method</strong></a></li>
@@ -164,11 +164,11 @@
   </div>
 </div>
     <div class="post-content">
-      <p>This home lab is going to build a CentOS 8 KVM host on bare matel and then 3 KVM guest nodes be form up as a k8s cluster. The first step is going to craete the  KVM host on the bare metal.</p>
+      <p>This home lab is going to build a CentOS 8 VM host on bare matel and 3 VM guest nodes be form up as a k8s cluster. The first step is going to craete the VM host on the bare metal.</p>
 <h3 id="vm-host-base-environment"><strong>VM host base environment</strong></h3>
 <ul>
 <li>
-<p>Select <em><strong>Workstation</strong></em> as base environment for this Centos8 VM host with following configuration.</p>
+<p>Select <em><strong>Server with GUI</strong></em> as base environment for this Centos 8 VM host with following configuration.</p>
 <ul>
 <li>Intel(R) Core(TM) i7 CPU       Q 720  @ 1.60GHz</li>
 <li>8 GB memory</li>
@@ -224,6 +224,39 @@ Filename                Type            Size    Used    Priority
 
 </code></pre></td></tr></table>
 </div>
+</div><ul>
+<li>Anaconda packages</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">%packages
+@^graphical-server-environment
+@development
+@graphical-admin-tools
+@headless-management
+@remote-system-management
+@system-tools
+@virtualization-client
+@virtualization-hypervisor
+@virtualization-tools
+
+%end
+</code></pre></td></tr></table>
+</div>
 </div></li>
 </ul>
 <h4 id="reference-how-to-install-centos-8httpslinoxidecomdistroshow-to-install-centos">Reference: <a href="https://linoxide.com/distros/how-to-install-centos/">How to Install CentOS 8</a></h4>
@@ -236,7 +269,7 @@ Filename                Type            Size    Used    Priority
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># wget https://mirror.rackspace.com/elrepo/extras/el8/x86_64/RPMS/elrepo-release-8.1-1.el8.elrepo.noarch.rpm
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># wget https://mirror.rackspace.com/elrepo/extras/el8/x86_64/RPMS/elrepo-release-8.2-1.el8.elrepo.noarch.rpm
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -247,7 +280,7 @@ Filename                Type            Size    Used    Priority
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># rpm -Uvh elrepo-release-8.1-1.el8.elrepo.noarch.rpm
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># rpm -Uvh elrepo-release-8.2-1.el8.elrepo.noarch.rpm
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -350,7 +383,7 @@ gpgkey=https://dl.google.com/linux/linux_signing_key.pub
 </li>
 </ul>
 <h4 id="referencehow-to-install-google-chrome-web-browser-on-centos-8httpslinuxizecomposthow-to-install-google-chrome-web-browser-on-centos-8">Reference：<a href="https://linuxize.com/post/how-to-install-google-chrome-web-browser-on-centos-8/">How to Install Google Chrome Web Browser on CentOS 8</a></h4>
-<h3 id="br0-network-bridge"><strong>br0 Network Bridge</strong></h3>
+<h3 id="br0-network-bridge-optional"><strong>br0 Network Bridge</strong> (optional)</h3>
 <ul>
 <li>Check connections.
 <div class="highlight"><div class="chroma">
@@ -610,7 +643,7 @@ Install the virt-manager tool which allows us to manage Virtual Machines from a 
 </div></li>
 </ul>
 <h4 id="reference-how-to-install-kvm-on-rhel-8--centos-8-linuxhttpscomputingforgeekscomhow-to-install-kvm-on-rhel-8">Reference: <a href="https://computingforgeeks.com/how-to-install-kvm-on-rhel-8/">How To Install KVM on RHEL 8 / CentOS 8 Linux</a></h4>
-<h3 id="using-libvirtd-but-dont-want-virbr0"><strong>Using libvirtd but don&rsquo;t want virbr0</strong></h3>
+<h3 id="using-libvirtd-but-dont-want-virbr0-optional"><strong>Using libvirtd but don&rsquo;t want virbr0</strong> (optional)</h3>
 <p>On a Linux host server, the virtual network switch shows up as a network interface. The default one, created when the libvirt daemon is first installed and started, shows up as virbr0. It will act as a gateway for the VMs to route traffic. libvirtd will also insert iptables rules in iptable configuration for proper routing/natting of VM packets.</p>
 <p>If we don&rsquo;t want to use libvirtd service, we can stop the same which will remove all these network configurations from the system for virbr0 interface.</p>
 <p>But in our case scenario, libvirtd service will be kept running regarding this bare metal system is acting as KVM host but we have br0 setup to let guest VMs use it, so we will remove the virbr0 interface. Follow the steps below to remove the virbr0 interface.</p>
