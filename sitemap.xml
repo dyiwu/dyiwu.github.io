@@ -9,21 +9,91 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/categories/</loc>
-    <lastmod>2020-06-19T19:12:30+08:00</lastmod>
+    <loc>https://dyiwu.github.io/tags/bookmark/</loc>
+    <lastmod>2020-06-23T19:54:06+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/tags/centos8/</loc>
-    <lastmod>2020-06-19T19:12:30+08:00</lastmod>
+    <loc>https://dyiwu.github.io/categories/bookmark/</loc>
+    <lastmod>2020-06-23T19:54:06+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/categories/</loc>
+    <lastmod>2020-06-23T19:54:06+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://dyiwu.github.io/</loc>
+    <lastmod>2020-06-23T19:54:06+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/guru/</loc>
+    <lastmod>2020-06-23T19:54:06+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/post/</loc>
+    <lastmod>2020-06-23T19:54:06+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/</loc>
+    <lastmod>2020-06-23T19:54:06+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/post/bookmarks/guru/</loc>
+    <lastmod>2020-06-23T19:54:06+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/dhcp/</loc>
+    <lastmod>2020-06-23T19:54:06+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/kvm/</loc>
+    <lastmod>2020-06-23T19:54:06+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/post/tech/kvm-guest-dhcp-ip/</loc>
+    <lastmod>2020-06-23T19:54:06+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/categories/tech/</loc>
+    <lastmod>2020-06-23T19:54:06+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/centos8/</loc>
     <lastmod>2020-06-19T19:12:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -45,27 +115,6 @@
   
   <url>
     <loc>https://dyiwu.github.io/tags/k8s/</loc>
-    <lastmod>2020-06-19T19:12:30+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/post/</loc>
-    <lastmod>2020-06-19T19:12:30+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/</loc>
-    <lastmod>2020-06-19T19:12:30+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/categories/tech/</loc>
     <lastmod>2020-06-19T19:12:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -263,20 +312,6 @@
   <url>
     <loc>https://dyiwu.github.io/post/life/tw-stock-openhour/</loc>
     <lastmod>2020-02-15T20:22:21+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/bookmark/</loc>
-    <lastmod>2020-06-19T19:12:30+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/categories/bookmark/</loc>
-    <lastmod>2020-06-19T19:12:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -494,20 +529,6 @@
   <url>
     <loc>https://dyiwu.github.io/post/life/concessions/</loc>
     <lastmod>2019-05-03T11:20:47+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/guru/</loc>
-    <lastmod>2020-06-19T19:12:30+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/post/bookmarks/guru/</loc>
-    <lastmod>2020-06-19T19:12:30+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

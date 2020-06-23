@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 18 Jun 2020 21:22:39 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2020 21:16:28 +0800</lastBuildDate>
     
 	<atom:link href="https://dyiwu.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,24 @@
       
       <guid>https://dyiwu.github.io/about/</guid>
       <description>一個老碼農的筆記 Listen Commit Ownership Before honor comes humility. 15:33 .container { position: relative; } .text-block { position: absolute; top: 5px; left: 10px; color: navy; } Chaos is an old coding peasant&amp;rsquo;s note book. Which is build on top of Hugo with Even theme and hosted on GitHub. Hugo is a static site generator written in Go. Even is a super concise theme for</description>
+    </item>
+    
+    <item>
+      <title>大腕、網紅</title>
+      <link>https://dyiwu.github.io/post/bookmarks/guru/</link>
+      <pubDate>Mon, 22 Jun 2020 21:16:28 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/bookmarks/guru/</guid>
+      <description>&lt;p&gt;大腕、網紅的網站。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Static IP assignment for KVM guest</title>
+      <link>https://dyiwu.github.io/post/tech/kvm-guest-dhcp-ip/</link>
+      <pubDate>Mon, 22 Jun 2020 20:44:34 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/tech/kvm-guest-dhcp-ip/</guid>
+      <description>&lt;h2 id=&#34;procedures-to-assign-static-ip-addresses-for-guest-kvm&#34;&gt;Procedures to assign static IP addresses for guest KVM&lt;/h2&gt;</description>
     </item>
     
     <item>
@@ -326,15 +344,6 @@ TED talk is in 18 minutes length limit usually, but which need the Internet conn
 還真的回答不了這個問題——
 這涉及到歷史，政治，經濟，文化和教育等等諸多因素。&amp;hellip;&amp;hellip;
 有一個聽來的故事，或許可以幫助了解一下這個問題。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>大腕、網紅</title>
-      <link>https://dyiwu.github.io/post/bookmarks/guru/</link>
-      <pubDate>Thu, 02 May 2019 17:34:39 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/bookmarks/guru/</guid>
-      <description>&lt;p&gt;大腕、網紅的網站。&lt;/p&gt;</description>
     </item>
     
     <item>

@@ -7,10 +7,46 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 18 Jun 2020 21:22:39 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jun 2020 21:16:28 +0800</lastBuildDate>
     
 	<atom:link href="https://dyiwu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>bookmark</title>
+      <link>https://dyiwu.github.io/tags/bookmark/</link>
+      <pubDate>Mon, 22 Jun 2020 21:16:28 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/bookmark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>guru</title>
+      <link>https://dyiwu.github.io/tags/guru/</link>
+      <pubDate>Mon, 22 Jun 2020 21:16:28 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/guru/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dhcp</title>
+      <link>https://dyiwu.github.io/tags/dhcp/</link>
+      <pubDate>Mon, 22 Jun 2020 20:44:34 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/dhcp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kvm</title>
+      <link>https://dyiwu.github.io/tags/kvm/</link>
+      <pubDate>Mon, 22 Jun 2020 20:44:34 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/kvm/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>centos8</title>
@@ -166,15 +202,6 @@
     </item>
     
     <item>
-      <title>bookmark</title>
-      <link>https://dyiwu.github.io/tags/bookmark/</link>
-      <pubDate>Tue, 03 Sep 2019 20:36:19 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/bookmark/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>live</title>
       <link>https://dyiwu.github.io/tags/live/</link>
       <pubDate>Tue, 03 Sep 2019 20:36:19 +0800</pubDate>
@@ -279,15 +306,6 @@
       <pubDate>Fri, 10 May 2019 14:27:47 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/tags/%E9%A4%8A%E7%94%9F/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>guru</title>
-      <link>https://dyiwu.github.io/tags/guru/</link>
-      <pubDate>Thu, 02 May 2019 17:34:39 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/guru/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>kvm on Chaos - 一個老碼農的筆記</title>
+    <link>https://dyiwu.github.io/tags/kvm/</link>
+    <description>Recent content in kvm on Chaos - 一個老碼農的筆記</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
+    <lastBuildDate>Mon, 22 Jun 2020 20:44:34 +0800</lastBuildDate>
+    
+	<atom:link href="https://dyiwu.github.io/tags/kvm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Static IP assignment for KVM guest</title>
+      <link>https://dyiwu.github.io/post/tech/kvm-guest-dhcp-ip/</link>
+      <pubDate>Mon, 22 Jun 2020 20:44:34 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/post/tech/kvm-guest-dhcp-ip/</guid>
+      <description>&lt;h2 id=&#34;procedures-to-assign-static-ip-addresses-for-guest-kvm&#34;&gt;Procedures to assign static IP addresses for guest KVM&lt;/h2&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
