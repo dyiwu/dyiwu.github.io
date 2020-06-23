@@ -9,6 +9,62 @@
   </url>
   
   <url>
+    <loc>https://dyiwu.github.io/categories/</loc>
+    <lastmod>2020-06-23T21:30:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/</loc>
+    <lastmod>2020-06-23T21:30:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/dhcp/</loc>
+    <lastmod>2020-06-23T21:30:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/kvm/</loc>
+    <lastmod>2020-06-23T21:30:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/post/</loc>
+    <lastmod>2020-06-23T21:30:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/post/tech/kvm-guest-dhcp-ip/</loc>
+    <lastmod>2020-06-23T21:30:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/tags/</loc>
+    <lastmod>2020-06-23T21:30:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://dyiwu.github.io/categories/tech/</loc>
+    <lastmod>2020-06-23T21:30:15+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://dyiwu.github.io/tags/bookmark/</loc>
     <lastmod>2020-06-23T19:54:06+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -23,20 +79,6 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/categories/</loc>
-    <lastmod>2020-06-23T19:54:06+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/</loc>
-    <lastmod>2020-06-23T19:54:06+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://dyiwu.github.io/tags/guru/</loc>
     <lastmod>2020-06-23T19:54:06+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -44,49 +86,7 @@
   </url>
   
   <url>
-    <loc>https://dyiwu.github.io/post/</loc>
-    <lastmod>2020-06-23T19:54:06+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/</loc>
-    <lastmod>2020-06-23T19:54:06+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://dyiwu.github.io/post/bookmarks/guru/</loc>
-    <lastmod>2020-06-23T19:54:06+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/dhcp/</loc>
-    <lastmod>2020-06-23T19:54:06+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/tags/kvm/</loc>
-    <lastmod>2020-06-23T19:54:06+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/post/tech/kvm-guest-dhcp-ip/</loc>
-    <lastmod>2020-06-23T19:54:06+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://dyiwu.github.io/categories/tech/</loc>
     <lastmod>2020-06-23T19:54:06+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
