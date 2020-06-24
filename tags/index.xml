@@ -7,33 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 23 Jun 2020 20:14:34 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 24 Jun 2020 21:16:28 +0800</lastBuildDate>
     
 	<atom:link href="https://dyiwu.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>dhcp</title>
-      <link>https://dyiwu.github.io/tags/dhcp/</link>
-      <pubDate>Tue, 23 Jun 2020 20:14:34 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/dhcp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>kvm</title>
-      <link>https://dyiwu.github.io/tags/kvm/</link>
-      <pubDate>Tue, 23 Jun 2020 20:14:34 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/tags/kvm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>bookmark</title>
       <link>https://dyiwu.github.io/tags/bookmark/</link>
-      <pubDate>Mon, 22 Jun 2020 21:16:28 +0800</pubDate>
+      <pubDate>Wed, 24 Jun 2020 21:16:28 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/tags/bookmark/</guid>
       <description></description>
@@ -42,9 +24,36 @@
     <item>
       <title>guru</title>
       <link>https://dyiwu.github.io/tags/guru/</link>
-      <pubDate>Mon, 22 Jun 2020 21:16:28 +0800</pubDate>
+      <pubDate>Wed, 24 Jun 2020 21:16:28 +0800</pubDate>
       
       <guid>https://dyiwu.github.io/tags/guru/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>clone</title>
+      <link>https://dyiwu.github.io/tags/clone/</link>
+      <pubDate>Wed, 24 Jun 2020 20:49:27 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/clone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kvm</title>
+      <link>https://dyiwu.github.io/tags/kvm/</link>
+      <pubDate>Wed, 24 Jun 2020 20:49:27 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/kvm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dhcp</title>
+      <link>https://dyiwu.github.io/tags/dhcp/</link>
+      <pubDate>Tue, 23 Jun 2020 20:14:34 +0800</pubDate>
+      
+      <guid>https://dyiwu.github.io/tags/dhcp/</guid>
       <description></description>
     </item>
     

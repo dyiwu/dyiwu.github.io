@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>guru · Chaos - 一個老碼農的筆記</title>
+  <title>Clone KVM - Chaos - 一個老碼農的筆記</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Dyi-Wu Liu" /><meta name="description" content="Hugo theme even example site." /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Dyi-Wu Liu" /><meta name="description" content="Procedures to clone virtual machine" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,9 +26,7 @@
 <meta name="generator" content="Hugo 0.72.0 with theme even" />
 
 
-<link rel="canonical" href="https://dyiwu.github.io/tags/guru/" />
-  <link href="https://dyiwu.github.io/tags/guru/index.xml" rel="alternate" type="application/rss+xml" title="Chaos - 一個老碼農的筆記" />
-  <link href="https://dyiwu.github.io/tags/guru/index.xml" rel="feed" type="application/rss+xml" title="Chaos - 一個老碼農的筆記" />
+<link rel="canonical" href="https://dyiwu.github.io/post/tech/clone_kvm/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -41,15 +39,22 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="guru" />
-<meta property="og:description" content="Hugo theme even example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://dyiwu.github.io/tags/guru/" />
-<meta property="og:updated_time" content="2020-06-24T21:28:22+08:00" />
-<meta itemprop="name" content="guru">
-<meta itemprop="description" content="Hugo theme even example site."><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="guru"/>
-<meta name="twitter:description" content="Hugo theme even example site."/>
+<meta property="og:title" content="Clone KVM" />
+<meta property="og:description" content="Procedures to clone virtual machine" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dyiwu.github.io/post/tech/clone_kvm/" />
+<meta property="article:published_time" content="2020-06-24T20:49:27+08:00" />
+<meta property="article:modified_time" content="2020-06-24T21:28:22+08:00" />
+<meta itemprop="name" content="Clone KVM">
+<meta itemprop="description" content="Procedures to clone virtual machine">
+<meta itemprop="dateModified" content="2020-06-24T21:28:22&#43;08:00" />
+<meta itemprop="wordCount" content="114">
+
+
+
+<meta itemprop="keywords" content="kvm,clone," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Clone KVM"/>
+<meta name="twitter:description" content="Procedures to clone virtual machine"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -117,29 +122,135 @@
     <main id="main" class="main">
       <div class="content-wrapper">
         <div id="content" class="content">
-          <section id="archive" class="archive">
-  <div class="archive-title tag">
-        <h2 class="archive-name">guru</h2>
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Clone KVM</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-06-24 </span>
+        <div class="post-category">
+            <a href="/categories/tech/"> tech </a>
+            </div>
+          <span class="more-meta"> 114 words </span>
+          <span class="more-meta"> 1 min read </span>
+        
       </div>
+    </header>
 
-  <div class="archive-post">
-      <span class="archive-post-time">
-        2020-06-24
-      </span>
-      <span class="archive-post-title">
-        <a href="/post/bookmarks/guru/" class="archive-post-link">
-          大腕、網紅
-        </a>
-      </span>
+    
+    <div class="post-content">
+      <h2 id="procedures-to-clone-virtual-machine">Procedures to clone virtual machine</h2>
+<ul>
+<li>
+<p>List all virtual machine on system</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virsh list --all
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Suspend virtual machine</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virsh suspend main_node
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Clone virtual machine main_node to main_node_clone</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virt-clone --connect qemu:///system --original main_node \
+ --name main_node_clone --file /var/lib/libvirt/images/main_node_clone.qcow2
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Reset hostname and root user password.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virt-sysprep -d main_node_clone  --hostname main_node_clone --root-password password:123456
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>List the operations supported by the virt-sysprep program.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virt-sysprep --list-operations
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Resume virtual machine</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virsh resume main_node
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Start a virtual machine</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virsh start main_node_clone
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h4 id="reference-如何克隆一個kvm虛擬機並重置該虛擬機httpshuataihuanggitbooksiocloud-atlasvirtualkvmstartuphow_to_clone_a_kvm_virtual_machines_and_reset_the_vmhtml">Reference: <a href="https://huataihuang.gitbooks.io/cloud-atlas/virtual/kvm/startup/how_to_clone_a_kvm_virtual_machines_and_reset_the_vm.html">如何克隆一個KVM虛擬機並重置該虛擬機</a></h4>
     </div>
-</section>
 
-<nav class="pagination">
-  
-  
-</nav>
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/kvm/">kvm</a>
+          <a href="/tags/clone/">clone</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/bookmarks/guru/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">大腕、網紅</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/tech/kvm-guest-dhcp-ip/">
+            <span class="next-text nav-default">Static IP assignment for KVM guest</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
         </div>
         
+
+  
+
+  
 
       </div>
     </main>
