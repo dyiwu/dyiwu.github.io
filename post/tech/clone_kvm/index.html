@@ -44,11 +44,11 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://dyiwu.github.io/post/tech/clone_kvm/" />
 <meta property="article:published_time" content="2020-06-24T20:49:27+08:00" />
-<meta property="article:modified_time" content="2020-06-24T21:28:22+08:00" />
+<meta property="article:modified_time" content="2020-06-26T20:55:55+08:00" />
 <meta itemprop="name" content="Clone KVM">
 <meta itemprop="description" content="Procedures to clone virtual machine">
-<meta itemprop="dateModified" content="2020-06-24T21:28:22&#43;08:00" />
-<meta itemprop="wordCount" content="114">
+<meta itemprop="dateModified" content="2020-06-26T20:55:55&#43;08:00" />
+<meta itemprop="wordCount" content="458">
 
 
 
@@ -132,7 +132,7 @@
         <div class="post-category">
             <a href="/categories/tech/"> tech </a>
             </div>
-          <span class="more-meta"> 114 words </span>
+          <span class="more-meta"> 458 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -192,10 +192,90 @@
 <p>List the operations supported by the virt-sysprep program.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virt-sysprep --list-operations
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="err">$</span> <span class="nx">sudo</span> <span class="nx">virt</span><span class="o">-</span><span class="nx">sysprep</span> <span class="o">--</span><span class="nx">list</span><span class="o">-</span><span class="nx">operations</span>
+<span class="nx">abrt</span><span class="o">-</span><span class="nx">data</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">the</span> <span class="nx">crash</span> <span class="nx">data</span> <span class="nx">generated</span> <span class="nx">by</span> <span class="nx">ABRT</span>
+<span class="nx">backup</span><span class="o">-</span><span class="nx">files</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">editor</span> <span class="nx">backup</span> <span class="nx">files</span> <span class="nx">from</span> <span class="nx">the</span> <span class="nx">guest</span>
+<span class="nx">bash</span><span class="o">-</span><span class="nx">history</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">the</span> <span class="nx">bash</span> <span class="nx">history</span> <span class="nx">in</span> <span class="nx">the</span> <span class="nx">guest</span>
+<span class="nx">blkid</span><span class="o">-</span><span class="nx">tab</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">blkid</span> <span class="nx">tab</span> <span class="nx">in</span> <span class="nx">the</span> <span class="nx">guest</span>
+<span class="nx">ca</span><span class="o">-</span><span class="nx">certificates</span>   <span class="nx">Remove</span> <span class="nx">CA</span> <span class="nx">certificates</span> <span class="nx">in</span> <span class="nx">the</span> <span class="nx">guest</span>
+<span class="nx">crash</span><span class="o">-</span><span class="nx">data</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">the</span> <span class="nx">crash</span> <span class="nx">data</span> <span class="nx">generated</span> <span class="nx">by</span> <span class="nx">kexec</span><span class="o">-</span><span class="nx">tools</span>
+<span class="nx">cron</span><span class="o">-</span><span class="nx">spool</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">user</span> <span class="nx">at</span><span class="o">-</span><span class="nx">jobs</span> <span class="nx">and</span> <span class="nx">cron</span><span class="o">-</span><span class="nx">jobs</span>
+<span class="nx">customize</span> <span class="o">*</span> <span class="nx">Customize</span> <span class="nx">the</span> <span class="nx">guest</span>
+<span class="nx">dhcp</span><span class="o">-</span><span class="nx">client</span><span class="o">-</span><span class="nx">state</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">DHCP</span> <span class="nx">client</span> <span class="nx">leases</span>
+<span class="nx">dhcp</span><span class="o">-</span><span class="nx">server</span><span class="o">-</span><span class="nx">state</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">DHCP</span> <span class="nx">server</span> <span class="nx">leases</span>
+<span class="nx">dovecot</span><span class="o">-</span><span class="nx">data</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nf">Dovecot</span> <span class="p">(</span><span class="nx">mail</span> <span class="nx">server</span><span class="p">)</span> <span class="nx">data</span>
+<span class="nx">firewall</span><span class="o">-</span><span class="nx">rules</span>   <span class="nx">Remove</span> <span class="nx">the</span> <span class="nx">firewall</span> <span class="nx">rules</span>
+<span class="nx">flag</span><span class="o">-</span><span class="nx">reconfiguration</span>   <span class="nx">Flag</span> <span class="nx">the</span> <span class="nx">system</span> <span class="k">for</span> <span class="nx">reconfiguration</span>
+<span class="nx">fs</span><span class="o">-</span><span class="nx">uuids</span>   <span class="nx">Change</span> <span class="nx">filesystem</span> <span class="nx">UUIDs</span>
+<span class="nx">kerberos</span><span class="o">-</span><span class="nx">data</span>   <span class="nx">Remove</span> <span class="nx">Kerberos</span> <span class="nx">data</span> <span class="nx">in</span> <span class="nx">the</span> <span class="nx">guest</span>
+<span class="nx">logfiles</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">many</span> <span class="nx">log</span> <span class="nx">files</span> <span class="nx">from</span> <span class="nx">the</span> <span class="nx">guest</span>
+<span class="nx">lvm</span><span class="o">-</span><span class="nx">uuids</span> <span class="o">*</span> <span class="nx">Change</span> <span class="nx">LVM2</span> <span class="nx">PV</span> <span class="nx">and</span> <span class="nx">VG</span> <span class="nx">UUIDs</span>
+<span class="nx">machine</span><span class="o">-</span><span class="nx">id</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">the</span> <span class="nx">local</span> <span class="nx">machine</span> <span class="nx">ID</span>
+<span class="nx">mail</span><span class="o">-</span><span class="nx">spool</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">email</span> <span class="nx">from</span> <span class="nx">the</span> <span class="nx">local</span> <span class="nx">mail</span> <span class="nx">spool</span> <span class="nx">directory</span>
+<span class="nx">net</span><span class="o">-</span><span class="nx">hostname</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">HOSTNAME</span> <span class="nx">and</span> <span class="nx">DHCP_HOSTNAME</span> <span class="nx">in</span> <span class="nx">network</span> <span class="kd">interface</span> <span class="nx">configuration</span>
+<span class="nx">net</span><span class="o">-</span><span class="nx">hwaddr</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nf">HWADDR</span> <span class="p">(</span><span class="nx">hard</span><span class="o">-</span><span class="nx">coded</span> <span class="nx">MAC</span> <span class="nx">address</span><span class="p">)</span> <span class="nx">configuration</span>
+<span class="nx">pacct</span><span class="o">-</span><span class="nx">log</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">the</span> <span class="nx">process</span> <span class="nx">accounting</span> <span class="nx">log</span> <span class="nx">files</span>
+<span class="kn">package</span><span class="o">-</span><span class="nx">manager</span><span class="o">-</span><span class="nx">cache</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="kn">package</span> <span class="nx">manager</span> <span class="nx">cache</span>
+<span class="nx">pam</span><span class="o">-</span><span class="nx">data</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">the</span> <span class="nx">PAM</span> <span class="nx">data</span> <span class="nx">in</span> <span class="nx">the</span> <span class="nx">guest</span>
+<span class="nx">passwd</span><span class="o">-</span><span class="nx">backups</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="o">/</span><span class="nx">etc</span><span class="o">/</span><span class="nx">passwd</span><span class="o">-</span> <span class="nx">and</span> <span class="nx">similar</span> <span class="nx">backup</span> <span class="nx">files</span>
+<span class="nx">puppet</span><span class="o">-</span><span class="nx">data</span><span class="o">-</span><span class="nx">log</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">the</span> <span class="nx">data</span> <span class="nx">and</span> <span class="nx">log</span> <span class="nx">files</span> <span class="nx">of</span> <span class="nx">puppet</span>
+<span class="nx">rh</span><span class="o">-</span><span class="nx">subscription</span><span class="o">-</span><span class="nx">manager</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">the</span> <span class="nx">RH</span> <span class="nx">subscription</span> <span class="nx">manager</span> <span class="nx">files</span>
+<span class="nx">rhn</span><span class="o">-</span><span class="nx">systemid</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">the</span> <span class="nx">RHN</span> <span class="nx">system</span> <span class="nx">ID</span>
+<span class="nx">rpm</span><span class="o">-</span><span class="nx">db</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">host</span><span class="o">-</span><span class="nx">specific</span> <span class="nx">RPM</span> <span class="nx">database</span> <span class="nx">files</span>
+<span class="nx">samba</span><span class="o">-</span><span class="nx">db</span><span class="o">-</span><span class="nx">log</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">the</span> <span class="nx">database</span> <span class="nx">and</span> <span class="nx">log</span> <span class="nx">files</span> <span class="nx">of</span> <span class="nx">Samba</span>
+<span class="nx">script</span> <span class="o">*</span> <span class="nx">Run</span> <span class="nx">arbitrary</span> <span class="nx">scripts</span> <span class="nx">against</span> <span class="nx">the</span> <span class="nx">guest</span>
+<span class="nx">smolt</span><span class="o">-</span><span class="nx">uuid</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">the</span> <span class="nx">Smolt</span> <span class="nx">hardware</span> <span class="nx">UUID</span>
+<span class="nx">ssh</span><span class="o">-</span><span class="nx">hostkeys</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">the</span> <span class="nx">SSH</span> <span class="nx">host</span> <span class="nx">keys</span> <span class="nx">in</span> <span class="nx">the</span> <span class="nx">guest</span>
+<span class="nx">ssh</span><span class="o">-</span><span class="nx">userdir</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="s">&#34;.ssh&#34;</span> <span class="nx">directories</span> <span class="nx">in</span> <span class="nx">the</span> <span class="nx">guest</span>
+<span class="nx">sssd</span><span class="o">-</span><span class="nx">db</span><span class="o">-</span><span class="nx">log</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">the</span> <span class="nx">database</span> <span class="nx">and</span> <span class="nx">log</span> <span class="nx">files</span> <span class="nx">of</span> <span class="nx">sssd</span>
+<span class="nx">tmp</span><span class="o">-</span><span class="nx">files</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">temporary</span> <span class="nx">files</span>
+<span class="nx">udev</span><span class="o">-</span><span class="nx">persistent</span><span class="o">-</span><span class="nx">net</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">udev</span> <span class="nx">persistent</span> <span class="nx">net</span> <span class="nx">rules</span>
+<span class="nx">user</span><span class="o">-</span><span class="nx">account</span>   <span class="nx">Remove</span> <span class="nx">the</span> <span class="nx">user</span> <span class="nx">accounts</span> <span class="nx">in</span> <span class="nx">the</span> <span class="nx">guest</span>
+<span class="nx">utmp</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">the</span> <span class="nx">utmp</span> <span class="nx">file</span>
+<span class="nx">yum</span><span class="o">-</span><span class="nx">uuid</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">the</span> <span class="nx">yum</span> <span class="nx">UUID</span>
 </code></pre></td></tr></table>
 </div>
 </div></li>

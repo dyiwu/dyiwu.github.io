@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>大腕、網紅 - Chaos - 一個老碼農的筆記</title>
+  <title>Enabling nested virtualization in KVM - Chaos - 一個老碼農的筆記</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Dyi-Wu Liu" /><meta name="description" content="大腕、網紅的網站。
+<meta name="author" content="Dyi-Wu Liu" /><meta name="description" content="Nested virtualization allows you to run a virtual machine (VM) inside another VM while still using hardware acceleration from the host.
 " /><meta name="keywords" content="Hugo, theme, even" />
 
 
@@ -27,7 +27,7 @@
 <meta name="generator" content="Hugo 0.72.0 with theme even" />
 
 
-<link rel="canonical" href="https://dyiwu.github.io/post/bookmarks/guru/" />
+<link rel="canonical" href="https://dyiwu.github.io/post/tech/nest-kvm/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,22 +40,22 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="大腕、網紅" />
-<meta property="og:description" content="大腕、網紅的網站。" />
+<meta property="og:title" content="Enabling nested virtualization in KVM" />
+<meta property="og:description" content="Nested virtualization allows you to run a virtual machine (VM) inside another VM while still using hardware acceleration from the host." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://dyiwu.github.io/post/bookmarks/guru/" />
-<meta property="article:published_time" content="2020-06-24T21:16:28+08:00" />
-<meta property="article:modified_time" content="2020-06-24T21:28:22+08:00" />
-<meta itemprop="name" content="大腕、網紅">
-<meta itemprop="description" content="大腕、網紅的網站。">
-<meta itemprop="dateModified" content="2020-06-24T21:28:22&#43;08:00" />
-<meta itemprop="wordCount" content="59">
+<meta property="og:url" content="https://dyiwu.github.io/post/tech/nest-kvm/" />
+<meta property="article:published_time" content="2020-06-26T20:08:21+08:00" />
+<meta property="article:modified_time" content="2020-06-26T20:55:55+08:00" />
+<meta itemprop="name" content="Enabling nested virtualization in KVM">
+<meta itemprop="description" content="Nested virtualization allows you to run a virtual machine (VM) inside another VM while still using hardware acceleration from the host.">
+<meta itemprop="dateModified" content="2020-06-26T20:55:55&#43;08:00" />
+<meta itemprop="wordCount" content="302">
 
 
 
-<meta itemprop="keywords" content="guru,bookmark," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="大腕、網紅"/>
-<meta name="twitter:description" content="大腕、網紅的網站。"/>
+<meta itemprop="keywords" content="kvm," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Enabling nested virtualization in KVM"/>
+<meta name="twitter:description" content="Nested virtualization allows you to run a virtual machine (VM) inside another VM while still using hardware acceleration from the host."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -126,48 +126,106 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">大腕、網紅</h1>
+      <h1 class="post-title">Enabling nested virtualization in KVM</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2020-06-24 </span>
+        <span class="post-time"> 2020-06-26 </span>
         <div class="post-category">
-            <a href="/categories/bookmark/"> bookmark </a>
+            <a href="/categories/tech/"> tech </a>
             </div>
-          <span class="more-meta"> 59 words </span>
-          <span class="more-meta"> 1 min read </span>
+          <span class="more-meta"> 302 words </span>
+          <span class="more-meta"> 2 mins read </span>
         
       </div>
     </header>
 
     
     <div class="post-content">
-      <p>大腕、網紅的網站。</p>
-<ul>
-<li><a href="https://note.qidong.name/">零壹軒筆記</a></li>
-<li><a href="https://jimmysong.io/">宋淨超的博客-雲原生</a></li>
-<li><a href="https://chswei.github.io/">魏志軒@github</a>  <a href="https://medium.com/@chs_wei">@medium</a></li>
-<li><a href="https://blog.gtwang.org/">G. T. Wang 的個人部落格</a></li>
-<li><a href="https://atceiling.blogspot.com/">天花板隨記</a></li>
-<li><a href="https://www.cyberciti.biz/">nixCraft</a></li>
-<li><a href="https://jin-yang.github.io/">JIN-YANG 碼農的自留地</a></li>
-<li><a href="https://github.com/huataihuang">Huatai Huang</a></li>
-</ul>
+      <p>Nested virtualization allows you to run a virtual machine (VM) inside another VM while still using hardware acceleration from the host.</p>
+<h2 id="checking-if-nested-virtualization-is-supported">Checking if nested virtualization is supported</h2>
+<p>For Intel processors, check the /sys/module/kvm_intel/parameters/nested file.<br>
+For AMD processors, check the /sys/module/kvm_amd/parameters/nested file.<br>
+If you see 1 or Y, nested virtualization is supported; if you see 0 or N, nested virtualization is not supported.</p>
+<p>For example:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cat /sys/module/kvm_intel/parameters/nested
+Y
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="enabling-nested-virtualization">Enabling nested virtualization</h2>
+<p>To enable nested virtualization for Intel processors:
+Shut down all running VMs and unload the kvm_probe module:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># modprobe -r kvm_intel
+Activate the nesting feature:
+# modprobe kvm_intel nested=1
+</code></pre></td></tr></table>
+</div>
+</div><p>Nested virtualization is enabled until the host is rebooted. To enable it permanently, add the following line to the /etc/modprobe.d/kvm.conf file:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">options kvm_intel nested=1
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="configuring-nested-virtualization-in-virt-manager">Configuring nested virtualization in virt-manager</h2>
+<p>Configure your VM to use nested virtualization:<br>
+Open virt-manager, double-click the VM in which you wish to enable nested virtualization, and click the Show virtual hardware details icon.</p>
+<p>Click CPUs in the side menu. In the Configuration section, there are two options - either type host-passthrough in the Model: field, or select the Copy host CPU configuration check box (that fills the host-model value in the Model field).</p>
+<p>Using host-passthrough is not recommended for general usage. It should only be used for nested virtualization purposes.
+Click Apply.</p>
+<h2 id="testing-nested-virtualization">Testing nested virtualization</h2>
+<p>Start the virtual machine.<br>
+On the virtual machine, run:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># dnf group install virtualization
+Verify that the virtual machine has virtualization correctly set up:
+
+# virt-host-validate
+  QEMU: Checking for hardware virtualization                                 : PASS
+  QEMU: Checking for device /dev/kvm                                         : PASS
+  QEMU: Checking for device /dev/vhost-net                                   : PASS
+  QEMU: Checking for device /dev/net/tun                                     : PASS
+  LXC: Checking for Linux &gt;= 2.6.26           
+</code></pre></td></tr></table>
+</div>
+</div><h4 id="reference-how-to-enable-nested-virtualization-in-kvmhttpsdocsfedoraprojectorgen-usquick-docsusing-nested-virtualization-in-kvmindexhtml">Reference: <a href="https://docs.fedoraproject.org/en-US/quick-docs/using-nested-virtualization-in-kvm/index.html">How to enable nested virtualization in KVM</a></h4>
     </div>
 
     
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/guru/">guru</a>
-          <a href="/tags/bookmark/">bookmark</a>
+          <a href="/tags/kvm/">kvm</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/tech/nest-kvm/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Enabling nested virtualization in KVM</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/post/tech/clone_kvm/">
-            <span class="next-text nav-default">Clone KVM</span>
+        
+        <a class="next" href="/post/bookmarks/guru/">
+            <span class="next-text nav-default">大腕、網紅</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
