@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>dhcp - Tag - Chaos</title>
-        <link>https://example.com/tags/dhcp/</link>
+        <link>https://dyiwu.github.io/tags/dhcp/</link>
         <description>dhcp - Tag - Chaos</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (Dyi-Wu Liu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 23 Jun 2020 20:14:34 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/dhcp/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 23 Jun 2020 20:14:34 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/dhcp/" rel="self" type="application/rss+xml" /><item>
     <title>Static IP assignment for KVM guest</title>
-    <link>https://example.com/2020/06/kvm-guest-dhcp-ip/</link>
+    <link>https://dyiwu.github.io/2020/06/kvm-guest-dhcp-ip/</link>
     <pubDate>Tue, 23 Jun 2020 20:14:34 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2020/06/kvm-guest-dhcp-ip/</guid>
+    <guid>https://dyiwu.github.io/2020/06/kvm-guest-dhcp-ip/</guid>
     <description><![CDATA[<h2 id="procedures-to-assign-static-ip-addresses-for-guest-kvm">Procedures to assign static IP addresses for guest KVM</h2>]]></description>
 </item></channel>
 </rss>

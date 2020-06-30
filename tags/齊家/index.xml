@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>齊家 - Tag - Chaos</title>
-        <link>https://example.com/tags/%E9%BD%8A%E5%AE%B6/</link>
+        <link>https://dyiwu.github.io/tags/%E9%BD%8A%E5%AE%B6/</link>
         <description>齊家 - Tag - Chaos</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (Dyi-Wu Liu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 12 May 2019 16:47:05 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/%E9%BD%8A%E5%AE%B6/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 12 May 2019 16:47:05 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/%E9%BD%8A%E5%AE%B6/" rel="self" type="application/rss+xml" /><item>
     <title>朱熹紫陽朱子家訓</title>
-    <link>https://example.com/2019/05/zhu-family-instructions-2/</link>
+    <link>https://dyiwu.github.io/2019/05/zhu-family-instructions-2/</link>
     <pubDate>Sun, 12 May 2019 16:47:05 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2019/05/zhu-family-instructions-2/</guid>
+    <guid>https://dyiwu.github.io/2019/05/zhu-family-instructions-2/</guid>
     <description><![CDATA[朱熹紫陽朱子家訓 原文錄自《紫陽朱氏宗譜》 白話文註釋
  君之所貴者，仁也。
 臣之所貴者，忠也。
@@ -66,10 +66,10 @@
  ]]></description>
 </item><item>
     <title>朱子家訓</title>
-    <link>https://example.com/2019/05/zhu-family-instructions-1/</link>
+    <link>https://dyiwu.github.io/2019/05/zhu-family-instructions-1/</link>
     <pubDate>Sun, 12 May 2019 15:31:05 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2019/05/zhu-family-instructions-1/</guid>
+    <guid>https://dyiwu.github.io/2019/05/zhu-family-instructions-1/</guid>
     <description><![CDATA[朱柏廬治家格言 原文(不計標點題目共524字) 白話註釋
  黎明即起，灑掃庭除，要內外整潔；既昏便息，關鎖門戶，必親自檢點。
 一粥一飯，當思來處不易；半絲半縷，恒念物力維艱。

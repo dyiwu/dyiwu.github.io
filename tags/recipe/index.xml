@@ -1,36 +1,36 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>recipe - Tag - Chaos</title>
-        <link>https://example.com/tags/recipe/</link>
+        <link>https://dyiwu.github.io/tags/recipe/</link>
         <description>recipe - Tag - Chaos</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (Dyi-Wu Liu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 23 May 2020 12:00:43 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/recipe/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 23 May 2020 12:00:43 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/recipe/" rel="self" type="application/rss+xml" /><item>
     <title>Sweet Potato - 電鍋烤地瓜</title>
-    <link>https://example.com/2020/05/sweet-potato/</link>
+    <link>https://dyiwu.github.io/2020/05/sweet-potato/</link>
     <pubDate>Sat, 23 May 2020 12:00:43 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2020/05/sweet-potato/</guid>
+    <guid>https://dyiwu.github.io/2020/05/sweet-potato/</guid>
     <description><![CDATA[<h2 id="用電鍋烤地瓜的小技巧">用電鍋烤地瓜的小技巧</h2>]]></description>
 </item><item>
     <title>豬肋排做法-電鍋版</title>
-    <link>https://example.com/2020/02/porkribs/</link>
+    <link>https://dyiwu.github.io/2020/02/porkribs/</link>
     <pubDate>Sun, 16 Feb 2020 11:45:18 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2020/02/porkribs/</guid>
+    <guid>https://dyiwu.github.io/2020/02/porkribs/</guid>
     <description><![CDATA[豬肋排做法-電鍋版 醃煮食材：  豬小排五根，川燙過洗乾淨，剪掉多餘的肥油。 芹菜五根，切大段。 紅蘿蔔半根，切片。 蘋果半顆，切大塊。 洋蔥半顆，切大塊。 薑片適量。 大蒜適量。 蔥大段適量。 米酒兩大匙。 鹽。  肋排的醃煮與慢煎  電鍋內鍋加水蓋過食材，外鍋加水兩杯半。 豬小排撈出晾乾去水分。 起油鍋小火慢煎，一面約煎三分鐘。 待兩面成金黃色，起鍋裝盤。  調料蘸醬製作  蒜末、薑末小火爆香。 酒兩湯匙、醬油四大匙、糖一大匙、醃煮的湯適量，小火墩煮成一小碗。  ]]></description>
 </item><item>
     <title>22 Cooking Tips</title>
-    <link>https://example.com/2019/09/22-cooking-tips/</link>
+    <link>https://dyiwu.github.io/2019/09/22-cooking-tips/</link>
     <pubDate>Tue, 03 Sep 2019 19:53:20 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2019/09/22-cooking-tips/</guid>
+    <guid>https://dyiwu.github.io/2019/09/22-cooking-tips/</guid>
     <description><![CDATA[<p>大廚不外傳的22個做菜小訣竅</p>]]></description>
 </item><item>
     <title>茶葉蛋做法</title>
-    <link>https://example.com/2019/04/chayedan/</link>
+    <link>https://dyiwu.github.io/2019/04/chayedan/</link>
     <pubDate>Sun, 21 Apr 2019 23:58:18 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2019/04/chayedan/</guid>
+    <guid>https://dyiwu.github.io/2019/04/chayedan/</guid>
     <description><![CDATA[ 將雞蛋用清水刷洗乾淨！大家都知道雞蛋是從雞的哪裡生出來的吧， 不刷乾淨，那滷汁就會被污染喔！ 準備一個鍋子，將洗淨的雞蛋放入，加水蓋過雞蛋，再加一匙鹽於水中。 開中小火，用常溫水開始煮雞蛋。 水滾後，再煮約5分鐘後，即可用湯匙敲裂雞蛋蛋殼。 加入紅茶包、黑糖、八角、花椒和醬油於鍋中，攪拌均勻。 將鍋子移入電鍋中，外鍋放2杯水，開啟電源。電源跳起後，悶約30分鐘後， 再倒2杯水於外鍋，再煮一次。 （家中有悶燒鍋的，就可以直接放進悶鍋鍋裡，悶約4個小時！） 放涼後，即可連湯汁放入密封的保鮮盒內，放冰箱冷藏保存！ 冰冰涼涼的吃，風味也很棒喔！  ]]></description>
 </item></channel>
 </rss>

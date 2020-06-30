@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>chrome - Tag - Chaos</title>
-        <link>https://example.com/tags/chrome/</link>
+        <link>https://dyiwu.github.io/tags/chrome/</link>
         <description>chrome - Tag - Chaos</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (Dyi-Wu Liu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 13 Jun 2019 18:28:32 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/chrome/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 13 Jun 2019 18:28:32 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/chrome/" rel="self" type="application/rss+xml" /><item>
     <title>Install Google Chrome on Linux Mint 19 Tara</title>
-    <link>https://example.com/2019/06/install-chrome/</link>
+    <link>https://dyiwu.github.io/2019/06/install-chrome/</link>
     <pubDate>Thu, 13 Jun 2019 18:28:32 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2019/06/install-chrome/</guid>
+    <guid>https://dyiwu.github.io/2019/06/install-chrome/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

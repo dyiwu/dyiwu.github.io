@@ -1,44 +1,44 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>setup - Tag - Chaos</title>
-        <link>https://example.com/tags/setup/</link>
+        <link>https://dyiwu.github.io/tags/setup/</link>
         <description>setup - Tag - Chaos</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (Dyi-Wu Liu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 21 May 2020 19:53:30 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/setup/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 21 May 2020 19:53:30 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/setup/" rel="self" type="application/rss+xml" /><item>
     <title>Install Raspberry</title>
-    <link>https://example.com/2020/05/install-raspberry/</link>
+    <link>https://dyiwu.github.io/2020/05/install-raspberry/</link>
     <pubDate>Thu, 21 May 2020 19:53:30 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2020/05/install-raspberry/</guid>
+    <guid>https://dyiwu.github.io/2020/05/install-raspberry/</guid>
     <description><![CDATA[<h2 id="install-raspberry">Install Raspberry</h2>]]></description>
 </item><item>
     <title>Install Google Chrome on Linux Mint 19 Tara</title>
-    <link>https://example.com/2019/06/install-chrome/</link>
+    <link>https://dyiwu.github.io/2019/06/install-chrome/</link>
     <pubDate>Thu, 13 Jun 2019 18:28:32 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2019/06/install-chrome/</guid>
+    <guid>https://dyiwu.github.io/2019/06/install-chrome/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Install Nginx and PHP-FPM on Linux Mint 19</title>
-    <link>https://example.com/2019/06/install-nginx-php-fpm/</link>
+    <link>https://dyiwu.github.io/2019/06/install-nginx-php-fpm/</link>
     <pubDate>Thu, 06 Jun 2019 20:15:32 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2019/06/install-nginx-php-fpm/</guid>
+    <guid>https://dyiwu.github.io/2019/06/install-nginx-php-fpm/</guid>
     <description><![CDATA[<h2 id="_install-nginx_"><em>Install Nginx</em></h2>
 <p>Download the Nginx signing key from Nginx official site, and them add it into system.</p>]]></description>
 </item><item>
     <title>Install Hugo with Even theme</title>
-    <link>https://example.com/2019/05/install-hugo-even/</link>
+    <link>https://dyiwu.github.io/2019/05/install-hugo-even/</link>
     <pubDate>Wed, 01 May 2019 14:53:00 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2019/05/install-hugo-even/</guid>
+    <guid>https://dyiwu.github.io/2019/05/install-hugo-even/</guid>
     <description><![CDATA[<h2 id="install-hugo-with-even-theme">Install Hugo with Even theme</h2>]]></description>
 </item><item>
     <title>Install Hugo with Academic theme kickstart</title>
-    <link>https://example.com/2019/04/install_hugo_academic_kickstart/</link>
+    <link>https://dyiwu.github.io/2019/04/install_hugo_academic_kickstart/</link>
     <pubDate>Fri, 26 Apr 2019 20:03:10 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2019/04/install_hugo_academic_kickstart/</guid>
+    <guid>https://dyiwu.github.io/2019/04/install_hugo_academic_kickstart/</guid>
     <description><![CDATA[Install Hugo with Academic theme kickstart  File location:  Local repository saved under ~/Hugo/Site/chaos Generated web site saved under ~/Hugo/Site/chaos/public directory and deploy to github as https://dyiwu.github.io/     - Fork the Academic Kickstart repository from sourcethemes/academic-kickstart as dyiwu/academic-kickstart repo (https://github.com/sourcethemes/academic-kickstart)   rename the forked repo from academic-kickstart to chaos
   clone your dyiwu/chaos repo into local file system: 1 2 3 4  $ cd ~/Hugo/Site $ git clone https://github.]]></description>
 </item></channel>

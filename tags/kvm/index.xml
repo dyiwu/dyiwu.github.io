@@ -1,29 +1,29 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>kvm - Tag - Chaos</title>
-        <link>https://example.com/tags/kvm/</link>
+        <link>https://dyiwu.github.io/tags/kvm/</link>
         <description>kvm - Tag - Chaos</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (Dyi-Wu Liu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 26 Jun 2020 20:08:21 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/kvm/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 26 Jun 2020 20:08:21 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/kvm/" rel="self" type="application/rss+xml" /><item>
     <title>Enabling nested virtualization in KVM</title>
-    <link>https://example.com/2020/06/nest-kvm/</link>
+    <link>https://dyiwu.github.io/2020/06/nest-kvm/</link>
     <pubDate>Fri, 26 Jun 2020 20:08:21 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2020/06/nest-kvm/</guid>
+    <guid>https://dyiwu.github.io/2020/06/nest-kvm/</guid>
     <description><![CDATA[<p>Nested virtualization allows you to run a virtual machine (VM) inside another VM while still using hardware acceleration from the host.</p>]]></description>
 </item><item>
     <title>Clone KVM</title>
-    <link>https://example.com/2020/06/clone_kvm/</link>
+    <link>https://dyiwu.github.io/2020/06/clone_kvm/</link>
     <pubDate>Wed, 24 Jun 2020 20:49:27 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2020/06/clone_kvm/</guid>
+    <guid>https://dyiwu.github.io/2020/06/clone_kvm/</guid>
     <description><![CDATA[<h2 id="procedures-to-clone-virtual-machine">Procedures to clone virtual machine</h2>]]></description>
 </item><item>
     <title>Static IP assignment for KVM guest</title>
-    <link>https://example.com/2020/06/kvm-guest-dhcp-ip/</link>
+    <link>https://dyiwu.github.io/2020/06/kvm-guest-dhcp-ip/</link>
     <pubDate>Tue, 23 Jun 2020 20:14:34 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2020/06/kvm-guest-dhcp-ip/</guid>
+    <guid>https://dyiwu.github.io/2020/06/kvm-guest-dhcp-ip/</guid>
     <description><![CDATA[<h2 id="procedures-to-assign-static-ip-addresses-for-guest-kvm">Procedures to assign static IP addresses for guest KVM</h2>]]></description>
 </item></channel>
 </rss>

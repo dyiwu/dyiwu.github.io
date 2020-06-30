@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>隨筆 - Tag - Chaos</title>
-        <link>https://example.com/tags/%E9%9A%A8%E7%AD%86/</link>
+        <link>https://dyiwu.github.io/tags/%E9%9A%A8%E7%AD%86/</link>
         <description>隨筆 - Tag - Chaos</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (Dyi-Wu Liu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 08 Mar 2019 15:41:33 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/%E9%9A%A8%E7%AD%86/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 08 Mar 2019 15:41:33 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/%E9%9A%A8%E7%AD%86/" rel="self" type="application/rss+xml" /><item>
     <title>風一樣的女人</title>
-    <link>https://example.com/2019/03/wind/</link>
+    <link>https://dyiwu.github.io/2019/03/wind/</link>
     <pubDate>Fri, 08 Mar 2019 15:41:33 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2019/03/wind/</guid>
+    <guid>https://dyiwu.github.io/2019/03/wind/</guid>
     <description><![CDATA[解落三秋葉，能開二月花。過江千尺浪，入竹萬竿斜。]]></description>
 </item></channel>
 </rss>

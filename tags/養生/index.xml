@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>養生 - Tag - Chaos</title>
-        <link>https://example.com/tags/%E9%A4%8A%E7%94%9F/</link>
+        <link>https://dyiwu.github.io/tags/%E9%A4%8A%E7%94%9F/</link>
         <description>養生 - Tag - Chaos</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (Dyi-Wu Liu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 10 May 2019 14:27:47 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/%E9%A4%8A%E7%94%9F/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 10 May 2019 14:27:47 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/%E9%A4%8A%E7%94%9F/" rel="self" type="application/rss+xml" /><item>
     <title>Daily Exercise - 日課</title>
-    <link>https://example.com/2019/05/daily-exercise/</link>
+    <link>https://dyiwu.github.io/2019/05/daily-exercise/</link>
     <pubDate>Fri, 10 May 2019 14:27:47 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2019/05/daily-exercise/</guid>
+    <guid>https://dyiwu.github.io/2019/05/daily-exercise/</guid>
     <description><![CDATA[<h3 id="日課-武術養生-筋骨功法">日課-武術養生-筋骨功法</h3>]]></description>
 </item></channel>
 </rss>

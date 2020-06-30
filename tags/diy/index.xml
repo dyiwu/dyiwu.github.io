@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>diy - Tag - Chaos</title>
-        <link>https://example.com/tags/diy/</link>
+        <link>https://dyiwu.github.io/tags/diy/</link>
         <description>diy - Tag - Chaos</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (Dyi-Wu Liu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 03 Jun 2020 14:27:21 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/diy/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 03 Jun 2020 14:27:21 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/diy/" rel="self" type="application/rss+xml" /><item>
     <title>DIY Woodwork</title>
-    <link>https://example.com/2020/06/diy-woodwork/</link>
+    <link>https://dyiwu.github.io/2020/06/diy-woodwork/</link>
     <pubDate>Wed, 03 Jun 2020 14:27:21 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2020/06/diy-woodwork/</guid>
+    <guid>https://dyiwu.github.io/2020/06/diy-woodwork/</guid>
     <description><![CDATA[<h2 id="tips-for-woodwork">Tips for woodwork</h2>]]></description>
 </item></channel>
 </rss>

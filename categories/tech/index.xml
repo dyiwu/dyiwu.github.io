@@ -1,79 +1,79 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>tech - Category - Chaos</title>
-        <link>https://example.com/categories/tech/</link>
+        <link>https://dyiwu.github.io/categories/tech/</link>
         <description>tech - Category - Chaos</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (Dyi-Wu Liu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 26 Jun 2020 20:08:21 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/tech/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 26 Jun 2020 20:08:21 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/categories/tech/" rel="self" type="application/rss+xml" /><item>
     <title>Enabling nested virtualization in KVM</title>
-    <link>https://example.com/2020/06/nest-kvm/</link>
+    <link>https://dyiwu.github.io/2020/06/nest-kvm/</link>
     <pubDate>Fri, 26 Jun 2020 20:08:21 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2020/06/nest-kvm/</guid>
+    <guid>https://dyiwu.github.io/2020/06/nest-kvm/</guid>
     <description><![CDATA[<p>Nested virtualization allows you to run a virtual machine (VM) inside another VM while still using hardware acceleration from the host.</p>]]></description>
 </item><item>
     <title>Clone KVM</title>
-    <link>https://example.com/2020/06/clone_kvm/</link>
+    <link>https://dyiwu.github.io/2020/06/clone_kvm/</link>
     <pubDate>Wed, 24 Jun 2020 20:49:27 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2020/06/clone_kvm/</guid>
+    <guid>https://dyiwu.github.io/2020/06/clone_kvm/</guid>
     <description><![CDATA[<h2 id="procedures-to-clone-virtual-machine">Procedures to clone virtual machine</h2>]]></description>
 </item><item>
     <title>Static IP assignment for KVM guest</title>
-    <link>https://example.com/2020/06/kvm-guest-dhcp-ip/</link>
+    <link>https://dyiwu.github.io/2020/06/kvm-guest-dhcp-ip/</link>
     <pubDate>Tue, 23 Jun 2020 20:14:34 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2020/06/kvm-guest-dhcp-ip/</guid>
+    <guid>https://dyiwu.github.io/2020/06/kvm-guest-dhcp-ip/</guid>
     <description><![CDATA[<h2 id="procedures-to-assign-static-ip-addresses-for-guest-kvm">Procedures to assign static IP addresses for guest KVM</h2>]]></description>
 </item><item>
     <title>Home Lab - K8s on Centos 8 - VM host</title>
-    <link>https://example.com/2020/06/homelab-centos8-k8s-vm-host/</link>
+    <link>https://dyiwu.github.io/2020/06/homelab-centos8-k8s-vm-host/</link>
     <pubDate>Thu, 18 Jun 2020 21:22:39 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2020/06/homelab-centos8-k8s-vm-host/</guid>
+    <guid>https://dyiwu.github.io/2020/06/homelab-centos8-k8s-vm-host/</guid>
     <description><![CDATA[<p>This home lab is going to build a CentOS 8 VM host on bare matel and 3 VM guest nodes be form up as a k8s cluster. The first step is going to craete the VM host on the bare metal.</p>]]></description>
 </item><item>
     <title>Learn Git</title>
-    <link>https://example.com/2020/05/git-learn/</link>
+    <link>https://dyiwu.github.io/2020/05/git-learn/</link>
     <pubDate>Fri, 22 May 2020 13:02:09 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2020/05/git-learn/</guid>
+    <guid>https://dyiwu.github.io/2020/05/git-learn/</guid>
     <description><![CDATA[<p>Some tips and resources for learning Git.</p>]]></description>
 </item><item>
     <title>Install Raspberry</title>
-    <link>https://example.com/2020/05/install-raspberry/</link>
+    <link>https://dyiwu.github.io/2020/05/install-raspberry/</link>
     <pubDate>Thu, 21 May 2020 19:53:30 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2020/05/install-raspberry/</guid>
+    <guid>https://dyiwu.github.io/2020/05/install-raspberry/</guid>
     <description><![CDATA[<h2 id="install-raspberry">Install Raspberry</h2>]]></description>
 </item><item>
     <title>Marvell Yukon 2 Gigabit Ethernet driver on Centos 8.1</title>
-    <link>https://example.com/2020/05/kmod-sky2/</link>
+    <link>https://dyiwu.github.io/2020/05/kmod-sky2/</link>
     <pubDate>Sat, 16 May 2020 18:02:35 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2020/05/kmod-sky2/</guid>
+    <guid>https://dyiwu.github.io/2020/05/kmod-sky2/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>My practice on review TED talk video clip</title>
-    <link>https://example.com/2019/12/tip_ted_talk/</link>
+    <link>https://dyiwu.github.io/2019/12/tip_ted_talk/</link>
     <pubDate>Sat, 14 Dec 2019 18:40:11 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2019/12/tip_ted_talk/</guid>
+    <guid>https://dyiwu.github.io/2019/12/tip_ted_talk/</guid>
     <description><![CDATA[No matter what reasons I am interested in TED talks, either the interesting subject maters or the excellent English speech style. When I am learning from a desired TED talk, I always need to review it many times to cache the whole things especially when I use it as training material to improve my English ability.
 TED talk is in 18 minutes length limit usually, but which need the Internet connection to access it.]]></description>
 </item><item>
     <title>Install Docker Engine - Community on Centos7</title>
-    <link>https://example.com/2019/09/install-docker-ce-centos7/</link>
+    <link>https://dyiwu.github.io/2019/09/install-docker-ce-centos7/</link>
     <pubDate>Sun, 01 Sep 2019 17:56:12 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2019/09/install-docker-ce-centos7/</guid>
+    <guid>https://dyiwu.github.io/2019/09/install-docker-ce-centos7/</guid>
     <description><![CDATA[<p>Install Docker Engine - Community on CentOS 7</p>]]></description>
 </item><item>
     <title>Install Google Chrome on Linux Mint 19 Tara</title>
-    <link>https://example.com/2019/06/install-chrome/</link>
+    <link>https://dyiwu.github.io/2019/06/install-chrome/</link>
     <pubDate>Thu, 13 Jun 2019 18:28:32 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2019/06/install-chrome/</guid>
+    <guid>https://dyiwu.github.io/2019/06/install-chrome/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

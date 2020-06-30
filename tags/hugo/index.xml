@@ -1,30 +1,30 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>hugo - Tag - Chaos</title>
-        <link>https://example.com/tags/hugo/</link>
+        <link>https://dyiwu.github.io/tags/hugo/</link>
         <description>hugo - Tag - Chaos</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (Dyi-Wu Liu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 01 May 2019 14:53:00 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/hugo/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 01 May 2019 14:53:00 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/hugo/" rel="self" type="application/rss+xml" /><item>
     <title>Install Hugo with Even theme</title>
-    <link>https://example.com/2019/05/install-hugo-even/</link>
+    <link>https://dyiwu.github.io/2019/05/install-hugo-even/</link>
     <pubDate>Wed, 01 May 2019 14:53:00 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2019/05/install-hugo-even/</guid>
+    <guid>https://dyiwu.github.io/2019/05/install-hugo-even/</guid>
     <description><![CDATA[<h2 id="install-hugo-with-even-theme">Install Hugo with Even theme</h2>]]></description>
 </item><item>
     <title>Install Hugo with Academic theme kickstart</title>
-    <link>https://example.com/2019/04/install_hugo_academic_kickstart/</link>
+    <link>https://dyiwu.github.io/2019/04/install_hugo_academic_kickstart/</link>
     <pubDate>Fri, 26 Apr 2019 20:03:10 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2019/04/install_hugo_academic_kickstart/</guid>
+    <guid>https://dyiwu.github.io/2019/04/install_hugo_academic_kickstart/</guid>
     <description><![CDATA[Install Hugo with Academic theme kickstart  File location:  Local repository saved under ~/Hugo/Site/chaos Generated web site saved under ~/Hugo/Site/chaos/public directory and deploy to github as https://dyiwu.github.io/     - Fork the Academic Kickstart repository from sourcethemes/academic-kickstart as dyiwu/academic-kickstart repo (https://github.com/sourcethemes/academic-kickstart)   rename the forked repo from academic-kickstart to chaos
   clone your dyiwu/chaos repo into local file system: 1 2 3 4  $ cd ~/Hugo/Site $ git clone https://github.]]></description>
 </item><item>
     <title>Tips for using Hugo with academic theme</title>
-    <link>https://example.com/2019/04/tip_hugo_academic_theme/</link>
+    <link>https://dyiwu.github.io/2019/04/tip_hugo_academic_theme/</link>
     <pubDate>Mon, 22 Apr 2019 20:23:07 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2019/04/tip_hugo_academic_theme/</guid>
+    <guid>https://dyiwu.github.io/2019/04/tip_hugo_academic_theme/</guid>
     <description><![CDATA[shortcode
   {{&lt; list_tags &gt;}}
   {{&lt; list_categories &gt;}}
@@ -33,32 +33,32 @@
  https://lmyint.github.io/post/hugo-academic-tips/ https://highlightjs.org/ https://liatas.com/posts/escaping-hugo-shortcodes/ http://abitofcode.com/post/2017/04/customizing_a_hugo_site/  ]]></description>
 </item><item>
     <title>Escaping Hugo Shortcode</title>
-    <link>https://example.com/2019/04/escape-hugo-shortcode/</link>
+    <link>https://dyiwu.github.io/2019/04/escape-hugo-shortcode/</link>
     <pubDate>Sun, 21 Apr 2019 00:39:53 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2019/04/escape-hugo-shortcode/</guid>
+    <guid>https://dyiwu.github.io/2019/04/escape-hugo-shortcode/</guid>
     <description><![CDATA[Escaping Hugo Shortcode]]></description>
 </item><item>
     <title>Hugo New Command Usage</title>
-    <link>https://example.com/2019/04/hugo-new-command/</link>
+    <link>https://dyiwu.github.io/2019/04/hugo-new-command/</link>
     <pubDate>Sat, 06 Apr 2019 20:34:37 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2019/04/hugo-new-command/</guid>
+    <guid>https://dyiwu.github.io/2019/04/hugo-new-command/</guid>
     <description><![CDATA[hugo new command usage]]></description>
 </item><item>
     <title>Hugo bookmarks</title>
-    <link>https://example.com/2019/03/hugo-bookmarks/</link>
+    <link>https://dyiwu.github.io/2019/03/hugo-bookmarks/</link>
     <pubDate>Sat, 30 Mar 2019 06:55:19 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2019/03/hugo-bookmarks/</guid>
+    <guid>https://dyiwu.github.io/2019/03/hugo-bookmarks/</guid>
     <description><![CDATA[This page keep the Hugo framework related bookmarks.
  Hugo Documentation Hugo Discussion Hugo Markdown Guide Hugo theme even Hugo theme even - shortcodes   reveal-hugo theme @ gohugo dzello/reveal-hugo @ github hakimel/reveal.js @ github Academic Theme Documentation  ]]></description>
 </item><item>
     <title>Academic Kickstart Welcome Page</title>
-    <link>https://example.com/2019/03/academic_kickstart_demo/</link>
+    <link>https://dyiwu.github.io/2019/03/academic_kickstart_demo/</link>
     <pubDate>Sun, 24 Mar 2019 06:47:11 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2019/03/academic_kickstart_demo/</guid>
+    <guid>https://dyiwu.github.io/2019/03/academic_kickstart_demo/</guid>
     <description><![CDATA[Welcome page of Academic Kickstart template]]></description>
 </item></channel>
 </rss>

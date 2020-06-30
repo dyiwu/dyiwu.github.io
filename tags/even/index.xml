@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>even - Tag - Chaos</title>
-        <link>https://example.com/tags/even/</link>
+        <link>https://dyiwu.github.io/tags/even/</link>
         <description>even - Tag - Chaos</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (Dyi-Wu Liu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 01 May 2019 14:53:00 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/even/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 01 May 2019 14:53:00 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/even/" rel="self" type="application/rss+xml" /><item>
     <title>Install Hugo with Even theme</title>
-    <link>https://example.com/2019/05/install-hugo-even/</link>
+    <link>https://dyiwu.github.io/2019/05/install-hugo-even/</link>
     <pubDate>Wed, 01 May 2019 14:53:00 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://example.com/2019/05/install-hugo-even/</guid>
+    <guid>https://dyiwu.github.io/2019/05/install-hugo-even/</guid>
     <description><![CDATA[<h2 id="install-hugo-with-even-theme">Install Hugo with Even theme</h2>]]></description>
 </item></channel>
 </rss>
