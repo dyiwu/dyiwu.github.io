@@ -1,48 +1,55 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>markdown on Chaos - 一個老碼農的筆記</title>
-    <link>https://dyiwu.github.io/tags/markdown/</link>
-    <description>Recent content in markdown on Chaos - 一個老碼農的筆記</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Mon, 22 Apr 2019 20:23:07 +0800</lastBuildDate>
-    
-	<atom:link href="https://dyiwu.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Tips for using Hugo with academic theme</title>
-      <link>https://dyiwu.github.io/post/tech/tip_hugo_academic_theme/</link>
-      <pubDate>Mon, 22 Apr 2019 20:23:07 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/tech/tip_hugo_academic_theme/</guid>
-      <description>shortcode
-  {{&amp;lt; list_tags &amp;gt;}}
-  {{&amp;lt; list_categories &amp;gt;}}
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>markdown - Tag - Chaos</title>
+        <link>https://example.com/tags/markdown/</link>
+        <description>markdown - Tag - Chaos</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (Dyi-Wu Liu)</managingEditor>
+            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 05 Mar 2020 15:58:26 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/markdown/" rel="self" type="application/rss+xml" /><item>
+    <title>Theme Documentation - Content</title>
+    <link>https://example.com/2020/03/theme-documentation-content/</link>
+    <pubDate>Thu, 05 Mar 2020 15:58:26 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2020/03/theme-documentation-content/</guid>
+    <description><![CDATA[<p>Find out how to create and organize your content quickly and intuitively in <strong>LoveIt</strong> theme.</p>]]></description>
+</item><item>
+    <title>Theme Documentation - Basic Markdown Syntax</title>
+    <link>https://example.com/2019/12/theme-documentation-basic-markdown-syntax/</link>
+    <pubDate>Sun, 01 Dec 2019 21:57:40 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/12/theme-documentation-basic-markdown-syntax/</guid>
+    <description><![CDATA[<p>This article offers a sample of basic Markdown syntax that can be used in Hugo content files.</p>]]></description>
+</item><item>
+    <title>Theme Documentation - Emoji Support</title>
+    <link>https://example.com/2019/10/theme-documentation-emoji-support/</link>
+    <pubDate>Tue, 01 Oct 2019 17:55:28 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/10/theme-documentation-emoji-support/</guid>
+    <description><![CDATA[<p>Emoji can be enabled in a Hugo project in a number of ways.</p>]]></description>
+</item><item>
+    <title>Tips for using Hugo with academic theme</title>
+    <link>https://example.com/2019/04/tip_hugo_academic_theme/</link>
+    <pubDate>Mon, 22 Apr 2019 20:23:07 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/04/tip_hugo_academic_theme/</guid>
+    <description><![CDATA[shortcode
+  {{&lt; list_tags &gt;}}
+  {{&lt; list_categories &gt;}}
   High light code block with line number
-1{{&amp;lt; highlight plaintext &amp;#34;linenos=inline&amp;#34; &amp;gt;}} 2code block here 3{{&amp;lt; /highlight &amp;gt;}}   Reference:
- https://lmyint.github.io/post/hugo-academic-tips/ https://highlightjs.org/ https://liatas.com/posts/escaping-hugo-shortcodes/ http://abitofcode.com/post/2017/04/customizing_a_hugo_site/  </description>
-    </item>
-    
-    <item>
-      <title>Escaping Hugo Shortcode</title>
-      <link>https://dyiwu.github.io/post/tech/escape-hugo-shortcode/</link>
-      <pubDate>Sun, 21 Apr 2019 00:39:53 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/tech/escape-hugo-shortcode/</guid>
-      <description>Escaping Hugo Shortcode</description>
-    </item>
-    
-    <item>
-      <title>MathJax</title>
-      <link>https://dyiwu.github.io/post/tech/mathjax/</link>
-      <pubDate>Fri, 29 Mar 2019 07:14:22 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/tech/mathjax/</guid>
-      <description>MathJax, a JavaScript engine to display mathematics equations in browsers.</description>
-    </item>
-    
-  </channel>
+1{{&lt; highlight plaintext &#34;linenos=inline&#34; &gt;}} 2code block here 3{{&lt; /highlight &gt;}}   Reference:
+ https://lmyint.github.io/post/hugo-academic-tips/ https://highlightjs.org/ https://liatas.com/posts/escaping-hugo-shortcodes/ http://abitofcode.com/post/2017/04/customizing_a_hugo_site/  ]]></description>
+</item><item>
+    <title>Escaping Hugo Shortcode</title>
+    <link>https://example.com/2019/04/escape-hugo-shortcode/</link>
+    <pubDate>Sun, 21 Apr 2019 00:39:53 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/04/escape-hugo-shortcode/</guid>
+    <description><![CDATA[Escaping Hugo Shortcode]]></description>
+</item><item>
+    <title>MathJax</title>
+    <link>https://example.com/2019/03/mathjax/</link>
+    <pubDate>Fri, 29 Mar 2019 07:14:22 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/03/mathjax/</guid>
+    <description><![CDATA[MathJax, a JavaScript engine to display mathematics equations in browsers.]]></description>
+</item></channel>
 </rss>

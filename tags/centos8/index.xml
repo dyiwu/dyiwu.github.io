@@ -1,34 +1,22 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>centos8 on Chaos - 一個老碼農的筆記</title>
-    <link>https://dyiwu.github.io/tags/centos8/</link>
-    <description>Recent content in centos8 on Chaos - 一個老碼農的筆記</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 18 Jun 2020 21:22:39 +0800</lastBuildDate>
-    
-	<atom:link href="https://dyiwu.github.io/tags/centos8/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Home Lab - K8s on Centos 8 - VM host</title>
-      <link>https://dyiwu.github.io/post/tech/homelab-centos8-k8s-vm-host/</link>
-      <pubDate>Thu, 18 Jun 2020 21:22:39 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/tech/homelab-centos8-k8s-vm-host/</guid>
-      <description>&lt;p&gt;This home lab is going to build a CentOS 8 VM host on bare matel and 3 VM guest nodes be form up as a k8s cluster. The first step is going to craete the VM host on the bare metal.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Marvell Yukon 2 Gigabit Ethernet driver on Centos 8.1</title>
-      <link>https://dyiwu.github.io/post/tech/kmod-sky2/</link>
-      <pubDate>Sat, 16 May 2020 18:02:35 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/tech/kmod-sky2/</guid>
-      <description></description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>centos8 - Tag - Chaos</title>
+        <link>https://example.com/tags/centos8/</link>
+        <description>centos8 - Tag - Chaos</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (Dyi-Wu Liu)</managingEditor>
+            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 18 Jun 2020 21:22:39 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/centos8/" rel="self" type="application/rss+xml" /><item>
+    <title>Home Lab - K8s on Centos 8 - VM host</title>
+    <link>https://example.com/2020/06/homelab-centos8-k8s-vm-host/</link>
+    <pubDate>Thu, 18 Jun 2020 21:22:39 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2020/06/homelab-centos8-k8s-vm-host/</guid>
+    <description><![CDATA[<p>This home lab is going to build a CentOS 8 VM host on bare matel and 3 VM guest nodes be form up as a k8s cluster. The first step is going to craete the VM host on the bare metal.</p>]]></description>
+</item><item>
+    <title>Marvell Yukon 2 Gigabit Ethernet driver on Centos 8.1</title>
+    <link>https://example.com/2020/05/kmod-sky2/</link>
+    <pubDate>Sat, 16 May 2020 18:02:35 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2020/05/kmod-sky2/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
 </rss>

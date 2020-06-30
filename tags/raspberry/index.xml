@@ -1,25 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>raspberry on Chaos - 一個老碼農的筆記</title>
-    <link>https://dyiwu.github.io/tags/raspberry/</link>
-    <description>Recent content in raspberry on Chaos - 一個老碼農的筆記</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 21 May 2020 19:53:30 +0800</lastBuildDate>
-    
-	<atom:link href="https://dyiwu.github.io/tags/raspberry/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Install Raspberry</title>
-      <link>https://dyiwu.github.io/post/tech/install-raspberry/</link>
-      <pubDate>Thu, 21 May 2020 19:53:30 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/tech/install-raspberry/</guid>
-      <description>&lt;h2 id=&#34;install-raspberry&#34;&gt;Install Raspberry&lt;/h2&gt;</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>raspberry - Tag - Chaos</title>
+        <link>https://example.com/tags/raspberry/</link>
+        <description>raspberry - Tag - Chaos</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (Dyi-Wu Liu)</managingEditor>
+            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 21 May 2020 19:53:30 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/raspberry/" rel="self" type="application/rss+xml" /><item>
+    <title>Install Raspberry</title>
+    <link>https://example.com/2020/05/install-raspberry/</link>
+    <pubDate>Thu, 21 May 2020 19:53:30 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2020/05/install-raspberry/</guid>
+    <description><![CDATA[<h2 id="install-raspberry">Install Raspberry</h2>]]></description>
+</item></channel>
 </rss>

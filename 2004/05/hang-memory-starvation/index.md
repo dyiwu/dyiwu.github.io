@@ -1,0 +1,2482 @@
+# System hang with memory sleepers.
+
+## system hang with free memory desperately low
+
+```
+
+System crash dump analysis report
+=================================
+
+Symptom
+-------
+  System behaved as hang, no response on user's commands,
+  TOC dump be taken for root cause finding.
+
+Root Cause
+----------
+  The main problem is lack of free memory.  
+
+  User processes ycm330x were the memory killer.
+  There are 6 instances of ycm330x on system at the same time,
+  each of it cost 789MB of memory, which leads system run out of memory. 
+
+  The system wasn't actually hung, but it was running so slowly that it
+  appeared to be hung.
+
+Action Plan
+-----------
+  Please consult the application verder for the behavior of ycm330x
+  process.
+
+Detail Analysis
+---------------
+			=======================
+			= General Information =
+			=======================
+Dump time Mon May 31 09:23:52 2004 UTC-8
+System has been up 46 days, 14 hours, 53 minutes.
+
+System Name      : HP-UX
+Node Name        : localhost
+Model            : 9000/800/SD32000
+HP-UX version    : B.11.11 (64-bit Kernel)
+Number of CPU's  : 15
+Disabled CPU's   : 8
+CPU type         : PCXW+ (875 Mhz)
+CPU Architecture : PA-RISC 2.0
+Load average     : 0.49  0.57  0.61  
+
+			================
+			= Crash Events =
+			================
+
+
+Note: This seems to be a user initiated TOC !
+Stack Trace for crash event 0
+=============================
+
+==============  EVENT  ============================
+= Event #0 is TOC on CPU #3
+= p crash_event_t 0x8acb000
+= p rpb_t 0x9a9f130
+= Using pc from pim.wide.rp_pcoq_head_hi = 0x8197d7c
+==============  EVENT  ============================
+SR4=0x00000000
+                SP         RP Return Name
+0x000000006cda45d0 0x08197d7c su_waiters+0x3c
+0x000000006cda45d0 0x08014cd8 mpn_su_waiters+0xffffffd8
+0x000000006cda4550 0x086dc718 pset_get_nextspu+0xa8
+0x000000006cda44a0 0x086da83c pset_idle_loop+0x80c
+0x000000006cda42c0 0x08159330 idle+0xb88
+0x000000006cda4050 0x08156d6c swidle+0x28
+
+
+Stack Traces for other processors 
+=================================
+
+Processor #0
+==============  EVENT  ============================
+= Event #4 is TOC on CPU #0
+= p crash_event_t 0x8acb0c0
+= p rpb_t 0x8ac4eb0
+= Using pc from pim.wide.rp_pcoq_head_hi = 0xc00000000017004f
+= USER mode!
+==============  EVENT  ============================
+
+Processor #1
+==============  EVENT  ============================
+= Event #5 is TOC on CPU #1
+= p crash_event_t 0x8acb0f0
+= p rpb_t 0x9a9e370
+= Using pc from pim.wide.rp_pcoq_head_hi = 0x801502c
+==============  EVENT  ============================
+SR5=0x065efc00
+                SP         RP Return Name
+0x400003ffffff14d8 0x0801502c mpn_b_vsema+0x30
+0x400003ffffff14d8 0x08152050 superpage_unlock+0x90
+0x400003ffffff1438 0x0816aa90 vhand_vfdcheck+0x110
+0x400003ffffff1398 0x084af49c for_val3+0x5c
+0x400003ffffff12f8 0x0815e674 for_val2+0x29c
+0x400003ffffff11d8 0x0815e514 for_val2+0x13c
+0x400003ffffff10b8 0x0815e514 for_val2+0x13c
+0x400003ffffff0f98 0x0815e514 for_val2+0x13c
+0x400003ffffff0e78 0x0815e3c4 foreach_valid+0x54
+0x400003ffffff0de8 0x08151e04 agepages+0x11c
+0x400003ffffff0d18 0x08141614 vhand_core+0x294
+0x400003ffffff0c48 0x08179410 vhand_global_pager+0x3d8
+0x400003ffffff0b68 0x081789d0 vhand+0x378
+0x400003ffffff09c8 0x0839c0bc im_vhand+0xd4
+0x400003ffffff0938 0x084af254 DoCalllist+0x3c
+0x400003ffffff08b8 0x0839c4b0 main+0x28
+0x400003ffffff0848 0x081557cc $vstart+0x48
+0x400003ffffff07f8 0x081db2e4 $locore+0x94
+
+Processor #2
+==============  EVENT  ============================
+= Event #6 is TOC on CPU #2
+= p crash_event_t 0x8acb120
+= p rpb_t 0x9a9ea50
+= Using pc from pim.wide.rp_pcoq_head_hi = 0x82a83fc
+==============  EVENT  ============================
+SR5=0x0c0be800
+                SP         RP Return Name
+0x400003ffffff0e48 0x082a83fc check_panic_loop+0x24
+0x400003ffffff0e48 0x08146060 trap+0xb58
+0x400003ffffff0c78 0x081486fc thandler+0xd20
++-------------  TRAP  ----------------------------
+|  Trap type 31 in USER mode at 0x996ec00.0xc0000000001700d3 (???)
+|  p struct save_state 0xc0be800.0x400003ffffff07a8
++-------------  TRAP  ----------------------------
+
+Processor #4
+==============  EVENT  ============================
+= Event #1 is TOC on CPU #4
+= p crash_event_t 0x8acb030
+= p rpb_t 0x9a9f810
+= Using pc from pim.wide.rp_pcoq_head_hi = 0x82a83fc
+==============  EVENT  ============================
+SR5=0x06a72c00
+                SP         RP Return Name
+0x400003ffffff0e48 0x082a83fc check_panic_loop+0x24
+0x400003ffffff0e48 0x08146060 trap+0xb58
+0x400003ffffff0c78 0x081486fc thandler+0xd20
++-------------  TRAP  ----------------------------
+|  Trap type 31 in USER mode at 0x996ec00.0xc00000000017004f (???)
+|  p struct save_state 0x6a72c00.0x400003ffffff07a8
++-------------  TRAP  ----------------------------
+
+Processor #5
+==============  EVENT  ============================
+= Event #2 is TOC on CPU #5
+= p crash_event_t 0x8acb060
+= p rpb_t 0x9a9fef0
+= Using pc from pim.wide.rp_pcoq_head_hi = 0x82a8408
+==============  EVENT  ============================
+SR5=0x0dd11400
+                SP         RP Return Name
+0x400003ffffff0e48 0x082a8408 check_panic_loop+0x30
+0x400003ffffff0e48 0x08146060 trap+0xb58
+0x400003ffffff0c78 0x081486fc thandler+0xd20
++-------------  TRAP  ----------------------------
+|  Trap type 31 in USER mode at 0x996ec00.0xc0000000001700d3 (???)
+|  p struct save_state 0xdd11400.0x400003ffffff07a8
++-------------  TRAP  ----------------------------
+
+Processor #6
+==============  EVENT  ============================
+= Event #3 is TOC on CPU #6
+= p crash_event_t 0x8acb090
+= p rpb_t 0x9aa05d0
+= Using pc from pim.wide.rp_pcoq_head_hi = 0x82a8408
+==============  EVENT  ============================
+SR5=0x057e9c00
+                SP         RP Return Name
+0x400003ffffff0e48 0x082a8408 check_panic_loop+0x30
+0x400003ffffff0e48 0x08146060 trap+0xb58
+0x400003ffffff0c78 0x081486fc thandler+0xd20
++-------------  TRAP  ----------------------------
+|  Trap type 31 in USER mode at 0x996ec00.0xc0000000001700d3 (???)
+|  p struct save_state 0x57e9c00.0x400003ffffff07a8
++-------------  TRAP  ----------------------------
+
+			==================
+			= Memory Globals =
+			==================
+
+Physical Memory     = 3922944 pages (14.96 GB)
+Free Memory         = 6333 pages (24.74 MB)
+Average Free Memory = 6333 pages (24.74 MB)
+desfree             = 13312 pages (52.00 MB)
+minfree             = 6400 pages (25.00 MB)
+
+Free memory is desperately low (freemem < minfree) !
+We have memory sleepers !
+
+			=======================
+			= Kernel Memory Usage =
+			=======================
+----------------------------------------------------------------------
+Physical memory usage summary (in page/byte/percent):
+
+Physmem             =  3922944   15.0g 100%  Physical memory
+  Freemem           =     6333   24.7m   0%  Free physical memory
+  Used              =  3916611   14.9g 100%  Used physical memory
+    System          =   906449    3.5g  23%  By kernel:
+      Static        =   183463  716.7m   5%   for text/static data
+      Dynamic       =   374048    1.4g  10%   for dynamic data
+      Bufcache      =   341134    1.3g   9%   for buffer cache
+      Eqmem         =       74  296.0k   0%   for equiv. mapped memory
+      SCmem         =     7730   30.2m   0%   for critical memory
+    User            =  3010130   11.5g  77%  By user processes:
+      Uarea         =    14152   55.3m   0%   for thread uareas
+    Disowned        =        8   32.0k   0%  Disowned pages
+    Bad             =       12   48.0k   0%  Bad
+
+----------------------------------------------------------------------
+Kernel dynamic memory usage (in page/byte/percent):
+
+Dynamic             =   374048    1.4g  10%  Kernel dynamic memory
+  Arenas            =   283319    1.1g   7%  Kernel arenas
+    M_TEMP          =   181528  709.1m   5%  
+    M_SPINLOCK      =    14195   55.4m   0%  
+    M_LVM           =    14057   54.9m   0%  
+    VFD_BT_NODE     =    13012   50.8m   0%  
+    KMEM_ALLOC      =    11310   44.2m   0%  
+    ALLOCB_MBLK_LM  =     9014   35.2m   0%  
+    M_SWAP          =     7791   30.4m   0%  
+    M_REG           =     4144   16.2m   0%  
+    M_PREG          =     3896   15.2m   0%  
+    M_IOSYS         =     2836   11.1m   0%  
+    M_KTHREAD       =     2002    7.8m   0%  
+    M_STRQUEUE      =     1900    7.4m   0%  
+    KMEM_VARFLIST_H =     1776    6.9m   0%  
+    M_VXVM          =     1367    5.3m   0%  
+    FD_CHUNK_T_AREN =     1262    4.9m   0%  
+    Other           =    13229   51.7m   0%  Other arenas...
+  Kalloc            =    90574  353.8m   2%  kalloc()
+    SuperPagePool   =    30679  119.8m   1%    Kernel superpage cache
+    BufcacheBufs    =    45078  176.1m   1%    Buffer cache bufs
+    BufcacheHash    =    10240   40.0m   0%    Buffer cache hash heads
+    Other           =     4577   17.9m   0%    Other...
+  Eqalloc           =      155  620.0k   0%  eqalloc()
+
+			=====================
+			= User Memory Usage =
+			=====================
+Top 10 Processes sorted by physical size (in pages):
+
+pid   command        virtual  physical
+----- -------------- -------- --------
+26550 ycm330x        205943   202026  
+3957  ycm330x        205943   202022  
+17106 ycm330x        205943   202022  
+28734 ycm330x        205943   202022  
+7874  ycm330x        205943   202021  
+4713  ycm330x        205943   156633  
+16258 java           67041    33167   
+2865  vxsvc          19941    15482   
+5262  oracle         1080622  10306   
+5264  oracle         1080622  10304   
+-----------------------------
+libp4 (8.27): Opening ./vmunix ./INDEX
+
+gunzip ./vmunix.gz ...
+Loading symbols from ./vmunix
+Kernel TEXT pages not requested in crashconf
+Will use an artificial mapping from a.out TEXT pages
+Loading symbols from ./SEOS
+Warning: Load vt failed on this module
+Warning: Load debug_header failed on this module
+
+		      crashinfo (3.5) output
+
+			=====================
+			= Table Of Contents =
+			=====================
+* General Information
+* Crash Events
+* Message Buffer
+* Memory Globals
+* Kernel Memory Usage
+* User Memory Usage
+* Buffer Cache Globals
+* Swap Information
+* Global Error Counters / kmem_writes
+* Network Interfaces
+* Crash Event / Processor Information
+* Processor Clock Info
+* Load Averages
+* Beta Semaphore Checks
+* Thread Information
+* Kernel Patches
+
+			=======================
+			= General Information =
+			=======================
+Note: System appears to be using Virtual Partitions (vpars) !
+
+Dump time Mon May 31 09:23:52 2004 UTC-8
+System has been up 46 days, 14 hours, 53 minutes.
+
+System Name      : HP-UX
+Node Name        : localhost
+Model            : 9000/800/SD32000
+HP-UX version    : B.11.11 (64-bit Kernel)
+Number of CPU's  : 15
+Disabled CPU's   : 8
+CPU type         : PCXW+ (875 Mhz)
+CPU Architecture : PA-RISC 2.0
+Load average     : 0.49  0.57  0.61  
+
+			================
+			= Crash Events =
+			================
+
+Note: We have 8 disabled cpus !
+As this is a vpars system you should not get a crash event
+for the disabled cpus.
+
+Note: CPU 7 is disabled
+Note: CPU 8 is disabled
+Note: CPU 9 is disabled
+Note: CPU 10 is disabled
+Note: CPU 11 is disabled
+Note: CPU 12 is disabled
+Note: CPU 13 is disabled
+Note: CPU 14 is disabled
+
+Note: Crash event 0 was a TOC !
+
+Note: This seems to be a user initiated TOC !
+To get a better understanding why the system was brought down,
+please go to: 
+"http://wtec.cup.hp.com/~hpux/crash/FirstPassWeb/PA/contents.htm#TOC"
+
+Stack Trace for crash event 0
+=============================
+
+==============  EVENT  ============================
+= Event #0 is TOC on CPU #3
+= p crash_event_t 0x8acb000
+= p rpb_t 0x9a9f130
+= Using pc from pim.wide.rp_pcoq_head_hi = 0x8197d7c
+==============  EVENT  ============================
+SR4=0x00000000
+                SP         RP Return Name
+0x000000006cda45d0 0x08197d7c su_waiters+0x3c
+0x000000006cda45d0 0x08014cd8 mpn_su_waiters+0xffffffd8
+0x000000006cda4550 0x086dc718 pset_get_nextspu+0xa8
+0x000000006cda44a0 0x086da83c pset_idle_loop+0x80c
+0x000000006cda42c0 0x08159330 idle+0xb88
+0x000000006cda4050 0x08156d6c swidle+0x28
+
+
+Stack Traces for other processors 
+=================================
+
+Processor #0
+==============  EVENT  ============================
+= Event #4 is TOC on CPU #0
+= p crash_event_t 0x8acb0c0
+= p rpb_t 0x8ac4eb0
+= Using pc from pim.wide.rp_pcoq_head_hi = 0xc00000000017004f
+= USER mode!
+==============  EVENT  ============================
+Can't unwind
+
+Processor #1
+==============  EVENT  ============================
+= Event #5 is TOC on CPU #1
+= p crash_event_t 0x8acb0f0
+= p rpb_t 0x9a9e370
+= Using pc from pim.wide.rp_pcoq_head_hi = 0x801502c
+==============  EVENT  ============================
+SR5=0x065efc00
+                SP         RP Return Name
+0x400003ffffff14d8 0x0801502c mpn_b_vsema+0x30
+0x400003ffffff14d8 0x08152050 superpage_unlock+0x90
+0x400003ffffff1438 0x0816aa90 vhand_vfdcheck+0x110
+0x400003ffffff1398 0x084af49c for_val3+0x5c
+0x400003ffffff12f8 0x0815e674 for_val2+0x29c
+0x400003ffffff11d8 0x0815e514 for_val2+0x13c
+0x400003ffffff10b8 0x0815e514 for_val2+0x13c
+0x400003ffffff0f98 0x0815e514 for_val2+0x13c
+0x400003ffffff0e78 0x0815e3c4 foreach_valid+0x54
+0x400003ffffff0de8 0x08151e04 agepages+0x11c
+0x400003ffffff0d18 0x08141614 vhand_core+0x294
+0x400003ffffff0c48 0x08179410 vhand_global_pager+0x3d8
+0x400003ffffff0b68 0x081789d0 vhand+0x378
+0x400003ffffff09c8 0x0839c0bc im_vhand+0xd4
+0x400003ffffff0938 0x084af254 DoCalllist+0x3c
+0x400003ffffff08b8 0x0839c4b0 main+0x28
+0x400003ffffff0848 0x081557cc $vstart+0x48
+0x400003ffffff07f8 0x081db2e4 $locore+0x94
+
+Processor #2
+==============  EVENT  ============================
+= Event #6 is TOC on CPU #2
+= p crash_event_t 0x8acb120
+= p rpb_t 0x9a9ea50
+= Using pc from pim.wide.rp_pcoq_head_hi = 0x82a83fc
+==============  EVENT  ============================
+SR5=0x0c0be800
+                SP         RP Return Name
+0x400003ffffff0e48 0x082a83fc check_panic_loop+0x24
+0x400003ffffff0e48 0x08146060 trap+0xb58
+0x400003ffffff0c78 0x081486fc thandler+0xd20
++-------------  TRAP  ----------------------------
+|  Trap type 31 in USER mode at 0x996ec00.0xc0000000001700d3 (???)
+|  p struct save_state 0xc0be800.0x400003ffffff07a8
++-------------  TRAP  ----------------------------
+
+Processor #4
+==============  EVENT  ============================
+= Event #1 is TOC on CPU #4
+= p crash_event_t 0x8acb030
+= p rpb_t 0x9a9f810
+= Using pc from pim.wide.rp_pcoq_head_hi = 0x82a83fc
+==============  EVENT  ============================
+SR5=0x06a72c00
+                SP         RP Return Name
+0x400003ffffff0e48 0x082a83fc check_panic_loop+0x24
+0x400003ffffff0e48 0x08146060 trap+0xb58
+0x400003ffffff0c78 0x081486fc thandler+0xd20
++-------------  TRAP  ----------------------------
+|  Trap type 31 in USER mode at 0x996ec00.0xc00000000017004f (???)
+|  p struct save_state 0x6a72c00.0x400003ffffff07a8
++-------------  TRAP  ----------------------------
+
+Processor #5
+==============  EVENT  ============================
+= Event #2 is TOC on CPU #5
+= p crash_event_t 0x8acb060
+= p rpb_t 0x9a9fef0
+= Using pc from pim.wide.rp_pcoq_head_hi = 0x82a8408
+==============  EVENT  ============================
+SR5=0x0dd11400
+                SP         RP Return Name
+0x400003ffffff0e48 0x082a8408 check_panic_loop+0x30
+0x400003ffffff0e48 0x08146060 trap+0xb58
+0x400003ffffff0c78 0x081486fc thandler+0xd20
++-------------  TRAP  ----------------------------
+|  Trap type 31 in USER mode at 0x996ec00.0xc0000000001700d3 (???)
+|  p struct save_state 0xdd11400.0x400003ffffff07a8
++-------------  TRAP  ----------------------------
+
+Processor #6
+==============  EVENT  ============================
+= Event #3 is TOC on CPU #6
+= p crash_event_t 0x8acb090
+= p rpb_t 0x9aa05d0
+= Using pc from pim.wide.rp_pcoq_head_hi = 0x82a8408
+==============  EVENT  ============================
+SR5=0x057e9c00
+                SP         RP Return Name
+0x400003ffffff0e48 0x082a8408 check_panic_loop+0x30
+0x400003ffffff0e48 0x08146060 trap+0xb58
+0x400003ffffff0c78 0x081486fc thandler+0xd20
++-------------  TRAP  ----------------------------
+|  Trap type 31 in USER mode at 0x996ec00.0xc0000000001700d3 (???)
+|  p struct save_state 0x57e9c00.0x400003ffffff07a8
++-------------  TRAP  ----------------------------
+Processor number 7 disabled!
+
+Note: CPU 7 is disabled
+
+Processor #7
+Can't find the mpinfo[0].prochpa into the crash event table
+Processor number 8 disabled!
+
+Note: CPU 8 is disabled
+
+Processor #8
+Can't find the mpinfo[0].prochpa into the crash event table
+Processor number 9 disabled!
+
+Note: CPU 9 is disabled
+
+Processor #9
+Can't find the mpinfo[0].prochpa into the crash event table
+Processor number 10 disabled!
+
+Note: CPU 10 is disabled
+
+Processor #10
+Can't find the mpinfo[0].prochpa into the crash event table
+Processor number 11 disabled!
+
+Note: CPU 11 is disabled
+
+Processor #11
+Can't find the mpinfo[0].prochpa into the crash event table
+Processor number 12 disabled!
+
+Note: CPU 12 is disabled
+
+Processor #12
+Can't find the mpinfo[0].prochpa into the crash event table
+Processor number 13 disabled!
+
+Note: CPU 13 is disabled
+
+Processor #13
+Can't find the mpinfo[0].prochpa into the crash event table
+Processor number 14 disabled!
+
+Note: CPU 14 is disabled
+
+Processor #14
+Can't find the mpinfo[0].prochpa into the crash event table
+
+			==================
+			= Message Buffer =
+			==================
+
+Performed a switch for Lun ID = 0 (pv = 0x000000007fcc7080), from raw device 0x1f101300 (with priority: 1, and current flags: 0x0) to raw device 0x1f111300 (with priority: 0, and current flags: 0x0).
+LVM: Recovered Path (device 0x1f112500) to PV 1 in VG 9.
+LVM: Performed a switch for Lun ID = 0 (pv = 0x0000000083086840), from raw device 0x1f102500 (with priority: 1, and current flags: 0x0) to raw device 0x1f112500 (with priority: 0, and current flags: 0x0).
+LVM: Recovered Path (device 0x1f112000) to PV 0 in VG 7.
+LVM: Performed a switch for Lun ID = 0 (pv = 0x00000000835b5800), from raw device 0x1f102000 (with priority: 1, and current flags: 0x0) to raw device 0x1f112000 (with priority: 0, and current flags: 0x0).
+LVM: Restored PV 1 to VG 7.
+LVM: Recovered Path (device 0x1f111200) to PV 0 in VG 4.
+LVM: Performed a switch for Lun ID = 0 (pv = 0x0000000082c9d840), from raw device 0x1f101200 (with priority: 1, and current flags: 0x0) to raw device 0x1f111200 (with priority: 0, and current flags: 0x0).
+LVM: Restored PV 1 to VG 9.
+DIAGNOSTIC SYSTEM WARNING:
+   The diagnostic logging facility is no longer receiving excessive
+   errors from the I/O subsystem.  3 I/O error entries were lost.
+LVM: Restored PV 0 to VG 4.
+LVM: Restored PV 1 to VG 4.
+LVM: Restored PV 0 to VG 7.
+ ID = 0 (pv = 0x0000000082c9d840), from raw device 0x1f111200 (with priority: 0, and current flags: 0x40) to raw device 0x1f101200 (with priority: 1, and current flags: 0x0).
+DIAGNOSTIC SYSTEM WARNING:
+   The diagnostic logging facility has started receiving excessive
+   errors from the I/O subsystem.  I/O error entries will be lost
+   until the cause of the excessive I/O logging is corrected.
+   If the diaglogd daemon is not active, use the Daemon Startup command
+   in stm to start it.
+   If the diaglogd daemon is active, use the logtool utility in stm
+   to determine which I/O subsystem is logging excessive errors.
+DIAGNOSTIC SYSTEM WARNING:
+   The diagnostic logging facility is no longer receiving excessive
+   errors from the I/O subsystem.  2 I/O error entries were lost.
+DIAGNOSTIC SYSTEM WARNING:
+   The diagnostic logging facility has started receiving excessive
+   errors from the I/O subsystem.  I/O error entries will be lost
+   until the cause of the excessive I/O logging is corrected.
+   If the diaglogd daemon is not active, use the Daemon Startup command
+   in stm to start it.
+   If the diaglogd daemon is active, use the logtool utility in stm
+   to determine which I/O subsystem is logging excessive errors.
+LVM: Recovered Path (device 0x1f112100) to PV 1 in VG 7.
+LVM: Performed a switch for Lun ID = 0 (pv = 0x00000000835bd080), from raw device 0x1f102100 (with priority: 1, and current flags: 0x0) to raw device 0x1f112100 (with priority: 0, and current flags: 0x0).
+DIAGNOSTIC SYSTEM WARNING:
+   The diagnostic logging facility is no longer receiving excessive
+   errors from the I/O subsystem.  6 I/O error entries were lost.
+DIAGNOSTIC SYSTEM WARNING:
+   The diagnostic logging facility has started receiving excessive
+   errors from the I/O subsystem.  I/O error entries will be lost
+   until the cause of the excessive I/O logging is corrected.
+   If the diaglogd daemon is not active, use the Daemon Startup command
+   in stm to start it.
+   If the diaglogd daemon is active, use the logtool utility in stm
+   to determine which I/O subsystem is logging excessive errors.
+LVM: Performed a switch for Lun ID = 0 (pv = 0x0000000083086840), from raw device 0x1f112500 (with priority: 0, and current flags: 0x40) to raw device 0x1f102500 (with priority: 1, and current flags: 0x0).
+LVM: Performed a switch for Lun ID = 0 (pv = 0x000000007fcc7080), from raw device 0x1f111300 (with priority: 0, and current flags: 0x40) to raw device 0x1f101300 (with priority: 1, and current flags: 0x0).
+LVM: Performed a switch for Lun ID = 0 (pv = 0x00000000835b5800), from raw device 0x1f112000 (with priority: 0, and current flags: 0x40) to raw device 0x1f102000 (with priority: 1, and current flags: 0x0).
+LVM: Recovered Path (device 0x1f111300) to PV 1 in VG 4.
+LVM: 
+
+			==================
+			= Memory Globals =
+			==================
+
+Physical Memory     = 3922944 pages (14.96 GB)
+Free Memory         = 6333 pages (24.74 MB)
+Average Free Memory = 6333 pages (24.74 MB)
+desfree             = 13312 pages (52.00 MB)
+minfree             = 6400 pages (25.00 MB)
+
+Note:  Free memory is desperately low (freemem < minfree) !
+Note:  We have memory sleepers !
+
+			=======================
+			= Kernel Memory Usage =
+			=======================
+----------------------------------------------------------------------
+Pfdat processing:
+
+Scanning 3829415 pfdat entries (be patient) ...
+
+Warning: Found a P_BAD page (pfn 0x20fbdb, pfd_t 0x613f90a0)
+Warning: P_BAD is set by the memory diagnostics (dmem scrubbing).
+Warning: Found a P_BAD page (pfn 0x21fbd9, pfd_t 0x619f8fe0)
+Warning: Found a P_BAD page (pfn 0x2257db, pfd_t 0x61c210a0)
+Warning: Found a P_BAD page (pfn 0x22f3d8, pfd_t 0x61fc8f80)
+Warning: Found a P_BAD page (pfn 0x238bdc, pfd_t 0x62359100)
+Warning: Found a P_BAD page (pfn 0x23efd9, pfd_t 0x625b0fe0)
+Warning: Found a P_BAD page (pfn 0x28ebd8, pfd_t 0x64398f80)
+Warning: Found a P_BAD page (pfn 0x28f3de, pfd_t 0x643c91c0)
+Warning: Found a P_BAD page (pfn 0x28f3df, pfd_t 0x643c9220)
+Warning: Found a P_BAD page (pfn 0x28ffdc, pfd_t 0x64411100)
+Warning: Found a P_BAD page (pfn 0x3523dd, pfd_t 0x68ce9160)
+Warning: Found a P_BAD page (pfn 0x3523de, pfd_t 0x68ce91c0)
+
+----------------------------------------------------------------------
+Physical memory usage summary (in page/byte/percent):
+
+Physmem             =  3922944   15.0g 100%  Physical memory
+  Freemem           =     6333   24.7m   0%  Free physical memory
+  Used              =  3916611   14.9g 100%  Used physical memory
+    System          =   906449    3.5g  23%  By kernel:
+      Static        =   183463  716.7m   5%   for text/static data
+      Dynamic       =   374048    1.4g  10%   for dynamic data
+      Bufcache      =   341134    1.3g   9%   for buffer cache
+      Eqmem         =       74  296.0k   0%   for equiv. mapped memory
+      SCmem         =     7730   30.2m   0%   for critical memory
+    User            =  3010130   11.5g  77%  By user processes:
+      Uarea         =    14152   55.3m   0%   for thread uareas
+    Disowned        =        8   32.0k   0%  Disowned pages
+    Bad             =       12   48.0k   0%  Bad
+
+----------------------------------------------------------------------
+Kernel dynamic memory usage (in page/byte/percent):
+
+Dynamic             =   374048    1.4g  10%  Kernel dynamic memory
+  Arenas            =   283319    1.1g   7%  Kernel arenas
+    M_TEMP          =   181528  709.1m   5%  
+    M_SPINLOCK      =    14195   55.4m   0%  
+    M_LVM           =    14057   54.9m   0%  
+    VFD_BT_NODE     =    13012   50.8m   0%  
+    KMEM_ALLOC      =    11310   44.2m   0%  
+    ALLOCB_MBLK_LM  =     9014   35.2m   0%  
+    M_SWAP          =     7791   30.4m   0%  
+    M_REG           =     4144   16.2m   0%  
+    M_PREG          =     3896   15.2m   0%  
+    M_IOSYS         =     2836   11.1m   0%  
+    M_KTHREAD       =     2002    7.8m   0%  
+    M_STRQUEUE      =     1900    7.4m   0%  
+    KMEM_VARFLIST_H =     1776    6.9m   0%  
+    M_VXVM          =     1367    5.3m   0%  
+    FD_CHUNK_T_AREN =     1262    4.9m   0%  
+    Other           =    13229   51.7m   0%  Other arenas...
+  Kalloc            =    90574  353.8m   2%  kalloc()
+    SuperPagePool   =    30679  119.8m   1%    Kernel superpage cache
+    BufcacheBufs    =    45078  176.1m   1%    Buffer cache bufs
+    BufcacheHash    =    10240   40.0m   0%    Buffer cache hash heads
+    Other           =     4577   17.9m   0%    Other...
+  Eqalloc           =      155  620.0k   0%  eqalloc()
+
+			=====================
+			= User Memory Usage =
+			=====================
+Top 10 Processes sorted by physical size (in pages):
+
+pid   command        virtual  physical
+----- -------------- -------- --------
+26550 ycm330x        205943   202026  
+3957  ycm330x        205943   202022  
+17106 ycm330x        205943   202022  
+28734 ycm330x        205943   202022  
+7874  ycm330x        205943   202021  
+4713  ycm330x        205943   156633  
+16258 java           67041    33167   
+2865  vxsvc          19941    15482   
+5262  oracle         1080622  10306   
+5264  oracle         1080622  10304   
+
+			========================
+			= Buffer Cache Globals =
+			========================
+
+dbc_max_pct           = 10 %
+dbc_min_pct           = 5 %
+dbc current pct       = 8.7 %
+bufpages              = 341134 pages (1.30 GB)
+Number of buf headers = 307734
+
+fixed_size_cache = 0 
+dbc_parolemem    = 0 
+dbc_stealavg     = 19653 
+dbc_ceiling      = 392294 pages (1.50 GB)
+dbc_nbuf         = 98073 
+dbc_bufpages     = 196147 pages (766.20 MB)
+dbc_vhandcredit  = 270031363 
+orignbuf         = 0 
+origbufpages     = 0 pages
+
+			====================
+			= Swap Information =
+			====================
+
+swapinfo -mt emulation:
+
+             Mb      Mb      Mb   PCT  START/      Mb
+TYPE      AVAIL    USED    FREE  USED   LIMIT RESERVE  PRI  NAME
+dev       30720     739   29981    2%       0       -    1  /dev/vg00/lvol2
+reserve       -   12732  -12732
+memory    11884    2107    9777   18%
+total     42604   15578   27026   37%       -       0    -
+
+swapmem_on  = 1 
+swapmem_cnt = 2502935 pages (9.55 GB)
+swapmem_max = 3042479 pages (11.61 GB)
+swapspc_cnt = 4415741 pages (16.84 GB)
+swapspc_max = 7864320 pages (30.00 GB)
+
+		=======================================
+		= Global Error Counters / kmem_writes =
+		=======================================
+
+scsi_bioerrors                    = 177
+	scsi_bioerrors_logged             = 0
+	scsi_async_write_bioerrors        = 0
+	scsi_async_write_bioerrors_logged = 0
+	sd_strategy_bioerrors             = 6
+	sd_strategy_async_write_bioerrors = 0
+	sd_epowerf_bioerrors              = 5
+	sd_epowerf_async_write_bioerrors  = 0
+
+Note:  There are scsi_bioerrors ! For more information go to: 
+"http://wtec.cup.hp.com/~hpux/crash/info/scsi_bioerrors.htm"
+
+			======================
+			= Network Interfaces =
+			======================
+
+Name   PPA   Driver      Interface           Mac       States       IP
+              Name      Description        Address    Link IP     Address
+--------------------------------------------------------------------------------
+clic1   1    clic    Hyperfabric        0x000000000000 DOWN n/c  n/c          
+lan3    3    btlan   100BT 4 port / 11i 0x00306e4a04f7 UP   DOWN 0.0.0.0      
+lan4    4    btlan   100BT 4 port / 11i 0x00306e37597b UP   UP   192.168.10.4 
+lan5    5    igelan  Gigabit            0x00306e49a76c UP   UP   10.6.250.14  
+                                                            UP   10.6.250.161 
+
+n/c : means "Not Configured", ifconfig has not been done on this interface
+
+
+If you want more information, you can use : "lanshow -f"
+
+		=======================================
+		= Crash Event / Processor Information =
+		=======================================
+
+Number of processors = 15
+
+
+        s
+        t
+        a       spin reg eiem/spl         eirr             ipsw            
+evt cpu t type  dpth src cr15             cr23             cr22            
+--- --- - ----- ---- --- ---------------- ---------------- ----------------
+0   3   E TOC   2    rpb c400000000000000 0000000100000000 0804c21f WCRQPDI
+                     mpi fffffff0ffffffff
+1   4   E TOC   0    rpb fffffff0ffffffff 0000000000000000 0844001f WLCRQPDI
+          31         s_s ffffffffffffffff N/A              0804011f WCRQPDI
+2   5   E TOC   0    rpb fffffff0ffffffff 0000000100000000 084c001f WLBCRQPDI
+          31         s_s ffffffffffffffff N/A              0804001f WCRQPDI
+3   6   E TOC   0    rpb fffffff0ffffffff 0000000100000000 084c001f WLBCRQPDI
+          31         s_s ffffffffffffffff N/A              0804001f WCRQPDI
+4   0   E TOC   0    rpb ffffffffffffffff 0000000000000000 0804011f WCRQPDI
+5   1   E TOC   0    rpb c400000000000000 0000000900000000 0844f31f WLCRQPDI
+6   2   E TOC   0    rpb fffffff0ffffffff 0000000100000000 0844001f WLCRQPDI
+          31         s_s ffffffffffffffff N/A              0804001f WCRQPDI
+
+Trap Types :
+
+Trap type 31 = Panic Trap (T_PANIC)
+
+Outstanding external interrupts
+===============================
+
+    eirr
+cpu bit  SPL                Handler SPL        Handler
+--- ---- --------           -----------        -------
+1   28   SPL6/SPINLOCK_EIEM SPLNOPREEMPT       take_a_trap
+1   31   SPL6/SPINLOCK_EIEM SPLNOPREEMPT       take_a_trap
+2   31   SPLNOPREEMPT       SPLNOPREEMPT       take_a_trap
+3   31   SPL6/SPINLOCK_EIEM SPLNOPREEMPT       take_a_trap
+5   31   SPLNOPREEMPT       SPLNOPREEMPT       take_a_trap
+6   31   SPLNOPREEMPT       SPLNOPREEMPT       take_a_trap
+
+SPL/EIEM values:
+
+0xfffffffeffffffff = SPLPREEMPTOK - Default user mode SPL level.
+0xfffffff0ffffffff = SPLNOPREEMPT - Disable kernel preemption (scheduling interrupt off).
+0xffffff00ffffffff = SPL2 - Disable software interrupt (software triggers off).
+0xed00080000000000 = SPL5 - Disable IO modules.
+0xc500000000000000 = SPL6+CLOCK_RESYNC - Disable hardclock+enable clock-resync.
+0xc400000000000000 = SPL6 - Disable hardclock.
+0x0000000700000000 = SPL7/PSW_I=0 - Disable the world.
+
+
+			========================
+			= Processor Clock Info =
+			========================
+
+hardclock_late = 0
+itick_per_tick = 8750000
+lbolt          = 402815796 (0x18027b34)
+
+    mpi                interval                         clk eiem eirr PSW
+cpu timeinval          timer              delta (ticks) od  0,4  0,4  I
+--- ------------------ ------------------ ------------- --- ---- ---- ---
+0   0x21c2418156957c   0x21c241812d7deb   0             0   1 1  0 0  1 
+1   0x21c241a6fc3e5b   0x21c241a6aba327   0             0   1 0  0 0  1 
+2   0x21c241ab2e0bce   0x21c241ab2bb387   0             0   1 1  0 0  1 
+3   0x21c23ac0fe9402   0x21c23ac0b4e4d3   0             0   1 0  0 0  1 
+4   0x21c24177052fce   0x21c24176b5e537   0             0   1 1  0 0  1 
+5   0x21c24176d62a6a   0x21c24176767537   0             0   1 1  0 0  1 
+6   0x21c2417b5b35a9   0x21c2417aec8dc3   0             0   1 1  0 0  1 
+
+			=================
+			= Load Averages =
+			=================
+
+
+avenrun
+=======
+0.49  0.57  0.61  
+
+mp_avenrun
+==========
+cpu0 : 1.000000  1.003777  0.944382  
+cpu1 : 1.000000  1.005031  0.962117  
+cpu2 : 1.000001  1.010167  0.968025  
+cpu3 : 1.000000  1.003254  0.947767  
+cpu4 : 1.000217  1.022676  0.989084  
+cpu5 : 1.000000  1.000670  0.929509  
+cpu6 : 1.000000  1.004589  0.971437  
+
+			=========================
+			= Beta Semaphore Checks =
+			=========================
+Note: We have threads waiting on beta semaphores !
+
+Threads waiting on Beta Semaphores
+==================================
+
+                TICKS
+WAITING OWNER   SINCE
+TID     TID     RUN        CPU PRI SEMA ADDRESS   CALLER
+------- ------- ---------- --- --- -------------- ----------
+3334    -1      105620     0   646 0x9062160      shm_unattached_vmtotal+0x28
+2106    -1      101228     0   639 0x9062160      shmget+0x44
+9348816 -1      98016      0   646 0x9062160      shmdt+0x94
+9348803 -1      98016      0   646 0x9062160      shmdt+0x94
+304460  3334    105468     0   646 0x9101608      vmtotal+0x38
+3373    3334    104253     0   646 0x9101608      vmtotal+0x38
+304454  3334    103739     0   646 0x9101608      vmtotal+0x38
+1205    3334    103479     0   646 0x9101608      vmtotal+0x38
+
+			======================
+			= Thread Information =
+			======================
+
+117 Threads ran in the last second
+158 Threads ran in the last 5 seconds
+178 Threads ran in the last 10 seconds
+213 Threads ran in the last minute
+480 Threads ran in the last hour
+
+statdaemon ran 16 ticks ago
+
+
+Most Common Wait Channels
+=========================
+                                                          ticks since run:
+Wait Channel                                       count  longest    shortest
+------------                                       -----  ---------- ----------
+memory_sleepers                                    59     98018      8272      
+vx_worklist_thread_sv                              32     161        61        
+per_processor_selects+0xc0                         20     402792610  1         
+schedcpu_procp                                     16     758        58        
+async_bufhead                                      16     402806942  402806941 
+streams_mp_sync                                    15     634        29        
+per_processor_selects                              12     402791965  22        
+wait1(0x7f6b6040)                                  8      402792327  402791529 
+per_processor_selects+0x140                        8      402801867  184832    
+per_processor_selects+0x80                         7      360110865  206       
+per_processor_selects+0x100                        7      402791965  260254    
+lvmkd_q                                            6      260        260       
+*uptr+0                                            5      293752772  66        
+per_processor_selects+0x40                         5      402798078  103710    
+per_processor_selects+0x180                        5      402801821  955       
+msgque[35]+0x5c                                    4      137453     137446    
+msgque[313]+0x5c                                   4      79287      79287     
+msgque[211]+0x5c                                   4      5445       5445      
+vmtotal_lock                                       4      105468     103479    
+msgque[197]+0x5c                                   4      39         39        
+msgque[259]+0x5c                                   4      3714       3714      
+msgque[256]+0x5c                                   4      3904       3904      
+shm_lock                                           4      105620     98016     
+svc_run(0x4044d080)                                3      402750348  143678557 
+LVM vg11/lv85                                      3      107481     102910    
+svc_run(0x4044d040)                                3      402750349  143678557 
+svc_run(0x4044d140)                                3      402750346  143677657 
+svc_run(0x4044d100)                                3      402750347  402750347 
+svc_run(0x4044d1c0)                                3      402750346  143678557 
+svc_run(0x4044d0c0)                                3      402750348  143678557 
+msgque[371]+0x5c                                   3      213843     213834    
+msgque[70]+0x5c                                    3      348242     348238    
+svc_run(0x4044d180)                                3      402750346  143678557 
+msgque[131]+0x5c                                   3      116600     116587    
+msgque[134]+0x5c                                   2      58548323   58548301  
+msgque[191]+0x5c                                   2      83960230   83960230  
+msgque[112]+0x5c                                   2      83962878   83962878  
+msgque[233]+0x5c                                   2      83958777   83958777  
+msgque[189]+0x5c                                   2      83960340   83960340  
+msgque[200]+0x5c                                   2      83959833   83959833  
+msgque[177]+0x5c                                   2      23816221   23816205  
+LVM vg10/lv100                                     2      98206      95374     
+msgque[114]+0x5c                                   2      83962789   83962789  
+msgque[194]+0x5c                                   2      83960128   83960128  
+msgque[96]+0x5c                                    2      83963442   83963442  
+msgque[169]+0x5c                                   2      60695482   60695482  
+msgque[80]+0x5c                                    2      23317018   23316991  
+msgque[57]+0x5c                                    2      25977527   25977525  
+msgque[171]+0x5c                                   2      60692371   60692371  
+msgque[174]+0x5c                                   2      83960765   83960765  
+msgque[160]+0x5c                                   2      83961309   83961309  
+msgque[151]+0x5c                                   2      83961570   83961570  
+msgque[142]+0x5c                                   2      83961828   83961828  
+msgque[145]+0x5c                                   2      25164152   25164151  
+msgque[139]+0x5c                                   2      25173442   25173441  
+msgque[224]+0x5c                                   2      83965140   83965096  
+ticks_since_boot                                   2      16         16        
+msgque[9]+0x5c                                     2      83965899   83965899  
+msgque[376]+0x5c                                   2      83954290   83954290  
+msgque[214]+0x5c                                   2      83959342   83959342  
+msgque[128]+0x5c                                   2      42306754   42306748  
+msgque[132]+0x5c                                   2      109980     109978    
+msgque[86]+0x5c                                    2      83963740   83963740  
+msgque[120]+0x5c                                   2      83962652   83962652  
+msgque[297]+0x5c                                   2      8038652    8038650   
+msgque[101]+0x5c                                   2      83963291   83963291  
+msgque[68]+0x5c                                    2      83964214   83964214  
+msgque[63]+0x5c                                    2      23176267   23176266  
+msgque[39]+0x5c                                    2      83965100   83965100  
+msgque[24]+0x5c                                    2      83965511   83965511  
+msgque[15]+0x5c                                    2      83965755   83965755  
+msgque[52]+0x5c                                    2      83964657   83964657  
+msgque[122]+0x5c                                   2      83962478   83962478  
+msgque[227]+0x5c                                   2      83958982   83958982  
+msgque[254]+0x5c                                   2      83958091   83958091  
+msgque[6]+0x5c                                     2      83965989   83965989  
+msgque[106]+0x5c                                   2      106211     106202    
+msgque[239]+0x5c                                   2      83958570   83958570  
+msgque[230]+0x5c                                   2      83958880   83958880  
+msgque[264]+0x5c                                   2      83957605   83957605  
+msgque[248]+0x5c                                   2      83958257   83958257  
+msgque[222]+0x5c                                   2      83959189   83959189  
+msgque[208]+0x5c                                   2      83959625   83959625  
+msgque[205]+0x5c                                   2      83959730   83959730  
+msgque[4]+0x5c                                     2      83966090   83966090  
+streams_blk_sync                                   2      402812424  402812424 
+msgque[44]+0x5c                                    2      83964849   83964849  
+msgque[91]+0x5c                                    2      83963591   83963591  
+msgque[37]+0x5c                                    2      25097316   25097313  
+msgque[75]+0x5c                                    2      83964019   83964019  
+msgque[59]+0x5c                                    2      173587     173582    
+msgque[103]+0x5c                                   2      83963176   83963176  
+msgque[236]+0x5c                                   2      83958666   83958666  
+msgque[41]+0x5c                                    2      83964959   83964959  
+LVM vg09/lv68                                      2      99620      51952     
+msgque[245]+0x5c                                   2      83958361   83958361  
+LVM vg06/lv54                                      2      104868     98750     
+msgque[290]+0x5c                                   2      83956965   83956965  
+msgque[295]+0x5c                                   2      83956811   83956811  
+msgque[292]+0x5c                                   2      173578     173452    
+msgque[304]+0x5c                                   2      83956556   83956556  
+msgque[309]+0x5c                                   2      25552421   25552316  
+msgque[320]+0x5c                                   2      83956029   83956029  
+msgque[325]+0x5c                                   2      83955878   83955878  
+msgque[335]+0x5c                                   2      83955566   83955566  
+msgque[330]+0x5c                                   2      83955725   83955725  
+msgque[340]+0x5c                                   2      83955403   83955403  
+msgque[347]+0x5c                                   2      83955209   83955209  
+msgque[352]+0x5c                                   2      83955050   83955050  
+msgque[357]+0x5c                                   2      42334040   42334037  
+msgque[359]+0x5c                                   2      83954846   83954846  
+msgque[361]+0x5c                                   2      83954743   83954743  
+msgque[242]+0x5c                                   2      83958465   83958465  
+msgque[367]+0x5c                                   2      5151287    5151287   
+msgque[374]+0x5c                                   2      22815295   22815294  
+
+
+Most Common Sleep Callers
+=========================
+                                                          ticks since run:
+Sleep Caller                                       count  longest    shortest
+------------                                       -----  ---------- ----------
+hpstreams_read_int()                               368    402792289  1264      
+msgrcv2()                                          257    402810318  2         
+ksleep()                                           205    402800699  1         
+wait1()                                            146    402792327  98012     
+reserve_freemem()                                  61     98018      8272      
+select()                                           39     402801867  1         
+vx_worklist_thread()                               32     161        61        
+poll()                                             27     402801821  6         
+lock_read()                                        24     107936     35701     
+pm_sigwait()                                       21     402800703  9         
+svc_run()                                          21     402750349  143677657 
+sosleep()                                          21     402800094  87        
+real_nanosleep()                                   20     182152720  0         
+pset_schedcpu()                                    16     758        58        
+async_daemon()                                     16     402806942  402806941 
+semop()                                            15     84374316   6         
+streams_getmsg()                                   11     402798216  113215    
+lvmkd_daemon()                                     6      260        260       
+thread_wait()                                      4      402800689  402788219 
+fifo_rdwr()                                        3      402798746  106189    
+sigsuspend()                                       3      105781     66        
+getmsg_subr()                                      2      170229     79241     
+opause()                                           2      293752772  293740377 
+thread_suspend_wait()                              2      105538     93114     
+
+
+Idle Globals
+============
+
+candidate_idle_spu = -1
+migration_cycles = 1500000
+
+Running Threads (TSRUNPROC) and idle Processors
+===============================================
+
+
+                    TICKS      TICKS                    I TICKS
+                    SINCE      SINCE                    C SINCE      NREADY
+TID     PID   PPID  RUN        IDLE       PRI SPU STATE S MIGR       FR LO AL COMMAND
+------- ----- ----- ---------- ---------- --- --- ----- - ---------  -- -- -- -------
+2943625 26550 26545 1          16         241 0   USER  N 16         0  0  0  ycm330x 
+2       2     0     107948     108051     133 1   SYS   N 108051     0  0  0  vhand 
+2925684 7874  7869  61         182        241 2   SYS   N 182        0  0  0  ycm330x 
+                               0              3   IDLE  N 1          0  0  0  
+6134323 3957  1710  87         3204       241 4   SYS   N 3204       0  0  0  ycm330x 
+2916857 28734 28729 87         4232       241 5   SYS   N 4232       0  0  0  ycm330x 
+2934724 17106 17101 61         955        241 6   SYS   N 955        0  0  0  ycm330x 
+
+Note: 
+FR: free to run on any processor (candidate for thread migration).
+LO: locked (via processor affinity/mpctl) to this processor).
+AL: Alpha semaphores misses (special scheduling when miss a sema).
+
+Threads waiting on cpu (TSRUN) - sorted by cpu/pri/ticks-since-run
+==================================================================
+
+Note:  There is 1 thread in TSZOMB stat !
+
+All Threads - sorted by ticks-since-run
+=======================================
+
+TID     PID   PPID  TICKS      PRI SPU STAT  SYSCALL        COMMAND        WCHAN
+------- ----- ----- ---------- --- --- ----- -------------- -------------- -----
+51765   16257 1     0          168 3   SLEEP nanosleep      rmiregistry    real_nanosleep(0x936a04a8)
+51768   16257 1     0          168 3   SLEEP nanosleep      rmiregistry    real_nanosleep(0x92ea64a8)
+265829  9079  1     0          168 3   SLEEP nanosleep      java           real_nanosleep(0x939f74a8)
+3349    3037  2949  1          154 0   SLEEP ksleep         prfAgent       ksleep(0x7990bb00)
+3167    2958  2956  1          20  3   SLEEP select         cmcld          per_processor_selects+0xc0
+2943625 26550 26545 1          241 0   RUN   n/a            ycm330x        
+318476  18970 1     2          155 3   SLEEP msgrcv         GWADM          msgque[403]+0x5c
+318426  18920 1     2          155 3   SLEEP msgrcv         GWADM          msgque[386]+0x5c
+3155    2949  1     3          154 3   SLEEP ksleep         awservices     ksleep(0x798b24c0)
+9348792 735   1     6          156 3   SLEEP semop          oracle         sema[28][21]+0x4
+304464  5264  1     6          154 3   SLEEP poll           oracle         per_processor_selects+0xc0
+304462  5262  1     7          154 3   SLEEP poll           oracle         per_processor_selects+0xc0
+318427  18921 1     8          155 3   SLEEP msgrcv         GWTDOMAIN      msgque[388]+0x5c
+3248    3021  2949  9          154 3   SLEEP ksleep         aws_sadmin     ksleep(0x798c3740)
+6059    4699  4657  9          168 3   SLEEP sigtimedwait   tail           pm_sigwait(0x7916b3c0)
+3384    3052  3031  9          168 3   SLEEP sigtimedwait   cai_UxOs_ProcC pm_sigwait(0x7916b140)
+3       3     0     16         128 3   SLEEP n/a            statdaemon     ticks_since_boot
+4       4     0     16         128 0   SLEEP n/a            unhashdaemon   unhash
+0       0     0     16         127 3   SLEEP n/a            swapper        ticks_since_boot
+3367    3038  2949  21         154 0   SLEEP ksleep         proAgent       ksleep(0x798a9580)
+3365    3038  2949  21         154 3   SLEEP ksleep         proAgent       ksleep(0x798a94c0)
+304493  5293  1     22         154 3   SLEEP n/a            oracle         per_processor_selects+0xc0
+3369    3045  1     22         154 0   SLEEP poll           camf           per_processor_selects
+318478  18972 1     24         155 0   SLEEP msgrcv         GWADM          msgque[409]+0x5c
+29      29    0     29         100 0   SLEEP n/a            smpsched       streams_mp_sync
+304478  5278  1     29         156 0   SLEEP semop          oracle         sema[28][18]+0x4
+40      40    0     29         100 3   SLEEP n/a            smpsched       streams_mp_sync
+304474  5274  1     30         156 0   SLEEP semop          oracle         sema[28][16]+0x4
+2072    1951  1     32         -16 0   SLEEP ksleep         midaemon       ksleep(0x799351c0)
+2071    1951  1     32         -16 3   SLEEP ki_call        midaemon       ki_cf
+29885   26322 1     34         154 3   SLEEP poll           caftf          per_processor_selects+0xc0
+304482  5282  1     35         156 3   SLEEP semop          oracle         sema[28][20]+0x4
+318480  18974 1     37         155 3   SLEEP msgrcv         GWADM          msgque[413]+0x5c
+318353  18852 1     39         156 3   SLEEP semop          oracle         __sem+0xfe4
+317771  18267 1     39         155 3   SLEEP msgrcv         PBSSRVT        msgque[197]+0x5c
+317766  18262 1     39         155 3   SLEEP msgrcv         PBSSRVT        msgque[197]+0x5c
+317761  18257 1     39         155 0   SLEEP msgrcv         PBSSRVT        msgque[197]+0x5c
+9348829 762   1     39         156 3   SLEEP semop          oracle         sema[28][29]+0x4
+317776  18272 1     39         155 0   SLEEP msgrcv         PBSSRVT        msgque[197]+0x5c
+3983    3612  1962  42         154 3   SLEEP ksleep         rep_server     ksleep(0x799b92c0)
+304476  5276  1     44         156 3   SLEEP semop          oracle         sema[28][17]+0x4
+305078  5850  1     47         156 3   SLEEP semop          oracle         sema[28][52]+0x4
+304486  5286  1     47         156 3   SLEEP semop          oracle         sema[28][22]+0x4
+3300    3030  2949  55         154 3   SLEEP ksleep         caiLogA2       ksleep(0x79935600)
+306918  7654  1     55         156 0   SLEEP semop          oracle         sema[28][79]+0x4
+265826  9079  1     57         154 3   SLEEP ksleep         java           ksleep(0x798c3d00)
+318428  18922 1     57         155 3   SLEEP msgrcv         GWADM          msgque[390]+0x5c
+3258    3022  2949  57         154 3   SLEEP ksleep         aws_snmp       ksleep(0x798b26c0)
+318430  18924 1     57         155 3   SLEEP msgrcv         GWADM          msgque[394]+0x5c
+3186    2972  2949  57         154 3   SLEEP ksleep         aws_orb        ksleep(0x793b8340)
+318432  18926 1     57         155 3   SLEEP msgrcv         GWADM          msgque[398]+0x5c
+55      27    0     58         128 3   SLEEP n/a            schedcpu       schedcpu_procp
+54      27    0     58         128 3   SLEEP n/a            schedcpu       schedcpu_procp
+9412    8012  0     60         153 3   SLEEP n/a            nfsktcpd       *kstackaddr+0x318c
+65      50    0     61         138 3   SLEEP n/a            vxfsd          vx_event_wait(0x8fad1100)
+2952772 50    0     61         138 3   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+79      50    0     61         138 3   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+93      50    0     61         138 3   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+70      50    0     61         138 0   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+68      50    0     61         138 0   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+2952768 50    0     61         138 0   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+94      50    0     61         138 0   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+90      50    0     61         138 0   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+75      50    0     61         138 0   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+76      50    0     61         138 0   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+89      50    0     61         138 0   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+84      50    0     61         138 0   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+87      50    0     61         138 3   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+86      50    0     61         138 3   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+83      50    0     61         138 3   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+2952771 50    0     61         138 3   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+2925684 7874  7869  61         241 2   RUN   panic*         ycm330x        
+91      50    0     61         138 2   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+2934724 17106 17101 61         241 6   RUN   panic*         ycm330x        
+92      50    0     61         138 2   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+88      50    0     61         138 2   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+80      50    0     61         138 2   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+95      50    0     61         138 2   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+66      50    0     61         138 6   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+85      50    0     61         138 6   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+72      50    0     61         138 6   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+77      50    0     61         138 6   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+67      50    0     61         138 3   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+82      50    0     61         138 3   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+71      50    0     61         138 3   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+73      50    0     61         138 3   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+1487    1378  1     66         120 3   SLEEP sigsuspend     xntpd          *uptr+0
+738     675   674   72         127 0   SLEEP sigtimedwait   netfmt         pm_sigwait(0x780b2200)
+3994    3629  3627  73         168 0   SLEEP select         alarmgen       real_nanosleep(0x7fdc74a8)
+2368668 10629 10624 75         168 3   SLEEP sigtimedwait   dbsnmp         pm_sigwait(0x7916b200)
+3310    3031  2949  75         154 0   SLEEP ksleep         caiUxOs        ksleep(0x793b8780)
+304470  5270  1     86         156 0   SLEEP semop          oracle         sema[28][14]+0x4
+3270    3022  2949  87         154 4   SLEEP ksleep         aws_snmp       ksleep(0x793b8440)
+3395    3037  2949  87         154 3   SLEEP ksleep         prfAgent       ksleep(0x798c3b80)
+3329    3030  2949  87         154 5   SLEEP recv           caiLogA2       sosleep(0x797fb880)
+3271    2972  2949  87         154 2   SLEEP recv           aws_orb        sosleep(0x78e55340)
+2916857 28734 28729 87         241 5   RUN   panic*         ycm330x        
+3399    2972  2949  87         154 3   SLEEP recv           aws_orb        sosleep(0x798c4640)
+3330    3030  2949  87         154 6   SLEEP ksleep         caiLogA2       ksleep(0x798a9440)
+3333    2972  2949  87         154 4   SLEEP ksleep         aws_orb        ksleep(0x793b8900)
+6134323 3957  1710  87         241 4   RUN   panic*         ycm330x        
+3269    3022  2949  87         154 6   SLEEP recv           aws_snmp       sosleep(0x78e55280)
+3398    3037  2949  87         154 2   SLEEP ksleep         prfAgent       ksleep(0x798c3c00)
+3268    3022  2949  87         154 2   SLEEP ksleep         aws_snmp       ksleep(0x793b83c0)
+3331    2972  2949  87         154 2   SLEEP ksleep         aws_orb        ksleep(0x798c3b00)
+3400    2972  2949  87         154 0   SLEEP ksleep         aws_orb        ksleep(0x7990bc80)
+3332    2972  2949  87         154 0   SLEEP recv           aws_orb        sosleep(0x797fb940)
+3328    3030  2949  87         154 0   SLEEP ksleep         caiLogA2       ksleep(0x798a93c0)
+3194    2972  2949  87         154 0   SLEEP ksleep         aws_orb        ksleep(0x798b2580)
+3187    2972  2949  87         154 0   SLEEP ksleep         aws_orb        ksleep(0x79935480)
+3489    2972  2949  87         154 2   SLEEP ksleep         aws_orb        ksleep(0x79935840)
+3265    3021  2949  87         154 4   SLEEP recv           aws_sadmin     sosleep(0x791271c0)
+3397    3037  2949  87         154 4   SLEEP recv           prfAgent       sosleep(0x798c47c0)
+318482  18976 1     89         155 0   SLEEP msgrcv         GWADM          msgque[417]+0x5c
+5490    4373  1762  94         158 3   SLEEP sigtimedwait   cclogd         pm_sigwait(0x7916b280)
+2231    2103  1     98         154 0   SLEEP select         triggag        per_processor_selects
+1509    1398  1     99         154 0   SLEEP poll           pwgrd          per_processor_selects
+2073    1951  1     121        -16 3   SLEEP nanosleep      midaemon       real_nanosleep(0x79df94a8)
+304468  5268  1     126        156 3   SLEEP semop          oracle         sema[28][13]+0x4
+33      33    0     129        100 3   SLEEP n/a            smpsched       streams_mp_sync
+30      30    0     129        100 3   SLEEP n/a            smpsched       streams_mp_sync
+1882    1762  1     131        154 3   SLEEP select         diagmond       per_processor_selects+0xc0
+52      27    0     158        128 0   SLEEP n/a            schedcpu       schedcpu_procp
+53      27    0     158        128 3   SLEEP n/a            schedcpu       schedcpu_procp
+78      50    0     161        138 3   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+69      50    0     161        138 0   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+74      50    0     161        138 3   SLEEP n/a            vxfsd          vx_worklist_thread_sv
+4785274 5599  1     180        154 3   SLEEP select         lpsched        per_processor_selects+0xc0
+2368667 10629 10624 181        168 3   SLEEP sigtimedwait   dbsnmp         pm_sigwait(0x7916b240)
+3350    3037  2949  198        154 3   SLEEP ksleep         prfAgent       ksleep(0x7990bb80)
+8227    6842  1     206        154 2   SLEEP select         dm_stape       per_processor_selects+0x80
+7889    6504  1     226        168 0   SLEEP sigsuspend     xcomd          *uptr+0
+1910    1790  1     227        154 2   SLEEP select         acactmgr       per_processor_selects+0x80
+36      36    0     230        100 2   SLEEP n/a            smpsched       streams_mp_sync
+28      28    0     230        100 3   SLEEP n/a            smpsched       streams_mp_sync
+51      27    0     258        128 3   SLEEP n/a            schedcpu       schedcpu_procp
+50      27    0     258        128 0   SLEEP n/a            schedcpu       schedcpu_procp
+20      20    0     260        147 3   SLEEP n/a            lvmkd          lvmkd_q
+22      22    0     260        147 3   SLEEP n/a            lvmkd          lvmkd_q
+23      23    0     260        147 0   SLEEP n/a            lvmkd          lvmkd_q
+24      24    0     260        147 0   SLEEP n/a            lvmkd          lvmkd_q
+21      21    0     260        147 3   SLEEP n/a            lvmkd          lvmkd_q
+25      25    0     260        147 3   SLEEP n/a            lvmkd          lvmkd_q
+3176    2967  2966  303        25  3   SLEEP select         cmlogd         per_processor_selects+0xc0
+5491    4374  1762  311        158 3   SLEEP read           diaglogd       diag2_sleep_flag
+39      39    0     331        100 0   SLEEP n/a            smpsched       streams_mp_sync
+32      32    0     331        100 0   SLEEP n/a            smpsched       streams_mp_sync
+49      27    0     358        128 3   SLEEP n/a            schedcpu       schedcpu_procp
+48      27    0     358        128 3   SLEEP n/a            schedcpu       schedcpu_procp
+502479  25154 1     382        168 3   SLEEP sigtimedwait   jhq510n        pm_sigwait(0x7916b340)
+42      42    0     382        100 3   SLEEP n/a            smpsched       streams_mp_sync
+627     571   1     430        168 0   SLEEP sigtimedwait   vpard          pm_sigwait(0x780b2180)
+38      38    0     432        100 3   SLEEP n/a            smpsched       streams_mp_sync
+35      35    0     432        100 0   SLEEP n/a            smpsched       streams_mp_sync
+3998    3629  3627  451        154 3   SLEEP ksleep         alarmgen       ksleep(0x799b9100)
+47      27    0     458        128 3   SLEEP n/a            schedcpu       schedcpu_procp
+46      27    0     458        128 3   SLEEP n/a            schedcpu       schedcpu_procp
+318419  18913 1     482        155 0   SLEEP msgrcv         WSL            msgque[379]+0x5c
+3995    3627  1962  518        154 3   SLEEP ksleep         agdbserver     ksleep(0x798b22c0)
+34      34    0     533        100 3   SLEEP n/a            smpsched       streams_mp_sync
+37      37    0     533        100 3   SLEEP n/a            smpsched       streams_mp_sync
+3992    3627  1962  538        154 0   SLEEP ksleep         agdbserver     ksleep(0x799b9300)
+27      27    0     558        128 3   SLEEP n/a            schedcpu       schedcpu_procp
+45      27    0     558        128 0   SLEEP n/a            schedcpu       schedcpu_procp
+2094    1970  1862  566        168 3   SLEEP sigtimedwait   acrecorderd    pm_sigwait(0x7916b1c0)
+31      31    0     634        100 0   SLEEP n/a            smpsched       streams_mp_sync
+41      41    0     634        100 3   SLEEP n/a            smpsched       streams_mp_sync
+58      27    0     658        128 3   SLEEP n/a            schedcpu       schedcpu_procp
+59      27    0     658        128 3   SLEEP n/a            schedcpu       schedcpu_procp
+1231    1163  1     678        154 0   SLEEP select         mib2agt        per_processor_selects
+56      27    0     758        128 3   SLEEP n/a            schedcpu       schedcpu_procp
+57      27    0     758        128 0   SLEEP n/a            schedcpu       schedcpu_procp
+5493    4376  1762  806        154 3   SLEEP select         psmctd         per_processor_selects+0xc0
+1344    1266  1     807        154 3   SLEEP ksleep         dmisp          ksleep(0x798c3040)
+7835470 7276  18913 833        155 0   SLEEP msgrcv         WSH            msgque[440]+0x5c
+316914  17412 1     833        155 0   SLEEP msgrcv         BBL            msgque[3]+0x5c
+3949    1275  1     924        154 0   SLEEP ksleep         hpuxci         ksleep(0x7990b040)
+3175    2966  2958  955        25  6   SLEEP select         cmsrvassistd   per_processor_selects+0x180
+4001    3629  3627  1072       154 0   SLEEP ksleep         alarmgen       ksleep(0x799b9380)
+309246  9963  1     1264       154 0   SLEEP read           oracle         STREAM 0x98f1d100
+1958    1838  1     1567       154 3   SLEEP poll           aclogrd        per_processor_selects+0xc0
+4003    3612  1962  1588       154 2   SLEEP recvmsg        rep_server     sosleep(0x7fd4a7c0)
+4002    3629  3627  1588       154 0   SLEEP recvmsg        alarmgen       sosleep(0x7fd4a700)
+3985    3612  1962  1588       154 0   SLEEP ksleep         rep_server     ksleep(0x79935940)
+3997    3627  1962  1588       154 4   SLEEP ksleep         agdbserver     ksleep(0x798b29c0)
+4046    3627  1962  1588       154 0   SLEEP recvmsg        agdbserver     sosleep(0x7fd4aa00)
+3999    3629  3627  1588       154 4   SLEEP recvmsg        alarmgen       sosleep(0x9aac6400)
+1767    1647  1     1624       154 0   SLEEP select         basicdsd       per_processor_selects
+1864    1744  1     1629       154 0   SLEEP select         pdclientd      per_processor_selects
+621     565   1     2093       154 0   SLEEP tsync          syncer         sync_proc_headers
+2368659 10629 10624 2196       154 3   SLEEP ksleep         dbsnmp         ksleep(0x9bc47bc0)
+3301    3030  2949  2438       154 3   SLEEP ksleep         caiLogA2       ksleep(0x79935680)
+1396    1291  1     2525       154 3   SLEEP ksleep         swci           ksleep(0x798c3440)
+3259    3022  2949  2769       154 0   SLEEP ksleep         aws_snmp       ksleep(0x798b2740)
+2127    2000  1     3252       154 0   SLEEP select         swagentd       per_processor_selects
+3981    3612  1962  3522       154 0   SLEEP ksleep         rep_server     ksleep(0x799b9240)
+318032  18533 1     3714       155 3   SLEEP msgrcv         PRXSRVT        msgque[259]+0x5c
+318048  18549 1     3714       155 3   SLEEP msgrcv         PRXSRVT        msgque[259]+0x5c
+318037  18538 1     3714       155 2   SLEEP msgrcv         PRXSRVT        msgque[259]+0x5c
+318042  18543 1     3714       155 3   SLEEP msgrcv         PRXSRVT        msgque[259]+0x5c
+318015  18516 1     3904       155 0   SLEEP msgrcv         PRLSRVT        msgque[256]+0x5c
+318025  18526 1     3904       155 3   SLEEP msgrcv         PRLSRVT        msgque[256]+0x5c
+318010  18511 1     3904       155 2   SLEEP msgrcv         PRLSRVT        msgque[256]+0x5c
+318020  18521 1     3904       155 3   SLEEP msgrcv         PRLSRVT        msgque[256]+0x5c
+3987    1962  1     4094       154 2   SLEEP ksleep         perflbd        ksleep(0x793b8bc0)
+1378    1279  1     4295       154 3   SLEEP ksleep         sdci           ksleep(0x79935040)
+3302    3030  2949  4700       154 5   SLEEP ksleep         caiLogA2       ksleep(0x799356c0)
+304488  5288  1     5245       156 3   SLEEP semop          oracle         sema[28][23]+0x4
+910     847   1     5379       154 3   SLEEP select         automount      per_processor_selects+0xc0
+317831  18327 1     5445       155 0   SLEEP msgrcv         PHCSRVT        msgque[211]+0x5c
+317821  18317 1     5445       155 3   SLEEP msgrcv         PHCSRVT        msgque[211]+0x5c
+317836  18332 1     5445       155 0   SLEEP msgrcv         PHCSRVT        msgque[211]+0x5c
+317826  18322 1     5445       155 3   SLEEP msgrcv         PHCSRVT        msgque[211]+0x5c
+1982    1862  1     7194       168 0   SLEEP sigtimedwait   acrecorderd    pm_sigwait(0x780b21c0)
+307964  8702  1     7478       154 0   SLEEP read           oracle         STREAM 0x98f1dc40
+8860756 5797  1     8272       130 0   SLEEP read           getty          memory_sleepers
+5840    4489  1     9404       154 0   SLEEP poll           tnslsnr        per_processor_selects
+2952770 50    0     9761       138 0   ZOMB  n/a            vxfsd          
+1212    1144  1     10560      154 3   SLEEP select         snmpdm         per_processor_selects+0xc0
+3272    3022  2949  10661      154 3   SLEEP poll           aws_snmp       per_processor_selects+0xc0
+9725495 10629 10624 13546      154 2   SLEEP ksleep         dbsnmp         ksleep(0x9a509a80)
+9667125 10629 10624 13546      154 3   SLEEP ksleep         dbsnmp         ksleep(0xb0032480)
+2369382 10629 10624 13546      154 0   SLEEP ksleep         dbsnmp         ksleep(0x9a509bc0)
+9725493 10629 10624 13546      154 0   SLEEP ksleep         dbsnmp         ksleep(0xadf20280)
+8382    6992  1     16683      130 6   SLEEP trap*          lpmc_em        memory_sleepers
+2368666 10629 10624 16956      154 6   SLEEP ksleep         dbsnmp         ksleep(0x9a509f00)
+306906  7642  1     18556      130 2   SLEEP trap*          oracle         memory_sleepers
+7875    6490  1     19682      138 0   SLEEP sigtimedwait   krsd           pm_sigwait(0x780b2080)
+8165    6780  1     19719      130 2   SLEEP trap*          dm_ses_enclosu memory_sleepers
+304490  5290  1     22873      156 0   SLEEP semop          oracle         sema[28][24]+0x4
+309778  0     0     23279      130 0   SLEEP trap*                         memory_sleepers
+8435    7045  1     24980      130 0   SLEEP trap*          sysstat_em     memory_sleepers
+304466  5266  1     35701      133 0   SLEEP write          oracle         LVM vg07/lv86
+1340    1266  1     38445      154 0   SLEEP ksleep         dmisp          ksleep(0x798b2100)
+1441    1332  1     39157      64  0   SLEEP select         rbootd         per_processor_selects
+311274  11987 1     41501      130 2   SLEEP trap*          oracle         memory_sleepers
+2952767 5955  2865  46225      130 0   SLEEP <deleted>      vxsvc          memory_sleepers
+3218    2865  1     46225      152 0   SLEEP <deleted>      vxsvc          reserve_freemem(0xb9ab3248)
+3286    2865  1     46319      154 0   STOP  poll           vxsvc          
+3123    2865  1     46371      154 0   STOP  poll           vxsvc          
+309264  9981  1     51952      133 3   SLEEP read           oracle         LVM vg09/lv68
+3249    3021  2949  56165      154 0   SLEEP ksleep         aws_sadmin     ksleep(0x798c37c0)
+700     639   1     56680      130 0   SLEEP trap*          syslogd        memory_sleepers
+306894  7630  1     60189      130 0   SLEEP trap*          oracle         memory_sleepers
+307720  8465  1     62286      130 2   SLEEP trap*          oracle         memory_sleepers
+1338    1266  1     62352      130 6   SLEEP trap*          dmisp          memory_sleepers
+4268916 16414 18913 62476      130 0   SLEEP trap*          WSH            memory_sleepers
+2278    1982  1     64050      154 0   SLEEP ksleep         prm3d          ksleep(0x799b9180)
+318431  18925 1     64888      130 0   SLEEP trap*          GWTDOMAIN      memory_sleepers
+310625  11336 1     65889      130 0   SLEEP trap*          oracle         memory_sleepers
+2887156 27957 26664 69343      130 3   SLEEP <deleted>      sh             memory_sleepers
+2885858 26657 6394  69343      130 3   SLEEP getmsg         telnetd        memory_sleepers
+2952766 5954  27957 69343      152 1   IDL   n/a            sh             
+309185  9904  1     69452      133 2   SLEEP read           oracle         LVM vg10/lv64
+412700  26217 18913 70918      130 0   SLEEP trap*          WSH            memory_sleepers
+318483  18977 1     72897      130 0   SLEEP trap*          GWTDOMAIN      memory_sleepers
+304480  5280  1     73067      130 0   SLEEP trap*          oracle         memory_sleepers
+304458  5258  1     74468      130 2   SLEEP trap*          oracle         memory_sleepers
+304456  5256  1     74487      130 2   SLEEP trap*          oracle         memory_sleepers
+309321  10035 1     76259      154 2   SLEEP read           oracle         STREAM 0x999b5840
+318429  18923 1     76908      130 0   SLEEP trap*          GWTDOMAIN      memory_sleepers
+319959  20414 18913 76909      130 0   SLEEP trap*          WSH            memory_sleepers
+7896    6511  1     76974      130 2   SLEEP trap*          disk_em        memory_sleepers
+2277    1982  1     79098      154 2   SLEEP ksleep         prm3d          ksleep(0x7990b200)
+2947707 761   6394  79241      154 2   SLEEP getmsg         telnetd        STREAM 0x98564080
+2948752 1867  770   79241      130 6   SLEEP <deleted>      ksh            memory_sleepers
+2952762 5953  1867  79241      152 1   IDL   n/a            ksh            
+4143498 21102 1     79287      155 3   SLEEP msgrcv         WBXSRVI        msgque[313]+0x5c
+4075343 14209 1     79287      155 2   SLEEP msgrcv         WBXSRVI        msgque[313]+0x5c
+4087884 27277 1     79287      155 2   SLEEP msgrcv         WBXSRVI        msgque[313]+0x5c
+4119333 28107 1     79287      155 5   SLEEP msgrcv         WBXSRVI        msgque[313]+0x5c
+4075312 14176 1     79287      130 2   SLEEP trap*          WBXSRVI        memory_sleepers
+3340    3032  2949  81089      130 5   SLEEP recv           hpaAgent       memory_sleepers
+3360    2972  2949  81089      154 6   SLEEP ksleep         aws_orb        ksleep(0x793b8b00)
+320735  21181 18913 81601      130 0   SLEEP trap*          WSH            memory_sleepers
+7999    6614  1     81746      130 0   SLEEP trap*          dm_core_hw     memory_sleepers
+318433  18927 1     81912      130 0   SLEEP trap*          GWTDOMAIN      memory_sleepers
+3322    3032  2949  83109      130 0   SLEEP trap*          hpaAgent       memory_sleepers
+3339    3032  2949  83158      154 2   SLEEP ksleep         hpaAgent       ksleep(0x7990ba40)
+2952761 0     0     83163      130 2   SLEEP trap*                         memory_sleepers
+3323    3032  2949  83164      154 2   SLEEP ksleep         hpaAgent       ksleep(0x7990b940)
+2952760 5951  1748  83217      152 1   IDL   n/a            cron           
+3357    3039  3037  83217      130 5   SLEEP trap*          prfAgent       memory_sleepers
+1868    1748  1     83217      130 5   SLEEP <deleted>      cron           memory_sleepers
+3342    2972  2949  83414      154 0   SLEEP recv           aws_orb        sosleep(0x791277c0)
+3341    3032  2949  83414      154 2   SLEEP ksleep         hpaAgent       ksleep(0x7990bac0)
+51781   16257 1     84106      154 0   SLEEP ksleep         rmiregistry    ksleep(0x799b95c0)
+3574858 16257 1     84895      154 0   SLEEP ksleep         rmiregistry    ksleep(0x9bc47200)
+318227  18727 1     85078      154 0   SLEEP read           oracle         STREAM 0xb91e3080
+318223  18723 1     85078      155 5   SLEEP msgrcv         WBXSRVT        msgque[314]+0x5c
+2907365 19148 19146 85432      130 0   SLEEP read           ksh            memory_sleepers
+318481  18975 1     85916      130 0   SLEEP trap*          GWTDOMAIN      memory_sleepers
+309266  9983  1     86538      130 0   SLEEP trap*          oracle         memory_sleepers
+307665  8412  1     86793      133 2   SLEEP read           oracle         LVM vg09/lv61
+318420  18914 1     86941      130 5   SLEEP trap*          TAUTHSRV       memory_sleepers
+318424  18918 1     86941      154 6   SLEEP read           oracle         STREAM 0xb9602100
+317531  18027 1     87700      155 3   SLEEP msgrcv         JBDSRVI        msgque[125]+0x5c
+317535  18031 1     87700      154 0   SLEEP read           oracle         STREAM 0x85e9a840
+7512428 1603  18913 88102      130 0   SLEEP trap*          WSH            memory_sleepers
+7882    6497  1     88708      130 5   SLEEP trap*          p_client       memory_sleepers
+3941099 25272 1     88920      130 0   SLEEP trap*          YCMSRVI        memory_sleepers
+318471  18965 1     89137      130 0   SLEEP trap*          JBDSRVI        memory_sleepers
+7336160 28938 1     89627      130 6   SLEEP trap*          JBDSRVI        memory_sleepers
+318434  18928 18913 90108      130 0   SLEEP trap*          WSH            memory_sleepers
+2279    1982  1     90295      154 2   SLEEP ksleep         prm3d          ksleep(0x7990b240)
+2952759 5950  6394  91708      152 1   IDL   n/a            inetd          
+7779    6394  1     91708      130 2   SLEEP <deleted>      inetd          memory_sleepers
+2239    1982  1     92737      154 0   SLEEP ksleep         prm3d          ksleep(0x79935280)
+2233    1982  1     93114      152 5   SLEEP lwp_suspend    prm3d          thread_suspend_wait(0x7a1600ed)
+2259    1982  1     93114      154 2   SLEEP ksleep         prm3d          ksleep(0x793b82c0)
+3264    3021  2949  93679      154 5   SLEEP ksleep         aws_sadmin     ksleep(0x7990b600)
+3290    3021  2949  94400      130 4   SLEEP trap*          aws_sadmin     memory_sleepers
+3311    3031  2949  94611      154 0   SLEEP ksleep         caiUxOs        ksleep(0x798c3a00)
+318479  18973 1     94924      130 0   SLEEP trap*          GWTDOMAIN      memory_sleepers
+309195  9913  1     95374      133 5   SLEEP read           oracle         LVM vg10/lv100
+3266    3021  2949  95773      154 3   SLEEP ksleep         aws_sadmin     ksleep(0x7990b680)
+3267    2972  2949  95773      154 4   SLEEP recv           aws_orb        sosleep(0x79127580)
+318477  18971 1     96329      130 0   SLEEP trap*          GWTDOMAIN      memory_sleepers
+2276    1982  1     97098      130 2   SLEEP trap*          prm3d          memory_sleepers
+51867   16257 1     97479      154 5   SLEEP ksleep         rmiregistry    ksleep(0x799b9700)
+51868   16257 1     97584      154 0   SLEEP ksleep         rmiregistry    ksleep(0x799b9740)
+624     568   1     97628      130 5   SLEEP trap*          vphbd          memory_sleepers
+4088049 27430 1     97700      130 2   SLEEP trap*          WBXSRVI        memory_sleepers
+7910    6525  1     97871      152 0   SLEEP <deleted>      dm_chassis     reserve_freemem(0x92474248)
+2952758 5949  6525  97871      130 0   SLEEP <deleted>      dm_chassis     memory_sleepers
+318719  19208 1     97879      133 0   SLEEP read           oracle         LVM vg02/lv70
+2952756 5947  22086 98010      130 6   SLEEP trap*          sh             memory_sleepers
+4024751 22086 1     98012      158 2   SLEEP n/a            YCMSRVI        wait1(0x85e4f040)
+9348816 753   1     98016      134 2   SLEEP shmdt          oracle         shm_lock
+9348803 744   1     98016      134 2   SLEEP shmdt          oracle         shm_lock
+2952740 5931  5928  98018      130 0   SLEEP trap*          ycm330x        memory_sleepers
+2951888 16258 1     98018      130 4   SLEEP trap*          java           memory_sleepers
+4300633 18606 18600 98018      130 3   SLEEP trap*          jhq015x        memory_sleepers
+2952736 16257 1     98018      130 2   SLEEP trap*          rmiregistry    memory_sleepers
+2951535 4713  4707  98018      130 2   SLEEP trap*          ycm330x        memory_sleepers
+312708  13410 1     98206      133 0   SLEEP read           oracle         LVM vg10/lv100
+311301  12013 1     98750      133 3   SLEEP read           oracle         LVM vg06/lv54
+307180  7914  1     99077      133 2   SLEEP read           oracle         LVM vg06/lv30
+2234    1982  1     99115      154 0   SLEEP ksleep         prm3d          ksleep(0x798a92c0)
+309310  10025 1     99620      133 5   SLEEP read           oracle         LVM vg09/lv68
+2106    1979  1     101228     127 2   SLEEP shmget         scopeux        shm_lock
+3366    3038  2949  101315     154 5   SLEEP ksleep         proAgent       ksleep(0x798a9540)
+318222  18722 1     101815     133 2   SLEEP read           oracle         LVM vg07/lv87
+318218  18718 1     101815     154 0   SLEEP read           WBXSRVT        STREAM 0xb9142b80
+2952737 5928  16823 101929     158 0   SLEEP waitpid        sh             wait1(0x85e28040)
+3933195 16823 1     101933     158 0   SLEEP waitpid        YCMSRVI        wait1(0x99e02040)
+3374    3038  2949  102090     154 5   SLEEP recv           proAgent       sosleep(0x797fbac0)
+3377    2972  2949  102090     154 6   SLEEP ksleep         aws_orb        ksleep(0x79935800)
+307172  7906  1     102301     133 0   SLEEP read           oracle         LVM vg07/lv84
+317563  18059 1     102910     154 0   SLEEP read           JHQSRVT1       STREAM 0x934007c0
+317567  18063 1     102910     133 0   SLEEP read           oracle         LVM vg11/lv85
+307168  7902  1     103152     133 5   SLEEP read           oracle         LVM vg06/lv53
+1205    1137  1     103479     134 0   SLEEP pstat          sendmail       vmtotal_lock
+4065086 3711  1     103528     154 3   SLEEP read           YCMSRVI        STREAM 0x93d184c0
+318347  18846 1     103552     154 0   SLEEP read           YCMSRVI        STREAM 0xb9510080
+8084    6699  1     103709     154 2   SLEEP select         dm_memory      per_processor_selects+0x80
+7902    6517  1     103710     154 0   SLEEP select         dm_FCMS_adapte per_processor_selects
+7905    6520  1     103710     154 6   SLEEP select         dm_TL_adapter  per_processor_selects+0x40
+304454  5254  1     103739     134 2   SLEEP pstat          oracle         vmtotal_lock
+3373    3038  2949  104253     134 0   SLEEP pstat          proAgent       vmtotal_lock
+3376    2972  2949  104315     154 3   SLEEP recv           aws_orb        sosleep(0x797fbb80)
+3375    3038  2949  104315     154 6   SLEEP ksleep         proAgent       ksleep(0x798a96c0)
+309242  9960  1     104755     133 2   SLEEP read           oracle         LVM vg07/lv121
+307015  7751  1     104830     133 3   SLEEP read           oracle         LVM vg11/lv23
+310694  11404 1     104868     133 2   SLEEP read           oracle         LVM vg06/lv54
+3338    2972  2949  105090     154 6   SLEEP ksleep         aws_orb        ksleep(0x793b8940)
+3335    3031  2949  105090     154 4   SLEEP recv           caiUxOs        sosleep(0x790a1640)
+304460  5260  1     105468     134 5   SLEEP pstat          oracle         vmtotal_lock
+9029322 16258 1     105538     152 2   SLEEP <deleted>      java           thread_suspend_wait(0x926fe0ed)
+51776   16258 1     105539     168 2   STOP  nanosleep      java           
+51772   16258 1     105541     154 2   STOP  ksleep         java           
+304472  5272  1     105579     133 0   SLEEP write          oracle         LVM vg03/lv1
+3334    3031  2949  105620     134 0   SLEEP pstat          caiUxOs        shm_lock
+51871   16258 1     105754     154 3   STOP  read           java           STREAM 0x982a1400
+2952717 5909  1     105754     133 3   SLEEP shmat          oracle         lock_write(0x93cdc29e)
+2952718 5910  0     105781     178 4   IDL   n/a            java           
+1       1     0     105781     168 3   SLEEP sigsuspend     init           *uptr+0
+311324  12038 1     105828     133 3   SLEEP read           oracle         LVM vg11/lv85
+2952715 5907  5906  106189     154 3   SLEEP read           cat            FIFO 0x95fef340
+2952714 5906  18606 106189     158 3   SLEEP waitpid        sh             wait1(0xb9b46040)
+317282  17778 1     106202     155 0   SLEEP msgrcv         BRMSRVGT       msgque[106]+0x5c
+317286  17782 1     106203     154 3   SLEEP read           oracle         STREAM 0x92d92880
+317277  17773 1     106211     155 0   SLEEP msgrcv         BRMSRVGT       msgque[106]+0x5c
+3083    2865  1     106245     154 0   STOP  ksleep         vxsvc          ksleep(0x7990b280)
+3312    3031  2949  106630     154 0   SLEEP ksleep         caiUxOs        ksleep(0x798c3a40)
+3337    2972  2949  107419     154 2   SLEEP recv           aws_orb        sosleep(0x790a17c0)
+3336    3031  2949  107419     154 2   SLEEP ksleep         caiUxOs        ksleep(0x798b28c0)
+307655  8403  1     107481     133 2   SLEEP read           oracle         LVM vg11/lv85
+307184  7918  1     107638     133 2   SLEEP read           oracle         LVM vg09/lv157
+2951885 5054  16258 107735     183 2   ZOMB  exit           df             
+9029711 16258 1     107735     168 2   STOP  nanosleep      java           
+2951771 16258 1     107844     178 3   ZOMB  lwp_detached_e java           
+9029907 16258 1     107844     168 5   STOP  nanosleep      java           
+51870   16258 1     107873     168 2   STOP  nanosleep      java           
+317572  18068 1     107915     133 5   SLEEP read           oracle         LVM vg09/lv85
+317568  18064 1     107917     154 0   SLEEP read           JHQSRVT1       STREAM 0x9a0ee440
+403637  16590 1     107919     133 2   SLEEP read           oracle         LVM vg07/lv184
+9029521 16258 1     107930     168 2   STOP  nanosleep      java           
+307176  7910  1     107936     133 2   SLEEP read           oracle         LVM vg04/lv70
+51775   16258 1     107940     154 2   STOP  ksleep         java           ksleep(0x91e52200)
+2       2     0     107948     133 1   RUN   n/a            vhand          
+51763   16258 1     107954     154 0   STOP  ksleep         java           ksleep(0x95ee91c0)
+51865   16258 1     107965     154 5   STOP  ksleep         java           
+51774   16258 1     107965     154 2   STOP  ksleep         java           ksleep(0x91e52240)
+3274    3022  2949  109556     154 2   SLEEP poll           aws_snmp       per_processor_selects+0x80
+51767   16257 1     109588     154 0   SLEEP ksleep         rmiregistry    ksleep(0x799b93c0)
+51766   16257 1     109588     154 3   SLEEP ksleep         rmiregistry    ksleep(0x799b9400)
+317553  18049 1     109978     155 2   SLEEP msgrcv         JFRSRVT        msgque[132]+0x5c
+317548  18044 1     109980     155 6   SLEEP msgrcv         JFRSRVT        msgque[132]+0x5c
+317552  18048 1     110848     154 2   SLEEP read           oracle         STREAM 0x9269dbc0
+2951429 16257 1     111123     178 0   ZOMB  lwp_detached_e rmiregistry    
+9029125 16258 1     111502     168 5   STOP  nanosleep      java           
+4665162 16258 1     113215     154 0   STOP  accept         java           STREAM 0x85ec4c00
+2951529 4707  18931 113986     158 2   SLEEP waitpid        sh             wait1(0xb9cca040)
+318437  18931 1     113990     158 2   SLEEP waitpid        YCMSRVI        wait1(0xb9696040)
+318441  18935 1     113991     154 0   SLEEP read           oracle         STREAM 0xb96024c0
+4244092 23011 1     116587     155 2   SLEEP msgrcv         JFRSRVI        msgque[131]+0x5c
+8586564 23515 1     116600     155 0   SLEEP msgrcv         JFRSRVI        msgque[131]+0x5c
+4244107 23026 1     116600     155 5   SLEEP msgrcv         JFRSRVI        msgque[131]+0x5c
+308600  9325  1     117487     154 2   SLEEP read           oracle         STREAM 0xb8e62880
+2947715 770   761   117834     158 0   SLEEP waitpid        ksh            wait1(0x7fb1a040)
+9031059 16258 1     123461     168 0   STOP  nanosleep      java           
+9030672 16258 1     123754     168 1   STOP  nanosleep      java           
+7336185 28964 1     124044     154 1   SLEEP read           oracle         STREAM 0x7fa80480
+9030290 16258 1     124128     168 2   STOP  nanosleep      java           
+9030097 16258 1     124808     168 2   STOP  nanosleep      java           real_nanosleep(0x939e34a8)
+2943620 26545 4156  127000     158 5   SLEEP waitpid        sh             wait1(0xb8db5040)
+8871982 4156  1     127004     158 5   SLEEP waitpid        YCMSRVI        wait1(0x98467040)
+317281  17777 1     127571     154 0   SLEEP read           oracle         STREAM 0x93655bc0
+4665604 16258 1     127621     168 6   STOP  nanosleep      java           
+51783   16258 1     135097     168 1   STOP  nanosleep      java           
+318821  19309 1     137446     155 2   SLEEP msgrcv         BDDSRVGI       msgque[35]+0x5c
+318825  19313 1     137446     154 1   SLEEP read           oracle         STREAM 0xb9806480
+8461133 27900 1     137453     155 4   SLEEP msgrcv         BDDSRVGI       msgque[35]+0x5c
+319074  19545 1     137453     155 0   SLEEP msgrcv         BDDSRVGI       msgque[35]+0x5c
+317034  17532 1     137453     155 3   SLEEP msgrcv         BDDSRVGI       msgque[35]+0x5c
+8461155 27922 1     138056     154 6   SLEEP read           oracle         STREAM 0x995ddc40
+2934719 17101 28955 140014     158 1   SLEEP waitpid        sh             wait1(0x92f85040)
+536412  28955 1     140017     158 2   SLEEP waitpid        YCMSRVI        wait1(0x98857040)
+2925679 7869  3417  153023     158 1   SLEEP waitpid        sh             wait1(0xbb260040)
+3949021 3417  1     153026     158 1   SLEEP waitpid        YCMSRVI        wait1(0xb9b95040)
+2916852 28729 19242 165825     158 6   SLEEP waitpid        sh             wait1(0xbb1f1040)
+318754  19242 1     165829     158 2   SLEEP waitpid        YCMSRVI        wait1(0xb97e3040)
+318786  19274 1     165829     154 6   SLEEP read           oracle         STREAM 0x99ba4800
+314607  15315 1     166643     154 3   SLEEP read           oracle         STREAM 0x85e81100
+318475  18969 1     167480     154 4   SLEEP read           oracle         STREAM 0xb9602880
+2907363 19146 6394  170229     154 5   SLEEP getmsg         telnetd        STREAM 0x9a125040
+314611  15319 1     171372     154 0   SLEEP read           oracle         STREAM 0x99b7f840
+3847635 18362 1     173452     155 2   SLEEP msgrcv         UTSRVGI        msgque[292]+0x5c
+318143  18643 1     173578     155 0   SLEEP msgrcv         UTSRVGI        msgque[292]+0x5c
+317125  17623 1     173582     155 0   SLEEP msgrcv         BIMSRVGI       msgque[59]+0x5c
+317129  17627 1     173582     154 1   SLEEP read           oracle         STREAM 0x931ab840
+3840733 11142 1     173587     155 4   SLEEP msgrcv         BIMSRVGI       msgque[59]+0x5c
+318147  18647 1     173591     154 2   SLEEP read           oracle         STREAM 0xb912e440
+317038  17536 1     180322     154 4   SLEEP read           oracle         STREAM 0x99179840
+9030485 16258 1     184584     168 4   STOP  nanosleep      java           real_nanosleep(0x9aae14a8)
+845     782   1     184832     154 5   SLEEP poll           rpcbind        per_processor_selects+0x140
+306873  7610  1     190045     154 3   SLEEP read           oracle         STREAM 0x93b53100
+9584054 9183  1     195114     154 3   SLEEP read           oracle         STREAM 0xb995ec00
+9584103 9233  1     195114     154 1   SLEEP read           oracle         STREAM 0x99825c40
+2885865 26664 26657 206330     158 1   SLEEP waitpid        ksh            wait1(0xb9786040)
+8420167 516   1     213834     155 3   SLEEP msgrcv         YPMSRVI        msgque[371]+0x5c
+318486  18980 1     213843     155 2   SLEEP msgrcv         YPMSRVI        msgque[371]+0x5c
+318384  18883 1     213843     155 6   SLEEP msgrcv         YPMSRVI        msgque[371]+0x5c
+318388  18887 1     213846     154 3   SLEEP read           oracle         STREAM 0xb94cf840
+318490  18984 1     213866     154 3   SLEEP read           oracle         STREAM 0xb96cd040
+5543    4375  1762  260254     154 4   SLEEP ksleep         memlogd        ksleep(0x798b2480)
+5539    4375  1762  260254     154 4   SLEEP select         memlogd        per_processor_selects+0x100
+5538    4375  1762  260254     154 2   SLEEP ksleep         memlogd        ksleep(0x79935b00)
+5542    4375  1762  260254     154 6   SLEEP ksleep         memlogd        ksleep(0x798b2440)
+5544    4375  1762  260254     154 0   SLEEP ksleep         memlogd        ksleep(0x798b2400)
+5536    4375  1762  260254     154 0   SLEEP ksleep         memlogd        ksleep(0x79935a40)
+5541    4375  1762  260259     154 3   SLEEP ksleep         memlogd        ksleep(0x798b2380)
+1417    1308  1     296165     168 4   SLEEP sigtimedwait   scrdaemon      pm_sigwait(0x79131240)
+1596    1279  1     319499     168 2   SLEEP sigtimedwait   sdci           pm_sigwait(0x7916a2c0)
+7504162 23137 1     348238     155 6   SLEEP msgrcv         BLMSRVGI       msgque[70]+0x5c
+317160  17658 1     348242     155 3   SLEEP msgrcv         BLMSRVGI       msgque[70]+0x5c
+320616  21069 1     348242     155 3   SLEEP msgrcv         BLMSRVGI       msgque[70]+0x5c
+317166  17664 1     363122     154 4   SLEEP read           oracle         STREAM 0x93c5e480
+320620  21073 1     365250     154 0   SLEEP read           oracle         STREAM 0xb9951100
+2368671 10629 10624 455872     154 4   SLEEP ksleep         dbsnmp         ksleep(0x9a509a40)
+3996    3627  1962  520475     154 2   SLEEP select         agdbserver     per_processor_selects+0x80
+3991    3627  1962  520571     154 4   SLEEP ksleep         agdbserver     ksleep(0x798a9700)
+4004    3629  3627  520571     154 3   SLEEP ksleep         alarmgen       ksleep(0x79935a00)
+4005    3627  1962  1815721    154 6   SLEEP ksleep         agdbserver     ksleep(0x798a9780)
+6059621 17027 6394  1951876    154 1   SLEEP poll           rpc.cmsd       per_processor_selects+0x40
+4045    3627  1962  2260732    154 4   SLEEP ksleep         agdbserver     ksleep(0x798a97c0)
+3193    2975  2966  2425057    127 6   SLEEP select         cmgmsd         per_processor_selects+0x180
+5884    4529  2966  2774889    158 6   SLEEP waitpid        oracle9.sh     wait1(0x8b0e5040)
+765542  9041  4529  2775014    168 2   SLEEP sigtimedwait   sleep          pm_sigwait(0x7916a180)
+51862   16258 1     3218285    168 5   STOP  nanosleep      java           real_nanosleep(0x9244d4a8)
+9911563 14    0     3742401    148 4   ZOMB  n/a            ioconfigd      
+14      14    0     3742824    152 3   SLEEP n/a            ioconfigd      SD$#var#tmp#ucAAAAAAa26803
+307007  7743  1     4805694    154 1   SLEEP read           oracle         STREAM 0x923f7c40
+7918    6533  1     5039555    154 1   SLEEP read           mflm_manager   FIFO 0x99483040
+8770725 14022 1     5151287    155 5   SLEEP msgrcv         YDDSRVT        msgque[367]+0x5c
+8770692 13992 1     5151287    155 3   SLEEP msgrcv         YDDSRVT        msgque[367]+0x5c
+1223    1155  1     5278994    154 3   SLEEP select         hp_unixagt     per_processor_selects+0xc0
+1245    1177  1     5278998    154 5   SLEEP select         cmsnmpd        per_processor_selects+0x140
+2368664 10629 10624 6316803    154 1   SLEEP ksleep         dbsnmp         ksleep(0x9bc47c40)
+316481  17212 1     7889722    154 3   SLEEP read           oracle         STREAM 0x98e337c0
+320485  20941 1     8038650    155 0   SLEEP msgrcv         UTSRVI         msgque[297]+0x5c
+320489  20945 1     8038650    154 1   SLEEP read           oracle         STREAM 0x98663400
+318165  18665 1     8038652    155 0   SLEEP msgrcv         UTSRVI         msgque[297]+0x5c
+307100  7835  1     8040104    154 4   SLEEP read           oracle         STREAM 0x98001840
+26      26    0     9427723    148 3   SLEEP n/a            lvmschedd      lv_schedule_daemon
+307329  8082  1     13889201   154 3   SLEEP read           oracle         STREAM 0x988ae800
+307337  8090  1     13889265   154 2   SLEEP read           oracle         STREAM 0x93b85c40
+790772  8012  0     16260464   152 5   ZOMB  n/a            nfsktcpd       
+9363    7963  1     16260464   154 3   SLEEP poll           nfsd           per_processor_selects+0xc0
+9352    7952  1     16289124   154 1   SLEEP poll           rpc.mountd     per_processor_selects+0x40
+318389  18888 1     22815294   155 1   SLEEP msgrcv         YPMSRVT        msgque[374]+0x5c
+318393  18892 1     22815294   154 3   SLEEP read           oracle         STREAM 0xb9510800
+318394  18893 1     22815295   155 1   SLEEP msgrcv         YPMSRVT        msgque[374]+0x5c
+318398  18897 1     22815307   154 5   SLEEP read           oracle         STREAM 0xb94ccbc0
+6248241 9079  1     22861594   179 2   ZOMB  lwp_detached_e java           
+265825  9079  1     22861744   154 5   SLEEP ksleep         java           ksleep(0x798c3d40)
+265811  9079  1     22861755   154 5   SLEEP accept         java           STREAM 0x931ab0c0
+265839  9079  1     22861755   154 4   SLEEP ksleep         java           ksleep(0x798a9ac0)
+7411262 16574 1     22984262   154 5   SLEEP read           oracle         STREAM 0x93d15440
+6132136 1710  1558  23027602   158 6   SLEEP waitpid        sh             wait1(0xb9cb5040)
+6131986 1558  6394  23030791   158 4   SLEEP waitpid        auto_remote    wait1(0x99300040)
+6092210 20418 1     23091675   155 0   SLEEP msgrcv         BMSSRVGI       msgque[85]+0x5c
+313183  13877 1     23105357   154 2   SLEEP read           oracle         STREAM 0x9340f7c0
+313185  13879 1     23106305   154 6   SLEEP read           oracle         STREAM 0x9873f040
+265828  9079  1     23158006   154 5   SLEEP ksleep         java           ksleep(0x798c3d80)
+265827  9079  1     23158006   154 1   SLEEP ksleep         java           ksleep(0x798c3dc0)
+317135  17633 1     23176266   155 2   SLEEP msgrcv         BLISRVT        msgque[63]+0x5c
+317140  17638 1     23176267   155 1   SLEEP msgrcv         BLISRVT        msgque[63]+0x5c
+3215    2993  2977  23182667   154 3   SLEEP select         dtlogin        per_processor_selects+0xc0
+313172  13867 1     23253469   154 2   SLEEP n/a            oracle         STREAM 0x99e61040
+317195  17693 1     23316991   154 5   SLEEP read           oracle         STREAM 0x98252040
+317191  17689 1     23316991   155 2   SLEEP msgrcv         BLQSRVT        msgque[80]+0x5c
+317196  17694 1     23317018   155 6   SLEEP msgrcv         BLQSRVT        msgque[80]+0x5c
+317200  17698 1     23317033   154 1   SLEEP read           oracle         STREAM 0x91ee9040
+7838346 10307 1     23607717   154 4   SLEEP read           oracle         STREAM 0x98b930c0
+307321  8074  1     23630203   154 2   SLEEP read           oracle         STREAM 0x986c7440
+307305  8058  1     23707342   154 0   SLEEP read           oracle         STREAM 0x93b85880
+317682  18178 1     23816205   154 5   SLEEP read           oracle         STREAM 0x933cc040
+317678  18174 1     23816205   155 1   SLEEP msgrcv         JVPSRVT4       msgque[177]+0x5c
+317683  18179 1     23816221   155 3   SLEEP msgrcv         JVPSRVT4       msgque[177]+0x5c
+317687  18183 1     23816231   154 3   SLEEP read           oracle         STREAM 0x9355c840
+307232  7990  1     24144845   154 3   SLEEP read           oracle         STREAM 0x984a8880
+7961333 4268  1     24145233   154 5   SLEEP read           oracle         STREAM 0x982a1040
+7972611 15807 1     24145255   154 6   SLEEP read           oracle         STREAM 0x92ac7080
+307236  7994  1     24145489   154 3   SLEEP read           oracle         STREAM 0x9844a440
+307228  7982  1     24146038   154 6   SLEEP read           oracle         STREAM 0x985c8400
+307159  7893  1     24153781   154 0   SLEEP read           oracle         STREAM 0x934fb4c0
+307188  7922  1     24156560   154 0   SLEEP read           oracle         STREAM 0x982a17c0
+318169  18669 1     24335906   154 0   SLEEP read           oracle         STREAM 0xb912ebc0
+317054  17552 1     25097313   155 5   SLEEP msgrcv         BGMSRVI        msgque[37]+0x5c
+317058  17556 1     25097313   154 6   SLEEP read           oracle         STREAM 0x92ab7440
+8270826 25456 1     25097316   155 6   SLEEP msgrcv         BGMSRVI        msgque[37]+0x5c
+317591  18087 1     25164151   155 3   SLEEP msgrcv         JHQSRVT4       msgque[145]+0x5c
+317594  18090 1     25164152   155 5   SLEEP msgrcv         JHQSRVT4       msgque[145]+0x5c
+317578  18074 1     25173441   155 6   SLEEP msgrcv         JHQSRVT2       msgque[139]+0x5c
+317582  18078 1     25173442   154 1   SLEEP read           oracle         STREAM 0x929a5400
+317573  18069 1     25173442   155 2   SLEEP msgrcv         JHQSRVT2       msgque[139]+0x5c
+306849  7586  1     25204822   154 2   SLEEP read           oracle         STREAM 0x92960800
+317577  0     0     25228655   154 2   SLEEP read                          STREAM 0x93556440
+318202  18702 1     25552316   154 2   SLEEP read           oracle         STREAM 0xb9142400
+318198  18698 1     25552316   155 4   SLEEP msgrcv         WBISRVT        msgque[309]+0x5c
+318203  18703 1     25552421   155 5   SLEEP msgrcv         WBISRVT        msgque[309]+0x5c
+318207  18707 1     25559575   154 4   SLEEP read           oracle         STREAM 0xb91d4080
+7428710 4803  1     25690291   154 0   SLEEP read           oracle         STREAM 0x99d52400
+317124  17622 1     25977525   154 0   SLEEP read           oracle         STREAM 0x92f18040
+317120  17618 1     25977525   155 2   SLEEP msgrcv         BIMSRVI2       msgque[57]+0x5c
+9112904 13566 1     25977527   155 6   SLEEP msgrcv         BIMSRVI2       msgque[57]+0x5c
+51780   16258 1     27649415   154 1   STOP  ksleep         java           ksleep(0x798a9940)
+7972669 15865 1     34304260   154 5   SLEEP read           oracle         STREAM 0x9a238400
+7965786 8906  1     34310169   154 2   SLEEP read           oracle         STREAM 0x9905a480
+307490  8240  1     34318665   154 3   SLEEP read           oracle         STREAM 0x99a3bbc0
+8139869 9480  1     34320875   154 1   SLEEP read           oracle         STREAM 0xb9aecbc0
+307345  8098  1     34369646   154 1   SLEEP read           oracle         STREAM 0x999a7040
+7965707 8827  1     34611542   154 1   SLEEP read           oracle         STREAM 0xb9199c40
+4300628 18600 18599 40275093   158 4   SLEEP waitpid        sh             wait1(0xbb196040)
+4300627 18599 18596 40275154   158 2   SLEEP waitpid        sh             wait1(0xb8fd6040)
+4300626 18596 18548 40275156   158 2   SLEEP wait           time           wait1(0x91e5a040)
+4300592 18548 18518 40275157   158 1   SLEEP waitpid        sh             wait1(0xbb194040)
+4300573 18518 6394  40275390   158 2   SLEEP waitpid        auto_remote    wait1(0xb9d47040)
+317542  18038 1     42306748   154 3   SLEEP read           oracle         STREAM 0x98ea7040
+317538  18034 1     42306748   155 2   SLEEP msgrcv         JFRSRVGI       msgque[128]+0x5c
+384879  27237 1     42306754   155 3   SLEEP msgrcv         JFRSRVGI       msgque[128]+0x5c
+384887  27245 1     42334037   155 2   SLEEP msgrcv         WXXSRVI        msgque[357]+0x5c
+318313  18812 1     42334040   155 1   SLEEP msgrcv         WXXSRVI        msgque[357]+0x5c
+318317  18816 1     42334079   154 0   SLEEP read           oracle         STREAM 0xb9283800
+309003  9724  1     42642940   154 3   SLEEP read           oracle         STREAM 0x993c6bc0
+310540  11253 1     50590602   154 4   SLEEP read           oracle         STREAM 0x92595480
+310536  11249 1     50603037   154 5   SLEEP read           oracle         STREAM 0x999b5480
+317558  18054 1     58548301   155 4   SLEEP msgrcv         JHQSRVI        msgque[134]+0x5c
+317562  18058 1     58548301   154 1   SLEEP read           oracle         STREAM 0x92d4e0c0
+8711357 17441 1     58548323   155 4   SLEEP msgrcv         JHQSRVI        msgque[134]+0x5c
+7298815 20503 1     60692371   155 4   SLEEP msgrcv         JVPSRVT2       msgque[171]+0x5c
+7298775 20462 1     60692371   155 6   SLEEP msgrcv         JVPSRVT2       msgque[171]+0x5c
+7296523 17851 1     60695482   155 4   SLEEP msgrcv         JVPSRVT        msgque[169]+0x5c
+7296478 17803 1     60695482   155 5   SLEEP msgrcv         JVPSRVT        msgque[169]+0x5c
+7296547 17887 1     60701484   154 2   SLEEP read           oracle         STREAM 0x930e90c0
+7294135 15318 1     60704721   154 6   SLEEP read           oracle         STREAM 0x930e9c00
+7294103 15285 1     60704721   155 1   SLEEP msgrcv         JVPSRVI3       msgque[167]+0x5c
+318407  18906 1     83954290   155 2   SLEEP msgrcv         YRMSRVT        msgque[376]+0x5c
+318402  18901 1     83954290   155 4   SLEEP msgrcv         YRMSRVT        msgque[376]+0x5c
+318340  18839 1     83954743   155 4   SLEEP msgrcv         XUMSRVT        msgque[361]+0x5c
+318335  18834 1     83954743   155 2   SLEEP msgrcv         XUMSRVT        msgque[361]+0x5c
+318320  18819 1     83954846   155 2   SLEEP msgrcv         WXXSRVT        msgque[359]+0x5c
+318325  18824 1     83954846   155 4   SLEEP msgrcv         WXXSRVT        msgque[359]+0x5c
+318303  18802 1     83955050   155 5   SLEEP msgrcv         WUUSRVT        msgque[352]+0x5c
+318298  18797 1     83955050   155 2   SLEEP msgrcv         WUUSRVT        msgque[352]+0x5c
+318296  18795 1     83955209   155 2   SLEEP msgrcv         WTGSRVT        msgque[347]+0x5c
+318291  18790 1     83955209   155 1   SLEEP msgrcv         WTGSRVT        msgque[347]+0x5c
+318282  18781 1     83955403   155 3   SLEEP msgrcv         WSSSRVT        msgque[340]+0x5c
+318279  18778 1     83955403   155 1   SLEEP msgrcv         WSSSRVT        msgque[340]+0x5c
+318271  18771 1     83955566   155 1   SLEEP msgrcv         WSPSRVT        msgque[335]+0x5c
+318268  18768 1     83955566   155 6   SLEEP msgrcv         WSPSRVT        msgque[335]+0x5c
+318262  18762 1     83955725   155 4   SLEEP msgrcv         WRRSRVT        msgque[330]+0x5c
+318259  18759 1     83955725   155 1   SLEEP msgrcv         WRRSRVT        msgque[330]+0x5c
+318253  18753 1     83955878   155 1   SLEEP msgrcv         WMMSRVT        msgque[325]+0x5c
+318248  18748 1     83955878   155 2   SLEEP msgrcv         WMMSRVT        msgque[325]+0x5c
+318233  18733 1     83956029   155 5   SLEEP msgrcv         WIISRVT        msgque[320]+0x5c
+318238  18738 1     83956029   155 2   SLEEP msgrcv         WIISRVT        msgque[320]+0x5c
+318188  18688 1     83956556   155 5   SLEEP msgrcv         WAASRVT        msgque[304]+0x5c
+318183  18683 1     83956556   155 6   SLEEP msgrcv         WAASRVT        msgque[304]+0x5c
+318148  18648 1     83956811   155 4   SLEEP msgrcv         UTSRVGT        msgque[295]+0x5c
+318159  18659 1     83956811   155 0   SLEEP msgrcv         UTSRVGT        msgque[295]+0x5c
+318138  18638 1     83956965   155 2   SLEEP n/a            TACSRVT        msgque[290]+0x5c
+318131  18631 1     83956965   155 0   SLEEP msgrcv         TACSRVT        msgque[290]+0x5c
+318068  18568 1     83957605   155 2   SLEEP msgrcv         PUASRVT        msgque[264]+0x5c
+318063  18563 1     83957605   155 3   SLEEP msgrcv         PUASRVT        msgque[264]+0x5c
+317996  18498 1     83958091   155 2   SLEEP msgrcv         PRCSRVT        msgque[254]+0x5c
+318003  18504 1     83958091   155 3   SLEEP msgrcv         PRCSRVT        msgque[254]+0x5c
+317986  18488 1     83958257   155 3   SLEEP msgrcv         PRASRVT        msgque[248]+0x5c
+317981  18483 1     83958257   155 6   SLEEP msgrcv         PRASRVT        msgque[248]+0x5c
+317974  18476 1     83958361   155 1   SLEEP msgrcv         PQUSRVT        msgque[245]+0x5c
+317969  18471 1     83958361   155 0   SLEEP msgrcv         PQUSRVT        msgque[245]+0x5c
+317957  18459 1     83958465   155 2   SLEEP msgrcv         POASRVT6       msgque[242]+0x5c
+317962  18464 1     83958465   155 0   SLEEP msgrcv         POASRVT6       msgque[242]+0x5c
+317952  18454 1     83958570   155 4   SLEEP msgrcv         POASRVT5       msgque[239]+0x5c
+317947  18449 1     83958570   155 5   SLEEP msgrcv         POASRVT5       msgque[239]+0x5c
+317942  18442 1     83958666   155 6   SLEEP msgrcv         POASRVT4       msgque[236]+0x5c
+317936  18436 1     83958666   155 0   SLEEP msgrcv         POASRVT4       msgque[236]+0x5c
+317926  18425 1     83958777   155 0   SLEEP msgrcv         POASRVT3       msgque[233]+0x5c
+317931  18431 1     83958777   155 4   SLEEP msgrcv         POASRVT3       msgque[233]+0x5c
+317916  18415 1     83958880   155 5   SLEEP msgrcv         POASRVT2       msgque[230]+0x5c
+317921  18420 1     83958880   155 6   SLEEP msgrcv         POASRVT2       msgque[230]+0x5c
+317911  18410 1     83958982   155 3   SLEEP msgrcv         POASRVT1       msgque[227]+0x5c
+317906  18405 1     83958982   155 4   SLEEP msgrcv         POASRVT1       msgque[227]+0x5c
+317861  18357 1     83959189   155 5   SLEEP msgrcv         PMASRVT        msgque[222]+0x5c
+317867  18363 1     83959189   155 3   SLEEP msgrcv         PMASRVT        msgque[222]+0x5c
+317848  18344 1     83959342   155 4   SLEEP msgrcv         PLCSRVT        msgque[214]+0x5c
+317843  18339 1     83959342   155 3   SLEEP msgrcv         PLCSRVT        msgque[214]+0x5c
+318425  18919 1     83959548   155 6   SLEEP msgrcv         DMADM          msgque[384]+0x5c
+317814  18310 1     83959625   155 2   SLEEP msgrcv         PGMSRVT        msgque[208]+0x5c
+317809  18305 1     83959625   155 6   SLEEP msgrcv         PGMSRVT        msgque[208]+0x5c
+317794  18290 1     83959730   155 4   SLEEP msgrcv         PEASRVT        msgque[205]+0x5c
+317799  18295 1     83959730   155 6   SLEEP msgrcv         PEASRVT        msgque[205]+0x5c
+317782  18278 1     83959833   155 2   SLEEP msgrcv         PDRSRVT        msgque[200]+0x5c
+317787  18283 1     83959833   155 4   SLEEP msgrcv         PDRSRVT        msgque[200]+0x5c
+317754  18250 1     83960128   155 4   SLEEP msgrcv         PADSRVT        msgque[194]+0x5c
+317749  18244 1     83960128   155 6   SLEEP msgrcv         PADSRVT        msgque[194]+0x5c
+317737  18232 1     83960230   155 2   SLEEP msgrcv         PACSRVT        msgque[191]+0x5c
+317742  18237 1     83960230   155 5   SLEEP msgrcv         PACSRVT        msgque[191]+0x5c
+318413  18912 1     83960292   154 4   SLEEP read           oracle         STREAM 0xb959f440
+317725  18220 1     83960340   155 4   SLEEP msgrcv         NIGSRVT        msgque[189]+0x5c
+318406  18905 1     83960340   154 5   SLEEP read           oracle         STREAM 0xb94cd400
+317720  18215 1     83960340   155 5   SLEEP msgrcv         NIGSRVT        msgque[189]+0x5c
+318344  18843 1     83960745   154 5   SLEEP read           oracle         STREAM 0xb94cf0c0
+317673  18169 1     83960765   155 4   SLEEP msgrcv         JVPSRVT3       msgque[174]+0x5c
+317668  18164 1     83960765   155 3   SLEEP msgrcv         JVPSRVT3       msgque[174]+0x5c
+318339  18838 1     83960797   154 4   SLEEP read           oracle         STREAM 0x9a244c00
+318329  18828 1     83960848   154 0   SLEEP read           oracle         STREAM 0xb948f040
+318324  18823 1     83960894   154 5   SLEEP read           oracle         STREAM 0xb90c87c0
+318310  18809 1     83960998   155 5   SLEEP msgrcv         WXXSRVGI       msgque[354]+0x5c
+318312  18811 1     83960998   154 6   SLEEP read           oracle         STREAM 0xb9361c00
+318302  18801 1     83961100   154 4   SLEEP read           oracle         STREAM 0x85d570c0
+318297  18796 1     83961155   155 2   SLEEP msgrcv         WUUSRVI        msgque[349]+0x5c
+318295  18794 1     83961258   154 4   SLEEP read           oracle         STREAM 0xb9361840
+318286  18785 1     83961308   155 1   SLEEP msgrcv         WTGSRVI        msgque[345]+0x5c
+318290  18789 1     83961309   154 5   SLEEP read           oracle         STREAM 0xb92d2880
+317632  18129 1     83961309   155 1   SLEEP msgrcv         JVPSRVGT       msgque[160]+0x5c
+317629  18126 1     83961309   155 5   SLEEP msgrcv         JVPSRVGT       msgque[160]+0x5c
+318285  18784 1     83961357   155 3   SLEEP msgrcv         WSSSRVGI       msgque[342]+0x5c
+318281  18780 1     83961458   154 5   SLEEP read           oracle         STREAM 0xb93284c0
+318274  18774 1     83961512   155 2   SLEEP msgrcv         WSSSRVI        msgque[337]+0x5c
+317608  18104 1     83961570   155 4   SLEEP msgrcv         JMQSRVT        msgque[151]+0x5c
+317609  18105 1     83961570   155 6   SLEEP msgrcv         JMQSRVT        msgque[151]+0x5c
+318270  18770 1     83961619   154 5   SLEEP read           oracle         STREAM 0xb92d6100
+318265  18765 1     83961673   155 5   SLEEP msgrcv         WSPSRVI        msgque[332]+0x5c
+318267  18767 1     83961674   154 6   SLEEP read           oracle         STREAM 0x987934c0
+317583  18079 1     83961828   155 6   SLEEP msgrcv         JHQSRVT3       msgque[142]+0x5c
+317588  18084 1     83961828   155 1   SLEEP msgrcv         JHQSRVT3       msgque[142]+0x5c
+318256  18756 1     83961831   155 5   SLEEP msgrcv         WRRSRVI        msgque[327]+0x5c
+318255  18755 1     83961880   154 1   SLEEP read           oracle         STREAM 0xb9226bc0
+318252  18752 1     83961931   154 3   SLEEP read           oracle         STREAM 0xb9285480
+318243  18743 1     83961982   155 5   SLEEP msgrcv         WMMSRVI        msgque[322]+0x5c
+318247  18747 1     83961983   154 4   SLEEP read           oracle         STREAM 0xb92850c0
+318242  18742 1     83962031   154 2   SLEEP read           oracle         STREAM 0xb9217b80
+318237  18737 1     83962076   154 3   SLEEP read           oracle         STREAM 0xb924b480
+318232  18732 1     83962128   154 6   SLEEP read           oracle         STREAM 0xb91e3bc0
+318228  18728 1     83962128   155 4   SLEEP msgrcv         WIISRVI        msgque[317]+0x5c
+317487  17983 1     83962478   155 6   SLEEP msgrcv         IQMSRVT        msgque[122]+0x5c
+317482  17978 1     83962478   155 1   SLEEP msgrcv         IQMSRVT        msgque[122]+0x5c
+318197  18697 1     83962505   154 6   SLEEP read           oracle         STREAM 0xb91994c0
+318193  18693 1     83962505   155 4   SLEEP msgrcv         WBISRVI        msgque[306]+0x5c
+318192  18692 1     83962558   154 6   SLEEP read           oracle         STREAM 0xb91a9040
+318187  18687 1     83962608   154 2   SLEEP read           oracle         STREAM 0xb90f57c0
+317388  17884 1     83962652   155 4   SLEEP msgrcv         IBCSRVT        msgque[120]+0x5c
+317383  17879 1     83962652   155 3   SLEEP msgrcv         IBCSRVT        msgque[120]+0x5c
+318178  18678 1     83962658   155 6   SLEEP msgrcv         WAASRVI        msgque[302]+0x5c
+318182  18682 1     83962658   154 0   SLEEP read           oracle         STREAM 0xb912d840
+318174  18674 1     83962718   154 6   SLEEP read           oracle         STREAM 0x890ac840
+318170  18670 1     83962718   155 5   SLEEP msgrcv         UTSRVT         msgque[300]+0x5c
+317368  17864 1     83962789   155 1   SLEEP msgrcv         IBBSRVGT       msgque[114]+0x5c
+317373  17869 1     83962789   155 3   SLEEP msgrcv         IBBSRVGT       msgque[114]+0x5c
+318164  18664 1     83962812   154 5   SLEEP read           oracle         STREAM 0x890acc00
+318158  18658 1     83962867   154 4   SLEEP read           oracle         STREAM 0xb90f5400
+317357  17853 1     83962878   155 4   SLEEP msgrcv         IBBSRVT        msgque[112]+0x5c
+318142  18642 1     83962967   154 3   SLEEP read           oracle         STREAM 0xb910dc00
+318137  18637 1     83963011   154 5   SLEEP read           oracle         STREAM 0xb90e6b80
+318126  18626 1     83963070   155 1   SLEEP msgrcv         TACSRVI4       msgque[288]+0x5c
+318130  18630 1     83963070   154 6   SLEEP read           oracle         STREAM 0x9aba9100
+318121  18621 1     83963124   155 6   SLEEP msgrcv         TACSRVI3       msgque[286]+0x5c
+318125  18625 1     83963124   154 5   SLEEP read           oracle         STREAM 0xb8fbcbc0
+317267  17763 1     83963176   155 2   SLEEP msgrcv         BRMSRVT        msgque[103]+0x5c
+318116  18616 1     83963176   155 2   SLEEP msgrcv         TACSRVI2       msgque[284]+0x5c
+317272  17768 1     83963176   155 2   SLEEP msgrcv         BRMSRVT        msgque[103]+0x5c
+318120  18620 1     83963176   154 5   SLEEP read           oracle         STREAM 0xb910d0c0
+318115  18615 1     83963240   154 4   SLEEP read           oracle         STREAM 0x9a22c840
+318111  18611 1     83963240   155 2   SLEEP msgrcv         TACSRVI1       msgque[282]+0x5c
+317256  17752 1     83963291   155 2   SLEEP msgrcv         BRISRVT        msgque[101]+0x5c
+317261  17757 1     83963291   155 1   SLEEP msgrcv         BRISRVT        msgque[101]+0x5c
+318098  18598 1     83963297   155 6   SLEEP msgrcv         QIASRVI6       msgque[280]+0x5c
+318102  18602 1     83963297   154 2   SLEEP read           oracle         STREAM 0xb90b8c40
+318093  18593 1     83963348   155 1   SLEEP msgrcv         QIASRVI5       msgque[278]+0x5c
+318097  18597 1     83963348   154 4   SLEEP read           oracle         STREAM 0xb8fbc440
+318092  18592 1     83963400   154 5   SLEEP read           oracle         STREAM 0xb90db100
+318088  18588 1     83963400   155 5   SLEEP msgrcv         QIASRVI4       msgque[276]+0x5c
+317246  17742 1     83963442   155 6   SLEEP msgrcv         BRCSRVT        msgque[96]+0x5c
+317241  17737 1     83963442   155 5   SLEEP msgrcv         BRCSRVT        msgque[96]+0x5c
+318083  18583 1     83963447   155 5   SLEEP msgrcv         QIASRVI3       msgque[274]+0x5c
+318087  18587 1     83963447   154 6   SLEEP read           oracle         STREAM 0x85dcc7c0
+318082  18582 1     83963499   154 5   SLEEP read           oracle         STREAM 0xb8fbc080
+318078  18578 1     83963499   155 6   SLEEP msgrcv         QIASRVI2       msgque[272]+0x5c
+318073  18573 1     83963552   155 2   SLEEP msgrcv         QIASRVI1       msgque[269]+0x5c
+318077  18577 1     83963552   154 6   SLEEP read           oracle         STREAM 0x7fdbc100
+317222  17720 1     83963591   155 0   SLEEP msgrcv         BOMSRVT        msgque[91]+0x5c
+317227  17725 1     83963591   155 3   SLEEP msgrcv         BOMSRVT        msgque[91]+0x5c
+318072  18572 1     83963607   154 3   SLEEP read           oracle         STREAM 0x885fc400
+318067  18567 1     83963650   154 2   SLEEP read           oracle         STREAM 0xb90b84c0
+318060  18560 1     83963711   154 3   SLEEP read           oracle         STREAM 0xb9095400
+317207  17705 1     83963740   155 4   SLEEP msgrcv         BMSSRVT        msgque[86]+0x5c
+317212  17710 1     83963740   155 2   SLEEP msgrcv         BMSSRVT        msgque[86]+0x5c
+318046  18547 1     83963759   154 5   SLEEP read           oracle         STREAM 0x982d6840
+318041  18542 1     83963807   154 6   SLEEP read           oracle         STREAM 0x98baec40
+318036  18537 1     83963851   154 2   SLEEP read           oracle         STREAM 0xb9098c00
+318029  18530 1     83963900   154 3   SLEEP read           oracle         STREAM 0x929b4bc0
+318024  18525 1     83963946   154 2   SLEEP read           oracle         STREAM 0xb9098840
+318019  18520 1     83963993   154 0   SLEEP read           oracle         STREAM 0x8884c440
+317172  17670 1     83964019   155 3   SLEEP msgrcv         BLOSRVT        msgque[75]+0x5c
+317181  17679 1     83964019   155 4   SLEEP msgrcv         BLOSRVT        msgque[75]+0x5c
+318014  18515 1     83964039   154 4   SLEEP read           oracle         STREAM 0xb9098480
+318007  18508 1     83964092   154 0   SLEEP read           oracle         STREAM 0x7f8a14c0
+318001  18503 1     83964152   154 5   SLEEP read           oracle         STREAM 0x9a25dbc0
+317991  18493 1     83964202   155 0   SLEEP msgrcv         PRCSRVI        msgque[251]+0x5c
+317995  18497 1     83964203   154 5   SLEEP read           oracle         STREAM 0x79c69840
+317155  17653 1     83964214   155 1   SLEEP msgrcv         BLMSRVT        msgque[68]+0x5c
+317150  17648 1     83964214   155 2   SLEEP msgrcv         BLMSRVT        msgque[68]+0x5c
+317990  18492 1     83964258   154 6   SLEEP read           oracle         STREAM 0x9a25d440
+317985  18487 1     83964309   154 0   SLEEP read           oracle         STREAM 0xb905d100
+317978  18480 1     83964363   154 5   SLEEP read           oracle         STREAM 0x99f62c40
+317973  18475 1     83964414   154 5   SLEEP read           oracle         STREAM 0x92987100
+317966  18468 1     83964467   154 2   SLEEP read           oracle         STREAM 0x9a25d800
+317961  18463 1     83964516   154 0   SLEEP read           oracle         STREAM 0x996d1840
+317956  18458 1     83964572   154 1   SLEEP read           oracle         STREAM 0x7a1b9480
+317951  18453 1     83964620   154 0   SLEEP read           oracle         STREAM 0x99f58c40
+317110  17608 1     83964657   155 0   SLEEP msgrcv         BIMSRVT        msgque[52]+0x5c
+317105  17603 1     83964657   155 0   SLEEP msgrcv         BIMSRVT        msgque[52]+0x5c
+317946  18447 1     83964667   154 6   SLEEP read           oracle         STREAM 0x9a23b7c0
+317941  18441 1     83964717   154 3   SLEEP read           oracle         STREAM 0x9a23b040
+317935  18435 1     83964778   154 1   SLEEP read           oracle         STREAM 0x98982b80
+317930  18430 1     83964826   154 5   SLEEP read           oracle         STREAM 0x888e5840
+317090  0     0     83964849   155 3   SLEEP msgrcv                        msgque[44]+0x5c
+317085  17583 1     83964849   155 0   SLEEP msgrcv         BIASRVT        msgque[44]+0x5c
+317925  18424 1     83964882   154 4   SLEEP read           oracle         STREAM 0x93ac8880
+317920  18419 1     83964933   154 0   SLEEP read           oracle         STREAM 0x85ec40c0
+317078  17576 1     83964959   155 3   SLEEP msgrcv         BGMSRVT2       msgque[41]+0x5c
+317069  17567 1     83964959   155 0   SLEEP msgrcv         BGMSRVT2       msgque[41]+0x5c
+317915  18414 1     83964983   154 5   SLEEP read           oracle         STREAM 0x99f38b80
+317910  18409 1     83965033   154 3   SLEEP read           oracle         STREAM 0x9382d800
+317897  18396 1     83965096   155 4   SLEEP n/a            POASRVI        msgque[224]+0x5c
+317901  18400 1     83965097   154 5   SLEEP read           oracle         STREAM 0x99e72080
+317064  17562 1     83965100   155 1   SLEEP msgrcv         BGMSRVT1       msgque[39]+0x5c
+317059  17557 1     83965100   155 3   SLEEP msgrcv         BGMSRVT1       msgque[39]+0x5c
+317890  18389 1     83965140   154 2   SLEEP read           oracle         STREAM 0x88828800
+317876  18372 1     83965140   155 4   SLEEP msgrcv         POASRVI        msgque[224]+0x5c
+317873  18369 1     83965190   154 5   SLEEP read           oracle         STREAM 0x9382dbc0
+317865  18361 1     83965237   154 0   SLEEP read           oracle         STREAM 0x886b17c0
+317853  18349 1     83965292   155 5   SLEEP msgrcv         PMASRVI        msgque[219]+0x5c
+317860  18356 1     83965292   154 0   SLEEP read           oracle         STREAM 0xb8ad3040
+317852  18348 1     83965343   154 0   SLEEP read           oracle         STREAM 0x935df400
+317847  18343 1     83965390   154 3   SLEEP read           oracle         STREAM 0x99f62880
+317840  18336 1     83965439   154 2   SLEEP read           oracle         STREAM 0x9894ac40
+317835  18331 1     83965487   154 6   SLEEP read           oracle         STREAM 0x930ee440
+317007  17505 1     83965511   155 6   SLEEP msgrcv         BCMSRVT        msgque[24]+0x5c
+317002  17500 1     83965511   155 6   SLEEP msgrcv         BCMSRVT        msgque[24]+0x5c
+317830  18326 1     83965533   154 5   SLEEP read           oracle         STREAM 0x92e53880
+317825  18321 1     83965579   154 6   SLEEP read           oracle         STREAM 0x989eb400
+317818  18314 1     83965627   154 1   SLEEP read           oracle         STREAM 0x99f0a480
+317813  18309 1     83965684   154 2   SLEEP read           oracle         STREAM 0x85e07800
+317806  18302 1     83965732   154 2   SLEEP read           oracle         STREAM 0xb8aeb4c0
+316955  17453 1     83965755   155 5   SLEEP msgrcv         BCISRVT        msgque[15]+0x5c
+316950  17448 1     83965755   155 2   SLEEP msgrcv         BCISRVT        msgque[15]+0x5c
+317798  18294 1     83965781   154 3   SLEEP read           oracle         STREAM 0x938c8880
+317791  18287 1     83965834   154 5   SLEEP read           oracle         STREAM 0x992b94c0
+317786  18282 1     83965881   154 6   SLEEP read           oracle         STREAM 0x99d2e4c0
+316935  17433 1     83965899   155 6   SLEEP msgrcv         BANSRVT        msgque[9]+0x5c
+316940  17438 1     83965899   155 6   SLEEP msgrcv         BANSRVT        msgque[9]+0x5c
+317780  18276 1     83965933   154 5   SLEEP read           oracle         STREAM 0x930a54c0
+317775  18271 1     83965985   154 3   SLEEP read           oracle         STREAM 0x99b917c0
+316925  17423 1     83965989   155 5   SLEEP msgrcv         BAMSRVT2       msgque[6]+0x5c
+316930  17428 1     83965989   155 1   SLEEP msgrcv         BAMSRVT2       msgque[6]+0x5c
+317770  18266 1     83966036   154 1   SLEEP read           oracle         STREAM 0x98250c40
+317765  18261 1     83966081   154 0   SLEEP read           oracle         STREAM 0x929a5b80
+316920  17418 1     83966090   155 1   SLEEP msgrcv         BAMSRVT1       msgque[4]+0x5c
+316915  17413 1     83966090   155 4   SLEEP msgrcv         BAMSRVT1       msgque[4]+0x5c
+317758  18254 1     83966130   154 6   SLEEP read           oracle         STREAM 0x93081480
+317753  18248 1     83966173   154 6   SLEEP read           oracle         STREAM 0x999b37c0
+317746  18241 1     83966232   154 3   SLEEP read           oracle         STREAM 0x93af1c00
+317741  18236 1     83966278   154 3   SLEEP read           oracle         STREAM 0x99f85840
+317729  18224 1     83966342   154 1   SLEEP read           oracle         STREAM 0xb8a6dc00
+317724  18219 1     83966391   154 4   SLEEP read           oracle         STREAM 0x7fdd5c40
+317719  18214 1     83966449   154 3   SLEEP read           oracle         STREAM 0x99d7c800
+317715  18210 1     83966449   155 5   SLEEP msgrcv         NIGSRVI4       msgque[187]+0x5c
+317708  18204 1     83966502   155 0   SLEEP msgrcv         NIGSRVI3       msgque[185]+0x5c
+317714  18209 1     83966502   154 0   SLEEP read           oracle         STREAM 0x937854c0
+317703  18199 1     83966561   155 6   SLEEP msgrcv         NIGSRVI2       msgque[183]+0x5c
+317707  18203 1     83966561   154 4   SLEEP read           oracle         STREAM 0x7c1af480
+317702  18198 1     83966615   154 6   SLEEP read           oracle         STREAM 0x98be0c40
+317698  18194 1     83966615   155 0   SLEEP msgrcv         NIGSRVI1       msgque[180]+0x5c
+317677  18173 1     83966767   154 6   SLEEP read           oracle         STREAM 0x924a5c00
+317672  18168 1     83966815   154 2   SLEEP read           oracle         STREAM 0x793d1b80
+317642  18138 1     83967167   154 3   SLEEP read           oracle         STREAM 0x99ba4080
+317640  18136 1     83967167   155 3   SLEEP msgrcv         JVPSRVI2       msgque[165]+0x5c
+317635  18132 1     83967227   155 1   SLEEP msgrcv         JVPSRVI        msgque[162]+0x5c
+317634  18131 1     83967310   154 6   SLEEP read           oracle         STREAM 0x99ae8b80
+317631  18128 1     83967356   154 1   SLEEP read           oracle         STREAM 0x937af440
+317626  18123 1     83967409   155 2   SLEEP msgrcv         JVPSRVGI       msgque[158]+0x5c
+317623  18120 1     83967461   155 4   SLEEP msgrcv         JUTSRVI        msgque[156]+0x5c
+317614  18111 1     83967516   155 6   SLEEP msgrcv         JMSSRVI        msgque[153]+0x5c
+317620  18117 1     83967516   154 1   SLEEP read           oracle         STREAM 0xb8e624c0
+317613  18109 1     83967572   154 5   SLEEP read           oracle         STREAM 0x92f7bb80
+317603  18099 1     83967672   155 4   SLEEP msgrcv         JMQSRVI        msgque[148]+0x5c
+317607  18103 1     83967672   154 5   SLEEP read           oracle         STREAM 0x92b8c800
+317587  18083 1     83967875   154 5   SLEEP read           oracle         STREAM 0x91ec5bc0
+317491  17987 1     83968480   154 5   SLEEP n/a            oracle         STREAM 0x93ef4440
+317486  17982 1     83968528   154 6   SLEEP read           oracle         STREAM 0x886587c0
+317392  17888 1     83968653   154 4   SLEEP read           oracle         STREAM 0x929057c0
+317387  17883 1     83968698   154 0   SLEEP read           oracle         STREAM 0x79bc6b80
+317382  17878 1     83968744   154 5   SLEEP read           oracle         STREAM 0x98cf80c0
+317378  17874 1     83968744   155 6   SLEEP msgrcv         IBCSRVI        msgque[117]+0x5c
+317377  17873 1     83968791   154 6   SLEEP read           oracle         STREAM 0x99cee480
+317372  17868 1     83968835   154 3   SLEEP read           oracle         STREAM 0x98d15840
+317367  17863 1     83968879   154 3   SLEEP read           oracle         STREAM 0x92b2c840
+317356  17852 1     83968928   154 1   SLEEP read           oracle         STREAM 0x93072800
+317347  17843 1     83968972   155 4   SLEEP msgrcv         IBBSRVI        msgque[109]+0x5c
+317351  17847 1     83968972   154 2   SLEEP read           oracle         STREAM 0x93920b80
+317276  17772 1     83969177   154 4   SLEEP read           oracle         STREAM 0x9333e4c0
+317271  17767 1     83969230   154 6   SLEEP read           oracle         STREAM 0x9333e880
+317265  17761 1     83969292   154 6   SLEEP read           oracle         STREAM 0x9338d880
+317260  17756 1     83969345   154 5   SLEEP read           oracle         STREAM 0x93260880
+317255  17751 1     83969394   154 5   SLEEP read           oracle         STREAM 0x922b9400
+317251  17747 1     83969394   155 6   SLEEP msgrcv         BRISRVI        msgque[98]+0x5c
+317250  17746 1     83969444   154 1   SLEEP read           oracle         STREAM 0x9338dc40
+317245  17741 1     83969492   154 2   SLEEP read           oracle         STREAM 0x7fa80c00
+317240  17736 1     83969543   154 1   SLEEP read           oracle         STREAM 0x91ee97c0
+317233  17731 1     83969543   155 0   SLEEP msgrcv         BRCSRVI        msgque[93]+0x5c
+317231  17729 1     83969593   154 3   SLEEP read           oracle         STREAM 0x982a1b80
+317226  17724 1     83969639   154 2   SLEEP read           oracle         STREAM 0x98082480
+317221  17719 1     83969684   154 6   SLEEP read           oracle         STREAM 0x92d02c00
+317216  17714 1     83969742   154 3   SLEEP read           oracle         STREAM 0x9324f040
+317211  17709 1     83969785   154 5   SLEEP read           oracle         STREAM 0x99e33480
+317190  17688 1     83969976   154 1   SLEEP read           oracle         STREAM 0x93d60880
+317186  17684 1     83969976   155 1   SLEEP msgrcv         BLQSRVI        msgque[77]+0x5c
+317185  17683 1     83970020   154 4   SLEEP read           oracle         STREAM 0x932a4840
+317178  17676 1     83970071   154 6   SLEEP read           oracle         STREAM 0x92c960c0
+317171  17669 1     83970124   154 5   SLEEP read           oracle         STREAM 0x93e8db80
+317167  17665 1     83970124   155 0   SLEEP msgrcv         BLOSRVI        msgque[73]+0x5c
+317159  17657 1     83970215   154 5   SLEEP read           oracle         STREAM 0x99f38400
+317154  17652 1     83970266   154 6   SLEEP read           oracle         STREAM 0x924e7400
+317149  17647 1     83970317   154 4   SLEEP read           oracle         STREAM 0x92c99100
+317145  17643 1     83970317   155 5   SLEEP msgrcv         BLMSRVI        msgque[65]+0x5c
+317144  17642 1     83970369   154 3   SLEEP read           oracle         STREAM 0x92c0e080
+317139  17637 1     83970417   154 6   SLEEP read           oracle         STREAM 0x939a6880
+317130  17628 1     83970469   155 5   SLEEP msgrcv         BLISRVI        msgque[61]+0x5c
+317134  17632 1     83970469   154 6   SLEEP read           oracle         STREAM 0x923f2c40
+317119  17617 1     83970608   154 6   SLEEP read           oracle         STREAM 0x99261c40
+317115  17613 1     83970608   155 4   SLEEP msgrcv         BIMSRVI1       msgque[54]+0x5c
+317114  17612 1     83970659   154 6   SLEEP read           oracle         STREAM 0x930a5880
+317109  17607 1     83970704   154 4   SLEEP read           oracle         STREAM 0x890ac0c0
+317104  17602 1     83970751   154 1   SLEEP read           oracle         STREAM 0x9361cc00
+317100  17598 1     83970751   155 4   SLEEP msgrcv         BIASRVI2       msgque[50]+0x5c
+317095  17593 1     83970804   155 5   SLEEP n/a            BIASRVI1       msgque[47]+0x5c
+317099  17597 1     83970805   154 6   SLEEP read           oracle         STREAM 0x92ad3040
+317094  17592 1     83970851   154 5   SLEEP read           oracle         STREAM 0x922c9c00
+317089  17587 1     83970905   154 4   SLEEP read           oracle         STREAM 0x922c9480
+317082  17580 1     83970960   154 6   SLEEP read           oracle         STREAM 0x922c90c0
+317077  17575 1     83971010   154 4   SLEEP read           oracle         STREAM 0x9844a080
+317068  17566 1     83971102   154 1   SLEEP read           oracle         STREAM 0x9377c440
+317063  17561 1     83971146   154 2   SLEEP read           oracle         STREAM 0x93785100
+317031  17529 1     83971312   154 4   SLEEP read           oracle         STREAM 0x92b2c0c0
+317027  17525 1     83971312   155 3   SLEEP msgrcv         BCMSRVI4       msgque[33]+0x5c
+317022  17520 1     83971363   155 6   SLEEP msgrcv         BCMSRVI3       msgque[31]+0x5c
+317026  17524 1     83971363   154 6   SLEEP read           oracle         STREAM 0x9338d100
+317021  17519 1     83971412   154 0   SLEEP read           oracle         STREAM 0x939a6c40
+317017  17515 1     83971412   155 6   SLEEP msgrcv         BCMSRVI2       msgque[29]+0x5c
+317012  17510 1     83971465   155 1   SLEEP msgrcv         BCMSRVI1       msgque[26]+0x5c
+317016  17514 1     83971465   154 1   SLEEP read           oracle         STREAM 0x92e22c40
+317011  17509 1     83971512   154 3   SLEEP read           oracle         STREAM 0x99749480
+317006  17504 1     83971556   154 6   SLEEP read           oracle         STREAM 0x99f38040
+316997  17495 1     83971607   155 5   SLEEP msgrcv         BCISRVGI       msgque[22]+0x5c
+317001  17499 1     83971607   154 4   SLEEP read           oracle         STREAM 0x932a4c00
+316972  17470 1     83971656   155 6   SLEEP msgrcv         BCISRVI2       msgque[20]+0x5c
+316996  17494 1     83971656   154 2   SLEEP read           oracle         STREAM 0x93021040
+316960  17458 1     83971708   155 4   SLEEP msgrcv         BCISRVI1       msgque[17]+0x5c
+316964  17462 1     83971708   154 2   SLEEP read           oracle         STREAM 0x9209d480
+316959  17457 1     83971756   154 0   SLEEP read           oracle         STREAM 0x92fd6080
+316954  0     0     83971800   154 3   SLEEP read                          STREAM 0x986ea880
+316949  17447 1     83971852   154 0   SLEEP read           oracle         STREAM 0x98aad800
+316945  17443 1     83971852   155 1   SLEEP msgrcv         BANSRVI        msgque[12]+0x5c
+316944  17442 1     83971900   154 3   SLEEP read           oracle         STREAM 0x9256a440
+316939  17437 1     83971942   154 3   SLEEP read           oracle         STREAM 0x936fcc00
+316934  17432 1     83971990   154 0   SLEEP read           oracle         STREAM 0x923f7880
+316929  17427 1     83972033   154 1   SLEEP read           oracle         STREAM 0x930e9840
+316924  17422 1     83972091   154 6   SLEEP read           oracle         STREAM 0x92b8c080
+316919  17417 1     83972136   154 2   SLEEP read           oracle         STREAM 0x92ad37c0
+3170    2961  1     84138885   154 2   SLEEP select         cmclconfd      per_processor_selects+0x80
+3177    2968  2966  84149623   20  0   SLEEP select         cmlvmd         per_processor_selects
+308500  9223  1     84167980   154 1   SLEEP read           oracle         STREAM 0x92905b80
+307645  8393  1     84195009   154 1   SLEEP read           oracle         STREAM 0x98b0a0c0
+307641  8389  1     84195077   154 4   SLEEP read           oracle         STREAM 0x988927c0
+4009    3634  0     84195555   20  1   SLEEP n/a            slvm_sorcvd    hpstreams_read_int(0x7f851ca8)
+307613  8362  1     84195663   154 0   SLEEP read           oracle         STREAM 0x99e61b80
+307609  8358  1     84195746   154 3   SLEEP read           oracle         STREAM 0x99af2c40
+307605  8354  1     84195816   154 0   SLEEP read           oracle         STREAM 0x99eb9080
+307601  8350  1     84195888   154 6   SLEEP read           oracle         STREAM 0x99023040
+307597  8346  1     84195955   154 4   SLEEP read           oracle         STREAM 0x99c210c0
+307593  8342  1     84196032   154 0   SLEEP read           oracle         STREAM 0x98503040
+307585  8334  1     84196191   154 5   SLEEP read           oracle         STREAM 0x93e29c00
+307577  8326  1     84196324   154 5   SLEEP read           oracle         STREAM 0x999a2440
+307573  8322  1     84196392   154 3   SLEEP read           oracle         STREAM 0x98564bc0
+3213    2991  2966  84196421   154 4   SLEEP select         cmtaped        per_processor_selects+0x100
+307567  8316  1     84196466   154 3   SLEEP read           oracle         STREAM 0x98503400
+307559  8308  1     84196611   154 6   SLEEP read           oracle         STREAM 0x998374c0
+307545  8294  1     84196811   154 1   SLEEP read           oracle         STREAM 0x99749840
+307537  8286  1     84196948   154 0   SLEEP read           oracle         STREAM 0x999a77c0
+307526  8275  1     84197084   154 0   SLEEP read           oracle         STREAM 0x88658400
+307522  8271  1     84197148   154 5   SLEEP read           oracle         STREAM 0x923f2880
+307506  8256  1     84197307   154 6   SLEEP read           oracle         STREAM 0x88658040
+307502  8252  1     84197377   154 6   SLEEP read           oracle         STREAM 0x99682c00
+307498  8248  1     84197435   154 4   SLEEP read           oracle         STREAM 0x99212b80
+307478  8230  1     84197704   154 6   SLEEP read           oracle         STREAM 0x98cbbbc0
+307472  8226  1     84197768   154 6   SLEEP read           oracle         STREAM 0x98d56440
+307468  8222  1     84197856   154 3   SLEEP read           oracle         STREAM 0x98ec14c0
+307456  8210  1     84198064   154 1   SLEEP read           oracle         STREAM 0x798e7080
+307452  8206  1     84198141   154 2   SLEEP read           oracle         STREAM 0x78fe97c0
+307444  8198  1     84198287   154 4   SLEEP read           oracle         STREAM 0x98aad080
+307440  8194  1     84198349   154 5   SLEEP read           oracle         STREAM 0x98cbb080
+307432  8186  1     84198493   154 0   SLEEP read           oracle         STREAM 0x98d150c0
+307416  8170  1     84198773   154 4   SLEEP read           oracle         STREAM 0x9a07ec40
+307409  8163  1     84198840   154 3   SLEEP read           oracle         STREAM 0x99a3b080
+307405  0     0     84198916   154 2   SLEEP read                          STREAM 0x99842880
+307385  8139  1     84199290   154 2   SLEEP read           oracle         STREAM 0x9944bbc0
+307369  8122  1     84199584   154 4   SLEEP read           oracle         STREAM 0x98190bc0
+307357  8110  1     84199811   154 2   SLEEP read           oracle         STREAM 0x98a92bc0
+307353  8106  1     84199873   154 0   SLEEP read           oracle         STREAM 0x989ebb80
+307349  8102  1     84199938   154 2   SLEEP read           oracle         STREAM 0x98a92800
+307325  8078  1     84200322   154 4   SLEEP read           oracle         STREAM 0x93e29840
+307313  8066  1     84200529   154 0   SLEEP read           oracle         STREAM 0x9961c800
+307286  8044  1     84200860   154 4   SLEEP read           oracle         STREAM 0x9888f800
+307282  8040  1     84200928   154 5   SLEEP read           oracle         STREAM 0x9888fbc0
+307270  8028  1     84201116   154 2   SLEEP read           oracle         STREAM 0x93c437c0
+307258  8016  1     84201337   154 0   SLEEP read           oracle         STREAM 0x793e3040
+307250  8007  1     84201484   154 0   SLEEP read           oracle         STREAM 0x93ef4800
+307244  8002  1     84201559   154 2   SLEEP read           oracle         STREAM 0x9844a800
+307220  7955  1     84201925   154 6   SLEEP read           oracle         STREAM 0x98276480
+307216  7950  1     84201983   154 1   SLEEP read           oracle         STREAM 0x98276c00
+307212  7946  1     84202042   154 2   SLEEP read           oracle         STREAM 0x98122400
+307208  7942  1     84202214   154 4   SLEEP read           oracle         STREAM 0x981227c0
+307147  7881  1     84203225   154 0   SLEEP read           oracle         STREAM 0x98082c00
+307117  7851  1     84203690   154 0   SLEEP read           oracle         STREAM 0x9819f440
+307096  7831  1     84203919   154 6   SLEEP read           oracle         STREAM 0x93ac4b80
+307078  7814  1     84204248   154 5   SLEEP read           oracle         STREAM 0x93c68440
+307074  7810  1     84204313   154 0   SLEEP read           oracle         STREAM 0x99a54bc0
+307070  7806  1     84204385   154 1   SLEEP read           oracle         STREAM 0x996940c0
+307066  7802  1     84204451   154 1   SLEEP read           oracle         STREAM 0x998cab80
+307062  7798  1     84204529   154 1   SLEEP read           oracle         STREAM 0x93fd7c00
+307003  7739  1     84205067   154 2   SLEEP read           oracle         STREAM 0x92ad3400
+306999  7735  1     84205160   154 6   SLEEP read           oracle         STREAM 0x92c99880
+306995  7731  1     84205225   154 1   SLEEP read           oracle         STREAM 0x93329800
+306991  7727  1     84205283   154 1   SLEEP read           oracle         STREAM 0x939a64c0
+306959  7695  1     84205412   154 1   SLEEP read           oracle         STREAM 0x98d78c00
+306955  7691  1     84205470   154 3   SLEEP read           oracle         STREAM 0x9880e080
+306910  7646  1     84206078   154 3   SLEEP read           oracle         STREAM 0x984dd100
+306890  7626  1     84206447   154 3   SLEEP read           oracle         STREAM 0x98ea7400
+306886  7622  1     84206503   154 3   SLEEP read           oracle         STREAM 0x92e32040
+306861  7598  1     84206819   154 4   SLEEP read           oracle         STREAM 0x92ab7bc0
+306857  7594  1     84206879   154 0   SLEEP read           oracle         STREAM 0x93e8d040
+306837  7574  1     84207217   154 3   SLEEP read           oracle         STREAM 0x9347b4c0
+306833  7570  1     84207275   154 4   SLEEP read           oracle         STREAM 0x93655440
+306821  7558  1     84207465   154 4   SLEEP read           oracle         STREAM 0x7f9f5480
+4047    3668  1     84300878   154 4   SLEEP select         cmclconfd      per_processor_selects+0x100
+725     664   1     84374316   127 0   SLEEP read           nktl_daemon    netdiag_ques+0x44
+737     674   1     84374316   127 5   SLEEP semop          ntl_reader     sema[2][1]+0x4
+302468  3557  3555  84389476   154 0   SLEEP read           chk_auto_up    STREAM 0x925f4040
+274064  4495  4493  84390958   154 5   SLEEP read           sqlplus        STREAM 0x933c0440
+303228  4253  4247  84392278   154 3   SLEEP read           xum183n        STREAM 0x93f06bc0
+2368660 10629 10624 84410788   154 1   SLEEP n/a            dbsnmp         ksleep(0x9bc473c0)
+302466  3555  1     84471371   158 5   SLEEP waitpid        sh             wait1(0x992a7040)
+301606  2684  24381 84489029   154 4   SLEEP n/a            ycm330x        STREAM 0x92ac7bc0
+293563  24381 24248 84489066   158 2   SLEEP waitpid        sh             wait1(0x98df3040)
+259585  19722 19721 84491899   154 1   SLEEP read           sqlplus        STREAM 0x93072440
+297478  28324 28320 84492414   154 3   SLEEP read           chk_auto_up    STREAM 0x933ccb80
+297474  28320 1     84492446   158 2   SLEEP waitpid        sh             wait1(0x99494040)
+258346  18448 18446 84492753   154 0   SLEEP read           sqlplus        STREAM 0x92d0a880
+295100  25924 25921 84494665   154 0   SLEEP read           sqlplus        STREAM 0x98ba4880
+295097  25921 25904 84494696   158 2   SLEEP waitpid        sh             wait1(0x9995d040)
+295080  25904 25868 84494698   158 4   SLEEP waitpid        jut200x        wait1(0x9836f040)
+295044  25868 25866 84494727   158 3   SLEEP waitpid        jut200x.sh     wait1(0x93922040)
+295042  25866 25865 84494768   158 5   SLEEP waitpid        sh             wait1(0x99368040)
+295041  25865 25712 84494770   158 5   SLEEP wait           time           wait1(0x991a2040)
+294887  25712 25553 84494771   158 2   SLEEP waitpid        sh             wait1(0x93422040)
+294728  25553 6394  84494942   158 3   SLEEP waitpid        auto_remote    wait1(0x93c0b040)
+293431  24248 6394  84497005   158 0   SLEEP waitpid        auto_remote    wait1(0x984ab040)
+290870  21676 21674 84501118   154 4   SLEEP read           sqlplus        STREAM 0x85ebbc40
+290868  21674 21657 84501142   158 5   SLEEP waitpid        sh             wait1(0x9920b040)
+290851  21657 21619 84501144   158 1   SLEEP waitpid        jut200x        wait1(0x98ec4040)
+290813  21619 21617 84501174   158 1   SLEEP waitpid        jut200x.sh     wait1(0x990b3040)
+290811  21617 21616 84501216   158 4   SLEEP waitpid        sh             wait1(0x99068040)
+290810  21616 21493 84501217   158 1   SLEEP wait           time           wait1(0x98ec6040)
+290687  21493 21370 84501219   158 0   SLEEP waitpid        sh             wait1(0x98f3e040)
+290567  21370 6394  84501376   158 1   SLEEP waitpid        auto_remote    wait1(0x98f11040)
+289856  20654 20652 84502748   154 6   SLEEP read           sqlplus        STREAM 0x93329440
+289854  20652 20635 84502776   158 3   SLEEP waitpid        sh             wait1(0x98cfc040)
+289837  20635 20591 84502778   158 3   SLEEP waitpid        jut200x        wait1(0x7a0f1040)
+289793  20591 20589 84502805   158 5   SLEEP waitpid        jut200x.sh     wait1(0x98571040)
+289791  20589 20587 84502856   158 4   SLEEP waitpid        sh             wait1(0x98e4a040)
+289789  20587 20446 84502857   158 4   SLEEP wait           time           wait1(0x989e6040)
+289658  20446 20303 84502858   158 3   SLEEP waitpid        sh             wait1(0x939f6040)
+289529  20303 6394  84503018   158 3   SLEEP waitpid        auto_remote    wait1(0x98e92040)
+285299  15950 15948 84509706   154 3   SLEEP read           sqlplus        STREAM 0x92595c00
+285297  15948 15931 84509734   158 0   SLEEP waitpid        sh             wait1(0x991b8040)
+285279  15931 15886 84509737   158 6   SLEEP waitpid        jut200x        wait1(0x98cc0040)
+285235  15886 15884 84509763   158 3   SLEEP waitpid        jut200x.sh     wait1(0x792d9040)
+285233  15884 15882 84509812   158 2   SLEEP waitpid        sh             wait1(0x98ffb040)
+285231  15882 15703 84509814   158 0   SLEEP wait           time           wait1(0x99006040)
+285057  15703 15559 84509815   158 6   SLEEP waitpid        sh             wait1(0x99041040)
+284917  15559 6394  84509976   158 4   SLEEP waitpid        auto_remote    wait1(0x99756040)
+283551  14160 14158 84512344   154 4   SLEEP read           sqlplus        STREAM 0x93b78bc0
+283549  14158 14133 84512380   158 3   SLEEP waitpid        sh             wait1(0x98ad6040)
+283525  14133 14089 84512382   158 1   SLEEP waitpid        jut200x        wait1(0x98cdb040)
+283482  14089 14087 84512419   158 5   SLEEP waitpid        jut200x.sh     wait1(0x9a1a8040)
+283480  14087 14085 84512466   158 3   SLEEP waitpid        sh             wait1(0x98bda040)
+283478  14085 13939 84512468   158 3   SLEEP n/a            time           wait1(0x98cea040)
+283334  13939 13793 84512470   158 3   SLEEP waitpid        sh             wait1(0x98c24040)
+283191  13793 6394  84512645   158 5   SLEEP waitpid        auto_remote    wait1(0x98d1a040)
+281797  12359 12358 84515097   154 1   SLEEP read           sqlplus        STREAM 0x98da70c0
+281796  12358 12338 84515124   158 6   SLEEP waitpid        sh             wait1(0x985a6040)
+281777  12338 12286 84515126   158 6   SLEEP waitpid        jut200x        wait1(0x987a7040)
+281728  12286 12285 84515156   158 0   SLEEP n/a            jut200x.sh     wait1(0x925aa040)
+281727  12285 12283 84515213   158 5   SLEEP waitpid        sh             wait1(0x9a325040)
+281725  12283 12157 84515214   158 1   SLEEP wait           time           wait1(0x98b66040)
+281603  12157 12019 84515215   158 5   SLEEP waitpid        sh             wait1(0x98566040)
+281471  12019 6394  84515373   158 2   SLEEP waitpid        auto_remote    wait1(0x98bc5040)
+280001  10529 10527 84517975   154 4   SLEEP read           sqlplus        STREAM 0x9361ec00
+279999  10527 10511 84518003   158 0   SLEEP waitpid        sh             wait1(0x93ce3040)
+279983  10511 10471 84518005   158 5   SLEEP waitpid        jut200x        wait1(0x99203040)
+279943  10471 10470 84518031   158 3   SLEEP waitpid        jut200x.sh     wait1(0x98785040)
+279942  10470 10468 84518078   158 2   SLEEP waitpid        sh             wait1(0x9312a040)
+279940  10468 10337 84518079   158 5   SLEEP wait           time           wait1(0x934ef040)
+279811  10337 10152 84518081   158 2   SLEEP waitpid        sh             wait1(0x780ac040)
+279626  10152 6394  84518242   158 6   SLEEP waitpid        auto_remote    wait1(0x92919040)
+278859  9386  9384  84519591   154 4   SLEEP read           sqlplus        STREAM 0x98b18c00
+278857  9384  9350  84519629   158 6   SLEEP waitpid        sh             wait1(0x99920040)
+278823  9350  9306  84519631   158 1   SLEEP waitpid        jut200x        wait1(0x93d0d040)
+278779  9306  9304  84519686   158 5   SLEEP waitpid        jut200x.sh     wait1(0x91d3e040)
+278777  9304  9302  84519744   158 6   SLEEP waitpid        sh             wait1(0x994de040)
+278647  9174  9037  84519748   158 0   SLEEP waitpid        sh             wait1(0x98e03040)
+278775  9302  9174  84519748   158 0   SLEEP wait           time           wait1(0x92264040)
+278509  9037  6394  84519907   158 2   SLEEP waitpid        auto_remote    wait1(0x9244c040)
+274062  4493  4476  84527110   158 1   SLEEP waitpid        sh             wait1(0x928a4040)
+274046  4476  4440  84527113   158 4   SLEEP waitpid        jut200x        wait1(0x980b7040)
+274010  4440  4437  84527137   158 6   SLEEP waitpid        jut200x.sh     wait1(0x98a3b040)
+274007  4437  4436  84527178   158 1   SLEEP waitpid        sh             wait1(0x98a29040)
+274006  4436  4303  84527180   158 1   SLEEP wait           time           wait1(0x98a96040)
+273879  4303  4179  84527181   158 2   SLEEP waitpid        sh             wait1(0x984f0040)
+273755  4179  6394  84527342   158 4   SLEEP waitpid        auto_remote    wait1(0x93913040)
+269848  131   129   84533618   154 4   SLEEP read           sqlplus        STREAM 0x93556800
+269846  129   111   84533644   158 2   SLEEP waitpid        sh             wait1(0x98914040)
+269828  111   29970 84533646   158 0   SLEEP waitpid        jut200x        wait1(0x92542040)
+269788  29970 29968 84533674   158 6   SLEEP waitpid        jut200x.sh     wait1(0x920f7040)
+269786  29968 29966 84533718   158 0   SLEEP waitpid        sh             wait1(0x98182040)
+269784  29966 29841 84533720   158 2   SLEEP wait           time           wait1(0x93f77040)
+269658  29841 29709 84533721   158 5   SLEEP waitpid        sh             wait1(0x986f1040)
+269528  29709 6394  84533875   158 6   SLEEP waitpid        auto_remote    wait1(0x780bb040)
+266263  26431 26429 84538802   154 3   SLEEP read           sqlplus        STREAM 0x9380d040
+266261  26429 26406 84538829   158 6   SLEEP waitpid        sh             wait1(0x93ed6040)
+266239  26406 26362 84538831   158 6   SLEEP waitpid        jut200x        wait1(0x98268040)
+266196  26362 26360 84538865   158 6   SLEEP waitpid        jut200x.sh     wait1(0x985e6040)
+266194  26360 26359 84538915   158 5   SLEEP waitpid        sh             wait1(0x98fd6040)
+266193  26359 26224 84538916   158 5   SLEEP wait           time           wait1(0x93a51040)
+266064  26224 26091 84538917   158 1   SLEEP waitpid        sh             wait1(0x938b9040)
+265932  26091 6394  84539074   158 6   SLEEP waitpid        auto_remote    wait1(0x98c32040)
+264508  24684 24682 84541103   154 5   SLEEP read           sqlplus        STREAM 0x937ac880
+264506  24682 24661 84541131   158 1   SLEEP waitpid        sh             wait1(0x939be040)
+264485  24661 24621 84541133   158 1   SLEEP waitpid        jut200x        wait1(0x9a272040)
+264445  24621 24619 84541167   158 2   SLEEP waitpid        jut200x.sh     wait1(0x93bd3040)
+264443  24619 24618 84541216   158 1   SLEEP waitpid        sh             wait1(0x939e2040)
+264442  24618 24488 84541217   158 4   SLEEP wait           time           wait1(0x9272c040)
+264312  24488 24359 84541218   158 2   SLEEP waitpid        sh             wait1(0x79ccc040)
+264183  24359 6394  84541382   158 0   SLEEP waitpid        auto_remote    wait1(0x99030040)
+262697  22871 22870 84543936   154 6   SLEEP read           sqlplus        STREAM 0x92220480
+262696  22870 22853 84543983   158 4   SLEEP waitpid        sh             wait1(0x93342040)
+262679  22853 22811 84543985   158 6   SLEEP waitpid        jut200x        wait1(0x93da3040)
+262637  22811 22809 84544011   158 4   SLEEP waitpid        jut200x.sh     wait1(0x79a78040)
+262635  22809 22807 84544059   158 3   SLEEP waitpid        sh             wait1(0x98f45040)
+262633  22807 22685 84544061   158 2   SLEEP wait           time           wait1(0x99117040)
+262509  22685 22552 84544062   158 1   SLEEP waitpid        sh             wait1(0x9810b040)
+262376  22552 6394  84544222   158 5   SLEEP waitpid        auto_remote    wait1(0x9af28040)
+259584  19721 19700 84548816   158 0   SLEEP waitpid        sh             wait1(0x92478040)
+259564  19700 19656 84548818   158 1   SLEEP waitpid        jut200x        wait1(0x98f43040)
+259521  19656 19654 84548850   158 2   SLEEP waitpid        jut200x.sh     wait1(0x993ec040)
+259519  19654 19652 84548900   158 0   SLEEP waitpid        sh             wait1(0x93537040)
+259517  19652 19526 84548902   158 2   SLEEP wait           time           wait1(0x92be8040)
+259395  19526 19396 84548903   158 4   SLEEP waitpid        sh             wait1(0x98620040)
+259269  19396 6394  84549058   158 3   SLEEP waitpid        auto_remote    wait1(0x98dbd040)
+258344  18446 18427 84550715   158 4   SLEEP waitpid        sh             wait1(0x8acaa040)
+258326  18427 18385 84550717   158 5   SLEEP waitpid        jut200x        wait1(0x98dcf040)
+258285  18385 18383 84550744   158 2   SLEEP waitpid        jut200x.sh     wait1(0x92ee6040)
+258283  18383 18381 84550791   158 1   SLEEP waitpid        sh             wait1(0x93223040)
+258281  18381 18249 84550793   158 0   SLEEP wait           time           wait1(0x9360f040)
+258155  18249 18115 84550794   158 1   SLEEP waitpid        sh             wait1(0x9289b040)
+258024  18115 6394  84550940   158 1   SLEEP waitpid        auto_remote    wait1(0x93700040)
+265833  9079  1     92538872   154 5   SLEEP ksleep         java           ksleep(0x798c3f80)
+12      12    0     100303104  -32 1   SLEEP n/a            ttisr          ttirr
+4665164 16257 1     119060315  154 1   SLEEP n/a            rmiregistry    ksleep(0xb0032340)
+51864   16258 1     119112668  154 3   STOP  ksleep         java           ksleep(0x798c3580)
+3158    2949  1     120064224  154 3   SLEEP accept         awservices     STREAM 0x7c1af840
+2472692 2949  1     120064224  154 6   SLEEP ksleep         awservices     ksleep(0x79935ec0)
+51863   16258 1     120628672  154 3   STOP  accept         java           STREAM 0x85f004c0
+893     830   1     143673699  154 6   SLEEP poll           rpc.statd      per_processor_selects+0x180
+9380    7980  7970  143677657  154 4   SLEEP nfssvc         nfsd           svc_run(0x4044d140)
+9373    7973  7964  143678557  154 6   SLEEP nfssvc         nfsd           svc_run(0x4044d1c0)
+9370    7970  7964  143678557  154 4   SLEEP nfssvc         nfsd           svc_run(0x4044d140)
+9365    7965  7964  143678557  154 0   SLEEP nfssvc         nfsd           svc_run(0x4044d040)
+9368    7968  7964  143678557  154 2   SLEEP nfssvc         nfsd           svc_run(0x4044d0c0)
+9369    7969  7964  143678557  154 1   SLEEP nfssvc         nfsd           svc_run(0x4044d080)
+9374    7974  7964  143678557  154 5   SLEEP nfssvc         nfsd           svc_run(0x4044d180)
+331662  5573  5566  143682980  154 4   SLEEP poll           pfs_mountd.rpc per_processor_selects+0x100
+339321  13287 13283 143682980  154 3   SLEEP poll           pfsd.rpc       per_processor_selects+0xc0
+265832  9079  1     164016677  154 3   SLEEP ksleep         java           ksleep(0x798c3f40)
+51733   16257 1     182152720  168 4   SLEEP nanosleep      rmiregistry    real_nanosleep(0x9337f4a8)
+1284    1216  1     191732474  154 2   SLEEP getsockname    dced           STREAM 0x92e32400
+1346    1266  1     191734585  154 5   SLEEP ksleep         dmisp          ksleep(0x798a90c0)
+4043    3612  1962  191735298  154 2   SLEEP ksleep         rep_server     ksleep(0x798b2a00)
+3982    3612  1962  191735298  154 0   SLEEP ksleep         rep_server     ksleep(0x799358c0)
+1345    1266  1     191735584  154 5   SLEEP ksleep         dmisp          ksleep(0x798c3080)
+1404    1266  1     191735585  154 3   SLEEP ksleep         dmisp          ksleep(0x799b9040)
+3984    3612  1962  191736580  154 5   SLEEP select         rep_server     per_processor_selects+0x140
+1348    1266  1     191736581  154 4   SLEEP ksleep         dmisp          LVM vg21/lv17
+1347    1266  1     191736581  154 6   SLEEP select         dmisp          per_processor_selects+0x180
+4044    3612  1962  191780200  154 4   SLEEP ksleep         rep_server     ksleep(0x798b2a40)
+1383    1266  1     191781085  154 0   SLEEP ksleep         dmisp          ksleep(0x7990b0c0)
+1372    1266  1     191781086  154 2   SLEEP ksleep         dmisp          ksleep(0x798c3380)
+51779   16258 1     213118698  154 5   STOP  ksleep         java           ksleep(0x798a9900)
+2368400 10629 10624 275695560  154 4   SLEEP ksleep         dbsnmp         ksleep(0x9bc474c0)
+2368665 10629 10624 275695560  154 3   SLEEP accept         dbsnmp         STREAM 0x92e53100
+2368669 10629 10624 275695961  154 0   SLEEP accept         dbsnmp         STREAM 0x92e53c40
+2368670 10629 10624 275696215  154 2   SLEEP ksleep         dbsnmp         LVM vg09/lv83
+2368411 10629 10624 275696568  154 4   SLEEP select         dbsnmp         per_processor_selects+0x100
+2368395 10624 1     275696589  158 6   SLEEP waitpid        dbsnmpwd       wait1(0x93211040)
+339317  13283 1     293740377  168 1   SLEEP pause          pfsd           *uptr+0
+331655  5566  1     293752772  168 5   SLEEP pause          pfs_mountd     *uptr+0
+2548198 23368 6394  352295221  154 5   SLEEP poll           rpc.ttdbserver per_processor_selects+0x140
+1270    1202  1     353667995  154 5   SLEEP select         fddi4subagt    per_processor_selects+0x140
+5534    4389  1     360110865  154 2   SLEEP select         registrar      per_processor_selects+0x80
+265831  9079  1     388033433  154 1   SLEEP ksleep         java           ksleep(0x798c3f00)
+265830  9079  1     388033433  154 2   SLEEP ksleep         java           ksleep(0x798c3ec0)
+6017    4657  1     394688365  158 5   SLEEP waitpid        eventor        wait1(0x7feae040)
+51773   16257 1     396858759  154 3   SLEEP ksleep         rmiregistry    ksleep(0x799b9580)
+51734   16258 1     396897171  154 3   STOP  ksleep         java           ksleep(0x95ee9100)
+51782   16258 1     396901053  154 5   STOP  ksleep         java           ksleep(0x798c3600)
+51778   16258 1     396901088  154 6   STOP  ksleep         java           ksleep(0x798a9840)
+51777   16258 1     396901090  154 2   STOP  ksleep         java           ksleep(0x798a9880)
+51771   16257 1     396901094  154 0   SLEEP ksleep         rmiregistry    ksleep(0x799b9540)
+51769   16257 1     396901095  154 0   SLEEP ksleep         rmiregistry    ksleep(0x9a5099c0)
+51770   16257 1     396901095  154 0   SLEEP ksleep         rmiregistry    ksleep(0x799b9500)
+2243    1982  1     401807428  154 6   SLEEP ksleep         prm3d          ksleep(0x79935380)
+2242    1982  1     402041450  154 3   SLEEP ksleep         prm3d          ksleep(0x79935340)
+9379    7979  7970  402750346  154 4   SLEEP nfssvc         nfsd           svc_run(0x4044d140)
+9383    7983  7974  402750346  154 6   SLEEP nfssvc         nfsd           svc_run(0x4044d180)
+9384    7984  7974  402750346  154 1   SLEEP nfssvc         nfsd           svc_run(0x4044d180)
+9387    7987  7973  402750346  154 0   SLEEP nfssvc         nfsd           svc_run(0x4044d1c0)
+9388    7988  7973  402750346  154 5   SLEEP nfssvc         nfsd           svc_run(0x4044d1c0)
+9377    7977  7964  402750347  154 1   SLEEP nfssvc         nfsd           svc_run(0x4044d100)
+9378    7978  7964  402750347  154 0   SLEEP nfssvc         nfsd           svc_run(0x4044d100)
+9364    7964  1     402750347  154 3   SLEEP nfssvc         nfsd           svc_run(0x4044d100)
+9375    7975  7968  402750348  154 1   SLEEP nfssvc         nfsd           svc_run(0x4044d0c0)
+9372    7972  7969  402750348  154 1   SLEEP nfssvc         nfsd           svc_run(0x4044d080)
+9376    7976  7968  402750348  154 2   SLEEP nfssvc         nfsd           svc_run(0x4044d0c0)
+9371    7971  7969  402750348  154 2   SLEEP nfssvc         nfsd           svc_run(0x4044d080)
+9367    7967  7965  402750349  154 1   SLEEP nfssvc         nfsd           svc_run(0x4044d040)
+9366    7966  7965  402750349  154 0   SLEEP nfssvc         nfsd           svc_run(0x4044d040)
+2235    1982  1     402755993  154 5   SLEEP ksleep         prm3d          ksleep(0x798a9300)
+7876    6491  1     402761308  154 4   SLEEP ioctl          sfd            sfd_sleeping
+2280    1982  1     402761488  178 5   ZOMB  lwp_detached_e prm3d          
+2102    1962  1     402767369  154 3   SLEEP ksleep         perflbd        ksleep(0x798a9240)
+1402    1291  1     402769180  154 4   SLEEP ksleep         swci           ksleep(0x798b2240)
+1381    1279  1     402769189  154 6   SLEEP ksleep         sdci           ksleep(0x798a91c0)
+1370    1275  1     402769199  154 2   SLEEP ksleep         hpuxci         ksleep(0x798a9180)
+3385    3031  2949  402776062  154 3   SLEEP ksleep         caiUxOs        ksleep(0x793b8b40)
+5492    4375  1762  402776607  158 5   SLEEP sigtimedwait   memlogd        pm_sigwait(0x797a20c0)
+5540    4375  1762  402776608  154 4   SLEEP ksleep         memlogd        ksleep(0x79935b80)
+5537    4375  1762  402776609  158 2   SLEEP sigwait        memlogd        pm_sigwait(0x7916a100)
+1369    1275  1     402786322  154 3   SLEEP ksleep         hpuxci         ksleep(0x7990b080)
+3165    2956  1     402786394  158 3   SLEEP waitpid        cmclconfd      wait1(0x7a1f3040)
+4008    3633  0     402786843  20  4   SLEEP n/a            resyncd        slvm_resync_q
+3986    3627  1962  402786988  154 1   SLEEP ksleep         agdbserver     ksleep(0x799b9200)
+2084    1962  1     402786989  154 5   SLEEP select         perflbd        per_processor_selects+0x140
+3988    1962  1     402787008  154 3   SLEEP select         perflbd        per_processor_selects+0xc0
+3964    3612  1962  402787010  154 5   SLEEP ksleep         rep_server     ksleep(0x799b9280)
+1365    1275  1     402788219  154 5   SLEEP lwp_wait       hpuxci         thread_wait(0x7faf2040)
+1341    1266  1     402788219  154 4   SLEEP select         dmisp          per_processor_selects+0x100
+3955    1266  1     402788244  137 6   ZOMB  lwp_detached_e dmisp          
+3956    1275  1     402788244  154 6   SLEEP recv           hpuxci         sosleep(0x793cbe80)
+3064    2865  1     402790450  154 6   STOP  ksleep         vxsvc          ksleep(0x798a9380)
+3327    3032  2949  402790459  154 1   SLEEP ksleep         hpaAgent       ksleep(0x7990ba00)
+3159    2949  1     402790616  154 2   SLEEP ksleep         awservices     ksleep(0x7990b400)
+3315    3031  2949  402790905  154 1   SLEEP ksleep         caiUxOs        ksleep(0x798c3ac0)
+3309    2949  1     402790919  154 3   SLEEP recv           awservices     STREAM 0x7a11f440
+3299    2949  1     402790919  154 6   SLEEP recv           awservices     STREAM 0x7f960880
+3348    2949  1     402790919  154 5   SLEEP recv           awservices     STREAM 0x7a11fbc0
+3359    2949  1     402791121  154 4   SLEEP recv           awservices     STREAM 0x7f8c3400
+3319    2949  1     402791323  154 1   SLEEP recv           awservices     STREAM 0x7f951400
+3355    3037  2949  402791396  154 6   SLEEP ksleep         prfAgent       ksleep(0x7990bc40)
+3197    2972  2949  402791401  154 0   SLEEP accept         aws_orb        SOCKET 0x79bb2980
+3372    3038  2949  402791478  154 5   SLEEP ksleep         proAgent       ksleep(0x798a9600)
+3305    3030  2949  402791489  154 2   SLEEP ksleep         caiLogA2       ksleep(0x79935740)
+3371    3038  2949  402791525  154 5   SLEEP recv           proAgent       STREAM 0x7a022c40
+3370    2949  1     402791525  154 0   SLEEP recv           awservices     STREAM 0x7f9f50c0
+3356    3038  2949  402791525  154 3   SLEEP ksleep         proAgent       ksleep(0x798a9500)
+3346    3037  2949  402791528  154 3   SLEEP ksleep         prfAgent       ksleep(0x7990bb40)
+3353    3037  2949  402791529  154 3   SLEEP recv           prfAgent       STREAM 0x7fa07bc0
+3354    2949  1     402791529  158 1   SLEEP waitpid        awservices     wait1(0x7f6b6040)
+3352    2949  1     402791529  154 0   SLEEP recv           awservices     STREAM 0x7a11f800
+3358    2949  1     402791529  154 1   SLEEP ksleep         awservices     ksleep(0x793b8a80)
+3351    3037  2949  402791531  154 0   SLEEP ksleep         prfAgent       ksleep(0x7990bbc0)
+3345    2949  1     402791535  158 1   SLEEP waitpid        awservices     wait1(0x7f6b6040)
+3347    2949  1     402791535  154 1   SLEEP ksleep         awservices     ksleep(0x793b89c0)
+3325    2949  1     402791636  154 0   SLEEP recv           awservices     STREAM 0x7f7e67c0
+3317    3032  2949  402791636  154 2   SLEEP ksleep         hpaAgent       ksleep(0x7990b900)
+3326    3032  2949  402791636  154 4   SLEEP recv           hpaAgent       STREAM 0x7fa07440
+3324    3032  2949  402791638  154 3   SLEEP ksleep         hpaAgent       ksleep(0x7990b980)
+3318    2949  1     402791652  154 5   SLEEP ksleep         awservices     ksleep(0x793b8840)
+3316    2949  1     402791652  158 1   SLEEP waitpid        awservices     wait1(0x7f6b6040)
+3313    2949  1     402791653  154 0   SLEEP recv           awservices     STREAM 0x7f7e6b80
+3314    3031  2949  402791653  154 5   SLEEP recv           caiUxOs        STREAM 0x7f98d440
+3307    3031  2949  402791653  154 6   SLEEP ksleep         caiUxOs        ksleep(0x793b87c0)
+3304    3030  2949  402791660  154 6   SLEEP recv           caiLogA2       STREAM 0x7a11f080
+3303    2949  1     402791660  154 0   SLEEP recv           awservices     STREAM 0x7f7e6400
+3306    2949  1     402791660  158 5   SLEEP waitpid        awservices     wait1(0x7f6b6040)
+3297    3030  2949  402791660  154 5   SLEEP ksleep         caiLogA2       ksleep(0x79935640)
+3308    2949  1     402791660  154 3   SLEEP ksleep         awservices     ksleep(0x7990b800)
+3298    2949  1     402791666  154 0   SLEEP ksleep         awservices     ksleep(0x7990b700)
+3296    2949  1     402791666  158 5   SLEEP waitpid        awservices     wait1(0x7f6b6040)
+3257    2949  1     402791868  154 0   SLEEP recv           awservices     STREAM 0x7f6debc0
+3247    2949  1     402791868  154 4   SLEEP recv           awservices     STREAM 0x7f8a8480
+3245    3021  2949  402791872  154 6   SLEEP ksleep         aws_sadmin     ksleep(0x798c3780)
+3253    3021  2949  402791872  154 5   SLEEP ksleep         aws_sadmin     ksleep(0x798c3880)
+3291    3021  2949  402791873  154 2   SLEEP ksleep         aws_sadmin     ksleep(0x799355c0)
+3153    2865  1     402791949  154 1   STOP  ksleep         vxsvc          ksleep(0x7990b300)
+3285    2865  1     402791950  154 0   STOP  ksleep         vxsvc          ksleep(0x798c3980)
+3284    2865  1     402791953  152 0   ZOMB  lwp_detached_e vxsvc          
+3279    3022  2949  402791965  154 6   SLEEP ksleep         aws_snmp       ksleep(0x793b8640)
+3273    3022  2949  402791965  154 1   SLEEP ksleep         aws_snmp       ksleep(0x793b84c0)
+3255    3022  2949  402791965  154 1   SLEEP ksleep         aws_snmp       ksleep(0x798b2700)
+3276    3022  2949  402791965  154 3   SLEEP poll           aws_snmp       per_processor_selects+0xc0
+3275    3022  2949  402791965  154 4   SLEEP ksleep         aws_snmp       ksleep(0x793b8540)
+3280    3022  2949  402791965  154 4   SLEEP poll           aws_snmp       per_processor_selects+0x100
+3263    3022  2949  402791965  154 0   SLEEP ksleep         aws_snmp       ksleep(0x798b2800)
+3281    3022  2949  402791965  154 0   SLEEP ksleep         aws_snmp       ksleep(0x793b86c0)
+3283    3022  2949  402791965  154 0   SLEEP ksleep         aws_snmp       ksleep(0x793b8740)
+3277    3022  2949  402791965  154 2   SLEEP ksleep         aws_snmp       ksleep(0x793b85c0)
+3278    3022  2949  402791965  154 1   SLEEP poll           aws_snmp       per_processor_selects+0x40
+3282    3022  2949  402791965  154 0   SLEEP poll           aws_snmp       per_processor_selects
+3262    3022  2949  402791968  154 4   SLEEP recv           aws_snmp       STREAM 0x7f951040
+3261    2949  1     402791969  154 0   SLEEP recv           awservices     STREAM 0x7f87a880
+3260    3022  2949  402791970  154 0   SLEEP ksleep         aws_snmp       ksleep(0x798b2780)
+3256    2949  1     402791973  154 0   SLEEP ksleep         awservices     ksleep(0x7990b540)
+3252    3021  2949  402791974  154 0   SLEEP recv           aws_sadmin     STREAM 0x7f865b80
+3251    2949  1     402791974  154 0   SLEEP recv           awservices     STREAM 0x7a1b2c00
+3254    2949  1     402791974  158 6   SLEEP waitpid        awservices     wait1(0x7f6b6040)
+3250    3021  2949  402791975  154 0   SLEEP ksleep         aws_sadmin     ksleep(0x798c3800)
+3246    2949  1     402791986  154 0   SLEEP ksleep         awservices     ksleep(0x7990b480)
+3244    2949  1     402791986  158 4   SLEEP waitpid        awservices     wait1(0x7f6b6040)
+3184    2949  1     402792188  154 6   SLEEP recv           awservices     STREAM 0x7f6de800
+3196    2977  1     402792247  158 6   SLEEP waitpid        dtrc           wait1(0x7f6f8040)
+3204    2972  2949  402792271  154 0   SLEEP accept         aws_orb        STREAM 0x7f87a4c0
+3192    2972  2949  402792271  154 1   SLEEP ksleep         aws_orb        ksleep(0x79935540)
+3182    2972  2949  402792271  154 5   SLEEP ksleep         aws_orb        ksleep(0x793b8380)
+3199    2972  2949  402792272  154 5   SLEEP accept         aws_orb        STREAM 0x7f87a100
+3191    2972  2949  402792289  154 0   SLEEP recv           aws_orb        STREAM 0x7f70c880
+3190    2949  1     402792289  154 3   SLEEP recv           awservices     STREAM 0x79040bc0
+3188    2972  2949  402792324  154 0   SLEEP ksleep         aws_orb        ksleep(0x799354c0)
+3183    2949  1     402792327  154 0   SLEEP ksleep         awservices     ksleep(0x79935400)
+3181    2949  1     402792327  158 4   SLEEP waitpid        awservices     wait1(0x7f6b6040)
+3152    2949  1     402792529  154 2   SLEEP ksleep         awservices     ksleep(0x798b2500)
+3156    2949  1     402792531  154 1   SLEEP ksleep         awservices     ksleep(0x7990b340)
+3157    2949  1     402792531  154 1   SLEEP ksleep         awservices     ksleep(0x7990b380)
+3084    2865  1     402792602  154 1   STOP  ksleep         vxsvc          ksleep(0x7990b2c0)
+3072    2865  1     402792610  154 3   STOP  poll           vxsvc          per_processor_selects+0xc0
+2100    1962  1     402796766  154 5   SLEEP ksleep         perflbd        ksleep(0x798b2300)
+2109    1982  1     402797319  154 3   SLEEP ksleep         prm3d          ksleep(0x793b8200)
+2128    1982  1     402797489  154 4   SLEEP ksleep         prm3d          ksleep(0x793b81c0)
+2257    1982  1     402797493  154 2   SLEEP accept         prm3d          STREAM 0x79b10400
+2256    1982  1     402797703  154 4   SLEEP accept         prm3d          STREAM 0x79911080
+2258    1982  1     402797712  154 2   SLEEP ksleep         prm3d          ksleep(0x793b8280)
+2241    1982  1     402797822  154 6   SLEEP ksleep         prm3d          ksleep(0x79935300)
+2240    1982  1     402797822  154 3   SLEEP ksleep         prm3d          ksleep(0x799352c0)
+2145    2017  1     402798078  154 1   SLEEP select         emsagent       per_processor_selects+0x40
+1403    1291  1     402798189  154 6   SLEEP ksleep         swci           ksleep(0x798c34c0)
+1371    1275  1     402798192  154 5   SLEEP ksleep         hpuxci         ksleep(0x798b2200)
+1382    1279  1     402798192  154 2   SLEEP ksleep         sdci           ksleep(0x79935100)
+1934    1814  1     402798216  154 0   SLEEP accept         acdistagn      STREAM 0x798e7800
+2023    1903  1     402798229  154 5   SLEEP poll           ttd            per_processor_selects+0x140
+2085    1962  1     402798373  -32 4   SLEEP sigwait        perflbd        pm_sigwait(0x79131040)
+1379    1279  1     402798682  154 6   SLEEP ksleep         sdci           ksleep(0x799350c0)
+1399    1291  1     402798682  154 1   SLEEP ksleep         swci           ksleep(0x798c3480)
+1885    1765  1     402798746  154 1   SLEEP read           envd           FIFO 0x78fa11c0
+1375    1279  1     402799716  154 5   SLEEP lwp_wait       sdci           thread_wait(0x799e7040)
+1393    1291  1     402799834  154 3   SLEEP lwp_wait       swci           thread_wait(0x79a87040)
+1585    1291  1     402800018  154 6   SLEEP recv           swci           sosleep(0x797fb580)
+1514    1279  1     402800086  168 0   SLEEP sigwait        sdci           pm_sigwait(0x780b2100)
+1492    1279  1     402800094  154 4   SLEEP recv           sdci           sosleep(0x798c4880)
+1353    1266  1     402800098  154 6   SLEEP ksleep         dmisp          ksleep(0x798c3240)
+1394    1291  1     402800165  168 1   SLEEP sigwait        swci           pm_sigwait(0x78fee040)
+1366    1275  1     402800185  168 3   SLEEP sigwait        hpuxci         pm_sigwait(0x7916b0c0)
+1352    1266  1     402800673  154 5   SLEEP ksleep         dmisp          ksleep(0x798c3200)
+1354    1266  1     402800673  154 3   SLEEP ksleep         dmisp          ksleep(0x798c3280)
+1350    1266  1     402800673  154 0   SLEEP ksleep         dmisp          ksleep(0x798c3180)
+1357    1266  1     402800673  154 3   SLEEP ksleep         dmisp          ksleep(0x798c3340)
+1351    1266  1     402800673  154 3   SLEEP ksleep         dmisp          ksleep(0x798c31c0)
+1355    1266  1     402800673  154 4   SLEEP ksleep         dmisp          ksleep(0x798c32c0)
+1343    1266  1     402800673  154 6   SLEEP ksleep         dmisp          ksleep(0x798b21c0)
+1349    1266  1     402800673  154 3   SLEEP ksleep         dmisp          ksleep(0x798c3140)
+1356    1266  1     402800673  154 3   SLEEP ksleep         dmisp          ksleep(0x798c3300)
+1334    1266  1     402800689  154 1   SLEEP lwp_wait       dmisp          thread_wait(0x798bd040)
+1342    1266  1     402800689  154 3   SLEEP ksleep         dmisp          ksleep(0x798b2180)
+1339    1266  1     402800689  154 3   SLEEP ksleep         dmisp          ksleep(0x798b20c0)
+1337    1266  1     402800699  154 3   SLEEP ksleep         dmisp          ksleep(0x798b2040)
+1335    1266  1     402800703  168 3   SLEEP sigwait        dmisp          pm_sigwait(0x7916b080)
+899     836   1     402801821  154 6   SLEEP poll           rpc.lockd      per_processor_selects+0x180
+1239    1171  1     402801867  154 5   SLEEP select         trapdestagt    per_processor_selects+0x140
+874     811   1     402806941  154 0   SLEEP async_daemon   biod           async_bufhead
+878     815   1     402806941  154 0   SLEEP async_daemon   biod           async_bufhead
+875     812   1     402806941  154 1   SLEEP async_daemon   biod           async_bufhead
+884     821   1     402806941  154 0   SLEEP async_daemon   biod           async_bufhead
+877     814   1     402806941  154 2   SLEEP async_daemon   biod           async_bufhead
+883     820   1     402806941  154 2   SLEEP async_daemon   biod           async_bufhead
+876     813   1     402806941  154 0   SLEEP async_daemon   biod           async_bufhead
+872     809   1     402806941  154 0   SLEEP async_daemon   biod           async_bufhead
+882     819   1     402806941  154 0   SLEEP async_daemon   biod           async_bufhead
+870     807   1     402806941  154 0   SLEEP async_daemon   biod           async_bufhead
+873     810   1     402806941  154 6   SLEEP async_daemon   biod           async_bufhead
+881     818   1     402806941  154 5   SLEEP async_daemon   biod           async_bufhead
+871     808   1     402806941  154 4   SLEEP async_daemon   biod           async_bufhead
+880     817   1     402806941  154 0   SLEEP async_daemon   biod           async_bufhead
+879     816   1     402806941  154 4   SLEEP async_daemon   biod           async_bufhead
+869     806   1     402806942  154 0   SLEEP async_daemon   biod           async_bufhead
+850     787   0     402806951  152 0   SLEEP n/a            nfskd          nfs_srvr_debug+0x10
+703     642   1     402810318  155 1   SLEEP msgrcv         ptydaemon      msgque[0]+0x5c
+628     14    0     402810590  148 0   SLEEP n/a            ioconfigd      ve_thread_to_terminate
+44      44    0     402812424  100 0   SLEEP n/a            sblksched      streams_blk_sync
+43      43    0     402812424  100 0   SLEEP n/a            sblksched      streams_blk_sync
+10      10    0     402812540  100 0   SLEEP n/a            strweld        weldq_runq
+11      11    0     402812540  100 0   SLEEP n/a            strfreebd      str_freeb_idle
+8       8     0     402812540  100 0   SLEEP n/a            supsched       streams_up_runq
+9       9     0     402812540  100 0   SLEEP n/a            strmem         __preinit_end+0x978
+
+			==================
+			= Kernel Patches =
+			==================
+
+PHKL_22857	PHKL_22874	PHKL_22994	PHKL_23196	PHKL_23203
+PHKL_23225	PHKL_23239	PHKL_23242	PHKL_23246	PHKL_23250
+PHKL_23335	PHKL_23337	PHKL_23400	PHKL_23401	PHKL_23423
+PHKL_23445	PHKL_23505	PHKL_23609	PHKL_23626	PHKL_23642
+PHKL_23811	PHKL_23934	PHKL_23957	PHKL_23995	PHKL_23999
+PHKL_24026	PHKL_24037	PHKL_24046	PHKL_24047	PHKL_24056
+PHKL_24163	PHKL_24188	PHKL_24253	PHKL_24278	PHKL_24343
+PHKL_24408	PHKL_24507	PHKL_24548	PHKL_24551	PHKL_24552
+PHKL_24554	PHKL_24555	PHKL_24556	PHKL_24558	PHKL_24562
+PHKL_24563	PHKL_24565	PHKL_24568	PHKL_24569	PHKL_24571
+PHKL_24574	PHKL_24575	PHKL_24577	PHKL_24578	PHKL_24579
+PHKL_24580	PHKL_24581	PHKL_24582	PHKL_24583	PHKL_24585
+PHKL_24652	PHKL_24677	PHKL_24730	PHKL_24751	PHKL_24779
+PHKL_24960	PHKL_25022	PHKL_25080	PHKL_25123	PHKL_25165
+PHKL_25166	PHKL_25209	PHKL_25212	PHKL_25233	PHKL_25238
+PHKL_25248	PHKL_25304	PHKL_25351	PHKL_25362	PHKL_25367
+PHKL_25368	PHKL_25375	PHKL_25493	PHKL_25552	PHKL_25593
+PHKL_25602	PHKL_25610	PHKL_25614	PHKL_25652	PHKL_25728
+PHKL_25729	PHKL_25761	PHKL_25773	PHKL_25778	PHKL_25869
+PHKL_25871	PHKL_25885	PHKL_25886	PHKL_26002	PHKL_26032
+PHKL_26037	PHKL_26074	PHKL_26104	PHKL_26201	PHKL_26230
+PHKL_26241	PHKL_26386	PHKL_26407	PHKL_26425	PHKL_26467
+PHKL_26519	PHKL_26552	PHKL_26705	PHKL_26734	PHKL_26743
+PHKL_26755	PHKL_26761	PHKL_26833	PHKL_26847	PHKL_26893
+PHKL_26938	PHKL_26979	PHKL_27025	PHKL_27054	PHKL_27091
+PHKL_27092	PHKL_27094	PHKL_27096	PHKL_27121	PHKL_27152
+PHKL_27153	PHKL_27154	PHKL_27155	PHKL_27156	PHKL_27172
+PHKL_27179	PHKL_27219	PHKL_27266	PHKL_27278	PHKL_27283
+PHKL_27294	PHKL_27321	PHKL_27498	PHKL_27531	PHKL_27532
+PHKL_27669	PHKL_27682	PHKL_27688	PHKL_27714	PHKL_27715
+PHKL_27757	PHKL_27992	PHKL_28410	PHNE_22878	PHNE_23465
+PHNE_23502	PHNE_23594	PHNE_23932	PHNE_24035	PHNE_24131
+PHNE_24211	PHNE_24473	PHNE_24492	PHNE_24506	PHNE_24910
+PHNE_25083	PHNE_25388	PHNE_25627	PHNE_25644	PHNE_26326
+PHNE_26710	PHNE_26728	PHNE_26939	PHNE_27218	
+
+```
+

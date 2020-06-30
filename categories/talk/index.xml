@@ -1,26 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>talk on Chaos - 一個老碼農的筆記</title>
-    <link>https://dyiwu.github.io/categories/talk/</link>
-    <description>Recent content in talk on Chaos - 一個老碼農的筆記</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 24 Jul 2014 15:14:34 +0800</lastBuildDate>
-    
-	<atom:link href="https://dyiwu.github.io/categories/talk/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Talk: Frist Pass Linux Kernel Dump</title>
-      <link>https://dyiwu.github.io/post/talk/fplkd/</link>
-      <pubDate>Thu, 24 Jul 2014 15:14:34 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/talk/fplkd/</guid>
-      <description>&lt;p&gt;Kdump is a kernel crash dumping mechanism that allows you to save the contents of the system’s memory for later analysis. A kernel crash dump can be the only information available in the event of a failure, the importance of having this data in a business critical environment cannot be underestimated.&lt;/p&gt;
-&lt;p&gt;This presentation is a preliminary talk about 3W1H for kdump in linux environment.&lt;/p&gt;</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>talk - Category - Chaos</title>
+        <link>https://example.com/categories/talk/</link>
+        <description>talk - Category - Chaos</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (Dyi-Wu Liu)</managingEditor>
+            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 24 Jul 2014 15:14:34 &#43;0800</lastBuildDate><atom:link href="https://example.com/categories/talk/" rel="self" type="application/rss+xml" /><item>
+    <title>Talk: Frist Pass Linux Kernel Dump</title>
+    <link>https://example.com/2014/07/fplkd/</link>
+    <pubDate>Thu, 24 Jul 2014 15:14:34 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2014/07/fplkd/</guid>
+    <description><![CDATA[<p>Kdump is a kernel crash dumping mechanism that allows you to save the contents of the system’s memory for later analysis. A kernel crash dump can be the only information available in the event of a failure, the importance of having this data in a business critical environment cannot be underestimated.</p>
+<p>This presentation is a preliminary talk about 3W1H for kdump in linux environment.</p>]]></description>
+</item></channel>
 </rss>

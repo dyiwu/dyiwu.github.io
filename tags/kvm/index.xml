@@ -1,43 +1,29 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>kvm on Chaos - 一個老碼農的筆記</title>
-    <link>https://dyiwu.github.io/tags/kvm/</link>
-    <description>Recent content in kvm on Chaos - 一個老碼農的筆記</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 26 Jun 2020 20:08:21 +0800</lastBuildDate>
-    
-	<atom:link href="https://dyiwu.github.io/tags/kvm/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Enabling nested virtualization in KVM</title>
-      <link>https://dyiwu.github.io/post/tech/nest-kvm/</link>
-      <pubDate>Fri, 26 Jun 2020 20:08:21 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/tech/nest-kvm/</guid>
-      <description>&lt;p&gt;Nested virtualization allows you to run a virtual machine (VM) inside another VM while still using hardware acceleration from the host.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Clone KVM</title>
-      <link>https://dyiwu.github.io/post/tech/clone_kvm/</link>
-      <pubDate>Wed, 24 Jun 2020 20:49:27 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/tech/clone_kvm/</guid>
-      <description>&lt;h2 id=&#34;procedures-to-clone-virtual-machine&#34;&gt;Procedures to clone virtual machine&lt;/h2&gt;</description>
-    </item>
-    
-    <item>
-      <title>Static IP assignment for KVM guest</title>
-      <link>https://dyiwu.github.io/post/tech/kvm-guest-dhcp-ip/</link>
-      <pubDate>Tue, 23 Jun 2020 20:14:34 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/tech/kvm-guest-dhcp-ip/</guid>
-      <description>&lt;h2 id=&#34;procedures-to-assign-static-ip-addresses-for-guest-kvm&#34;&gt;Procedures to assign static IP addresses for guest KVM&lt;/h2&gt;</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>kvm - Tag - Chaos</title>
+        <link>https://example.com/tags/kvm/</link>
+        <description>kvm - Tag - Chaos</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (Dyi-Wu Liu)</managingEditor>
+            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 26 Jun 2020 20:08:21 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/kvm/" rel="self" type="application/rss+xml" /><item>
+    <title>Enabling nested virtualization in KVM</title>
+    <link>https://example.com/2020/06/nest-kvm/</link>
+    <pubDate>Fri, 26 Jun 2020 20:08:21 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2020/06/nest-kvm/</guid>
+    <description><![CDATA[<p>Nested virtualization allows you to run a virtual machine (VM) inside another VM while still using hardware acceleration from the host.</p>]]></description>
+</item><item>
+    <title>Clone KVM</title>
+    <link>https://example.com/2020/06/clone_kvm/</link>
+    <pubDate>Wed, 24 Jun 2020 20:49:27 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2020/06/clone_kvm/</guid>
+    <description><![CDATA[<h2 id="procedures-to-clone-virtual-machine">Procedures to clone virtual machine</h2>]]></description>
+</item><item>
+    <title>Static IP assignment for KVM guest</title>
+    <link>https://example.com/2020/06/kvm-guest-dhcp-ip/</link>
+    <pubDate>Tue, 23 Jun 2020 20:14:34 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2020/06/kvm-guest-dhcp-ip/</guid>
+    <description><![CDATA[<h2 id="procedures-to-assign-static-ip-addresses-for-guest-kvm">Procedures to assign static IP addresses for guest KVM</h2>]]></description>
+</item></channel>
 </rss>

@@ -1,102 +1,208 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>國學 on Chaos - 一個老碼農的筆記</title>
-    <link>https://dyiwu.github.io/tags/%E5%9C%8B%E5%AD%B8/</link>
-    <description>Recent content in 國學 on Chaos - 一個老碼農的筆記</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Sun, 24 Nov 2019 21:47:22 +0800</lastBuildDate>
-    
-	<atom:link href="https://dyiwu.github.io/tags/%E5%9C%8B%E5%AD%B8/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>陶朱公生意經</title>
-      <link>https://dyiwu.github.io/post/life/tao-business-rule/</link>
-      <pubDate>Sun, 24 Nov 2019 21:47:22 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/life/tao-business-rule/</guid>
-      <description>&lt;p&gt;根據陶朱公的經商思想加工整理而成的《陶朱公生意經》，又稱《陶朱公商經》、《陶朱公商訓》或《陶朱公經商十八則》，至今仍在定陶一帶流傳。&lt;/p&gt;
-&lt;p&gt;陶朱公，本名範蠡，字少伯，楚國宛城三戶（今河南省南陽淅川縣）人，是春秋末期的政治家、軍事家和經營思想家。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>朱熹紫陽朱子家訓</title>
-      <link>https://dyiwu.github.io/post/life/zhu-family-instructions-2/</link>
-      <pubDate>Sun, 12 May 2019 16:47:05 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/life/zhu-family-instructions-2/</guid>
-      <description>朱熹紫陽朱子家訓 原文錄自《紫陽朱氏宗譜》 白話文註釋 君之所貴者，仁也。 臣之所貴者，忠也。 父之所貴者，慈也。 子之所貴者，孝也。 兄之所貴者，友也。</description>
-    </item>
-    
-    <item>
-      <title>朱子家訓</title>
-      <link>https://dyiwu.github.io/post/life/zhu-family-instructions-1/</link>
-      <pubDate>Sun, 12 May 2019 15:31:05 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/life/zhu-family-instructions-1/</guid>
-      <description>朱柏廬治家格言 原文(不計標點題目共524字) 白話註釋 黎明即起，灑掃庭除，要內外整潔；既昏便息，關鎖門戶，必親自檢點。 一粥一飯，當思來處不易；</description>
-    </item>
-    
-    <item>
-      <title>增廣賢文 - Augmented sage</title>
-      <link>https://dyiwu.github.io/post/life/augmented_sage/</link>
-      <pubDate>Sun, 31 Mar 2019 13:33:54 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/life/augmented_sage/</guid>
-      <description>&lt;p&gt;水太清則無魚，人太緊則無智。&lt;br&gt;
-知者減半，省者全無。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>疊字 - Overlay</title>
-      <link>https://dyiwu.github.io/post/life/overlay/</link>
-      <pubDate>Mon, 25 Mar 2019 16:03:36 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/life/overlay/</guid>
-      <description>中文的三疊字怎麼念？</description>
-    </item>
-    
-    <item>
-      <title>千字文 - Thousand character classic</title>
-      <link>https://dyiwu.github.io/post/life/thousand-character-classic/</link>
-      <pubDate>Sun, 24 Mar 2019 06:57:23 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/life/thousand-character-classic/</guid>
-      <description>&lt;blockquote&gt;
-&lt;p&gt;女慕貞絜， 男效才良。知過必改， 得能莫忘。&lt;br&gt;罔談彼短， 靡恃己長。信使可覆， 器欲難量。&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>藏書 - Collection of books</title>
-      <link>https://dyiwu.github.io/post/life/collection_of_books/</link>
-      <pubDate>Sun, 24 Mar 2019 06:47:11 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/life/collection_of_books/</guid>
-      <description>藏而隱，隱而明，明兒靜，靜而開。</description>
-    </item>
-    
-    <item>
-      <title>風一樣的女人</title>
-      <link>https://dyiwu.github.io/post/life/wind/</link>
-      <pubDate>Fri, 08 Mar 2019 15:41:33 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/life/wind/</guid>
-      <description>解落三秋葉，能開二月花。過江千尺浪，入竹萬竿斜。</description>
-    </item>
-    
-    <item>
-      <title>長恨歌 - A Song of Immortal Regret</title>
-      <link>https://dyiwu.github.io/post/life/a-song-of-immortal-regret/</link>
-      <pubDate>Wed, 30 Aug 2017 01:37:56 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/life/a-song-of-immortal-regret/</guid>
-      <description>《長恨歌》是中國唐朝詩人白居易的一首長篇敘事詩。 第一段：貴妃受寵愛 漢皇重色思傾國，禦宇多年求不得。楊家有女初長成，養在深閨人未識。 天生麗質難</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>國學 - Tag - Chaos</title>
+        <link>https://example.com/tags/%E5%9C%8B%E5%AD%B8/</link>
+        <description>國學 - Tag - Chaos</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (Dyi-Wu Liu)</managingEditor>
+            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 24 Nov 2019 21:47:22 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/%E5%9C%8B%E5%AD%B8/" rel="self" type="application/rss+xml" /><item>
+    <title>陶朱公生意經</title>
+    <link>https://example.com/2019/11/tao-business-rule/</link>
+    <pubDate>Sun, 24 Nov 2019 21:47:22 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/11/tao-business-rule/</guid>
+    <description><![CDATA[<p>根據陶朱公的經商思想加工整理而成的《陶朱公生意經》，又稱《陶朱公商經》、《陶朱公商訓》或《陶朱公經商十八則》，至今仍在定陶一帶流傳。</p>
+<p>陶朱公，本名範蠡，字少伯，楚國宛城三戶（今河南省南陽淅川縣）人，是春秋末期的政治家、軍事家和經營思想家。</p>]]></description>
+</item><item>
+    <title>朱熹紫陽朱子家訓</title>
+    <link>https://example.com/2019/05/zhu-family-instructions-2/</link>
+    <pubDate>Sun, 12 May 2019 16:47:05 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/05/zhu-family-instructions-2/</guid>
+    <description><![CDATA[朱熹紫陽朱子家訓 原文錄自《紫陽朱氏宗譜》 白話文註釋
+ 君之所貴者，仁也。
+臣之所貴者，忠也。
+父之所貴者，慈也。
+子之所貴者，孝也。
+兄之所貴者，友也。
+弟之所貴者，恭也。
+夫之所貴者，和也。
+婦之所貴者，柔也。
+事師長貴乎禮也，交朋友貴乎信也。
+見老者，敬之；見幼者，愛之。
+有德者，年雖下於我，我必尊之；不肖者，年雖高於我，我必遠之。
+慎勿談人之短，切莫矜己之長。
+仇者以義解之，怨者以直報之，隨所遇而安之。
+人有小過，含容而忍之；人有大過，以理而諭之。
+勿以善小而不為，勿以惡小而為之。
+人有惡，則掩之；人有善，則揚之。
+處世無私仇，治家無私法。
+勿損人而利己，勿妒賢而嫉能。
+勿稱忿而報橫逆，勿非禮而害物命。
+見不義之財勿取，遇合理之事則從。
+詩書不可不讀，禮義不可不知。
+子孫不可不教，童僕不可不恤。
+斯文不可不敬，患難不可不扶。
+守我之分者，禮也；聽我之命者，天也。
+人能如是，天必相之。
+此乃日用常行之道，若衣服之於身體，飲食之於口腹，不可一日無也，可不慎哉！
+ 白話文註釋  作為國君，最重要的是懷有仁慈的心。
+作為臣子，最重要的則是忠誠。
+為人父，最重要的是慈愛；為人子，最要緊的則是孝道。
+作人的兄長，最要緊的是友愛弟妹；作為弟妹，則要恭敬兄長。
+作丈夫的，最重要的是態度平和，作妻子的，則必須重視溫柔的作用。
+與師長相處，最重要的是合乎禮；與朋友相交，最重要的則是講信用。
+遇見老者，當有尊敬之心；看見幼者，當有慈愛之心。
+對品德高尚的人，雖然年紀比我小，我也應當尊敬他； 對那些素行不端者，雖年紀比我大，我們也該離他遠點。
+千萬不要談論別人的短處，更不可以仗侍著自己的長處而自以為了不起。
+對人有恨意，化解之道就在於檢查自己是否站在合於道義的一方； 對於那些自己所怨恨的人，則應以平直的心態，正常地對待他們。
+隨便遇到什麼樣的環境，都當心平氣和地接受。
+別人有小過錯，則應有包容之心；別人犯了較大的過錯，則應將正確合理的作法明白告訴他。
+不要以為只是一件小小的善事而不去做，更不可以認為是小小的壞事而大膽地去做。
+別人的缺點，(面對他人時)我們應幫他稍加掩蓋；別人的優點，則應該幫他宣揚。
+處世不應為了私事而與人結仇；治家更要注意不可因為私心而有不公平的作法。
+不要做損人利己的事，不要有妒賢嫉能的心態。
+遇到不順的事情，切勿因氣憤而求一時之快；不要違背正常的行為規範而去傷害別的物體。
+遇有不合正義的發財機會，則應該放棄；遇到合情合理的事情，則不妨從事。
+古聖先賢所流傳下來的經典，不可以不讀； 待人的合理規範與處世的正當態度，則不可不知。
+對後代子孫，不能不重視教育；對僕人幫傭，則必須能體諒關懷。
+數千年的文化傳統不可不尊敬；遇到災變打擊，則不可不相互扶持。
+謹守本分，必須有賴於了解做人的基本規範；而我們一生的命運，則是由老天來決定。
+一個人能做到以上各點，則老天必定會來相助的。
+這些基本的道理，都是日常生活中隨處可做的。
+就像衣服之於身體，飲食之於口腹，是每天都不可離開，每天都不可缺少的。
+我們對這些基本的生活道理，怎可不重視呢？
+ ]]></description>
+</item><item>
+    <title>朱子家訓</title>
+    <link>https://example.com/2019/05/zhu-family-instructions-1/</link>
+    <pubDate>Sun, 12 May 2019 15:31:05 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/05/zhu-family-instructions-1/</guid>
+    <description><![CDATA[朱柏廬治家格言 原文(不計標點題目共524字) 白話註釋
+ 黎明即起，灑掃庭除，要內外整潔；既昏便息，關鎖門戶，必親自檢點。
+一粥一飯，當思來處不易；半絲半縷，恒念物力維艱。
+宜未雨而綢繆，毋臨渴而掘井。
+自奉必須儉約，宴客切勿留連。
+器具質而潔，瓦缶勝金玉；飲食約而精，園蔬愈珍饈。
+勿營華屋，勿謀良田。
+三姑六婆，實淫盜之媒；婢美妾嬌，非閨房之福。
+童僕勿用俊美，妻妾切忌豔妝。
+祖宗雖遠，祭祀不可不誠；子孫雖愚，經書不可不讀。
+居身務期儉約；教子要有義方。
+莫貪意外之財，莫飲過量之酒。
+與肩挑貿易，毋佔便宜；見窮苦親鄰，須加溫恤。
+刻薄成家，理無久享；倫常乖舛，立見消亡。
+兄弟叔姪，須分多潤寡；長幼內外，宜法肅辭嚴。
+聽婦言，乖骨肉，豈是丈夫？重貲財，薄父母，不成人子。
+嫁女擇佳婿，毋索重聘；娶媳求淑女，勿計厚奩。
+見富貴而生諂容者，最可恥；遇貧窮而作驕態者，賤莫甚。
+居家戒爭訟，訟則終凶；處世戒多言，言多必失。
+勿恃勢力而凌逼孤寡；毋貪口腹而恣殺牲禽。
+乖僻自是，悔誤必多，頹惰自甘，家道難成。
+狎暱惡少，久必受其累；屈志老成，急則可相依。
+輕聽發言，安知非人之譖愬？當忍耐三思；因事相爭，焉知非我之不是？須平心再想。
+施惠無念，受恩莫忘。
+凡事當留餘地，得意不宜再往。
+人有喜慶，不可生妒忌心；人有禍患，不可生喜幸心。
+善欲人見，不是真善；惡恐人知，便是大惡。
+見色而起淫心，報在妻女；匿怨而用暗箭，禍延子孫。
+家門和順，雖饔餐不繼，亦有餘歡；國課早完，即囊橐無餘，自得至樂。
+讀書志在聖賢，非徒科第；為官心存君國，豈計身家？
+守分安命，順時聽天。
+為人若此，庶乎近焉。
+ 白話文註釋 (原文)：黎明即起，灑掃庭除，要內外整潔；既昏便息，關鎖門戶，必親自檢點。
+ (白話)：每天早晨，天剛微亮的時候，就要起床！那時屋子裏面還是黑暗的，先用水來灑濕堂前階下一帶地方的灰塵，然後用帚掃地！房子的裏面和外面都要整齊清潔。已經到了黃昏的時，便要休息；睡覺以前，門戶有要關的，或要鎖的，必須自己去查看一下。
+ (原文)：一粥一飯，當思來處不易；半絲半縷，恆念物力維艱。
+ (白話)：我們對於所吃的一頓粥，或一頓飯，應當想著它的所以得來是不容易的；對於衣服的半根絲或半條線，也要常念著這些物資的產生是很艱難的。
+ (原文)：宜未雨而綢繆！毋臨渴而掘井！
+ (白話)：凡事先要準備，像沒到下雨的時候，要先把房子修補完善，不要「臨時抱佛腳」，像到了口渴的時候，才來掘井。
+ (原文)：自奉必須儉約！宴客切勿留連！
+ (白話)：自己享受，必須約節！請客來吃酒，食切不可沒有限度！
+ (原文)：器具質而潔，瓦缶勝金鈺；飲食約而精，園蔬愈珍饈。
+ (白話)：飲食用具，質樸結實，又洗得乾淨，雖然用泥土做的瓦器，也比金玉製的好些。飲食的東西，節約而做得精美，就是園裏種的蔬菜，也勝於珍貴的肴饌。
+ (原文)：勿營華屋！勿謀良田！
+ (白話)：不要營造華麗的房屋！不要圖買良好的田園！
+ (原文)：三姑六婆，實淫盜之媒；婢美妾嬌，非閨房之福。
+ (白話)：三姑和六婆，都是姦淫和盜竊的媒介；美麗的婢女和嬌豔的姬妾，不是家庭的幸福。
+ (原文)：童僕勿用俊美！妻妾切忌豔妝！
+ (白話)：家僮、奴僕，不可僱用俊美貌的！妻、妾切不可有豔麗的妝飾！
+ (原文)：祖宗雖遠，祭祀不可不誠；子孫雖愚，經書不可不讀。]]></description>
+</item><item>
+    <title>增廣賢文 - Augmented sage</title>
+    <link>https://example.com/2019/03/augmented_sage/</link>
+    <pubDate>Sun, 31 Mar 2019 13:33:54 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/03/augmented_sage/</guid>
+    <description><![CDATA[<p>水太清則無魚，人太緊則無智。<br>
+知者減半，省者全無。</p>]]></description>
+</item><item>
+    <title>疊字 - Overlay</title>
+    <link>https://example.com/2019/03/overlay/</link>
+    <pubDate>Mon, 25 Mar 2019 16:03:36 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/03/overlay/</guid>
+    <description><![CDATA[中文的三疊字怎麼念？]]></description>
+</item><item>
+    <title>千字文 - Thousand character classic</title>
+    <link>https://example.com/2019/03/thousand-character-classic/</link>
+    <pubDate>Sun, 24 Mar 2019 06:57:23 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/03/thousand-character-classic/</guid>
+    <description><![CDATA[<blockquote>
+<p>女慕貞絜， 男效才良。知過必改， 得能莫忘。<br>罔談彼短， 靡恃己長。信使可覆， 器欲難量。</p>
+</blockquote>
+]]></description>
+</item><item>
+    <title>藏書 - Collection of books</title>
+    <link>https://example.com/2019/03/collection_of_books/</link>
+    <pubDate>Sun, 24 Mar 2019 06:47:11 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/03/collection_of_books/</guid>
+    <description><![CDATA[藏而隱，隱而明，明兒靜，靜而開。]]></description>
+</item><item>
+    <title>風一樣的女人</title>
+    <link>https://example.com/2019/03/wind/</link>
+    <pubDate>Fri, 08 Mar 2019 15:41:33 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/03/wind/</guid>
+    <description><![CDATA[解落三秋葉，能開二月花。過江千尺浪，入竹萬竿斜。]]></description>
+</item><item>
+    <title>長恨歌 - A Song of Immortal Regret</title>
+    <link>https://example.com/2017/08/A-Song-of-Immortal-Regret/</link>
+    <pubDate>Wed, 30 Aug 2017 01:37:56 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2017/08/A-Song-of-Immortal-Regret/</guid>
+    <description><![CDATA[《長恨歌》是中國唐朝詩人白居易的一首長篇敘事詩。
+ 第一段：貴妃受寵愛 漢皇重色思傾國，禦宇多年求不得。楊家有女初長成，養在深閨人未識。
+天生麗質難自棄，一朝選在君王側。回眸一笑百媚生，六宮粉黛無顏色。
+春寒賜浴華清池，溫泉水滑洗凝脂。侍兒扶起嬌無力，始是新承恩澤時。
+雲鬢花顏金步搖，芙蓉帳暖度春宵。春宵苦短日高起，從此君王不早朝。
+承歡侍宴無閒暇，春從春遊夜專夜。後宮佳麗三千人，三千寵愛在一身。
+金屋妝成嬌侍夜，玉樓宴罷醉和春。姊妹弟兄皆列士，可憐光彩生門戶。
+遂令天下父母心，不重生男重生女。驪宮高處入青雲，仙樂風飄處處聞。
+緩歌慢舞凝絲竹，盡日君王看不足。漁陽鼙鼓動地來，驚破霓裳羽衣曲。
+第二段：馬嵬驚變 九重城闕煙塵生，千乘萬騎西南行。翠華搖搖行複止，西出都門百餘裡。
+六軍不發無奈何，宛轉蛾眉馬前死。花鈿委地無人收，翠翹金雀玉搔頭。
+君王掩面救不得，回看血淚相和流。黃埃散漫風蕭索，雲棧縈紆登劍閣。
+峨嵋山下少人行，旌旗無光日色薄。蜀江水碧蜀山青，聖主朝朝暮暮情。
+行宮見月傷心色，夜雨聞鈴腸斷聲。
+第三段：玄宗皇帝思念 天旋地轉回龍馭，到此躊躇不能去。馬嵬坡下泥土中，不見玉顏空死處。
+君臣相顧盡霑衣，東望都門信馬歸。歸來池苑皆依舊，太液芙蓉未央柳。
+芙蓉如面柳如眉，對此如何不淚垂。春風桃李花開日，秋雨梧桐葉落時。
+西宮南內多秋草，落葉滿階紅不掃。梨園弟子白髮新，椒房阿監青娥老。
+夕殿螢飛思悄然，孤燈挑盡未成眠。遲遲鐘鼓初長夜，耿耿星河欲曙天。
+鴛鴦瓦冷霜華重，翡翠衾寒誰與共。悠悠生死別經年，魂魄不曾來入夢。
+第四段：仙界尋妃 臨邛道士鴻都客，能以精誠致魂魄。為感君王輾轉思，遂教方士殷勤覓。
+排空馭氣奔如電，升天入地求之遍。上窮碧落下黃泉，兩處茫茫皆不見。
+忽聞海上有仙山，山在虛無縹緲間。樓閣玲瓏五雲起，其中綽約多仙子。
+中有一人字太真，雪膚花貌參差是。金闕西廂叩玉扃，轉教小玉報雙成。
+聞道漢家天子使，九華帳裡夢魂驚。攬衣推枕起徘徊，珠箔銀屏迤邐開。
+雲髻(鬢?)半偏新睡覺，花冠不整下堂來。風吹仙袂飄飄(颻)舉，猶似霓裳羽衣舞。
+玉容寂寞淚闌幹，梨花一枝春帶雨。含情凝睇謝君王，一別音容兩渺茫。
+昭陽殿裡恩愛絕，蓬萊宮中日月長。回頭下望人寰處，不見長安見塵霧。
+唯將舊物表深情，鈿合金釵寄將去。釵留一股合一扇，釵擘黃金合分鈿。
+但教心似金鈿堅，天上人間會相見。臨別殷勤重寄詞，詞中有誓兩心知。
+七月七日長生殿，夜半無人私語時。在天願作比翼鳥，在地願為連理枝。
+天長地久有時盡，此恨綿綿無絕期。]]></description>
+</item></channel>
 </rss>

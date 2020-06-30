@@ -1,25 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>social on Chaos - 一個老碼農的筆記</title>
-    <link>https://dyiwu.github.io/tags/social/</link>
-    <description>Recent content in social on Chaos - 一個老碼農的筆記</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Sun, 31 Mar 2019 06:45:57 +0800</lastBuildDate>
-    
-	<atom:link href="https://dyiwu.github.io/tags/social/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>活躍溫馨的群組 - Active warm group</title>
-      <link>https://dyiwu.github.io/post/life/active_warm_group/</link>
-      <pubDate>Sun, 31 Mar 2019 06:45:57 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/life/active_warm_group/</guid>
-      <description>活躍溫馨群組的二三事：什麼是一個溫馨的群組、一個活躍的群組？</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>social - Tag - Chaos</title>
+        <link>https://example.com/tags/social/</link>
+        <description>social - Tag - Chaos</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (Dyi-Wu Liu)</managingEditor>
+            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 31 Mar 2019 06:45:57 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/social/" rel="self" type="application/rss+xml" /><item>
+    <title>活躍溫馨的群組 - Active warm group</title>
+    <link>https://example.com/2019/03/active_warm_group/</link>
+    <pubDate>Sun, 31 Mar 2019 06:45:57 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/03/active_warm_group/</guid>
+    <description><![CDATA[活躍溫馨群組的二三事：什麼是一個溫馨的群組、一個活躍的群組？]]></description>
+</item></channel>
 </rss>

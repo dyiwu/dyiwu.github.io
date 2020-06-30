@@ -1,25 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>日課 on Chaos - 一個老碼農的筆記</title>
-    <link>https://dyiwu.github.io/tags/%E6%97%A5%E8%AA%B2/</link>
-    <description>Recent content in 日課 on Chaos - 一個老碼農的筆記</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Fri, 10 May 2019 14:27:47 +0800</lastBuildDate>
-    
-	<atom:link href="https://dyiwu.github.io/tags/%E6%97%A5%E8%AA%B2/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Daily Exercise - 日課</title>
-      <link>https://dyiwu.github.io/post/life/daily-exercise/</link>
-      <pubDate>Fri, 10 May 2019 14:27:47 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/life/daily-exercise/</guid>
-      <description>&lt;h3 id=&#34;日課-武術養生-筋骨功法&#34;&gt;日課-武術養生-筋骨功法&lt;/h3&gt;</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>日課 - Tag - Chaos</title>
+        <link>https://example.com/tags/%E6%97%A5%E8%AA%B2/</link>
+        <description>日課 - Tag - Chaos</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (Dyi-Wu Liu)</managingEditor>
+            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 10 May 2019 14:27:47 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/%E6%97%A5%E8%AA%B2/" rel="self" type="application/rss+xml" /><item>
+    <title>Daily Exercise - 日課</title>
+    <link>https://example.com/2019/05/daily-exercise/</link>
+    <pubDate>Fri, 10 May 2019 14:27:47 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/05/daily-exercise/</guid>
+    <description><![CDATA[<h3 id="日課-武術養生-筋骨功法">日課-武術養生-筋骨功法</h3>]]></description>
+</item></channel>
 </rss>

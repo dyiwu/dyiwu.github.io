@@ -1,107 +1,92 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>財經 on Chaos - 一個老碼農的筆記</title>
-    <link>https://dyiwu.github.io/tags/%E8%B2%A1%E7%B6%93/</link>
-    <description>Recent content in 財經 on Chaos - 一個老碼農的筆記</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Dyi-Wu Liu &amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;a rel=&#34;license&#34; href=&#34;http://creativecommons.org/licenses/by-nc-sa/4.0/&#34;&gt;&lt;img alt=&#34;Creative Commons License&#34; style=&#34;border-width:0&#34; src=&#34;https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png&#34; /&gt;&lt;/a&gt;</copyright>
-    <lastBuildDate>Wed, 12 Feb 2020 14:42:05 +0800</lastBuildDate>
-    
-	<atom:link href="https://dyiwu.github.io/tags/%E8%B2%A1%E7%B6%93/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>ETF 筆記</title>
-      <link>https://dyiwu.github.io/post/life/tw-stock-etf/</link>
-      <pubDate>Wed, 12 Feb 2020 14:42:05 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/life/tw-stock-etf/</guid>
-      <description>ETF 筆記 代號名稱 0050（元大台灣50） Goodinfo!臺灣股市資訊網、 臺灣證券交易所 0056（元大高股息） Goodinfo!臺灣股市資訊網</description>
-    </item>
-    
-    <item>
-      <title>陶朱公生意經</title>
-      <link>https://dyiwu.github.io/post/life/tao-business-rule/</link>
-      <pubDate>Sun, 24 Nov 2019 21:47:22 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/life/tao-business-rule/</guid>
-      <description>&lt;p&gt;根據陶朱公的經商思想加工整理而成的《陶朱公生意經》，又稱《陶朱公商經》、《陶朱公商訓》或《陶朱公經商十八則》，至今仍在定陶一帶流傳。&lt;/p&gt;
-&lt;p&gt;陶朱公，本名範蠡，字少伯，楚國宛城三戶（今河南省南陽淅川縣）人，是春秋末期的政治家、軍事家和經營思想家。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>臺股證券下單、委託與撮合成交時間</title>
-      <link>https://dyiwu.github.io/post/life/tw-stock-openhour/</link>
-      <pubDate>Tue, 29 Oct 2019 20:30:05 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/life/tw-stock-openhour/</guid>
-      <description>證券下單、委託與撮合成交時間 集中市場交易時間 盤別/交易名稱 盤中單 預約單 一般交易 08:30-13:30 13:40-翌日08:30 盤後定價 14:00-14:30 09:00-14:00 零股交易 13:40-14:30 09:00-13:40 興櫃 09:00~15:00 15</description>
-    </item>
-    
-    <item>
-      <title>庫藏股</title>
-      <link>https://dyiwu.github.io/post/life/tw-stock-treasury-stock/</link>
-      <pubDate>Thu, 13 Jun 2019 18:01:06 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/life/tw-stock-treasury-stock/</guid>
-      <description>&lt;p&gt;庫藏股，指的是公司將自己已經發行的股票重新買回，存放於公司，而尚未註銷或重新售出。這樣做可以減少市場上所有已發行股票的總數。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>MACD 指標的用法</title>
-      <link>https://dyiwu.github.io/post/life/tw-stock-macd/</link>
-      <pubDate>Sat, 08 Jun 2019 11:28:07 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/life/tw-stock-macd/</guid>
-      <description>&lt;p&gt;MACD指標是非常非常實用的一個技術指標，他也是在這個股市上千個技術指標里比較少見的僅僅使用一個技術指標就能夠選到操作性比較強的個股的技術指標；&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>臺股選股123</title>
-      <link>https://dyiwu.github.io/post/life/tw-stock-which/</link>
-      <pubDate>Sun, 12 May 2019 23:49:05 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/life/tw-stock-which/</guid>
-      <description>以主力進出買賣超表爲基準選股 這份主力買超表很珍貴，是從每天全台灣所有券商分公司買賣紀錄統計分析出來的，可以直接從這張表裡面找到市場上主力正在</description>
-    </item>
-    
-    <item>
-      <title>KD 指標</title>
-      <link>https://dyiwu.github.io/post/life/tw-stock-kd/</link>
-      <pubDate>Sun, 12 May 2019 23:43:05 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/life/tw-stock-kd/</guid>
-      <description>KD指標 KD指標是使用RSV的加權移動平均來計算的， RSV數據表達的是「與最近9天相比，今天的股價是強還是弱?」。 收盤價、KD 數值 KD數值越</description>
-    </item>
-    
-    <item>
-      <title>臺股交易規則</title>
-      <link>https://dyiwu.github.io/post/life/tw-stock-market-rule/</link>
-      <pubDate>Thu, 09 May 2019 00:48:55 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/life/tw-stock-market-rule/</guid>
-      <description>&lt;h3 id=&#34;臺股交易時發生的費用&#34;&gt;臺股交易時發生的費用&lt;/h3&gt;</description>
-    </item>
-    
-    <item>
-      <title>財經詞彙</title>
-      <link>https://dyiwu.github.io/post/life/short_interest/</link>
-      <pubDate>Thu, 25 Apr 2019 16:27:39 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/life/short_interest/</guid>
-      <description>財經詞彙 空單餘額 (Short Interest) 什麼是空單餘額 (Short Interest)？ 市場上未回補的空頭數量，也就是交易者借券賣出、仍未買回的總數量。 Investopedia 的解釋 空單餘額一般</description>
-    </item>
-    
-    <item>
-      <title>Finance bookmarks</title>
-      <link>https://dyiwu.github.io/post/bookmarks/finance-bookmarks/</link>
-      <pubDate>Sat, 30 Mar 2019 19:33:39 +0800</pubDate>
-      
-      <guid>https://dyiwu.github.io/post/bookmarks/finance-bookmarks/</guid>
-      <description>This page keep the frequently used bookmark about finance. 匯市 銀行匯率比較·匯率查詢·匯率換算 FindRate.TW 手機版 - 銀行匯率比較·匯率查詢·匯率換算 FindRate.TW 股市 Nasdaq Quotes Investopedia Goodinfo! 臺灣股市資訊網 臺灣證券交易所 我</description>
-    </item>
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>財經 - Tag - Chaos</title>
+        <link>https://example.com/tags/%E8%B2%A1%E7%B6%93/</link>
+        <description>財經 - Tag - Chaos</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (Dyi-Wu Liu)</managingEditor>
+            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 12 Feb 2020 14:42:05 &#43;0800</lastBuildDate><atom:link href="https://example.com/tags/%E8%B2%A1%E7%B6%93/" rel="self" type="application/rss+xml" /><item>
+    <title>ETF 筆記</title>
+    <link>https://example.com/2020/02/tw-stock-etf/</link>
+    <pubDate>Wed, 12 Feb 2020 14:42:05 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2020/02/tw-stock-etf/</guid>
+    <description><![CDATA[ETF 筆記 代號名稱  0050（元大台灣50） Goodinfo!臺灣股市資訊網、 臺灣證券交易所 0056（元大高股息） Goodinfo!臺灣股市資訊網、 臺灣證券交易所 00692（富邦公司治理） Goodinfo!臺灣股市資訊網、 臺灣證券交易所 00850（元大台灣ESG永續） Goodinfo!臺灣股市資訊網、 臺灣證券交易所  短期投資  若是小資族，可以在，日線或週線KD20時買進，等到KD80時賣出。 1年約有:2-3次左右。  長期投資  定時定額投資，分散價位平均。 集中資金，每張1000股，等到日線或週線KD20時買進。當做長期投資的股票(ETF）。  0050、0056 的差異  0050、0056最大差異在於，0050是追蹤台灣50指數，也就是台股市值前50大的公司，因此與景氣連動性相當高；而0056則是由追蹤台灣30檔殖利率最高的公司組成。可以理解成，0050追求市值前50大，0056追求配息前30多。 不過以兩者歷史股價來看，0050近10年漲幅高達312%，遠高於0056的271%，但是近10年平均殖利率0050有2.89%，0056則有5.15%，意思是買0050可以賺到比較多的價差，買0056年拿的配息多，價差較少。  近年除息表現    0056 元大高股息       除息日 前一交易日收盤價 每股配發 殖利率 填息日 收盤價 填息天數     2019-10-23 28.14 1.80 6.40% 2019-12-30 29.00 69   2018-10-23 25.81 1.45 5.62% 2019-02-21 25.]]></description>
+</item><item>
+    <title>陶朱公生意經</title>
+    <link>https://example.com/2019/11/tao-business-rule/</link>
+    <pubDate>Sun, 24 Nov 2019 21:47:22 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/11/tao-business-rule/</guid>
+    <description><![CDATA[<p>根據陶朱公的經商思想加工整理而成的《陶朱公生意經》，又稱《陶朱公商經》、《陶朱公商訓》或《陶朱公經商十八則》，至今仍在定陶一帶流傳。</p>
+<p>陶朱公，本名範蠡，字少伯，楚國宛城三戶（今河南省南陽淅川縣）人，是春秋末期的政治家、軍事家和經營思想家。</p>]]></description>
+</item><item>
+    <title>臺股證券下單、委託與撮合成交時間</title>
+    <link>https://example.com/2019/10/tw-stock-openhour/</link>
+    <pubDate>Tue, 29 Oct 2019 20:30:05 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/10/tw-stock-openhour/</guid>
+    <description><![CDATA[證券下單、委託與撮合成交時間 集中市場交易時間        盤別/交易名稱 盤中單 預約單     一般交易 08:30-13:30 13:40-翌日08:30   盤後定價 14:00-14:30 09:00-14:00   零股交易 13:40-14:30 09:00-13:40   興櫃 09:00~15:00 15:10~次一營業日09:00    接受委託、撮合成交時間        盤別 委託時間 撮合成交時間     一般交易 8:30-13:30
+※若個股收盤前1分鐘價格波動達暫緩收盤標準，該個股自13:31起至13:33仍接受委託 9:00-13:30
+※若個股收盤前1分鐘價格波動達暫緩收盤標準，該個股13:30將不進行收盤撮合，暫緩至13:33收盤   盤後定價 14:00-14:30 14:30   零股交易 13:40-14:30 14:30   鉅額逐筆交易 09:00-17:00 09:00-17:00   鉅額配對交易 08:00-08:30]]></description>
+</item><item>
+    <title>庫藏股</title>
+    <link>https://example.com/2019/06/tw-stock-treasury-stock/</link>
+    <pubDate>Thu, 13 Jun 2019 18:01:06 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/06/tw-stock-treasury-stock/</guid>
+    <description><![CDATA[<p>庫藏股，指的是公司將自己已經發行的股票重新買回，存放於公司，而尚未註銷或重新售出。這樣做可以減少市場上所有已發行股票的總數。</p>]]></description>
+</item><item>
+    <title>MACD 指標的用法</title>
+    <link>https://example.com/2019/06/tw-stock-macd/</link>
+    <pubDate>Sat, 08 Jun 2019 11:28:07 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/06/tw-stock-macd/</guid>
+    <description><![CDATA[<p>MACD指標是非常非常實用的一個技術指標，他也是在這個股市上千個技術指標里比較少見的僅僅使用一個技術指標就能夠選到操作性比較強的個股的技術指標；</p>]]></description>
+</item><item>
+    <title>臺股選股123</title>
+    <link>https://example.com/2019/05/tw-stock-which/</link>
+    <pubDate>Sun, 12 May 2019 23:49:05 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/05/tw-stock-which/</guid>
+    <description><![CDATA[以主力進出買賣超表爲基準選股 這份主力買超表很珍貴，是從每天全台灣所有券商分公司買賣紀錄統計分析出來的，可以直接從這張表裡面找到市場上主力正在偷偷進場買進的股票有哪些，跟著市場主力一起買股，勝率會比自己亂弄要高很多。
+ 先到主力進出買賣超網頁:萬股網、富邦證券 進去以後會先看到當日淨買超排行，請直接點隔壁的累計15日淨買。 這時候就可以一支支點進去看，找有這三種特徵的股票：  走上升軌道，但是還沒連續長紅噴出的。 前波漲了一段，現在在盤整。 盤整一底比一底高的。    前20支裡面去找符合上述三個條件任何一項的都是可以買的強勢股票，續攻的機率有七八成。
+定存股選股  中保 9917
+這支股票過去幾年平均配息在3.2元左右，所以我判斷在50開始就可以開始買進，漲到100以後再賣出，沒到100以前都續抱。沒有跌到50以下請忍住別急著買，不然會發生賺了配息卻賠掉價差的慘事。
+這支股票厲害的地方在於它是做保全的，保全這種行業基本上是不太受景氣影響，甚至景氣越差，治安越差，反而生意越好，所以非常適合當成定存股票。  ]]></description>
+</item><item>
+    <title>KD 指標</title>
+    <link>https://example.com/2019/05/tw-stock-kd/</link>
+    <pubDate>Sun, 12 May 2019 23:43:05 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/05/tw-stock-kd/</guid>
+    <description><![CDATA[KD指標 KD指標是使用RSV的加權移動平均來計算的， RSV數據表達的是「與最近9天相比，今天的股價是強還是弱?」。
+收盤價、KD 數值  KD數值越高代表個股的收盤價接近最近幾天的最高價。
+反之KD數值越低代表個股的收盤價接近最近幾天的最低價。   RSV計算方式 1  (今日收盤價 - 最近九天的最低價)/(最近九天的最高價 - 最近九天最低價)   K值 是 RSV 和前一日的 K 的加權平均
+1  K = 2/3 X (昨日K值) + 1/3 X (今日RSV)   D值 是 K 和前一日的 D 的加權平均
+1  D = 2/3 X (昨日D值) + 1/3 X (今日K值)   KD 指標的應用 由於KD值可以靈敏地反映價格變化所以一般而言：
+KD值&gt;80 , KD值&lt;20  KD值&gt;80表示：高檔鈍化，股價表現強勢，再上漲機率高。
+KD值&lt;20表示：低檔鈍化，股價表現弱勢，下跌機率高。   而KD值另外一個常使用的判斷方式是根據公式KD值都會朝向同一個趨勢發展，但K值反應市場價格的速度較D值來的快，波動亦較D值來的大，所以當K值與D值交叉時被稱為黃金交叉或死亡交叉，是買進或賣出的指標訊號。]]></description>
+</item><item>
+    <title>臺股交易規則</title>
+    <link>https://example.com/2019/05/tw-stock-market-rule/</link>
+    <pubDate>Thu, 09 May 2019 00:48:55 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/05/tw-stock-market-rule/</guid>
+    <description><![CDATA[<h3 id="臺股交易時發生的費用">臺股交易時發生的費用</h3>]]></description>
+</item><item>
+    <title>財經詞彙</title>
+    <link>https://example.com/2019/04/short_interest/</link>
+    <pubDate>Thu, 25 Apr 2019 16:27:39 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/04/short_interest/</guid>
+    <description><![CDATA[財經詞彙  空單餘額 (Short Interest)  什麼是空單餘額 (Short Interest)？  市場上未回補的空頭數量，也就是交易者借券賣出、仍未買回的總數量。   Investopedia 的解釋  空單餘額一般以百分比表示。例如，某個股空單餘額3%， 就代表該股發行在外的股份有3%遭賣空。空單餘額如果相當高， 通常意味若市場認為公司前景悲觀，預期股價將走跌。      ]]></description>
+</item><item>
+    <title>Finance bookmarks</title>
+    <link>https://example.com/2019/03/finance-bookmarks/</link>
+    <pubDate>Sat, 30 Mar 2019 19:33:39 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://example.com/2019/03/finance-bookmarks/</guid>
+    <description><![CDATA[This page keep the frequently used bookmark about finance.
+   匯市     銀行匯率比較·匯率查詢·匯率換算 FindRate.TW 手機版 - 銀行匯率比較·匯率查詢·匯率換算 FindRate.TW     股市     Nasdaq Quotes Investopedia Goodinfo! 臺灣股市資訊網 臺灣證券交易所 我追蹤的股票 CMoney 追訊  ]]></description>
+</item></channel>
 </rss>
