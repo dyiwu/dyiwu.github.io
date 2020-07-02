@@ -2,12 +2,6 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://dyiwu.github.io/themedoc/theme-documentation-basics/</loc><lastmod>2020-03-06T21:29:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://dyiwu.github.io/themedoc/theme-documentation-content/</loc><lastmod>2020-03-05T15:58:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://dyiwu.github.io/themedoc/theme-documentation-built-in-shortcodes/</loc><lastmod>2020-03-04T16:29:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://dyiwu.github.io/themedoc/theme-documentation-extended-shortcodes/</loc><lastmod>2020-03-03T16:29:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://dyiwu.github.io/themedoc/theme-documentation-basic-markdown-syntax/</loc><lastmod>2020-01-01T16:45:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://dyiwu.github.io/themedoc/theme-documentation-emoji-support/</loc><lastmod>2019-10-01T17:55:28&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/about/</loc><lastmod>2020-05-12T02:38:52&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/categories/</loc><lastmod>2020-07-03T00:40:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://dyiwu.github.io/</loc><lastmod>2020-07-03T00:40:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
@@ -43,13 +37,6 @@
             <loc>https://dyiwu.github.io/2020/05/kmod-sky2/</loc><lastmod>2020-05-16T18:02:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2020/03/telescope/</loc><lastmod>2020-03-08T20:16:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2020/03/koifish/</loc><lastmod>2020-03-07T09:29:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://dyiwu.github.io/tags/configuration/</loc><lastmod>2020-03-06T21:29:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://dyiwu.github.io/tags/installation/</loc><lastmod>2020-03-06T21:29:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://dyiwu.github.io/categories/Theme-Document/</loc><lastmod>2020-03-06T21:29:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://dyiwu.github.io/themedoc/</loc><lastmod>2020-03-06T21:29:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://dyiwu.github.io/tags/content/</loc><lastmod>2020-03-05T15:58:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://dyiwu.github.io/tags/markdown/</loc><lastmod>2020-03-05T15:58:26&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://dyiwu.github.io/tags/shortcodes/</loc><lastmod>2020-03-04T16:29:41&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2020/02/porkribs/</loc><lastmod>2020-02-16T11:45:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/tags/bookmark/</loc><lastmod>2020-06-29T21:01:28&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://dyiwu.github.io/categories/bookmark/</loc><lastmod>2020-06-29T21:01:28&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
@@ -60,11 +47,9 @@
             <loc>https://dyiwu.github.io/2019/12/tip_ted_talk/</loc><lastmod>2019-12-14T18:40:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/tags/TED/</loc><lastmod>2019-12-14T18:40:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/tags/tool/</loc><lastmod>2019-12-14T18:40:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://dyiwu.github.io/tags/HTML/</loc><lastmod>2020-01-01T16:45:40&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/tags/%E5%9C%8B%E5%AD%B8/</loc><lastmod>2019-11-24T21:47:22&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2019/11/tao-business-rule/</loc><lastmod>2019-11-24T21:47:22&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2019/10/tw-stock-openhour/</loc><lastmod>2019-10-29T20:30:05&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://dyiwu.github.io/tags/emoji/</loc><lastmod>2019-10-01T17:55:28&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/tags/live/</loc><lastmod>2019-09-03T20:36:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2019/09/live-in-taiwan-bookmarks/</loc><lastmod>2019-09-03T20:36:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2019/09/22-cooking-tips/</loc><lastmod>2019-09-03T19:53:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -104,6 +89,7 @@
             <loc>https://dyiwu.github.io/tags/academic/</loc><lastmod>2019-04-26T20:03:10&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2019/04/install_hugo_academic_kickstart/</loc><lastmod>2019-04-26T20:03:10&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2019/04/short_interest/</loc><lastmod>2019-04-25T16:27:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://dyiwu.github.io/tags/markdown/</loc><lastmod>2019-04-22T20:23:07&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2019/04/tip_hugo_academic_theme/</loc><lastmod>2019-04-22T20:23:07&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2019/04/chayedan/</loc><lastmod>2019-04-21T23:58:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2019/04/escape-hugo-shortcode/</loc><lastmod>2019-04-21T00:39:53&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
