@@ -1,6 +1,6 @@
-# 大腕、網紅
+# Guru - 大腕、網紅
 
-大腕、網紅的網站。
+Guru - 大腕、網紅的網站。
 <!--more-->
 - [零壹軒筆記](https://note.qidong.name/)
 - [宋淨超的博客-雲原生](https://jimmysong.io/)

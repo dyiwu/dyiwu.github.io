@@ -3,8 +3,8 @@
         <title>hpux-kernel-dump - Tag - Chaos</title>
         <link>https://dyiwu.github.io/tags/hpux-kernel-dump/</link>
         <description>hpux-kernel-dump - Tag - Chaos</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (Dyi-Wu Liu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (Dyi-Wu Liu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 01 Aug 2015 21:29:34 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/hpux-kernel-dump/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (dyiwu)</managingEditor>
+            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 01 Aug 2015 21:29:34 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/hpux-kernel-dump/" rel="self" type="application/rss+xml" /><item>
     <title>I-cache errors lead spinlock deadlock</title>
     <link>https://dyiwu.github.io/2015/08/panic-icache-error-spinlock/</link>
     <pubDate>Sat, 01 Aug 2015 21:29:34 &#43;0800</pubDate>
