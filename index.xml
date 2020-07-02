@@ -1,6 +1,6 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Chaos</title>
+        <title>Chaos - 一個老碼農的筆記</title>
         <link>https://dyiwu.github.io/</link>
         <description>About LoveIt Theme</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (dyiwu)</managingEditor>

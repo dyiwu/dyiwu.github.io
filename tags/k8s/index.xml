@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>k8s - Tag - Chaos</title>
+        <title>k8s - Tag - Chaos - 一個老碼農的筆記</title>
         <link>https://dyiwu.github.io/tags/k8s/</link>
-        <description>k8s - Tag - Chaos</description>
+        <description>k8s - Tag - Chaos - 一個老碼農的筆記</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (dyiwu)</managingEditor>
             <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 18 Jun 2020 21:22:39 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/k8s/" rel="self" type="application/rss+xml" /><item>
     <title>Home Lab - K8s on Centos 8 - VM host</title>

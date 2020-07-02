@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>academic - Tag - Chaos</title>
+        <title>academic - Tag - Chaos - 一個老碼農的筆記</title>
         <link>https://dyiwu.github.io/tags/academic/</link>
-        <description>academic - Tag - Chaos</description>
+        <description>academic - Tag - Chaos - 一個老碼農的筆記</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (dyiwu)</managingEditor>
             <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 26 Apr 2019 20:03:10 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/academic/" rel="self" type="application/rss+xml" /><item>
     <title>Install Hugo with Academic theme kickstart</title>
