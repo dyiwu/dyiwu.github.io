@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>linux-kernel - Tag - Chaos - 一個老碼農的筆記</title>
+        <title>linux-kernel - Tag - Chaos - 老碼農的筆記</title>
         <link>https://dyiwu.github.io/tags/linux-kernel/</link>
-        <description>linux-kernel - Tag - Chaos - 一個老碼農的筆記</description>
+        <description>linux-kernel - Tag - Chaos - 老碼農的筆記</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (dyiwu)</managingEditor>
             <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 16 May 2020 18:02:35 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/linux-kernel/" rel="self" type="application/rss+xml" /><item>
     <title>Marvell Yukon 2 Gigabit Ethernet driver on Centos 8.1</title>
