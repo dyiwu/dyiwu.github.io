@@ -35,7 +35,7 @@
     <guid>https://dyiwu.github.io/2020/06/homelab-centos8-k8s-vm-host/</guid>
     <description><![CDATA[<p>This home lab is going to build a CentOS 8 VM host on bare matel and 3 VM guest nodes be form up as a k8s cluster. The first step is going to craete the VM host on the bare metal.</p>]]></description>
 </item><item>
-    <title>DIY Woodwork</title>
+    <title>木工活 - DIY Woodwork</title>
     <link>https://dyiwu.github.io/2020/06/diy-woodwork/</link>
     <pubDate>Wed, 03 Jun 2020 14:27:21 &#43;0800</pubDate>
     <author>Author</author>

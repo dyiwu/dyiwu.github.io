@@ -1,4 +1,4 @@
-# About
+# About Chaos
 
 ### ***一個老碼農的筆記***  
 <div class="container">
@@ -19,8 +19,8 @@
 .text-block {
   position: absolute;
   top: 5px;
-  left: 10px;
-  color: navy;
+  left: 40px;
+  color: orange;
 }
 </style>
 
