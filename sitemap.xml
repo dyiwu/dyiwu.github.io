@@ -2,13 +2,13 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://dyiwu.github.io/categories/</loc><lastmod>2020-07-04T15:16:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://dyiwu.github.io/</loc><lastmod>2020-07-04T15:16:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://dyiwu.github.io/categories/</loc><lastmod>2020-07-04T21:41:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://dyiwu.github.io/</loc><lastmod>2020-07-04T21:41:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://dyiwu.github.io/2020/07/clipgrap/</loc><lastmod>2020-07-04T15:16:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://dyiwu.github.io/tags/desktop/</loc><lastmod>2020-07-04T15:16:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://dyiwu.github.io/posts/</loc><lastmod>2020-07-04T15:16:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://dyiwu.github.io/tags/</loc><lastmod>2020-07-04T15:16:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://dyiwu.github.io/tags/TBD/</loc><lastmod>2020-07-04T15:16:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://dyiwu.github.io/posts/</loc><lastmod>2020-07-04T21:41:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://dyiwu.github.io/tags/</loc><lastmod>2020-07-04T21:41:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://dyiwu.github.io/tags/TBD/</loc><lastmod>2020-07-04T21:41:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://dyiwu.github.io/categories/tech/</loc><lastmod>2020-07-04T15:16:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://dyiwu.github.io/tags/ubuntu/</loc><lastmod>2020-07-04T15:16:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://dyiwu.github.io/tags/centos8/</loc><lastmod>2020-07-04T14:19:01&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
@@ -23,7 +23,7 @@
             <loc>https://dyiwu.github.io/tags/homelab/</loc><lastmod>2020-06-18T21:22:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>https://dyiwu.github.io/tags/k8s/</loc><lastmod>2020-06-18T21:22:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>https://dyiwu.github.io/tags/diy/</loc><lastmod>2020-06-03T14:27:21&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>https://dyiwu.github.io/categories/life/</loc><lastmod>2020-07-03T00:40:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://dyiwu.github.io/categories/life/</loc><lastmod>2020-07-04T21:41:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://dyiwu.github.io/tags/%E4%BD%8F/</loc><lastmod>2020-06-03T14:27:21&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
             <loc>https://dyiwu.github.io/2020/06/diy-woodwork/</loc><lastmod>2020-06-03T14:27:21&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
             <loc>https://dyiwu.github.io/tags/%E4%BF%AE%E8%BA%AB/</loc><lastmod>2020-07-03T00:40:31&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
@@ -48,12 +48,12 @@
             <loc>https://dyiwu.github.io/tags/guru/</loc><lastmod>2020-06-29T21:01:28&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://dyiwu.github.io/2020/02/guru/</loc><lastmod>2020-06-29T21:01:28&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://dyiwu.github.io/2020/02/tw-stock-etf/</loc><lastmod>2020-02-12T14:42:05&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://dyiwu.github.io/tags/%E8%B2%A1%E7%B6%93/</loc><lastmod>2020-02-12T14:42:05&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://dyiwu.github.io/tags/%E8%B2%A1%E7%B6%93/</loc><lastmod>2020-07-04T21:41:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://dyiwu.github.io/2019/12/tip_ted_talk/</loc><lastmod>2019-12-14T18:40:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/tags/TED/</loc><lastmod>2019-12-14T18:40:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/tags/tool/</loc><lastmod>2019-12-14T18:40:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://dyiwu.github.io/tags/%E5%9C%8B%E5%AD%B8/</loc><lastmod>2019-11-24T21:47:22&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://dyiwu.github.io/2019/11/tao-business-rule/</loc><lastmod>2019-11-24T21:47:22&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>https://dyiwu.github.io/tags/%E5%9C%8B%E5%AD%B8/</loc><lastmod>2020-07-04T21:41:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://dyiwu.github.io/2019/11/tao-business-rule/</loc><lastmod>2020-07-04T21:41:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
             <loc>https://dyiwu.github.io/2019/10/tw-stock-openhour/</loc><lastmod>2019-10-29T20:30:05&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/tags/live/</loc><lastmod>2019-09-03T20:36:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2019/09/live-in-taiwan-bookmarks/</loc><lastmod>2019-09-03T20:36:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
