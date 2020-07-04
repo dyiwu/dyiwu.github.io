@@ -4,13 +4,28 @@
         <link>https://dyiwu.github.io/posts/</link>
         <description>All Posts | Chaos - 老碼農的筆記</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (dyiwu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 26 Jun 2020 20:08:21 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 04 Jul 2020 15:16:57 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>ClipGrap</title>
+    <link>https://dyiwu.github.io/2020/07/clipgrap/</link>
+    <pubDate>Sat, 04 Jul 2020 15:16:57 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://dyiwu.github.io/2020/07/clipgrap/</guid>
+    <description><![CDATA[<p>ClipGrab is a multi-platform software package for downloading videos from popular websites</p>]]></description>
+</item><item>
+    <title>Close Lid Action</title>
+    <link>https://dyiwu.github.io/2020/07/close-lid-action/</link>
+    <pubDate>Sat, 04 Jul 2020 14:19:01 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://dyiwu.github.io/2020/07/close-lid-action/</guid>
+    <description><![CDATA[<p>Preventing the laptop from suspending when closing the lid.</p>]]></description>
+</item><item>
     <title>Enabling nested virtualization in KVM</title>
     <link>https://dyiwu.github.io/2020/06/nest-kvm/</link>
     <pubDate>Fri, 26 Jun 2020 20:08:21 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://dyiwu.github.io/2020/06/nest-kvm/</guid>
-    <description><![CDATA[<p>Nested virtualization allows you to run a virtual machine (VM) inside another VM while still using hardware acceleration from the host.</p>]]></description>
+    <description><![CDATA[<p>Nested virtualization allows you to run a virtual machine (VM) inside another VM
+while still using hardware acceleration from the host.</p>]]></description>
 </item><item>
     <title>Clone KVM</title>
     <link>https://dyiwu.github.io/2020/06/clone_kvm/</link>
@@ -60,19 +75,5 @@
     <author>Author</author>
     <guid>https://dyiwu.github.io/2020/05/git-learn/</guid>
     <description><![CDATA[<p>Some tips and resources for learning Git.</p>]]></description>
-</item><item>
-    <title>Install Raspberry</title>
-    <link>https://dyiwu.github.io/2020/05/install-raspberry/</link>
-    <pubDate>Thu, 21 May 2020 19:53:30 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://dyiwu.github.io/2020/05/install-raspberry/</guid>
-    <description><![CDATA[<h2 id="install-raspberry">Install Raspberry</h2>]]></description>
-</item><item>
-    <title>Marvell Yukon 2 Gigabit Ethernet driver on Centos 8.1</title>
-    <link>https://dyiwu.github.io/2020/05/kmod-sky2/</link>
-    <pubDate>Sat, 16 May 2020 18:02:35 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://dyiwu.github.io/2020/05/kmod-sky2/</guid>
-    <description><![CDATA[]]></description>
 </item></channel>
 </rss>

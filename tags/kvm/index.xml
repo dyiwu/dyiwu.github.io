@@ -10,7 +10,8 @@
     <pubDate>Fri, 26 Jun 2020 20:08:21 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://dyiwu.github.io/2020/06/nest-kvm/</guid>
-    <description><![CDATA[<p>Nested virtualization allows you to run a virtual machine (VM) inside another VM while still using hardware acceleration from the host.</p>]]></description>
+    <description><![CDATA[<p>Nested virtualization allows you to run a virtual machine (VM) inside another VM
+while still using hardware acceleration from the host.</p>]]></description>
 </item><item>
     <title>Clone KVM</title>
     <link>https://dyiwu.github.io/2020/06/clone_kvm/</link>

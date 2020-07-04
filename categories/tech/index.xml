@@ -4,13 +4,28 @@
         <link>https://dyiwu.github.io/categories/tech/</link>
         <description>tech - Category - Chaos - 老碼農的筆記</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (dyiwu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 26 Jun 2020 20:08:21 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/categories/tech/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 04 Jul 2020 15:16:57 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/categories/tech/" rel="self" type="application/rss+xml" /><item>
+    <title>ClipGrap</title>
+    <link>https://dyiwu.github.io/2020/07/clipgrap/</link>
+    <pubDate>Sat, 04 Jul 2020 15:16:57 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://dyiwu.github.io/2020/07/clipgrap/</guid>
+    <description><![CDATA[<p>ClipGrab is a multi-platform software package for downloading videos from popular websites</p>]]></description>
+</item><item>
+    <title>Close Lid Action</title>
+    <link>https://dyiwu.github.io/2020/07/close-lid-action/</link>
+    <pubDate>Sat, 04 Jul 2020 14:19:01 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://dyiwu.github.io/2020/07/close-lid-action/</guid>
+    <description><![CDATA[<p>Preventing the laptop from suspending when closing the lid.</p>]]></description>
+</item><item>
     <title>Enabling nested virtualization in KVM</title>
     <link>https://dyiwu.github.io/2020/06/nest-kvm/</link>
     <pubDate>Fri, 26 Jun 2020 20:08:21 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://dyiwu.github.io/2020/06/nest-kvm/</guid>
-    <description><![CDATA[<p>Nested virtualization allows you to run a virtual machine (VM) inside another VM while still using hardware acceleration from the host.</p>]]></description>
+    <description><![CDATA[<p>Nested virtualization allows you to run a virtual machine (VM) inside another VM
+while still using hardware acceleration from the host.</p>]]></description>
 </item><item>
     <title>Clone KVM</title>
     <link>https://dyiwu.github.io/2020/06/clone_kvm/</link>
@@ -61,19 +76,5 @@
     <guid>https://dyiwu.github.io/2019/12/tip_ted_talk/</guid>
     <description><![CDATA[No matter what reasons I am interested in TED talks, either the interesting subject maters or the excellent English speech style. When I am learning from a desired TED talk, I always need to review it many times to cache the whole things especially when I use it as training material to improve my English ability.
 TED talk is in 18 minutes length limit usually, but which need the Internet connection to access it.]]></description>
-</item><item>
-    <title>Install Docker Engine - Community on Centos7</title>
-    <link>https://dyiwu.github.io/2019/09/install-docker-ce-centos7/</link>
-    <pubDate>Sun, 01 Sep 2019 17:56:12 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://dyiwu.github.io/2019/09/install-docker-ce-centos7/</guid>
-    <description><![CDATA[<p>Install Docker Engine - Community on CentOS 7</p>]]></description>
-</item><item>
-    <title>Install Google Chrome on Linux Mint 19 Tara</title>
-    <link>https://dyiwu.github.io/2019/06/install-chrome/</link>
-    <pubDate>Thu, 13 Jun 2019 18:28:32 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://dyiwu.github.io/2019/06/install-chrome/</guid>
-    <description><![CDATA[]]></description>
 </item></channel>
 </rss>
