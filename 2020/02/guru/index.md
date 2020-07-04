@@ -11,4 +11,5 @@ Guru - 大腕、網紅的網站。
 - [JIN-YANG 碼農的自留地](https://jin-yang.github.io/)
 - [Huatai Huang](https://github.com/huataihuang)
 - [Dillon - Author of Hugo theme LoveIt](https://github.com/dillonzq)
+- [赫赫文王](https://kqh.me/)
 
