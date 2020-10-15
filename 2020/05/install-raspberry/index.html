@@ -11,7 +11,7 @@
 <meta property="og:url" content="https://dyiwu.github.io/2020/05/install-raspberry/" />
 <meta property="og:image" content="https://dyiwu.github.io/logo.png"/>
 <meta property="article:published_time" content="2020-05-21T19:53:30+08:00" />
-<meta property="article:modified_time" content="2020-05-21T19:53:30+08:00" />
+<meta property="article:modified_time" content="2020-10-15T14:28:30+08:00" />
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://dyiwu.github.io/logo.png"/>
 
@@ -34,8 +34,8 @@
                             "url": "https:\/\/dyiwu.github.io\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "raspberry, setup","wordcount":  148 ,
-        "url": "https:\/\/dyiwu.github.io\/2020\/05\/install-raspberry\/","datePublished": "2020-05-21T19:53:30+08:00","dateModified": "2020-05-21T19:53:30+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                        }],"genre": "posts","keywords": "raspberry, setup","wordcount":  351 ,
+        "url": "https:\/\/dyiwu.github.io\/2020\/05\/install-raspberry\/","datePublished": "2020-05-21T19:53:30+08:00","dateModified": "2020-10-15T14:28:30+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": {
                     "@type": "ImageObject",
@@ -116,8 +116,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Install Raspberry</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dyiwu</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tech/"><i class="far fa-folder fa-fw"></i>tech</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-05-21">2020-05-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;148 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-05-21">2020-05-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;351 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
@@ -129,6 +129,7 @@
       <ul>
         <li><a href="#ibus-pinyin">ibus-pinyin</a></li>
         <li><a href="#terminator">Terminator</a></li>
+        <li><a href="#add-user">Add user</a></li>
         <li><a href="#fonts">fonts</a>
           <ul>
             <li><a href="#reference">Reference:</a></li>
@@ -137,6 +138,12 @@
         <li><a href="#remmina">Remmina</a>
           <ul>
             <li><a href="#reference-1">Reference:</a></li>
+          </ul>
+        </li>
+        <li><a href="#samba-client">SAMBA Client</a></li>
+        <li><a href="#pi-3b-usb-boot">Pi 3B USB boot</a>
+          <ul>
+            <li><a href="#reference-2">Reference</a></li>
           </ul>
         </li>
       </ul>
@@ -155,7 +162,7 @@ Here is the installation procedure.</p>
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4
-$ im-config -s ibus
+$ sudo im-config -s ibus
 $ sudo apt install ibus-pinyin
 </code></pre></td></tr></table>
 </div>
@@ -168,6 +175,22 @@ Here is the installation procedure.</p>
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install terminator
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="add-user">Add user</h3>
+<p>Scripe to add user</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+</span><span class="cp"></span>groupadd -g <span class="m">8888</span> cosmos
+useradd -m -u <span class="m">9009</span> -g <span class="m">8888</span> -c <span class="s2">&#34;,,&#34;</span> -s /bin/bash -G adm,dialout,cdrom,sudo,audio,
+video,plugdev,games,users,input,netdev,spi,i2c,gpio dyiwu
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="fonts">fonts</h3>
@@ -184,11 +207,100 @@ Here is the installation procedure.</p>
 <h4 id="reference-1">Reference:</h4>
 <ul>
 <li><a href="https://remmina.org/how-to-install-remmina/" target="_blank" rel="noopener noreffer">How to install Remmina</a></li>
+</ul>
+<h3 id="samba-client">SAMBA Client</h3>
+<p>Access network SAMBA share from Pi Client</p>
+<p>Install required packages</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install  samba-common smbclient samba-common-bin smbclient  cifs-utils
+</code></pre></td></tr></table>
+</div>
+</div><p>Create directory for mount point</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo mkdir /mnt/DS420P
+$ sudo mkdir /mnt/DS420P/video
+$ sudo mkdir /mnt/DS420P/music
+$ sudo mkdir /mnt/DS420P/photo
+</code></pre></td></tr></table>
+</div>
+</div><p>Create a credential file for saving the user name and password.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo cat /home/pi/.smbcred
+username=xyz
+password=password_of_xyz
+</code></pre></td></tr></table>
+</div>
+</div><p>Save this credential file and change its permissions so it is not readable by others.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo chown xyz:xyz /home/pi/.smbcred
+$ sudo chmod 600 /home/pi/.smbcred
+</code></pre></td></tr></table>
+</div>
+</div><p>Create entries on /etc/fstab</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ grep cifs /etc/fstab
+//ds420p/video  /mnt/DS420P/video cifs credentials=/home/pi/.smbcred  0  0
+//ds420p/music  /mnt/DS420P/music cifs credentials=/home/pi/.smbcred  0  0
+//ds420p/photo  /mnt/DS420P/photo cifs credentials=/home/pi/.smbcred  0  0
+
+</code></pre></td></tr></table>
+</div>
+</div><p>Test it,</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo mount -a
+$ df | grep DS420P
+//ds420p/video 7742705752 7561820676 180885076  98% /mnt/DS420P/video
+//ds420p/music 7742705752 7561820676 180885076  98% /mnt/DS420P/music
+//ds420p/photo 7742705752 7561820676 180885076  98% /mnt/DS420P/photo
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="pi-3b-usb-boot">Pi 3B USB boot</h3>
+<h4 id="reference-2">Reference</h4>
+<ul>
+<li><a href="https://www.makeuseof.com/tag/make-raspberry-pi-3-boot-usb/" target="_blank" rel="noopener noreffer">How to Make Raspberry Pi 3 Boot From USB</a></li>
 </ul></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2020-05-21</span>
+                <span>Updated on 2020-10-15</span>
             </div>
             <div class="post-info-license"></div>
         </div>
