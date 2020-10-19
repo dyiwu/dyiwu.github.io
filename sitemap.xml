@@ -2,13 +2,15 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://dyiwu.github.io/categories/</loc><lastmod>2020-10-15T14:28:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://dyiwu.github.io/</loc><lastmod>2020-10-15T14:28:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://dyiwu.github.io/categories/life/</loc><lastmod>2020-10-08T18:39:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://dyiwu.github.io/posts/</loc><lastmod>2020-10-15T14:28:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://dyiwu.github.io/tags/</loc><lastmod>2020-10-15T14:28:30&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://dyiwu.github.io/tags/%E5%BF%83%E8%AA%9E/</loc><lastmod>2020-10-08T18:39:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>https://dyiwu.github.io/2020/10/words-to-my-reluctance/</loc><lastmod>2020-10-08T18:39:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://dyiwu.github.io/categories/</loc><lastmod>2020-10-19T15:45:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://dyiwu.github.io/</loc><lastmod>2020-10-19T15:45:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://dyiwu.github.io/categories/life/</loc><lastmod>2020-10-19T15:45:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://dyiwu.github.io/posts/</loc><lastmod>2020-10-19T15:45:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://dyiwu.github.io/tags/</loc><lastmod>2020-10-19T15:45:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://dyiwu.github.io/2020/10/tw-stock-per/</loc><lastmod>2020-10-19T15:45:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://dyiwu.github.io/tags/%E8%B2%A1%E7%B6%93/</loc><lastmod>2020-10-19T15:45:14&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>https://dyiwu.github.io/tags/%E5%BF%83%E8%AA%9E/</loc><lastmod>2020-10-08T18:39:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://dyiwu.github.io/2020/10/words-to-my-reluctance/</loc><lastmod>2020-10-08T18:39:47&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
             <loc>https://dyiwu.github.io/2020/07/clipgrap/</loc><lastmod>2020-07-04T15:16:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/tags/desktop/</loc><lastmod>2020-07-04T15:16:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/tags/TBD/</loc><lastmod>2020-07-04T21:41:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -40,17 +42,16 @@
             <loc>https://dyiwu.github.io/tags/linux-kernel/</loc><lastmod>2020-05-16T18:02:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2020/05/kmod-sky2/</loc><lastmod>2020-05-16T18:02:35&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/about/</loc><lastmod>2020-05-12T02:38:52&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://dyiwu.github.io/tags/%E4%BF%AE%E8%BA%AB/</loc><lastmod>2020-10-04T14:45:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://dyiwu.github.io/tags/%E5%BF%83%E9%9D%88%E9%9B%9E%E6%B9%AF/</loc><lastmod>2020-10-04T14:45:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://dyiwu.github.io/2020/03/telescope/</loc><lastmod>2020-10-04T14:45:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://dyiwu.github.io/tags/%E4%BF%AE%E8%BA%AB/</loc><lastmod>2020-10-04T14:45:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://dyiwu.github.io/tags/%E5%BF%83%E9%9D%88%E9%9B%9E%E6%B9%AF/</loc><lastmod>2020-10-04T14:45:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://dyiwu.github.io/2020/03/telescope/</loc><lastmod>2020-10-04T14:45:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>https://dyiwu.github.io/2020/03/koifish/</loc><lastmod>2020-03-07T09:29:20&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2020/02/porkribs/</loc><lastmod>2020-02-16T11:45:18&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://dyiwu.github.io/tags/bookmark/</loc><lastmod>2020-10-04T15:05:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
-            <loc>https://dyiwu.github.io/categories/bookmark/</loc><lastmod>2020-10-04T15:05:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://dyiwu.github.io/tags/bookmark/</loc><lastmod>2020-10-04T15:05:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
+            <loc>https://dyiwu.github.io/categories/bookmark/</loc><lastmod>2020-10-04T15:05:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>https://dyiwu.github.io/tags/guru/</loc><lastmod>2020-07-04T23:27:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2020/02/guru/</loc><lastmod>2020-07-04T23:27:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2020/02/tw-stock-etf/</loc><lastmod>2020-02-12T14:42:05&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://dyiwu.github.io/tags/%E8%B2%A1%E7%B6%93/</loc><lastmod>2020-07-04T21:41:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2019/12/tip_ted_talk/</loc><lastmod>2019-12-14T18:40:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/tags/TED/</loc><lastmod>2019-12-14T18:40:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/tags/tool/</loc><lastmod>2019-12-14T18:40:11&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -89,7 +90,7 @@
             <loc>https://dyiwu.github.io/2019/05/school-motto/</loc><lastmod>2019-05-03T11:00:16&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2019/05/concessions/</loc><lastmod>2019-05-03T10:40:42&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/tags/even/</loc><lastmod>2020-05-17T12:22:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://dyiwu.github.io/tags/hugo/</loc><lastmod>2020-10-04T15:05:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://dyiwu.github.io/tags/hugo/</loc><lastmod>2020-10-04T15:05:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>https://dyiwu.github.io/2019/05/install-hugo-even/</loc><lastmod>2020-05-17T12:22:00&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2019/04/changing/</loc><lastmod>2019-04-30T13:07:33&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2019/04/iron-kettle/</loc><lastmod>2019-04-29T16:45:17&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
@@ -109,7 +110,7 @@
             <loc>https://dyiwu.github.io/tags/social/</loc><lastmod>2019-03-31T06:45:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2019/03/active_warm_group/</loc><lastmod>2019-03-31T06:45:57&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2019/03/finance-bookmarks/</loc><lastmod>2019-03-30T19:33:39&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>https://dyiwu.github.io/2019/03/hugo-bookmarks/</loc><lastmod>2020-10-04T15:05:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url><url>
+            <loc>https://dyiwu.github.io/2019/03/hugo-bookmarks/</loc><lastmod>2020-10-04T15:05:19&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url><url>
             <loc>https://dyiwu.github.io/2019/03/mathjax/</loc><lastmod>2019-03-29T07:14:22&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/tags/web/</loc><lastmod>2019-03-29T07:14:22&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
             <loc>https://dyiwu.github.io/2019/03/overlay/</loc><lastmod>2019-03-25T16:03:36&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>

@@ -4,7 +4,14 @@
         <link>https://dyiwu.github.io/tags/%E8%B2%A1%E7%B6%93/</link>
         <description>財經 - Tag - Chaos - 老碼農的筆記</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (dyiwu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 12 Feb 2020 14:42:05 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/%E8%B2%A1%E7%B6%93/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 19 Oct 2020 15:45:14 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/%E8%B2%A1%E7%B6%93/" rel="self" type="application/rss+xml" /><item>
+    <title>本益比</title>
+    <link>https://dyiwu.github.io/2020/10/tw-stock-per/</link>
+    <pubDate>Mon, 19 Oct 2020 15:45:14 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://dyiwu.github.io/2020/10/tw-stock-per/</guid>
+    <description><![CDATA[<p>本益比(Price-to-Earning Ratio 簡稱PE)</p>]]></description>
+</item><item>
     <title>ETF 筆記</title>
     <link>https://dyiwu.github.io/2020/02/tw-stock-etf/</link>
     <pubDate>Wed, 12 Feb 2020 14:42:05 &#43;0800</pubDate>
@@ -79,13 +86,5 @@ KD值&lt;20表示：低檔鈍化，股價表現弱勢，下跌機率高。   而
     <author>Author</author>
     <guid>https://dyiwu.github.io/2019/04/short_interest/</guid>
     <description><![CDATA[財經詞彙  空單餘額 (Short Interest)  什麼是空單餘額 (Short Interest)？  市場上未回補的空頭數量，也就是交易者借券賣出、仍未買回的總數量。   Investopedia 的解釋  空單餘額一般以百分比表示。例如，某個股空單餘額3%， 就代表該股發行在外的股份有3%遭賣空。空單餘額如果相當高， 通常意味若市場認為公司前景悲觀，預期股價將走跌。      ]]></description>
-</item><item>
-    <title>Finance bookmarks</title>
-    <link>https://dyiwu.github.io/2019/03/finance-bookmarks/</link>
-    <pubDate>Sat, 30 Mar 2019 19:33:39 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://dyiwu.github.io/2019/03/finance-bookmarks/</guid>
-    <description><![CDATA[This page keep the frequently used bookmark about finance.
-   匯市     銀行匯率比較·匯率查詢·匯率換算 FindRate.TW 手機版 - 銀行匯率比較·匯率查詢·匯率換算 FindRate.TW     股市     Nasdaq Quotes Investopedia Goodinfo! 臺灣股市資訊網 臺灣證券交易所 我追蹤的股票 CMoney 追訊  ]]></description>
 </item></channel>
 </rss>

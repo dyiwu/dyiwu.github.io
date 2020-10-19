@@ -4,7 +4,14 @@
         <link>https://dyiwu.github.io/categories/life/</link>
         <description>life - Category - Chaos - 老碼農的筆記</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (dyiwu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 08 Oct 2020 18:39:47 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/categories/life/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 19 Oct 2020 15:45:14 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/categories/life/" rel="self" type="application/rss+xml" /><item>
+    <title>本益比</title>
+    <link>https://dyiwu.github.io/2020/10/tw-stock-per/</link>
+    <pubDate>Mon, 19 Oct 2020 15:45:14 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://dyiwu.github.io/2020/10/tw-stock-per/</guid>
+    <description><![CDATA[<p>本益比(Price-to-Earning Ratio 簡稱PE)</p>]]></description>
+</item><item>
     <title>給不捨的一段話</title>
     <link>https://dyiwu.github.io/2020/10/words-to-my-reluctance/</link>
     <pubDate>Thu, 08 Oct 2020 18:39:47 &#43;0800</pubDate>
@@ -79,14 +86,5 @@ Words to My Reluctance]]></description>
     <author>Author</author>
     <guid>https://dyiwu.github.io/2019/11/tao-business-rule/</guid>
     <description><![CDATA[<p>陶朱公，本名範蠡，字少伯，楚國宛城三戶（今河南省南陽淅川縣）人，是春秋末期的政治家、軍事家和經營思想家。</p>]]></description>
-</item><item>
-    <title>臺股證券下單、委託與撮合成交時間</title>
-    <link>https://dyiwu.github.io/2019/10/tw-stock-openhour/</link>
-    <pubDate>Tue, 29 Oct 2019 20:30:05 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://dyiwu.github.io/2019/10/tw-stock-openhour/</guid>
-    <description><![CDATA[證券下單、委託與撮合成交時間 集中市場交易時間        盤別/交易名稱 盤中單 預約單     一般交易 08:30-13:30 13:40-翌日08:30   盤後定價 14:00-14:30 09:00-14:00   零股交易 13:40-14:30 09:00-13:40   興櫃 09:00~15:00 15:10~次一營業日09:00    接受委託、撮合成交時間        盤別 委託時間 撮合成交時間     一般交易 8:30-13:30
-※若個股收盤前1分鐘價格波動達暫緩收盤標準，該個股自13:31起至13:33仍接受委託 9:00-13:30
-※若個股收盤前1分鐘價格波動達暫緩收盤標準，該個股13:30將不進行收盤撮合，暫緩至13:33收盤   盤後定價 14:00-14:30 14:30   零股交易 13:40-14:30 14:30   鉅額逐筆交易 09:00-17:00 09:00-17:00   鉅額配對交易 08:00-08:30]]></description>
 </item></channel>
 </rss>
