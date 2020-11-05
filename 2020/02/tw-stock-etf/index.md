@@ -63,3 +63,6 @@
 2. 槓反型ETF不碰、商品型ETF不碰、看不懂的ETF不碰。
 3. 買可配息的ETF。
 
+### 基本市況報導網站
+- [證交所ETF發行單位變動及淨值揭露專區](https://mis.twse.com.tw/stock/etf_nav.jsp?ex=tse)
+
