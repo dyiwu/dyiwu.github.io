@@ -8,8 +8,11 @@ This page keep the Hugo framework related bookmarks.
 
 * [Hugo theme LoveIt](https://themes.gohugo.io/loveit/)
 * [Hugo theme LoveIt Home](https://hugoloveit.com/)
+* [Hugo theme LoveIt Documentation](https://hugoloveit.com/categories/documentation/)
 * [Hugo theme LoveIt built-in shortcodes](https://hugoloveit.com/theme-documentation-built-in-shortcodes/)
 * [Hugo theme LoveIt extended shortcodes](https://hugoloveit.com/theme-documentation-extended-shortcodes/)  
+
+- [Markdown Guide](https://www.markdownguide.org/)
 
 + [Hugo theme even](https://themes.gohugo.io/hugo-theme-even/)
 + [Hugo theme even - shortcodes](https://blog.olowolo.com/example-site/post/shortcodes/)

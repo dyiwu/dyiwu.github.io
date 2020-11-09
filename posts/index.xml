@@ -4,7 +4,14 @@
         <link>https://dyiwu.github.io/posts/</link>
         <description>All Posts | Chaos - 老碼農的筆記</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (dyiwu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 19 Oct 2020 15:45:14 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 09 Nov 2020 12:37:32 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Things about WiFi</title>
+    <link>https://dyiwu.github.io/2020/11/wifi/</link>
+    <pubDate>Mon, 09 Nov 2020 12:37:32 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://dyiwu.github.io/2020/11/wifi/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>本益比</title>
     <link>https://dyiwu.github.io/2020/10/tw-stock-per/</link>
     <pubDate>Mon, 19 Oct 2020 15:45:14 &#43;0800</pubDate>
@@ -72,12 +79,5 @@ while still using hardware acceleration from the host.</p>]]></description>
     <author>Author</author>
     <guid>https://dyiwu.github.io/2020/06/diy-woodwork/</guid>
     <description><![CDATA[<h2 id="tips-for-woodwork">Tips for woodwork</h2>]]></description>
-</item><item>
-    <title>黑夜中的喃呢 : 自信與堅強</title>
-    <link>https://dyiwu.github.io/2020/05/confidence/</link>
-    <pubDate>Fri, 29 May 2020 21:01:31 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://dyiwu.github.io/2020/05/confidence/</guid>
-    <description><![CDATA[<h3 id="黑夜中的喃呢--自信與堅強">黑夜中的喃呢 : 自信與堅強</h3>]]></description>
 </item></channel>
 </rss>

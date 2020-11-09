@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>wifi - Tag - Chaos - 老碼農的筆記</title>
+        <link>https://dyiwu.github.io/tags/wifi/</link>
+        <description>wifi - Tag - Chaos - 老碼農的筆記</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (dyiwu)</managingEditor>
+            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 09 Nov 2020 12:37:32 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/wifi/" rel="self" type="application/rss+xml" /><item>
+    <title>Things about WiFi</title>
+    <link>https://dyiwu.github.io/2020/11/wifi/</link>
+    <pubDate>Mon, 09 Nov 2020 12:37:32 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://dyiwu.github.io/2020/11/wifi/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>

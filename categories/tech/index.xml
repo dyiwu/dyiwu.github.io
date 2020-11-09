@@ -4,7 +4,14 @@
         <link>https://dyiwu.github.io/categories/tech/</link>
         <description>tech - Category - Chaos - 老碼農的筆記</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (dyiwu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 04 Jul 2020 15:16:57 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/categories/tech/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 09 Nov 2020 12:37:32 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/categories/tech/" rel="self" type="application/rss+xml" /><item>
+    <title>Things about WiFi</title>
+    <link>https://dyiwu.github.io/2020/11/wifi/</link>
+    <pubDate>Mon, 09 Nov 2020 12:37:32 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://dyiwu.github.io/2020/11/wifi/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>ClipGrap</title>
     <link>https://dyiwu.github.io/2020/07/clipgrap/</link>
     <pubDate>Sat, 04 Jul 2020 15:16:57 &#43;0800</pubDate>
@@ -68,13 +75,5 @@ while still using hardware acceleration from the host.</p>]]></description>
     <author>Author</author>
     <guid>https://dyiwu.github.io/2020/05/kmod-sky2/</guid>
     <description><![CDATA[]]></description>
-</item><item>
-    <title>My practice on review TED talk video clip</title>
-    <link>https://dyiwu.github.io/2019/12/tip_ted_talk/</link>
-    <pubDate>Sat, 14 Dec 2019 18:40:11 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://dyiwu.github.io/2019/12/tip_ted_talk/</guid>
-    <description><![CDATA[No matter what reasons I am interested in TED talks, either the interesting subject maters or the excellent English speech style. When I am learning from a desired TED talk, I always need to review it many times to cache the whole things especially when I use it as training material to improve my English ability.
-TED talk is in 18 minutes length limit usually, but which need the Internet connection to access it.]]></description>
 </item></channel>
 </rss>
