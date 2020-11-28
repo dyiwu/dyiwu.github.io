@@ -4,7 +4,18 @@
         <link>https://dyiwu.github.io/posts/</link>
         <description>All Posts | Chaos - 老碼農的筆記</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (dyiwu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 09 Nov 2020 12:37:32 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 28 Nov 2020 23:18:33 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>老話 - Old Sayings</title>
+    <link>https://dyiwu.github.io/2020/11/old_sayings/</link>
+    <pubDate>Sat, 28 Nov 2020 23:18:33 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://dyiwu.github.io/2020/11/old_sayings/</guid>
+    <description><![CDATA[老話 - Old Sayings  風吹雞蛋殼，財去人安樂。不是你的就不是你的，不是你的就不該着。
+  雁過留聲，人過留名。
+  家雀的肚，老鼠的眼，吃的不多，看的不遠。
+  世事難行金作馬，錢能通鬼神，更能動世人。
+ ]]></description>
+</item><item>
     <title>Things about WiFi</title>
     <link>https://dyiwu.github.io/2020/11/wifi/</link>
     <pubDate>Mon, 09 Nov 2020 12:37:32 &#43;0800</pubDate>
@@ -72,12 +83,5 @@ while still using hardware acceleration from the host.</p>]]></description>
     <author>Author</author>
     <guid>https://dyiwu.github.io/2020/06/homelab-centos8-k8s-vm-host/</guid>
     <description><![CDATA[<p>This home lab is going to build a CentOS 8 VM host on bare matel and 3 VM guest nodes be form up as a k8s cluster. The first step is going to craete the VM host on the bare metal.</p>]]></description>
-</item><item>
-    <title>木工活 - DIY Woodwork</title>
-    <link>https://dyiwu.github.io/2020/06/diy-woodwork/</link>
-    <pubDate>Wed, 03 Jun 2020 14:27:21 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://dyiwu.github.io/2020/06/diy-woodwork/</guid>
-    <description><![CDATA[<h2 id="tips-for-woodwork">Tips for woodwork</h2>]]></description>
 </item></channel>
 </rss>
