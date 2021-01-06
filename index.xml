@@ -4,9 +4,16 @@
         <link>https://dyiwu.github.io/</link>
         <description>About LoveIt Theme</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (dyiwu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 28 Nov 2020 23:18:33 &#43;0800</lastBuildDate>
+            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 06 Jan 2021 18:33:30 &#43;0800</lastBuildDate>
             <atom:link href="https://dyiwu.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Install Linux Mint 20 Ulyana Cinnamon</title>
+    <link>https://dyiwu.github.io/2021/01/install-LinuxMint20/</link>
+    <pubDate>Wed, 06 Jan 2021 18:33:30 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://dyiwu.github.io/2021/01/install-LinuxMint20/</guid>
+    <description><![CDATA[<h2 id="install-linux-mint-20-ulyana-cinnamon">Install Linux Mint 20 Ulyana Cinnamon</h2>]]></description>
+</item><item>
     <title>老話 - Old Sayings</title>
     <link>https://dyiwu.github.io/2020/11/old_sayings/</link>
     <pubDate>Sat, 28 Nov 2020 23:18:33 &#43;0800</pubDate>
@@ -80,12 +87,5 @@ while still using hardware acceleration from the host.</p>]]></description>
     <author>Author</author>
     <guid>https://dyiwu.github.io/2020/06/kvm-guest-dhcp-ip/</guid>
     <description><![CDATA[<h2 id="procedures-to-assign-static-ip-addresses-for-guest-kvm">Procedures to assign static IP addresses for guest KVM</h2>]]></description>
-</item><item>
-    <title>Home Lab - K8s on Centos 8 - VM host</title>
-    <link>https://dyiwu.github.io/2020/06/homelab-centos8-k8s-vm-host/</link>
-    <pubDate>Thu, 18 Jun 2020 21:22:39 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://dyiwu.github.io/2020/06/homelab-centos8-k8s-vm-host/</guid>
-    <description><![CDATA[<p>This home lab is going to build a CentOS 8 VM host on bare matel and 3 VM guest nodes be form up as a k8s cluster. The first step is going to craete the VM host on the bare metal.</p>]]></description>
 </item></channel>
 </rss>

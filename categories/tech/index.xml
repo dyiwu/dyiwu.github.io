@@ -4,7 +4,14 @@
         <link>https://dyiwu.github.io/categories/tech/</link>
         <description>tech - Category - Chaos - 老碼農的筆記</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (dyiwu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 09 Nov 2020 12:37:32 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/categories/tech/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 06 Jan 2021 18:33:30 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/categories/tech/" rel="self" type="application/rss+xml" /><item>
+    <title>Install Linux Mint 20 Ulyana Cinnamon</title>
+    <link>https://dyiwu.github.io/2021/01/install-LinuxMint20/</link>
+    <pubDate>Wed, 06 Jan 2021 18:33:30 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://dyiwu.github.io/2021/01/install-LinuxMint20/</guid>
+    <description><![CDATA[<h2 id="install-linux-mint-20-ulyana-cinnamon">Install Linux Mint 20 Ulyana Cinnamon</h2>]]></description>
+</item><item>
     <title>Things about WiFi</title>
     <link>https://dyiwu.github.io/2020/11/wifi/</link>
     <pubDate>Mon, 09 Nov 2020 12:37:32 &#43;0800</pubDate>
@@ -68,12 +75,5 @@ while still using hardware acceleration from the host.</p>]]></description>
     <author>Author</author>
     <guid>https://dyiwu.github.io/2020/05/install-raspberry/</guid>
     <description><![CDATA[<h2 id="install-raspberry">Install Raspberry</h2>]]></description>
-</item><item>
-    <title>Marvell Yukon 2 Gigabit Ethernet driver on Centos 8.1</title>
-    <link>https://dyiwu.github.io/2020/05/kmod-sky2/</link>
-    <pubDate>Sat, 16 May 2020 18:02:35 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://dyiwu.github.io/2020/05/kmod-sky2/</guid>
-    <description><![CDATA[]]></description>
 </item></channel>
 </rss>
