@@ -34,7 +34,7 @@
                             "url": "https:\/\/dyiwu.github.io\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "mint, setup","wordcount":  527 ,
+                        }],"genre": "posts","keywords": "mint, setup","wordcount":  508 ,
         "url": "https:\/\/dyiwu.github.io\/2021\/01\/install-LinuxMint20\/","datePublished": "2021-01-06T18:33:30+08:00","dateModified": "2021-01-06T18:33:30+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": {
@@ -116,7 +116,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Install Linux Mint 20 Ulyana Cinnamon</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dyiwu</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tech/"><i class="far fa-folder fa-fw"></i>tech</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-06">2021-01-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;527 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-06">2021-01-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;508 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -132,7 +132,6 @@
         <li><a href="#google-chrome">Google Chrome</a></li>
         <li><a href="#hugo">Hugo</a></li>
         <li><a href="#ibus-pinyin">ibus-pinyin</a></li>
-        <li><a href="#terminator-1">Terminator</a></li>
         <li><a href="#add-user">Add user</a></li>
         <li><a href="#fonts">fonts</a>
           <ul>
@@ -245,36 +244,24 @@ Here is the installation procedure.</p>
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-doc
 $ sudo im-config -s ibus
 $ sudo apt install ibus-pinyin
 </code></pre></td></tr></table>
 </div>
-</div><h3 id="terminator-1">Terminator</h3>
-<p><em><strong>Terminator</strong></em> is a GNOME based terminal.
-Here is the installation procedure.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install terminator
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="add-user">Add user</h3>
-<p>Scripe to add user</p>
+</div><hr>
+<h3 id="add-user">Add user</h3>
+<p>Script to add user</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>groupadd -g <span class="m">8888</span> cosmos
-useradd -m -u <span class="m">9009</span> -g <span class="m">8888</span> -c <span class="s2">&#34;,,&#34;</span> -s /bin/bash -G adm,dialout,cdrom,sudo,audio,
-video,plugdev,games,users,input,netdev,spi,i2c,gpio dyiwu
+useradd -m -u <span class="m">9009</span> -g <span class="m">8888</span> -c <span class="s2">&#34;Dyi-Wu Liu,,&#34;</span> -s /bin/bash -G adm,cdrom,sudo,dip,plugdev,lpadmin,sambashare,cosmos dyiwu
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="fonts">fonts</h3>

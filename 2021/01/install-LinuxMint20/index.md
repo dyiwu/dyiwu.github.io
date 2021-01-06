@@ -60,26 +60,19 @@ Reference:
 ***ibus-pinyin*** is an input method for traditional Chinese.
 Here is the installation procedure.
 ```
-$ sudo apt install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4
+$ sudo apt-get install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-doc
 $ sudo im-config -s ibus
 $ sudo apt install ibus-pinyin
 ```
 
-### Terminator
-***Terminator*** is a GNOME based terminal.
-Here is the installation procedure.
-
-```
-$ sudo apt-get install terminator
-```
+---
 
 ### Add user
-Scripe to add user
+Script to add user
 ```
 #!/bin/bash
 groupadd -g 8888 cosmos
-useradd -m -u 9009 -g 8888 -c ",," -s /bin/bash -G adm,dialout,cdrom,sudo,audio,
-video,plugdev,games,users,input,netdev,spi,i2c,gpio dyiwu
+useradd -m -u 9009 -g 8888 -c "Dyi-Wu Liu,," -s /bin/bash -G adm,cdrom,sudo,dip,plugdev,lpadmin,sambashare,cosmos dyiwu
 ```
 
 ### fonts
