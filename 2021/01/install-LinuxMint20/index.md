@@ -77,9 +77,80 @@ useradd -m -u 9009 -g 8888 -c "Dyi-Wu Liu,," -s /bin/bash -G adm,cdrom,sudo,dip,
 
 ---
 
+### Evolution
+```
+$ sudo apt-get update
+$ sudo apt-get upgrade
+$ sudo apt-get install evolution
+```
+
+---
+
 ### fonts
 
-#### Reference:
+- 文泉驛正黑
+  ```
+  $ sudo apt-get install fonts-wqy-zenhei
+  ```
+
+- 文泉驛微米黑
+  ```
+  $ sudo apt-get install fonts-wqy-microhei
+  ```
+
+- 文泉驛點陣宋體
+  ```
+  $ sudo apt-get install xfonts-wqy
+  ```
+
+- 文鼎字型
+  ```
+  $ sudo apt-get install fonts-arphic-uming 
+  ```
+
+  如要安裝全部文鼎中文字型，可輸入以下指令：
+  ```
+  $ sudo apt-get install fonts-arphic*
+  ```
+
+- 教育部標準楷書
+  ```
+  $ sudo apt-get install fonts-moe-standard-kai
+  ```
+
+- cwTex圓體
+  ```
+  $ sudo apt-get install fonts-cwtex-yen
+  ```
+
+- Noto Sans CJK (思源黑體) 
+
+  1. 先上官網(http://www.google.com/get/noto/)
+  複製DOWNLOAD ALL FONTS按鈕的網址，格式大概如下：
+
+      https://noto-website-2.storage.googleapis.com/pkgs/Noto-unhinted.zip
+
+  2. 進入一個新增的資料夾：
+      ```
+      $ sudo mkdir /usr/share/fonts/truetype/Noto-unhinted
+      $ cd /usr/share/fonts/truetype/Noto-unhinted
+      ```
+  3. 下載字型壓縮檔：
+      ```
+      $ sudo wget https://noto-website-2.storage.googleapis.com/pkgs/Noto-unhinted.zip
+      ```
+  4. 解壓縮
+      ```
+      $ sudo unzip Noto-unhinted.zip
+      ```
+  5. update font cache and reboot
+      ```
+      $ sudo fc-cache -f -v
+      $ fc-cache -f -v
+      $ reboot
+      ```
+
+Reference:
 - [在樹莓派上安裝中文字型 Install Chinese Fonts with Raspberry Pi](http://studyraspberrypi.blogspot.com/2015/12/install-chinese-fonts.html)
 - [Raspberry Pi 筆記(38)：系統語系與中文輸入法](https://atceiling.blogspot.com/2017/03/raspberry-pi_26.html)
 

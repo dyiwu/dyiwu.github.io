@@ -34,7 +34,7 @@
                             "url": "https:\/\/dyiwu.github.io\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "mint, setup","wordcount":  494 ,
+                        }],"genre": "posts","keywords": "mint, setup","wordcount":  610 ,
         "url": "https:\/\/dyiwu.github.io\/2021\/01\/install-LinuxMint20\/","datePublished": "2021-01-06T18:33:30+08:00","dateModified": "2021-01-06T18:33:30+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": {
@@ -116,7 +116,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Install Linux Mint 20 Ulyana Cinnamon</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dyiwu</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tech/"><i class="far fa-folder fa-fw"></i>tech</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-06">2021-01-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;494 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-06">2021-01-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;610 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -133,11 +133,8 @@
         <li><a href="#hugo">Hugo</a></li>
         <li><a href="#ibus-pinyin">ibus-pinyin</a></li>
         <li><a href="#add-user">Add user</a></li>
-        <li><a href="#fonts">fonts</a>
-          <ul>
-            <li><a href="#reference">Reference:</a></li>
-          </ul>
-        </li>
+        <li><a href="#evolution">Evolution</a></li>
+        <li><a href="#fonts">fonts</a></li>
         <li><a href="#remmina">Remmina</a></li>
         <li><a href="#samba-client">SAMBA Client</a></li>
       </ul>
@@ -256,8 +253,159 @@ useradd -m -u <span class="m">9009</span> -g <span class="m">8888</span> -c <spa
 </code></pre></td></tr></table>
 </div>
 </div><hr>
+<h3 id="evolution">Evolution</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get update
+$ sudo apt-get upgrade
+$ sudo apt-get install evolution
+</code></pre></td></tr></table>
+</div>
+</div><hr>
 <h3 id="fonts">fonts</h3>
-<h4 id="reference">Reference:</h4>
+<ul>
+<li>
+<p>文泉驛正黑</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install fonts-wqy-zenhei
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>文泉驛微米黑</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install fonts-wqy-microhei
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>文泉驛點陣宋體</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install xfonts-wqy
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>文鼎字型</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install fonts-arphic-uming 
+</code></pre></td></tr></table>
+</div>
+</div><p>如要安裝全部文鼎中文字型，可輸入以下指令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install fonts-arphic*
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>教育部標準楷書</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install fonts-moe-standard-kai
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>cwTex圓體</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install fonts-cwtex-yen
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Noto Sans CJK (思源黑體)</p>
+<ol>
+<li>
+<p>先上官網(<a href="http://www.google.com/get/noto/">http://www.google.com/get/noto/</a>)
+複製DOWNLOAD ALL FONTS按鈕的網址，格式大概如下：</p>
+<p><a href="https://noto-website-2.storage.googleapis.com/pkgs/Noto-unhinted.zip">https://noto-website-2.storage.googleapis.com/pkgs/Noto-unhinted.zip</a></p>
+</li>
+<li>
+<p>進入一個新增的資料夾：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo mkdir /usr/share/fonts/truetype/Noto-unhinted
+$ cd /usr/share/fonts/truetype/Noto-unhinted
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>下載字型壓縮檔：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo wget https://noto-website-2.storage.googleapis.com/pkgs/Noto-unhinted.zip
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>解壓縮</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo unzip Noto-unhinted.zip
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>update font cache and reboot</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo fc-cache -f -v
+$ fc-cache -f -v
+$ reboot
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+</li>
+</ul>
+<p>Reference:</p>
 <ul>
 <li><a href="http://studyraspberrypi.blogspot.com/2015/12/install-chinese-fonts.html" target="_blank" rel="noopener noreffer">在樹莓派上安裝中文字型 Install Chinese Fonts with Raspberry Pi</a></li>
 <li><a href="https://atceiling.blogspot.com/2017/03/raspberry-pi_26.html" target="_blank" rel="noopener noreffer">Raspberry Pi 筆記(38)：系統語系與中文輸入法</a></li>
