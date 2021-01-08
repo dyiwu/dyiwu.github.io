@@ -234,4 +234,5 @@ $ df | grep ds420p
 Reference:
 - [25 Things to Do After Installing Linux Mint 20 Ulyana](https://averagelinuxuser.com/linuxmint20-after-install/)
 - [Important Things to Do After Installing Linux Mint 20](https://linuxhint.com/to_do_after_install-_linux_mint_20/)
+- [10 Things to Do First in Linux Mint 20.1 Cinnamon](https://easylinuxtipsproject.blogspot.com/p/first-mint-cinnamon.html)
 
