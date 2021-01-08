@@ -165,7 +165,22 @@ The profile options relax-order-checks and glyph-cache, which are under profile'
 
 xfreerdp /w:1900 /v:MyDNSServername /relax-order-checks +glyph-cache
 
+An official PPA with Remmina 1.4.7 release can be installed by copying and pasting this in a terminal:
+```
+$ sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
+$ sudo apt update
+$ sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret
+$ sudo apt install freerdp2-x11 remmina-plugin-nx remmina-plugin-exec remmina-plugin-kwallet remmina-plugin-xdmcp remmina-plugin-www fam qt5-qmltooling-plugins
+```
 
+Make sure Remmina is not running. Either close it, reboot, or kill it by pasting this in a terminal:
+```
+$ sudo killall remmina
+```
+List available plugins with apt-cache search remmina-plugin. By default RDP, SSH and SFTP are installed. 
+```
+$ apt-cache search remmina-plugin
+```
 Reference:
 [How to install Remmina](https://remmina.org/how-to-install-remmina/)
 
@@ -174,46 +189,49 @@ Access network SAMBA share from Pi Client
 
 Install required packages
 ```
-$ sudo apt-get install  samba-common smbclient samba-common-bin smbclient  cifs-utils
+$ sudo apt-get install samba-common smbclient samba-common-bin cifs-utils
 ```
 
 Create directory for mount point
 ```
-$ sudo mkdir /mnt/DS420P
-$ sudo mkdir /mnt/DS420P/video
-$ sudo mkdir /mnt/DS420P/music
-$ sudo mkdir /mnt/DS420P/photo
+$ sudo mkdir /mnt/ds420p
+$ sudo mkdir /mnt/ds420p/video
+$ sudo mkdir /mnt/ds420p/music
+$ sudo mkdir /mnt/ds420p/photo
 ```
  
 Create a credential file for saving the user name and password.
 ```
-$ sudo cat /home/pi/.smbcred
+$ sudo cat /root/smb.cred
 username=xyz
 password=password_of_xyz
+domain=workgroup
 ```
 
 Save this credential file and change its permissions so it is not readable by others. 
 ```
-$ sudo chown xyz:xyz /home/pi/.smbcred
-$ sudo chmod 600 /home/pi/.smbcred
+$ sudo chown root:root /root/smbcred
+$ sudo chmod 600 /root/smbcred
 ```
 
-Create entries on /etc/fstab
+Create entries in /etc/fstab
 ```
 $ grep cifs /etc/fstab
-//ds420p/video  /mnt/DS420P/video cifs credentials=/home/pi/.smbcred  0  0
-//ds420p/music  /mnt/DS420P/music cifs credentials=/home/pi/.smbcred  0  0
-//ds420p/photo  /mnt/DS420P/photo cifs credentials=/home/pi/.smbcred  0  0
+//ds420p/video  /mnt/ds420p/video cifs credentials=/root/smb.cred  0  0
+//ds420p/music  /mnt/ds420p/music cifs credentials=/root/smb.cred  0  0
+//ds420p/photo  /mnt/ds420p/photo cifs credentials=/root/smb.cred  0  0
 
 ```
 Test it,
 ```
 $ sudo mount -a
-$ df | grep DS420P
-//ds420p/video 7742705752 7561820676 180885076  98% /mnt/DS420P/video
-//ds420p/music 7742705752 7561820676 180885076  98% /mnt/DS420P/music
-//ds420p/photo 7742705752 7561820676 180885076  98% /mnt/DS420P/photo
+$ df | grep ds420p
+//ds420p/video 7742705752 7561820676 180885076  98% /mnt/ds420p/video
+//ds420p/music 7742705752 7561820676 180885076  98% /mnt/ds420p/music
+//ds420p/photo 7742705752 7561820676 180885076  98% /mnt/ds420p/photo
 ```
 
-
+Reference:
+- [25 Things to Do After Installing Linux Mint 20 Ulyana](https://averagelinuxuser.com/linuxmint20-after-install/)
+- [Important Things to Do After Installing Linux Mint 20](https://linuxhint.com/to_do_after_install-_linux_mint_20/)
 
