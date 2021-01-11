@@ -1,8 +1,63 @@
-# Install Linux Mint 20 Ulyana Cinnamon
+# Install Linux Mint 20.1 Ulyssa Cinnamon
 
-## Install Linux Mint 20 Ulyana Cinnamon
+## Install Linux Mint 20.1 Ulyssa Cinnamon
 <!--more--> 
-### git
+### Mint
+
+- [Linux Mint Home](https://linuxmint.com/)
+- [Linux Mint Documentation](https://linuxmint.com/documentation.php)
+- [Linux Mint Forum](https://forums.linuxmint.com/)
+- [Linux Mint Blog](https://blog.linuxmint.com/)
+```
+$ cat /etc/os-release 
+NAME="Linux Mint"
+VERSION="20.1 (Ulyssa)"
+ID=linuxmint
+ID_LIKE=ubuntu
+PRETTY_NAME="Linux Mint 20.1"
+VERSION_ID="20.1"
+HOME_URL="https://www.linuxmint.com/"
+SUPPORT_URL="https://forums.linuxmint.com/"
+BUG_REPORT_URL="http://linuxmint-troubleshooting-guide.readthedocs.io/en/latest/"
+PRIVACY_POLICY_URL="https://www.linuxmint.com/"
+VERSION_CODENAME=ulyssa
+UBUNTU_CODENAME=focal
+
+$ cat /etc/lsb-release
+DISTRIB_ID=LinuxMint
+DISTRIB_RELEASE=20.1
+DISTRIB_CODENAME=ulyssa
+DISTRIB_DESCRIPTION="Linux Mint 20.1 Ulyssa"
+
+```
+
+---
+
+### Disk Partitions
+```
+$ sudo fdisk -l /dev/sda
+Disk /dev/sda: 698.65 GiB, 750156374016 bytes, 1465149168 sectors
+Disk model: WDC WD7500BPKT-7
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 4096 bytes
+I/O size (minimum/optimal): 4096 bytes / 4096 bytes
+Disklabel type: dos
+Disk identifier: 0x4057e768
+
+Device     Boot    Start        End    Sectors  Size Id Type
+/dev/sda1           2048     999423     997376  487M  b W95 FAT32
+/dev/sda2  *      999424    3000319    2000896  977M 83 Linux
+/dev/sda3        3000320   35000319   32000000 15.3G 82 Linux swap / Solaris
+/dev/sda4       35000320 1465147391 1430147072  682G 83 Linux
+
+$ df |grep -e Mount -e sda
+Filesystem     1K-blocks     Used Available Use% Mounted on
+/dev/sda4      702801160 12192708 654838392   2% /
+/dev/sda2         968312   309968    591940  35% /boot
+/dev/sda1         497696        4    497692   1% /boot/efi
+```
+
+### Git
 Add the Official PPA by GIT, update the repository and then install Git.
 ```
 $ sudo add-apt-repository ppa:git-core/ppa
@@ -56,7 +111,7 @@ Reference:
 
 ---
 
-### ibus-pinyin
+### Ibus-pinyin
 ***ibus-pinyin*** is an input method for traditional Chinese.
 Here is the installation procedure.
 ```
@@ -86,7 +141,7 @@ $ sudo apt-get install evolution
 
 ---
 
-### fonts
+### Fonts
 
 - 文泉驛正黑
   ```
@@ -184,7 +239,7 @@ $ apt-cache search remmina-plugin
 Reference:
 [How to install Remmina](https://remmina.org/how-to-install-remmina/)
 
-### SAMBA Client
+### Samba Client
 Access network SAMBA share from Pi Client
 
 Install required packages
@@ -232,7 +287,7 @@ $ df | grep ds420p
 ```
 
 Reference:
-- [25 Things to Do After Installing Linux Mint 20 Ulyana](https://averagelinuxuser.com/linuxmint20-after-install/)
+- [25 Things to Do After Installing Linux Mint 20 Ulyssa](https://averagelinuxuser.com/linuxmint20-after-install/)
 - [Important Things to Do After Installing Linux Mint 20](https://linuxhint.com/to_do_after_install-_linux_mint_20/)
 - [10 Things to Do First in Linux Mint 20.1 Cinnamon](https://easylinuxtipsproject.blogspot.com/p/first-mint-cinnamon.html)
 
