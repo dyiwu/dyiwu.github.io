@@ -4,33 +4,13 @@
         <link>https://dyiwu.github.io/tags/hugo/</link>
         <description>hugo - Tag - Chaos - 老碼農的筆記</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (dyiwu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 01 May 2019 14:53:00 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/hugo/" rel="self" type="application/rss+xml" /><item>
-    <title>Install Hugo with Even theme</title>
-    <link>https://dyiwu.github.io/2019/05/install-hugo-even/</link>
-    <pubDate>Wed, 01 May 2019 14:53:00 &#43;0800</pubDate>
+            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 14 Jan 2021 08:53:00 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/hugo/" rel="self" type="application/rss+xml" /><item>
+    <title>Install Hugo with LoveIt theme</title>
+    <link>https://dyiwu.github.io/2021/01/install-hugo-loveit/</link>
+    <pubDate>Thu, 14 Jan 2021 08:53:00 &#43;0800</pubDate>
     <author>Author</author>
-    <guid>https://dyiwu.github.io/2019/05/install-hugo-even/</guid>
-    <description><![CDATA[<h2 id="install-hugo-with-even-theme">Install Hugo with Even theme</h2>]]></description>
-</item><item>
-    <title>Install Hugo with Academic theme kickstart</title>
-    <link>https://dyiwu.github.io/2019/04/install_hugo_academic_kickstart/</link>
-    <pubDate>Fri, 26 Apr 2019 20:03:10 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://dyiwu.github.io/2019/04/install_hugo_academic_kickstart/</guid>
-    <description><![CDATA[Install Hugo with Academic theme kickstart  File location:  Local repository saved under ~/Hugo/Site/chaos Generated web site saved under ~/Hugo/Site/chaos/public directory and deploy to github as https://dyiwu.github.io/     - Fork the Academic Kickstart repository from sourcethemes/academic-kickstart as dyiwu/academic-kickstart repo (https://github.com/sourcethemes/academic-kickstart)   rename the forked repo from academic-kickstart to chaos
-  clone your dyiwu/chaos repo into local file system: 1 2 3 4  $ cd ~/Hugo/Site $ git clone https://github.]]></description>
-</item><item>
-    <title>Tips for using Hugo with academic theme</title>
-    <link>https://dyiwu.github.io/2019/04/tip_hugo_academic_theme/</link>
-    <pubDate>Mon, 22 Apr 2019 20:23:07 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://dyiwu.github.io/2019/04/tip_hugo_academic_theme/</guid>
-    <description><![CDATA[shortcode
-  {{&lt; list_tags &gt;}}
-  {{&lt; list_categories &gt;}}
-  High light code block with line number
-1{{&lt; highlight plaintext &#34;linenos=inline&#34; &gt;}} 2code block here 3{{&lt; /highlight &gt;}}   Reference:
- https://lmyint.github.io/post/hugo-academic-tips/ https://highlightjs.org/ https://liatas.com/posts/escaping-hugo-shortcodes/ http://abitofcode.com/post/2017/04/customizing_a_hugo_site/  ]]></description>
+    <guid>https://dyiwu.github.io/2021/01/install-hugo-loveit/</guid>
+    <description><![CDATA[<p>Hugo with LoveIt theme installation</p>]]></description>
 </item><item>
     <title>Escaping Hugo Shortcode</title>
     <link>https://dyiwu.github.io/2019/04/escape-hugo-shortcode/</link>
@@ -52,13 +32,6 @@
     <author>Author</author>
     <guid>https://dyiwu.github.io/2019/03/hugo-bookmarks/</guid>
     <description><![CDATA[This page keep the Hugo framework related bookmarks.
- Hugo Documentation Hugo Discussion Hugo Markdown Guide   Hugo theme LoveIt Hugo theme LoveIt Home Hugo theme LoveIt Documentation Hugo theme LoveIt built-in shortcodes Hugo theme LoveIt extended shortcodes   Markdown Guide   Hugo theme even Hugo theme even - shortcodes   reveal-hugo theme @ gohugo dzello/reveal-hugo @ github hakimel/reveal.js @ github Academic Theme Documentation  ]]></description>
-</item><item>
-    <title>Academic Kickstart Welcome Page</title>
-    <link>https://dyiwu.github.io/2019/03/academic_kickstart_demo/</link>
-    <pubDate>Sun, 24 Mar 2019 06:47:11 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://dyiwu.github.io/2019/03/academic_kickstart_demo/</guid>
-    <description><![CDATA[Welcome page of Academic Kickstart template]]></description>
+ Hugo Documentation Hugo Discussion Hugo Markdown Guide   Hugo theme LoveIt Hugo theme LoveIt Home Hugo theme LoveIt Documentation Basic Markdown Syntax LoveIt Theme Documentation - Basics LoveIt Theme Documentation - Content LoveIt Theme Documentation - Built-in Shortcodes LoveIt Theme Documentation - Extended Shortcodes   Markdown Guide   Hugo theme even Hugo theme even - shortcodes   reveal-hugo theme @ gohugo dzello/reveal-hugo @ github hakimel/reveal.]]></description>
 </item></channel>
 </rss>

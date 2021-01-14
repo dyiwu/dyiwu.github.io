@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Install Hugo with LoveIt theme - Chaos - 老碼農的筆記</title><meta name="Description" content="About LoveIt Theme"><meta property="og:title" content="Install Hugo with LoveIt theme" />
+<meta property="og:description" content="Hugo with LoveIt theme installation" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://dyiwu.github.io/2021/01/install-hugo-loveit/" />
+<meta property="og:image" content="https://dyiwu.github.io/logo.png"/>
+<meta property="article:published_time" content="2021-01-14T08:53:00+08:00" />
+<meta property="article:modified_time" content="2021-01-14T08:53:00+08:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://dyiwu.github.io/logo.png"/>
+
+<meta name="twitter:title" content="Install Hugo with LoveIt theme"/>
+<meta name="twitter:description" content="Hugo with LoveIt theme installation"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://dyiwu.github.io/2021/01/install-hugo-loveit/" /><link rel="prev" href="https://dyiwu.github.io/2021/01/install-LinuxMint20/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Install Hugo with LoveIt theme",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/dyiwu.github.io\/2021\/01\/install-hugo-loveit\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/dyiwu.github.io\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "hugo, loveit, setup","wordcount":  849 ,
+        "url": "https:\/\/dyiwu.github.io\/2021\/01\/install-hugo-loveit\/","datePublished": "2021-01-14T08:53:00+08:00","dateModified": "2021-01-14T08:53:00+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/dyiwu.github.io\/images\/avatar.png",
+                    "width":  528 ,
+                    "height":  560 
+                }},"author": {
+                "@type": "Person",
+                "name": "dyiwu"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Chaos - 老碼農的筆記"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/logo.png"
+        data-srcset="/images/logo.png, /images/logo.png 1.5x, /images/logo.png 2x"
+        data-sizes="auto"
+        alt="/images/logo.png"
+        title="/images/logo.png" />Chaos - 老碼農的筆記</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/posts/" title="All Posts"> Archives </a><a class="menu-item" href="/about/" title="About Chaos"> About </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Chaos - 老碼農的筆記"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/logo.png"
+        data-srcset="/images/logo.png, /images/logo.png 1.5x, /images/logo.png 2x"
+        data-sizes="auto"
+        alt="/images/logo.png"
+        title="/images/logo.png" />Chaos - 老碼農的筆記</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/posts/" title="All Posts">Archives</a><a class="menu-item" href="/about/" title="About Chaos">About</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Install Hugo with LoveIt theme</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dyiwu</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tech/"><i class="far fa-folder fa-fw"></i>tech</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-14">2021-01-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;849 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#hugo">Hugo</a>
+      <ul>
+        <li><a href="#install">Install</a></li>
+      </ul>
+    </li>
+    <li><a href="#site">Site</a></li>
+    <li><a href="#theme">Theme</a>
+      <ul>
+        <li><a href="#install-1">Install</a></li>
+        <li><a href="#update-theme">Update theme</a></li>
+      </ul>
+    </li>
+    <li><a href="#deploy-to-github">Deploy to github</a></li>
+    <li><a href="#maintance-scripts">Maintance scripts</a>
+      <ul>
+        <li><a href="#deploy_chaossh">deploy_chaos.sh</a></li>
+        <li><a href="#deploy_publicsh">deploy_public.sh</a></li>
+        <li><a href="#clone_chaossh">clone_chaos.sh</a></li>
+        <li><a href="#clone_publicsh">clone_public.sh</a></li>
+        <li><a href="#clone_themesh">clone_theme.sh</a></li>
+        <li><a href="#update_themesh">update_theme.sh</a></li>
+      </ul>
+    </li>
+    <li><a href="#customization-and-tips">Customization and Tips</a>
+      <ul>
+        <li><a href="#summary-splitting">Summary Splitting</a></li>
+        <li><a href="#permlinks">Permlinks</a></li>
+        <li><a href="#goldmark">Goldmark</a></li>
+        <li><a href="#firewall">firewall</a></li>
+        <li><a href="#logo">Logo</a></li>
+        <li><a href="#tips">Tips</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Hugo with LoveIt theme installation</p>
+<h2 id="hugo">Hugo</h2>
+<h3 id="install">Install</h3>
+<p>download the tar ball from <a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ wget https://github.com/gohugoio/hugo/releases/download/v0.80.0/hugo_extended_0.80.0_Linux-64bit.tar.gz
+</code></pre></td></tr></table>
+</div>
+</div><p>Extract to ~/bin</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ tar tvf ~/bin/hugo_extended_0.80.0_Linux-64bit.tar.gz 
+-rw-r--r-- root/root     <span class="m">11357</span> 2020-12-31 21:27 LICENSE
+-rw-r--r-- root/root     <span class="m">12289</span> 2020-12-31 21:27 README.md
+-rwxr-xr-x root/root  <span class="m">49946384</span> 2020-12-31 21:48 hugo
+</code></pre></td></tr></table>
+</div>
+</div><p>Check the version</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ hugo version
+Hugo Static Site Generator v0.80.0-792EF0F4/extended linux/amd64 BuildDate: 2020-12-31T13:46:18Z
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="site">Site</h2>
+<ul>
+<li>
+<p>Create a new site named it as chaos in my case.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cd ~/Hugo/Sites
+$ hugo new site chaos
+Congratulations! Your new Hugo site is created in /home/dyiwu/Hugo/Sites/chaos.
+
+Just a few more steps and you&#39;re ready to go:
+
+1. Download a theme into the same-named folder.
+   Choose a theme from https://themes.gohugo.io/, or
+   create your own with the &#34;hugo new theme &lt;THEMENAME&gt;&#34; command.
+2. Perhaps you want to add some content. You can add single files
+   with &#34;hugo new &lt;SECTIONNAME&gt;/&lt;FILENAME&gt;.&lt;FORMAT&gt;&#34;.
+3. Start the built-in live server via &#34;hugo server&#34;.
+
+Visit https://gohugo.io/ for quickstart guide and full documentation.
+</code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<hr>
+<h2 id="theme">Theme</h2>
+<h3 id="install-1">Install</h3>
+<pre><code>```
+$ cd ~/Hugo/Sites/chaos
+$ git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
+$ cp themes/LoveIt/exampleSite/config.toml .
+```
+</code></pre>
+<h3 id="update-theme">Update theme</h3>
+<pre><code>```
+$ cd ~/Hugo/Sites/chaos/themes/LoveIt
+$ git pull
+```
+</code></pre>
+<h2 id="deploy-to-github">Deploy to github</h2>
+<ol>
+<li>
+<p>Create two repostories on github, named it as chaos and dyiwu.github.io</p>
+</li>
+<li>
+<p>Generate the web site which will be saved under ~/Hugo/Sites/chaos/public directory.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cd ~/Hugo/Sites/chaos
+$ hugo
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>link the generated web site (/public) folder to github</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cd ~/Hugo/Sites/chaos/public
+$ git init
+$ git remote add origin https://github.com/dyiwu/dyiwu.github.io.git
+$ git add .
+$ git commit -m &#34;Initial commit&#34;
+$ git push -u origin master
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Link the whole chaos site to github</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cd ~/Hugo/Sites/chaos
+$ git init
+$ git remote add origin https://github.com/dyiwu/chaos.git
+$ git add .
+$ git commit -m &#34;Initial commit&#34;
+$ git push -u origin master
+</code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>Web site will hosted on Github as <a href="https://dyiwu.github.io/">https://dyiwu.github.io/</a></p>
+</li>
+</ol>
+<h2 id="maintance-scripts">Maintance scripts</h2>
+<h3 id="deploy_chaossh">deploy_chaos.sh</h3>
+<p>Script to deploy chaos.git repo from local to github</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ cat deploy_chaos.sh 
+<span class="c1">#!/bin/bash</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;Deploying ~/Hugo/Sites/chaos updates to GitHub...&#34;</span>
+<span class="nb">cd</span> ~/Hugo/Sites/chaos
+<span class="c1"># Get current status before commit all</span>
+git status
+<span class="c1"># Add changes to git.</span>
+git add -A
+<span class="c1"># Commit changes.</span>
+<span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site `date`&#34;</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">]</span>
+<span class="k">then</span> <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+<span class="k">fi</span>
+git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+<span class="c1"># Push source and build repos.</span>
+git push origin master
+<span class="c1"># Get current status after commit all</span>
+git status
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="deploy_publicsh">deploy_public.sh</h3>
+<p>Script to deploy dyiwu.github.io.git from local to github</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ cat deploy_public.sh
+<span class="c1">#!/bin/bash</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;Deploying ~/Hugo/Sites/chaos/public updates to GitHub...&#34;</span>
+<span class="c1"># Build the project.</span>
+<span class="nb">cd</span> ~/Hugo/Sites/chaos
+hugo
+<span class="c1"># Go To Public folder</span>
+<span class="nb">cd</span> public
+<span class="c1"># Add changes to git.</span>
+git add --all
+<span class="c1"># Commit changes.</span>
+<span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site `date`&#34;</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">1</span> <span class="o">]</span>
+<span class="k">then</span> <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+<span class="k">fi</span>
+git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+<span class="c1"># Push source and build repos.</span>
+git push origin master
+<span class="c1"># Come Back</span>
+<span class="nb">cd</span> ..
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="clone_chaossh">clone_chaos.sh</h3>
+<p>Script to clone chaos.git repo from github to local</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ cat clone_chaos.sh 
+<span class="c1">#!/bin/bash</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;Clone chaos.git repo from GitHub to local...&#34;</span>
+<span class="nb">cd</span> ~/Hugo/Sites
+git clone https://github.com/dyiwu/chaos.git
+<span class="nb">cd</span> chaos
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="clone_publicsh">clone_public.sh</h3>
+<p>Script to clone dyiwu.github.io.git repo from github to local</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ cat clone_public.sh 
+<span class="c1">#!/bin/bash</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;Clone dyiwu.github.io.git repo from GitHub to local...&#34;</span>
+<span class="c1"># Build the project.</span>
+<span class="nb">cd</span> ~/Hugo/Sites/chaos
+git clone https://github.com/dyiwu/dyiwu.github.io.git public
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="clone_themesh">clone_theme.sh</h3>
+<p>Script to clone themes/LoveIt repo from github to local</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ cat clone_theme.sh 
+<span class="c1">#!/bin/bash</span>
+<span class="nb">cd</span> ~/Hugo/Sites/chaos
+git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="update_themesh">update_theme.sh</h3>
+<p>Script to update themes/even</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ cat update_theme.sh 
+<span class="c1">#!/bin/bash</span>
+<span class="nb">cd</span> ~/Hugo/Sites/chaos/themes/LoveIt
+git pull
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="customization-and-tips">Customization and Tips</h2>
+<h3 id="summary-splitting">Summary Splitting</h3>
+<p>Add the <code>&lt;!--more--&gt;</code> summary divider where you want to split the article.</p>
+<h3 id="permlinks">Permlinks</h3>
+<p>Setup Permlinks in config.toml</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
+    <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;/:year/:month/:filename/&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="goldmark">Goldmark</h3>
+<ul>
+<li><a href="https://gohugo.io/getting-started/configuration-markup/" target="_blank" rel="noopener noreffer">Configure Markup</a><br>
+<a href="https://github.com/yuin/goldmark/" target="_blank" rel="noopener noreffer">Goldmark</a> is from Hugo 0.60 the default library used for Markdown. By default, Goldmark does not render raw HTMLs and potentially dangerous links. If you have lots of inline HTML and/or JavaScript, you may need to turn this on by adding these into config.toml</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">renderer</span><span class="p">]</span>
+      <span class="nx">unsafe</span> <span class="p">=</span> <span class="kc">true</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="firewall">firewall</h3>
+<p>Open firewall 1313/tcp port</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo firewall-cmd --zone<span class="o">=</span>public --add-port<span class="o">=</span>1313/tcp --permanent
+$ sudo firewall-cmd --reload
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="logo">Logo</h3>
+<p>The logo file logo.png must be put in the assets/images directory.<br>
+Use logo = &ldquo;/images/logo.png&rdquo; in the config file.</p>
+<h3 id="tips">Tips</h3>
+<p>From the comments of <a href="https://hugoloveit.com/theme-documentation-basics/#22-install-the-theme">https://hugoloveit.com/theme-documentation-basics/#22-install-the-theme</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">I’m trying the theme in Gitlab pages
+In case you copy the exampleSite content as your initial content:
+
+Get rid of every call to instagram API in the content files, Instagram API is broken.
+
+adjust the themesDir in config.toml to themes
+
+If you want to use a logo, you must place the logo.png in the assets/images directory. Use logo = &#34;/images/logo.png&#34; in the config file
+
+</code></pre></td></tr></table>
+</div>
+</div><p>In case you want to remove a language you must remove all content files for that language firstly</p></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-01-14</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/2021/01/install-hugo-loveit/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://dyiwu.github.io/2021/01/install-hugo-loveit/" data-title="Install Hugo with LoveIt theme" data-via="xxxx" data-hashtags="hugo,loveit,setup"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://dyiwu.github.io/2021/01/install-hugo-loveit/" data-hashtag="hugo"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://dyiwu.github.io/2021/01/install-hugo-loveit/" data-title="Install Hugo with LoveIt theme"><i class="fab fa-hacker-news fa-fw"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://dyiwu.github.io/2021/01/install-hugo-loveit/" data-title="Install Hugo with LoveIt theme"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/line.svg"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://dyiwu.github.io/2021/01/install-hugo-loveit/" data-title="Install Hugo with LoveIt theme"><i class="fab fa-weibo fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/hugo/">hugo</a>,&nbsp;<a href="/tags/loveit/">loveit</a>,&nbsp;<a href="/tags/setup/">setup</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/2021/01/install-LinuxMint20/" class="prev" rel="prev" title="Install Linux Mint 20.1 Ulyssa Cinnamon"><i class="fas fa-angle-left fa-fw"></i>Install Linux Mint 20.1 Ulyssa Cinnamon</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.80.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">dyiwu</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.en","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

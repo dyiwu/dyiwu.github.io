@@ -4,19 +4,7 @@
         <link>https://dyiwu.github.io/tags/markdown/</link>
         <description>markdown - Tag - Chaos - 老碼農的筆記</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (dyiwu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 22 Apr 2019 20:23:07 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/markdown/" rel="self" type="application/rss+xml" /><item>
-    <title>Tips for using Hugo with academic theme</title>
-    <link>https://dyiwu.github.io/2019/04/tip_hugo_academic_theme/</link>
-    <pubDate>Mon, 22 Apr 2019 20:23:07 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://dyiwu.github.io/2019/04/tip_hugo_academic_theme/</guid>
-    <description><![CDATA[shortcode
-  {{&lt; list_tags &gt;}}
-  {{&lt; list_categories &gt;}}
-  High light code block with line number
-1{{&lt; highlight plaintext &#34;linenos=inline&#34; &gt;}} 2code block here 3{{&lt; /highlight &gt;}}   Reference:
- https://lmyint.github.io/post/hugo-academic-tips/ https://highlightjs.org/ https://liatas.com/posts/escaping-hugo-shortcodes/ http://abitofcode.com/post/2017/04/customizing_a_hugo_site/  ]]></description>
-</item><item>
+            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 21 Apr 2019 00:39:53 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/markdown/" rel="self" type="application/rss+xml" /><item>
     <title>Escaping Hugo Shortcode</title>
     <link>https://dyiwu.github.io/2019/04/escape-hugo-shortcode/</link>
     <pubDate>Sun, 21 Apr 2019 00:39:53 &#43;0800</pubDate>
