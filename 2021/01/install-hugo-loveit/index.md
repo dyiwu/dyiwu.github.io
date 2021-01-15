@@ -219,6 +219,7 @@ adjust the themesDir in config.toml to themes
 
 If you want to use a logo, you must place the logo.png in the assets/images directory. Use logo = "/images/logo.png" in the config file
 
-```
 In case you want to remove a language you must remove all content files for that language firstly
+```
+
 
