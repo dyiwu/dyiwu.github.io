@@ -34,7 +34,7 @@
                             "url": "https:\/\/dyiwu.github.io\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "mint, setup, homelab","wordcount":  933 ,
+                        }],"genre": "posts","keywords": "mint, setup, homelab","wordcount":  942 ,
         "url": "https:\/\/dyiwu.github.io\/2021\/01\/install-LinuxMint20\/","datePublished": "2021-01-06T18:33:30+08:00","dateModified": "2021-01-08T15:12:30+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": {
@@ -130,7 +130,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Install Linux Mint 20.1 Ulyssa Cinnamon</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>dyiwu</a></span>&nbsp;<span class="post-category">included in <a href="/categories/tech/"><i class="far fa-folder fa-fw"></i>tech</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-06">2021-01-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;933 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-01-06">2021-01-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;942 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;5 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -357,6 +357,19 @@ $ sudo im-config -s ibus
 $ sudo apt install ibus-pinyin
 </code></pre></td></tr></table>
 </div>
+</div><p>To set ibus as preference by adding these environment variables into ~/.bashrc .</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">export</span> <span class="nv">GTK_IM_MODULE</span><span class="o">=</span>ibus
+<span class="nb">export</span> <span class="nv">XMODIFIERS</span><span class="o">=</span>@im<span class="o">=</span>ibus
+<span class="nb">export</span> <span class="nv">QT_IM_MODULE</span><span class="o">=</span>ibus
+</code></pre></td></tr></table>
+</div>
 </div><hr>
 <h3 id="add-user">Add user</h3>
 <p>Script to add user</p>
@@ -381,7 +394,7 @@ useradd -m -u <span class="m">9009</span> -g <span class="m">8888</span> -c <spa
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get update
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo apt-get update
 $ sudo apt-get upgrade
 $ sudo apt-get install evolution
 </code></pre></td></tr></table>
@@ -396,7 +409,7 @@ $ sudo apt-get install evolution
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install fonts-wqy-zenhei
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install fonts-wqy-zenhei
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -407,7 +420,7 @@ $ sudo apt-get install evolution
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install fonts-wqy-microhei
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install fonts-wqy-microhei
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -418,7 +431,7 @@ $ sudo apt-get install evolution
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install xfonts-wqy
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install xfonts-wqy
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -429,7 +442,7 @@ $ sudo apt-get install evolution
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install fonts-arphic-uming 
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install fonts-arphic-uming 
 </code></pre></td></tr></table>
 </div>
 </div><p>如要安裝全部文鼎中文字型，可輸入以下指令：</p>
@@ -438,7 +451,7 @@ $ sudo apt-get install evolution
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install fonts-arphic*
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install fonts-arphic*
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -449,7 +462,7 @@ $ sudo apt-get install evolution
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install fonts-moe-standard-kai
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install fonts-moe-standard-kai
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -460,7 +473,7 @@ $ sudo apt-get install evolution
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install fonts-cwtex-yen
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install fonts-cwtex-yen
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -480,8 +493,8 @@ $ sudo apt-get install evolution
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo mkdir /usr/share/fonts/truetype/Noto-unhinted
-$ cd /usr/share/fonts/truetype/Noto-unhinted
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo mkdir /usr/share/fonts/truetype/Noto-unhinted
+<span class="nb">cd</span> /usr/share/fonts/truetype/Noto-unhinted
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -492,7 +505,7 @@ $ cd /usr/share/fonts/truetype/Noto-unhinted
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo wget https://noto-website-2.storage.googleapis.com/pkgs/Noto-unhinted.zip
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo wget https://noto-website-2.storage.googleapis.com/pkgs/Noto-unhinted.zip
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -503,7 +516,7 @@ $ cd /usr/share/fonts/truetype/Noto-unhinted
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo unzip Noto-unhinted.zip
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo unzip Noto-unhinted.zip
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -516,9 +529,9 @@ $ cd /usr/share/fonts/truetype/Noto-unhinted
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo fc-cache -f -v
-$ fc-cache -f -v
-$ reboot
+<pre class="chroma"><code class="language-bash" data-lang="bash">sudo fc-cache -f -v
+fc-cache -f -v
+sudo reboot
 </code></pre></td></tr></table>
 </div>
 </div></li>

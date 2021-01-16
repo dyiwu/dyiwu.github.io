@@ -122,7 +122,13 @@ $ sudo apt-get install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-doc
 $ sudo im-config -s ibus
 $ sudo apt install ibus-pinyin
 ```
+To set ibus as preference by adding these environment variables into ~/.bashrc .
 
+```bash
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+```
 ---
 
 ### Add user
@@ -136,7 +142,7 @@ useradd -m -u 9009 -g 8888 -c "Dyi-Wu Liu,," -s /bin/bash -G adm,cdrom,sudo,dip,
 ---
 
 ### Evolution
-```
+```bash
 $ sudo apt-get update
 $ sudo apt-get upgrade
 $ sudo apt-get install evolution
@@ -147,38 +153,38 @@ $ sudo apt-get install evolution
 ### Fonts
 
 - 文泉驛正黑
-  ```
-  $ sudo apt-get install fonts-wqy-zenhei
+  ```bash
+  sudo apt-get install fonts-wqy-zenhei
   ```
 
 - 文泉驛微米黑
-  ```
-  $ sudo apt-get install fonts-wqy-microhei
+  ```bash
+  sudo apt-get install fonts-wqy-microhei
   ```
 
 - 文泉驛點陣宋體
-  ```
-  $ sudo apt-get install xfonts-wqy
+  ```bash
+  sudo apt-get install xfonts-wqy
   ```
 
 - 文鼎字型
-  ```
-  $ sudo apt-get install fonts-arphic-uming 
+  ```bash
+  sudo apt-get install fonts-arphic-uming 
   ```
 
   如要安裝全部文鼎中文字型，可輸入以下指令：
-  ```
-  $ sudo apt-get install fonts-arphic*
+  ```bash
+  sudo apt-get install fonts-arphic*
   ```
 
 - 教育部標準楷書
-  ```
-  $ sudo apt-get install fonts-moe-standard-kai
+  ```bash
+  sudo apt-get install fonts-moe-standard-kai
   ```
 
 - cwTex圓體
-  ```
-  $ sudo apt-get install fonts-cwtex-yen
+  ```bash
+  sudo apt-get install fonts-cwtex-yen
   ```
 
 - Noto Sans CJK (思源黑體) 
@@ -189,23 +195,23 @@ $ sudo apt-get install evolution
       https://noto-website-2.storage.googleapis.com/pkgs/Noto-unhinted.zip
 
   2. 進入一個新增的資料夾：
-      ```
-      $ sudo mkdir /usr/share/fonts/truetype/Noto-unhinted
-      $ cd /usr/share/fonts/truetype/Noto-unhinted
+      ```bash
+      sudo mkdir /usr/share/fonts/truetype/Noto-unhinted
+      cd /usr/share/fonts/truetype/Noto-unhinted
       ```
   3. 下載字型壓縮檔：
-      ```
-      $ sudo wget https://noto-website-2.storage.googleapis.com/pkgs/Noto-unhinted.zip
+      ```bash
+      sudo wget https://noto-website-2.storage.googleapis.com/pkgs/Noto-unhinted.zip
       ```
   4. 解壓縮
-      ```
-      $ sudo unzip Noto-unhinted.zip
+      ```bash
+      sudo unzip Noto-unhinted.zip
       ```
   5. update font cache and reboot
-      ```
-      $ sudo fc-cache -f -v
-      $ fc-cache -f -v
-      $ reboot
+      ```bash
+      sudo fc-cache -f -v
+      fc-cache -f -v
+      sudo reboot
       ```
 
 Reference:
