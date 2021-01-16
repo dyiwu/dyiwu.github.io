@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>pdf - Tag - Chaos - 老碼農的筆記</title>
+        <link>https://dyiwu.github.io/tags/pdf/</link>
+        <description>pdf - Tag - Chaos - 老碼農的筆記</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (dyiwu)</managingEditor>
+            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 16 Jan 2021 22:01:30 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/tags/pdf/" rel="self" type="application/rss+xml" /><item>
+    <title>pdf tools usage</title>
+    <link>https://dyiwu.github.io/2021/01/tool-pdf/</link>
+    <pubDate>Sat, 16 Jan 2021 22:01:30 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://dyiwu.github.io/2021/01/tool-pdf/</guid>
+    <description><![CDATA[<p>pdf tools usage</p>]]></description>
+</item></channel>
+</rss>

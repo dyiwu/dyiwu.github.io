@@ -71,33 +71,36 @@ Reference:
 
 ### Terminator
 Just do this for old version 1.91.
+```bash
+sudo apt-get install terminator
 ```
-$ sudo apt-get install terminator
-```
-For the latest, add the official PPA, update the repository and then install Terminator.
-```
-$ sudo add-apt-repository ppa:gnome-terminator
-$ sudo apt-get update
-$ sudo apt-get install terminator
-```
-Reference:
-[Terminator - The robot future of terminals](https://gnometerminator.blogspot.com/)
 
+For the latest, add the official PPA, update the repository and then install Terminator.
+
+```bash
+sudo add-apt-repository ppa:mattrose/terminator
+sudo apt-get update
+sudo apt install terminator
+```
+
+Reference:
+- [Installing Terminator](https://github.com/gnome-terminator/terminator/blob/master/INSTALL.md#installing-terminator)
+- [Terminator - The robot future of terminals](https://gnometerminator.blogspot.com/)
 ---
 
 ### Google Chrome
 First, download the Google signing key and install it.
-```
-$ wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+```bash
+wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 ```
 Set up the Google Chrome repository.
-```
-$ echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
+```bash
+echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" | sudo tee /etc/apt/sources.list.d/google-chrome.list
 ```
 Update the repository index, install the stable version.
-```
-$ sudo apt-get update
-$ sudo apt-get  install -y google-chrome-stable
+```bash
+sudo apt-get update
+sudo apt-get install -y google-chrome-stable
 ```
 Reference:
 [How to Install Google Chrome in Linux Mint 20](https://linuxhint.com/install_google_chrome_linux_mint-2/)
