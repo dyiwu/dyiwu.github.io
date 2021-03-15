@@ -1,5 +1,8 @@
 # 投資型人壽保險 - Investment-Oriented Life Insurance
 
+投資型人壽保險 - Investment-Oriented Life Insurance
+
+<!--more-->
 ## 投資型保單：
 
 ### 國泰人壽委託摩根投信投資帳戶─全球前瞻組合（現金撥回）
