@@ -94,6 +94,11 @@ $ df | grep DS420P
 //ds420p/photo 7742705752 7561820676 180885076  98% /mnt/DS420P/photo
 ```
 
+### PulseAudio Volume Control
+```
+$ sudo apt install pavucontrol
+```
+
 ### Pi 3B USB boot
 
 #### Reference
