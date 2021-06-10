@@ -1,25 +1,20 @@
 # Commonly used tools in Windows
 
-Commonly used tools in Windows
+## Commonly used tools in Windows
 <!--more--> 
 
-## Auto Clicker
+### Auto Clicker
 Auto Clicker is a full-fledged portable auto-clicker software for Windows PC with two modes of auto-clicking, at your dynamic cursor location or at a prespecified location. The maximum amounts of clicked can also be set (or left as infinite).
 
-How to use Auto Clicker
-  - Set the time interval between clicks.
-  - Select the mouse button you want to click and the type of click.
-  - Set the repeat mode and number of clicks.
-  - Select where you want to click.
-  - Click the start button or use the hotkey (Default F6) to start the click action.
+Reference: [AutoClicker Team / Auto Clicker](https://www.opautoclicker.com/)
 
-How to change the Hotkey setting?
-  - Open OP Auto Clicker app.
-  - Click on the Hotkey setting button.
-  - Click on the Start / Stop button.
-  - Now, you can select the hotkey by pressing it on your keyboard. (By default it is F6)
-  - The pressed key will be now set as the Hotkey for OP Auto Clicker for PC.
+### Audacity Audio Editor
+Audacity is an easy-to-use, multi-track audio editor and recorder for Windows, macOS, GNU/Linux and other operating systems. Developed by a group of volunteers as open source.
 
-[AutoClicker Team / Auto Clicker](https://www.opautoclicker.com/)
+Reference: [Audacity Team](https://www.audacityteam.org/)
 
+### OpenShot Video Editor
+OpenShot Video Editor is an award-winning, open-source video editor, available on Linux, Mac, and Windows. OpenShot can create stunning videos, films, and animations with an easy-to-use interface and rich set of features.
+
+Reference: [OpenShot.org](https://www.openshot.org/)
 
