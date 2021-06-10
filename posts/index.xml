@@ -4,7 +4,14 @@
         <link>https://dyiwu.github.io/posts/</link>
         <description>All Posts | Chaos - 老碼農的筆記</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (dyiwu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 08 Jun 2021 18:02:18 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 10 Jun 2021 18:00:00 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Commonly used tools in Windows</title>
+    <link>https://dyiwu.github.io/2021/06/tool-windows/</link>
+    <pubDate>Thu, 10 Jun 2021 18:00:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://dyiwu.github.io/2021/06/tool-windows/</guid>
+    <description><![CDATA[<p>Commonly used tools in Windows</p>]]></description>
+</item><item>
     <title>烤箱烘烤溫度與時間</title>
     <link>https://dyiwu.github.io/2021/06/oven-timing/</link>
     <pubDate>Tue, 08 Jun 2021 18:02:18 &#43;0800</pubDate>
@@ -73,12 +80,5 @@
     <author>Author</author>
     <guid>https://dyiwu.github.io/2020/11/wifi/</guid>
     <description><![CDATA[]]></description>
-</item><item>
-    <title>本益比</title>
-    <link>https://dyiwu.github.io/2020/10/tw-stock-per/</link>
-    <pubDate>Mon, 19 Oct 2020 15:45:14 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://dyiwu.github.io/2020/10/tw-stock-per/</guid>
-    <description><![CDATA[<p>本益比(Price-to-Earning Ratio 簡稱PE)</p>]]></description>
 </item></channel>
 </rss>
