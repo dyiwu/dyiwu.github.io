@@ -143,9 +143,9 @@ useradd -m -u 9009 -g 8888 -c "Dyi-Wu Liu,," -s /bin/bash -G adm,cdrom,sudo,dip,
 
 ### Evolution
 ```bash
-$ sudo apt-get update
-$ sudo apt-get upgrade
-$ sudo apt-get install evolution
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install evolution
 ```
 
 ---
@@ -231,19 +231,19 @@ xfreerdp /w:1900 /v:MyDNSServername /relax-order-checks +glyph-cache
 
 An official PPA with Remmina 1.4.7 release can be installed by copying and pasting this in a terminal:
 ```
-$ sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
-$ sudo apt update
-$ sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret
-$ sudo apt install freerdp2-x11 remmina-plugin-nx remmina-plugin-exec remmina-plugin-kwallet remmina-plugin-xdmcp remmina-plugin-www fam qt5-qmltooling-plugins
+sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
+sudo apt update
+sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret
+sudo apt install freerdp2-x11 remmina-plugin-nx remmina-plugin-exec remmina-plugin-kwallet remmina-plugin-xdmcp remmina-plugin-www fam qt5-qmltooling-plugins
 ```
 
 Make sure Remmina is not running. Either close it, reboot, or kill it by pasting this in a terminal:
 ```
-$ sudo killall remmina
+sudo killall remmina
 ```
 List available plugins with apt-cache search remmina-plugin. By default RDP, SSH and SFTP are installed. 
 ```
-$ apt-cache search remmina-plugin
+apt-cache search remmina-plugin
 ```
 Reference:
 [How to install Remmina](https://remmina.org/how-to-install-remmina/)
@@ -253,20 +253,20 @@ Access network SAMBA share from Pi Client
 
 Install required packages
 ```
-$ sudo apt-get install samba-common smbclient samba-common-bin cifs-utils
+sudo apt-get install samba-common smbclient samba-common-bin cifs-utils
 ```
 
 Create directory for mount point
 ```
-$ sudo mkdir /mnt/ds420p
-$ sudo mkdir /mnt/ds420p/video
-$ sudo mkdir /mnt/ds420p/music
-$ sudo mkdir /mnt/ds420p/photo
+sudo mkdir /mnt/ds420p
+sudo mkdir /mnt/ds420p/video
+sudo mkdir /mnt/ds420p/music
+sudo mkdir /mnt/ds420p/photo
 ```
- 
+
 Create a credential file for saving the user name and password.
 ```
-$ sudo cat /root/smb.cred
+sudo cat /root/smb.cred
 username=xyz
 password=password_of_xyz
 domain=workgroup
@@ -274,13 +274,13 @@ domain=workgroup
 
 Save this credential file and change its permissions so it is not readable by others. 
 ```
-$ sudo chown root:root /root/smbcred
-$ sudo chmod 600 /root/smbcred
+sudo chown root:root /root/smbcred
+sudo chmod 600 /root/smbcred
 ```
 
 Create entries in /etc/fstab
 ```
-$ grep cifs /etc/fstab
+grep cifs /etc/fstab
 //ds420p/video  /mnt/ds420p/video cifs credentials=/root/smb.cred  0  0
 //ds420p/music  /mnt/ds420p/music cifs credentials=/root/smb.cred  0  0
 //ds420p/photo  /mnt/ds420p/photo cifs credentials=/root/smb.cred  0  0
@@ -288,15 +288,40 @@ $ grep cifs /etc/fstab
 ```
 Test it,
 ```
-$ sudo mount -a
-$ df | grep ds420p
+sudo mount -a
+df | grep ds420p
 //ds420p/video 7742705752 7561820676 180885076  98% /mnt/ds420p/video
 //ds420p/music 7742705752 7561820676 180885076  98% /mnt/ds420p/music
 //ds420p/photo 7742705752 7561820676 180885076  98% /mnt/ds420p/photo
 ```
+### Typora
+[Typora](https://typora.io/) is a truly minimal markdown editor.
 
-Reference:
+Add repository server's key by
+```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
+```
+or
+```
+wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+```
+
+Add Typora repository
+```
+sudo add-apt-repository 'deb https://typora.io/linux ./'
+sudo apt-get update
+```
+
+Install Typora
+```
+sudo apt-get install typora
+```
+
+### Reference:
 - [25 Things to Do After Installing Linux Mint 20 Ulyssa](https://averagelinuxuser.com/linuxmint20-after-install/)
 - [Important Things to Do After Installing Linux Mint 20](https://linuxhint.com/to_do_after_install-_linux_mint_20/)
 - [10 Things to Do First in Linux Mint 20.1 Cinnamon](https://easylinuxtipsproject.blogspot.com/p/first-mint-cinnamon.html)
+
+
+
 
