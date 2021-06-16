@@ -4,9 +4,16 @@
         <link>https://dyiwu.github.io/</link>
         <description>About LoveIt Theme</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (dyiwu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 10 Jun 2021 18:00:00 &#43;0800</lastBuildDate>
+            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 16 Jun 2021 13:02:18 &#43;0800</lastBuildDate>
             <atom:link href="https://dyiwu.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>電鍋蒸煮時間</title>
+    <link>https://dyiwu.github.io/2021/06/steam-cooker-timing/</link>
+    <pubDate>Wed, 16 Jun 2021 13:02:18 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://dyiwu.github.io/2021/06/steam-cooker-timing/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>Commonly used tools in Windows</title>
     <link>https://dyiwu.github.io/2021/06/tool-windows/</link>
     <pubDate>Thu, 10 Jun 2021 18:00:00 &#43;0800</pubDate>
@@ -75,12 +82,5 @@
   拖拉機犁大田，直來直往。
   旱地裡的泥鰍，鑽的深。
  ]]></description>
-</item><item>
-    <title>Things about WiFi</title>
-    <link>https://dyiwu.github.io/2020/11/wifi/</link>
-    <pubDate>Mon, 09 Nov 2020 12:37:32 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://dyiwu.github.io/2020/11/wifi/</guid>
-    <description><![CDATA[]]></description>
 </item></channel>
 </rss>
