@@ -21,7 +21,7 @@
 0.1 美元，且當月以一次為限；若小於或等於 USD $10.3 者則無，資產撥回金額=(撥回資產基準日之單位數)×(每單位撥
 回資產金額)。
      + 續次(民國 109 年 5 月起)：同上。
-- 資產撥回入帳日為撥回日加9天。
+- 資產撥回入帳日為撥回日加 7~10 個工作天。
 - [台灣人壽月月好鑫外幣變額年金保險](https://www.taiwanlife.com/SiteMap/107)
    + [商品條款](https://www.taiwanlife.com/u/other/3c9b30eb-9b2c-42ba-999b-a90561ac9949.pdf)
    + [商品說明書](https://www.taiwanlife.com/u/other/802b5c0f-6779-4bd1-aa06-bb947c5b66ee.pdf)
