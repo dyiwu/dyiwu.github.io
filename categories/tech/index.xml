@@ -12,13 +12,6 @@
     <guid>https://dyiwu.github.io/2021/06/tool-windows/</guid>
     <description><![CDATA[<h2 id="commonly-used-tools-in-windows">Commonly used tools in Windows</h2>]]></description>
 </item><item>
-    <title>pdf tools usage</title>
-    <link>https://dyiwu.github.io/2021/01/tool-pdf/</link>
-    <pubDate>Sat, 16 Jan 2021 22:01:30 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://dyiwu.github.io/2021/01/tool-pdf/</guid>
-    <description><![CDATA[<p>pdf tools usage</p>]]></description>
-</item><item>
     <title>Install Hugo with LoveIt theme</title>
     <link>https://dyiwu.github.io/2021/01/install-hugo-loveit/</link>
     <pubDate>Thu, 14 Jan 2021 08:53:00 &#43;0800</pubDate>
@@ -75,5 +68,12 @@ while still using hardware acceleration from the host.</p>]]></description>
     <author>Author</author>
     <guid>https://dyiwu.github.io/2020/06/kvm-guest-dhcp-ip/</guid>
     <description><![CDATA[<h2 id="procedures-to-assign-static-ip-addresses-for-guest-kvm">Procedures to assign static IP addresses for guest KVM</h2>]]></description>
+</item><item>
+    <title>Home Lab - K8s on Centos 8 - VM host</title>
+    <link>https://dyiwu.github.io/2020/06/homelab-centos8-k8s-vm-host/</link>
+    <pubDate>Thu, 18 Jun 2020 21:22:39 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://dyiwu.github.io/2020/06/homelab-centos8-k8s-vm-host/</guid>
+    <description><![CDATA[<p>This home lab is going to build a CentOS 8 VM host on bare matel and 3 VM guest nodes be form up as a k8s cluster. The first step is going to craete the VM host on the bare metal.</p>]]></description>
 </item></channel>
 </rss>
