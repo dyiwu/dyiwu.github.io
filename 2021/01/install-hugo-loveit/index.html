@@ -177,25 +177,25 @@
             </div><div class="content" id="content"><p>Hugo with LoveIt theme installation</p>
 <h2 id="hugo">Hugo</h2>
 <h3 id="install">Install</h3>
-<p>download the tar ball from <a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a></p>
+<p>download the tar ball from <a href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener noreffer">https://github.com/gohugoio/hugo/releases</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ wget https://github.com/gohugoio/hugo/releases/download/v0.80.0/hugo_extended_0.80.0_Linux-64bit.tar.gz
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ wget https://github.com/gohugoio/hugo/releases/download/v0.80.0/hugo_extended_0.80.0_Linux-64bit.tar.gz
 </code></pre></td></tr></table>
 </div>
 </div><p>Extract to ~/bin</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ tar tvf ~/bin/hugo_extended_0.80.0_Linux-64bit.tar.gz 
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ tar tvf ~/bin/hugo_extended_0.80.0_Linux-64bit.tar.gz 
 -rw-r--r-- root/root     <span class="m">11357</span> 2020-12-31 21:27 LICENSE
 -rw-r--r-- root/root     <span class="m">12289</span> 2020-12-31 21:27 README.md
 -rwxr-xr-x root/root  <span class="m">49946384</span> 2020-12-31 21:48 hugo
@@ -204,11 +204,11 @@
 </div><p>Check the version</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ hugo version
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ hugo version
 Hugo Static Site Generator v0.80.0-792EF0F4/extended linux/amd64 BuildDate: 2020-12-31T13:46:18Z
 </code></pre></td></tr></table>
 </div>
@@ -218,7 +218,7 @@ Hugo Static Site Generator v0.80.0-792EF0F4/extended linux/amd64 BuildDate: 2020
 <p>Create a new site named it as chaos in my case.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -234,7 +234,7 @@ Hugo Static Site Generator v0.80.0-792EF0F4/extended linux/amd64 BuildDate: 2020
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cd ~/Hugo/Sites
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ cd ~/Hugo/Sites
 $ hugo new site chaos
 Congratulations! Your new Hugo site is created in /home/dyiwu/Hugo/Sites/chaos.
 
@@ -276,11 +276,11 @@ $ git pull
 <p>Generate the web site which will be saved under ~/Hugo/Sites/chaos/public directory.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cd ~/Hugo/Sites/chaos
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ cd ~/Hugo/Sites/chaos
 $ hugo
 </code></pre></td></tr></table>
 </div>
@@ -289,7 +289,7 @@ $ hugo
 <p>link the generated web site (/public) folder to github</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -297,7 +297,7 @@ $ hugo
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cd ~/Hugo/Sites/chaos/public
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ cd ~/Hugo/Sites/chaos/public
 $ git init
 $ git remote add origin https://github.com/dyiwu/dyiwu.github.io.git
 $ git add .
@@ -310,7 +310,7 @@ $ git push -u origin master
 <p>Link the whole chaos site to github</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -318,7 +318,7 @@ $ git push -u origin master
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cd ~/Hugo/Sites/chaos
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ cd ~/Hugo/Sites/chaos
 $ git init
 $ git remote add origin https://github.com/dyiwu/chaos.git
 $ git add .
@@ -328,7 +328,7 @@ $ git push -u origin master
 </div>
 </div></li>
 <li>
-<p>Web site will hosted on Github as <a href="https://dyiwu.github.io/">https://dyiwu.github.io/</a></p>
+<p>Web site will hosted on Github as <a href="https://dyiwu.github.io/" target="_blank" rel="noopener noreffer">https://dyiwu.github.io/</a></p>
 </li>
 </ol>
 <h2 id="maintance-scripts">Maintance scripts</h2>
@@ -336,7 +336,7 @@ $ git push -u origin master
 <p>Script to deploy chaos.git repo from local to github</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -356,7 +356,7 @@ $ git push -u origin master
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ cat deploy_chaos.sh 
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ cat deploy_chaos.sh 
 <span class="c1">#!/bin/bash</span>
 <span class="nb">echo</span> -e <span class="s2">&#34;Deploying ~/Hugo/Sites/chaos updates to GitHub...&#34;</span>
 <span class="nb">cd</span> ~/Hugo/Sites/chaos
@@ -380,7 +380,7 @@ git status
 <p>Script to deploy dyiwu.github.io.git from local to github</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -402,7 +402,7 @@ git status
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ cat deploy_public.sh
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ cat deploy_public.sh
 <span class="c1">#!/bin/bash</span>
 <span class="nb">echo</span> -e <span class="s2">&#34;Deploying ~/Hugo/Sites/chaos/public updates to GitHub...&#34;</span>
 <span class="c1"># Build the project.</span>
@@ -428,7 +428,7 @@ git push origin master
 <p>Script to clone chaos.git repo from github to local</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -436,7 +436,7 @@ git push origin master
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ cat clone_chaos.sh 
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ cat clone_chaos.sh 
 <span class="c1">#!/bin/bash</span>
 <span class="nb">echo</span> -e <span class="s2">&#34;Clone chaos.git repo from GitHub to local...&#34;</span>
 <span class="nb">cd</span> ~/Hugo/Sites
@@ -448,7 +448,7 @@ git clone https://github.com/dyiwu/chaos.git
 <p>Script to clone dyiwu.github.io.git repo from github to local</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -456,7 +456,7 @@ git clone https://github.com/dyiwu/chaos.git
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ cat clone_public.sh 
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ cat clone_public.sh 
 <span class="c1">#!/bin/bash</span>
 <span class="nb">echo</span> -e <span class="s2">&#34;Clone dyiwu.github.io.git repo from GitHub to local...&#34;</span>
 <span class="c1"># Build the project.</span>
@@ -468,13 +468,13 @@ git clone https://github.com/dyiwu/dyiwu.github.io.git public
 <p>Script to clone themes/LoveIt repo from github to local</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ cat clone_theme.sh 
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ cat clone_theme.sh 
 <span class="c1">#!/bin/bash</span>
 <span class="nb">cd</span> ~/Hugo/Sites/chaos
 git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
@@ -484,13 +484,13 @@ git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
 <p>Script to update themes/even</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ cat update_theme.sh 
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ cat update_theme.sh 
 <span class="c1">#!/bin/bash</span>
 <span class="nb">cd</span> ~/Hugo/Sites/chaos/themes/LoveIt
 git pull
@@ -503,11 +503,11 @@ git pull
 <p>Setup Permlinks in config.toml</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
     <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;/:year/:month/:filename/&#34;</span>
 </code></pre></td></tr></table>
 </div>
@@ -518,11 +518,11 @@ git pull
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">renderer</span><span class="p">]</span>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">markup</span><span class="p">.</span><span class="nx">goldmark</span><span class="p">.</span><span class="nx">renderer</span><span class="p">]</span>
       <span class="nx">unsafe</span> <span class="p">=</span> <span class="kc">true</span>
 </code></pre></td></tr></table>
 </div>
@@ -530,11 +530,11 @@ git pull
 <p>Open firewall 1313/tcp port</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo firewall-cmd --zone<span class="o">=</span>public --add-port<span class="o">=</span>1313/tcp --permanent
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ sudo firewall-cmd --zone<span class="o">=</span>public --add-port<span class="o">=</span>1313/tcp --permanent
 $ sudo firewall-cmd --reload
 </code></pre></td></tr></table>
 </div>
@@ -542,10 +542,10 @@ $ sudo firewall-cmd --reload
 <p>The logo file logo.png must be put in the assets/images directory.<br>
 Use logo = &ldquo;/images/logo.png&rdquo; in the config file.</p>
 <h3 id="tips">Tips</h3>
-<p>From the comments of <a href="https://hugoloveit.com/theme-documentation-basics/#22-install-the-theme">https://hugoloveit.com/theme-documentation-basics/#22-install-the-theme</a></p>
+<p>From the comments of <a href="https://hugoloveit.com/theme-documentation-basics/#22-install-the-theme" target="_blank" rel="noopener noreffer">https://hugoloveit.com/theme-documentation-basics/#22-install-the-theme</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -557,7 +557,7 @@ Use logo = &ldquo;/images/logo.png&rdquo; in the config file.</p>
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">I’m trying the theme in Gitlab pages
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">I’m trying the theme in Gitlab pages
 In case you copy the exampleSite content as your initial content:
 
 Get rid of every call to instagram API in the content files, Instagram API is broken.
@@ -599,7 +599,7 @@ In case you want to remove a language you must remove all content files for that
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.85.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">dyiwu</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

@@ -152,21 +152,21 @@ Download the Nginx signing key from Nginx official site, and them add it into sy
 <p>Download the Nginx signing key from Nginx official site, and them add it into system.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ wget http://nginx.org/keys/nginx_signing.key | sudo apt-key add -
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ wget http://nginx.org/keys/nginx_signing.key | sudo apt-key add -
 </code></pre></td></tr></table>
 </div>
 </div><p>Add Nginx repository to the system.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ echo &#34;deb [arch=amd64] http://nginx.org/packages/ubuntu/ bionic nginx&#34; | sudo tee /etc/apt/sources.list.d/nginx.list
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ echo &#34;deb [arch=amd64] http://nginx.org/packages/ubuntu/ bionic nginx&#34; | sudo tee /etc/apt/sources.list.d/nginx.list
 
 $ echo &#34;deb-src [arch=amd64] http://nginx.org/packages/ubuntu/ bionic nginx&#34; | sudo tee -a /etc/apt/sources.list.d/nginx.list
 </code></pre></td></tr></table>
@@ -174,32 +174,32 @@ $ echo &#34;deb-src [arch=amd64] http://nginx.org/packages/ubuntu/ bionic nginx&
 </div><p>Update repository index.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt update
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt update
 </code></pre></td></tr></table>
 </div>
 </div><p>Install Nginx</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt install -y nginx
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt install -y nginx
 </code></pre></td></tr></table>
 </div>
 </div><p>Set Site’s Root DirectoryPermalink</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cd /etc/nginx/sites-available
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ cd /etc/nginx/sites-available
 $ sudo vi default
 
 -       root /var/www/html;
@@ -209,14 +209,14 @@ $ sudo vi default
 </div><p>Ownership and permissions for nginx local webserver</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo vi /etc/nginx/nginx.conf
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo vi /etc/nginx/nginx.conf
 
 $ grep user /etc/nginx/nginx.conf
 -	user www-data;
@@ -228,22 +228,22 @@ $ grep user /etc/nginx/nginx.conf
 <p>Use apt to install php-fpm</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt install -y php-fpm php-mysql php-cli
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt install -y php-fpm php-mysql php-cli
 </code></pre></td></tr></table>
 </div>
 </div><p>Edit the respective php.ini depending on the PHP version you have installed on the system.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo vi /etc/php/7.2/fpm/php.ini
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo vi /etc/php/7.2/fpm/php.ini
 
 -	cgi.fix_pathinfo=1
 +	cgi.fix_pathinfo=0
@@ -252,7 +252,7 @@ $ grep user /etc/nginx/nginx.conf
 </div><p>Edit the /etc/php/7.2/fpm/pool.d/www.conf file, change <em>user</em>, <em>group</em>, <em>listen</em>,<em>listen.owner</em> and <em>listen.group</em>.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -267,7 +267,7 @@ $ grep user /etc/nginx/nginx.conf
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo vi /etc/php/7.2/fpm/pool.d/www.conf
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo vi /etc/php/7.2/fpm/pool.d/www.conf
 -	user = www-data
 -	group = www-data
 +	user = dyiwu
@@ -285,7 +285,7 @@ $ grep user /etc/nginx/nginx.conf
 </div><p>Fix for Nginx PID problem in Ubuntu 16.04</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -296,7 +296,7 @@ $ grep user /etc/nginx/nginx.conf
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo systemctl stop nginx
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo systemctl stop nginx
 $ sudo mkdir /etc/systemd/system/nginx.service.d
 
 # build the file in root where no sudo is needed
@@ -310,11 +310,11 @@ $ sudo systemctl start nginx
 </div><p>Correct the permission of directory files.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo chown -R dyiwu:cosmos /var/www/public
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo chown -R dyiwu:cosmos /var/www/public
 $ ls -ld /var/www/public
 </code></pre></td></tr></table>
 </div>
@@ -322,7 +322,7 @@ $ ls -ld /var/www/public
 <p>Restart nginx and php-fpm services.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -331,7 +331,7 @@ $ ls -ld /var/www/public
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo systemctl restart nginx
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo systemctl restart nginx
 $ sudo systemctl status nginx
 $ ps aux | grep nginx
 
@@ -343,7 +343,7 @@ $ ps aux | grep php-fpm
 </div><p>Check the version of nginx</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -356,7 +356,7 @@ $ ps aux | grep php-fpm
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo nginx -v
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo nginx -v
 nginx version: nginx/1.16.0
 $ sudo nginx -V
 
@@ -373,14 +373,14 @@ phpinfo();
 <p>Deploy the hugo pages to local public directory by rsync</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ cat rsync-local.sh 
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ cat rsync-local.sh 
 <span class="c1">#!/bin/bash</span>
 <span class="nb">cd</span> ~/Hugo/Sites/chaos
 hugo
@@ -390,14 +390,14 @@ rsync -avh --delete --progress public/ /var/www/public/
 </div><p>Deploy the hugo pages to Raspberry Pi by rsync</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ cat rsync-raspberry.sh 
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ cat rsync-raspberry.sh 
 <span class="c1">#!/bin/bash</span>
 <span class="nb">cd</span> ~/Hugo/Sites/chaos
 hugo
@@ -407,7 +407,7 @@ rsync -avh --delete --progress public/ 192.168.1.164:/var/www/public/
 </div><hr>
 <h2 id="reference">Reference</h2>
 <ul>
-<li><a href="https://www.itzgeek.com/how-tos/linux/linux-mint-how-tos/how-to-install-linux-nginx-mariadb-php-lemp-stack-on-linux-mint-19.html">https://www.itzgeek.com/how-tos/linux/linux-mint-how-tos/how-to-install-linux-nginx-mariadb-php-lemp-stack-on-linux-mint-19.html</a></li>
+<li><a href="https://www.itzgeek.com/how-tos/linux/linux-mint-how-tos/how-to-install-linux-nginx-mariadb-php-lemp-stack-on-linux-mint-19.html" target="_blank" rel="noopener noreffer">https://www.itzgeek.com/how-tos/linux/linux-mint-how-tos/how-to-install-linux-nginx-mariadb-php-lemp-stack-on-linux-mint-19.html</a></li>
 <li><a href="https://blog.gtwang.org/linux/nginx-php-fpm-configuration-optimization/" target="_blank" rel="noopener noreffer">Ngix/PHP-FPM configuration optimization</a></li>
 <li><a href="http://nginx.org/en/docs/" target="_blank" rel="noopener noreffer">Nginx official documentation</a></li>
 <li><a href="http://nginx.org/en/support.html" target="_blank" rel="noopener noreffer">nginx-announce mailing list</a></li>
@@ -442,7 +442,7 @@ rsync -avh --delete --progress public/ 192.168.1.164:/var/www/public/
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.85.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">dyiwu</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

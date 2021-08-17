@@ -164,11 +164,11 @@ If you see 1 or Y, nested virtualization is supported; if you see 0 or N, nested
 <p>For example:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cat /sys/module/kvm_intel/parameters/nested
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ cat /sys/module/kvm_intel/parameters/nested
 Y
 </code></pre></td></tr></table>
 </div>
@@ -177,12 +177,12 @@ Y
 Shut down all running VMs and unload the kvm_probe module:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># modprobe -r kvm_intel
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># modprobe -r kvm_intel
 Activate the nesting feature:
 # modprobe kvm_intel nested=1
 </code></pre></td></tr></table>
@@ -190,10 +190,10 @@ Activate the nesting feature:
 </div><p>Nested virtualization is enabled until the host is rebooted. To enable it permanently, add the following line to the /etc/modprobe.d/kvm.conf file:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">options kvm_intel nested=1
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">options kvm_intel nested=1
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="configuring-nested-virtualization-in-virt-manager">Configuring nested virtualization in virt-manager</h2>
@@ -207,7 +207,7 @@ Click Apply.</p>
 On the virtual machine, run:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -218,7 +218,7 @@ On the virtual machine, run:</p>
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># dnf group install virtualization
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># dnf group install virtualization
 Verify that the virtual machine has virtualization correctly set up:
 
 # virt-host-validate
@@ -259,7 +259,7 @@ Verify that the virtual machine has virtualization correctly set up:
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.85.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">dyiwu</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

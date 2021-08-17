@@ -171,12 +171,12 @@
 Here is the installation procedure.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt install ibus ibus-clutter ibus-gtk ibus-gtk3 ibus-qt4
 $ sudo im-config -s ibus
 $ sudo apt install ibus-pinyin
 </code></pre></td></tr></table>
@@ -186,23 +186,23 @@ $ sudo apt install ibus-pinyin
 Here is the installation procedure.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install terminator
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install terminator
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="add-user">Add user</h3>
 <p>Scripe to add user</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>groupadd -g <span class="m">8888</span> cosmos
 useradd -m -u <span class="m">9009</span> -g <span class="m">8888</span> -c <span class="s2">&#34;,,&#34;</span> -s /bin/bash -G adm,dialout,cdrom,sudo,audio,
 video,plugdev,games,users,input,netdev,spi,i2c,gpio dyiwu
@@ -228,22 +228,22 @@ video,plugdev,games,users,input,netdev,spi,i2c,gpio dyiwu
 <p>Install required packages</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install  samba-common smbclient samba-common-bin smbclient  cifs-utils
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install  samba-common smbclient samba-common-bin smbclient  cifs-utils
 </code></pre></td></tr></table>
 </div>
 </div><p>Create directory for mount point</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo mkdir /mnt/DS420P
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo mkdir /mnt/DS420P
 $ sudo mkdir /mnt/DS420P/video
 $ sudo mkdir /mnt/DS420P/music
 $ sudo mkdir /mnt/DS420P/photo
@@ -252,12 +252,12 @@ $ sudo mkdir /mnt/DS420P/photo
 </div><p>Create a credential file for saving the user name and password.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo cat /home/pi/.smbcred
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo cat /home/pi/.smbcred
 username=xyz
 password=password_of_xyz
 </code></pre></td></tr></table>
@@ -265,25 +265,25 @@ password=password_of_xyz
 </div><p>Save this credential file and change its permissions so it is not readable by others.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo chown xyz:xyz /home/pi/.smbcred
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo chown xyz:xyz /home/pi/.smbcred
 $ sudo chmod 600 /home/pi/.smbcred
 </code></pre></td></tr></table>
 </div>
 </div><p>Create entries on /etc/fstab</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ grep cifs /etc/fstab
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ grep cifs /etc/fstab
 //ds420p/video  /mnt/DS420P/video cifs credentials=/home/pi/.smbcred  0  0
 //ds420p/music  /mnt/DS420P/music cifs credentials=/home/pi/.smbcred  0  0
 //ds420p/photo  /mnt/DS420P/photo cifs credentials=/home/pi/.smbcred  0  0
@@ -293,14 +293,14 @@ $ sudo chmod 600 /home/pi/.smbcred
 </div><p>Test it,</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo mount -a
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo mount -a
 $ df | grep DS420P
 //ds420p/video 7742705752 7561820676 180885076  98% /mnt/DS420P/video
 //ds420p/music 7742705752 7561820676 180885076  98% /mnt/DS420P/music
@@ -310,10 +310,10 @@ $ df | grep DS420P
 </div><h3 id="pulseaudio-volume-control">PulseAudio Volume Control</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt install pavucontrol
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt install pavucontrol
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="pi-3b-usb-boot">Pi 3B USB boot</h3>
@@ -350,7 +350,7 @@ $ df | grep DS420P
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.85.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">dyiwu</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

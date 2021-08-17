@@ -152,12 +152,12 @@
 The configuration file location of dnsmasq can be found by checking the rum time parameter of dnsmasq process. The default value is <strong>/var/lib/libvirt/dnsmasq/default.conf</strong></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ps -ef | grep dnsmasq | grep -v grep
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ ps -ef | grep dnsmasq | grep -v grep
 dnsmasq     6567       1  0 20:04 ?        00:00:00 /usr/sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/default.conf --leasefile-ro --dhcp-script=/usr/libexec/libvirt_leaseshelper
 root        6568    6567  0 20:04 ?        00:00:00 /usr/sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/default.conf --leasefile-ro --dhcp-script=/usr/libexec/libvirt_leaseshelper
 </code></pre></td></tr></table>
@@ -165,13 +165,13 @@ root        6568    6567  0 20:04 ?        00:00:00 /usr/sbin/dnsmasq --conf-fil
 </div><p>Get the name list of networks,</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virsh net-list
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virsh net-list
  Name                 State      Autostart     Persistent
 ----------------------------------------------------------
  default              active     yes           yes
@@ -180,12 +180,12 @@ root        6568    6567  0 20:04 ?        00:00:00 /usr/sbin/dnsmasq --conf-fil
 </div><p>Find out the guest VM’s MAC addresses, by</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virsh dumpxml {VM-NAME-HERE} | grep -i &#39;&lt;mac&#39;
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virsh dumpxml {VM-NAME-HERE} | grep -i &#39;&lt;mac&#39;
 $ sudo virsh dumpxml main | grep -i &#39;&lt;mac&#39;
       &lt;mac address=&#39;52:54:00:21:cb:4e&#39;/&gt;
 </code></pre></td></tr></table>
@@ -194,30 +194,30 @@ $ sudo virsh dumpxml main | grep -i &#39;&lt;mac&#39;
 <p>Edit the default network</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virsh net-edit default
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virsh net-edit default
 </code></pre></td></tr></table>
 </div>
 </div><p>Find the following section:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"> &lt;dhcp&gt;
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"> &lt;dhcp&gt;
       &lt;range start=&#39;192.168.122.100&#39; end=&#39;192.168.122.254&#39;/&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>Append the static IP as follows after range:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">     &lt;host mac=&#39;52:54:00:21:cb:4e&#39; name=&#39;main&#39; ip=&#39;192.168.122.10&#39;/&gt;
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">     &lt;host mac=&#39;52:54:00:21:cb:4e&#39; name=&#39;main&#39; ip=&#39;192.168.122.10&#39;/&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>Where,</p>
@@ -228,7 +228,7 @@ $ sudo virsh dumpxml main | grep -i &#39;&lt;mac&#39;
 <p>Here is the complete file with three static DHCP entries for three VMs:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -245,7 +245,7 @@ $ sudo virsh dumpxml main | grep -i &#39;&lt;mac&#39;
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;network&gt;
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&lt;network&gt;
   &lt;name&gt;default&lt;/name&gt;
   &lt;uuid&gt;5ac7cde2-2c09-4ef5-a038-9ffa1465e6c8&lt;/uuid&gt;
   &lt;forward mode=&#39;nat&#39;/&gt;
@@ -265,11 +265,11 @@ $ sudo virsh dumpxml main | grep -i &#39;&lt;mac&#39;
 </div><p>Restart DHCP service:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virsh net-destroy default
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virsh net-destroy default
 $ sudo virsh net-start default
 </code></pre></td></tr></table>
 </div>
@@ -306,7 +306,7 @@ $ sudo virsh net-start default
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.85.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">dyiwu</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>

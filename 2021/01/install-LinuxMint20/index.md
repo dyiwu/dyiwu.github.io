@@ -332,11 +332,42 @@ To merge the PDF documents, the syntax will be as shown
 pdfunite file1.pdf file2.pdf merged_output.pdf
 ```
 
+Reference:
+[How to Merge PDF Files on Linux](https://linoxide.com/merge-pdf-files-linux/)
+
+### Open-vm-tools
+Make sure open-vm-tools (and open-vm-tools-desktop if you're using a desktop environment) are installed, and that you've rebooted after their installation.
+
+```bash
+sudo apt update
+sudo apt install open-vm-tools open-vm-tools-desktop
+```
+
+Make sure you have a /mnt/hgfs directory made and empty. If not:
+
+```bash
+sudo mkdir -p /mnt/hgfs
+```
+
+To mount the filesystem, run:
+```bash
+sudo mount -t fuse.vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other
+```
+The shared folders will now be in subdirectories of /mnt/hgfs
+
+Add the following line to /etc/fstab to set up auto-mounting
+
+```bash
+.host:/ /mnt/hgfs fuse.vmhgfs-fuse auto,allow_other 0 0
+```
+
+Reference:
+[open-vm-tools and VMWare Shared Folders for Ubuntu guests](https://gist.github.com/darrenpmeyer/b69242a45197901f17bfe06e78f4dee3)
+
 ### Reference:
 - [25 Things to Do After Installing Linux Mint 20 Ulyssa](https://averagelinuxuser.com/linuxmint20-after-install/)
 - [Important Things to Do After Installing Linux Mint 20](https://linuxhint.com/to_do_after_install-_linux_mint_20/)
 - [10 Things to Do First in Linux Mint 20.1 Cinnamon](https://easylinuxtipsproject.blogspot.com/p/first-mint-cinnamon.html)
 
-- [How to Merge PDF Files on Linux](https://linoxide.com/merge-pdf-files-linux/)
 
 

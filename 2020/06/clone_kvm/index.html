@@ -156,10 +156,10 @@
 <p>List all virtual machine on system</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virsh list --all
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virsh list --all
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -167,10 +167,10 @@
 <p>Suspend virtual machine</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virsh suspend main_node
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virsh suspend main_node
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -178,11 +178,11 @@
 <p>Clone virtual machine main_node to main_node_clone</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virt-clone --connect qemu:///system --original main_node \
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virt-clone --connect qemu:///system --original main_node \
  --name main_node_clone --file /var/lib/libvirt/images/main_node_clone.qcow2
 </code></pre></td></tr></table>
 </div>
@@ -191,10 +191,10 @@
 <p>Reset hostname and root user password.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virt-sysprep -d main_node_clone  --hostname main_node_clone --root-password password:123456
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virt-sysprep -d main_node_clone  --hostname main_node_clone --root-password password:123456
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -202,7 +202,7 @@
 <p>List the operations supported by the virt-sysprep program.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -245,7 +245,7 @@
 </span><span class="lnt">41
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"><span class="err">$</span> <span class="nx">sudo</span> <span class="nx">virt</span><span class="o">-</span><span class="nx">sysprep</span> <span class="o">--</span><span class="nx">list</span><span class="o">-</span><span class="nx">operations</span>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="err">$</span> <span class="nx">sudo</span> <span class="nx">virt</span><span class="o">-</span><span class="nx">sysprep</span> <span class="o">--</span><span class="nx">list</span><span class="o">-</span><span class="nx">operations</span>
 <span class="nx">abrt</span><span class="o">-</span><span class="nx">data</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">the</span> <span class="nx">crash</span> <span class="nx">data</span> <span class="nx">generated</span> <span class="nx">by</span> <span class="nx">ABRT</span>
 <span class="nx">backup</span><span class="o">-</span><span class="nx">files</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">editor</span> <span class="nx">backup</span> <span class="nx">files</span> <span class="nx">from</span> <span class="nx">the</span> <span class="nx">guest</span>
 <span class="nx">bash</span><span class="o">-</span><span class="nx">history</span> <span class="o">*</span> <span class="nx">Remove</span> <span class="nx">the</span> <span class="nx">bash</span> <span class="nx">history</span> <span class="nx">in</span> <span class="nx">the</span> <span class="nx">guest</span>
@@ -293,10 +293,10 @@
 <p>Resume virtual machine</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virsh resume main_node
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virsh resume main_node
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -304,10 +304,10 @@
 <p>Start a virtual machine</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virsh start main_node_clone
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo virsh start main_node_clone
 </code></pre></td></tr></table>
 </div>
 </div></li>
@@ -342,7 +342,7 @@
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.85.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
                 </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2019 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">dyiwu</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
         </div>
     </footer></div>
