@@ -364,6 +364,18 @@ Add the following line to /etc/fstab to set up auto-mounting
 Reference:
 [open-vm-tools and VMWare Shared Folders for Ubuntu guests](https://gist.github.com/darrenpmeyer/b69242a45197901f17bfe06e78f4dee3)
 
+### Tips
+#### Symbolic Link
+To create symlinks in Linux Mint Cinnamon:
+In the file manager (Nemo) open the View menu > Extra Pane.
+
+Open the Desktop folder in one pane, and the source folder in the other pane.
+Click on the folder or file you want to symlink.
+
+Hold down SHIFT-CTRL and drag the folder to the other pane. A symlink will be magically created.
+
+Reference:
+[Creating shortcuts](https://forums.linuxmint.com/viewtopic.php?t=237708)
 ### Reference:
 - [25 Things to Do After Installing Linux Mint 20 Ulyssa](https://averagelinuxuser.com/linuxmint20-after-install/)
 - [Important Things to Do After Installing Linux Mint 20](https://linuxhint.com/to_do_after_install-_linux_mint_20/)
