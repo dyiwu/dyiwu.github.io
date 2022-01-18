@@ -4,9 +4,26 @@
         <link>https://dyiwu.github.io/</link>
         <description>About LoveIt Theme</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (dyiwu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 15 Jan 2022 21:20:00 &#43;0800</lastBuildDate>
+            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 18 Jan 2022 22:12:00 &#43;0800</lastBuildDate>
             <atom:link href="https://dyiwu.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>控制情緒 - Control Emotion</title>
+    <link>https://dyiwu.github.io/2022/01/control-emotion/</link>
+    <pubDate>Tue, 18 Jan 2022 22:12:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://dyiwu.github.io/2022/01/control-emotion/</guid>
+    <description><![CDATA[<p>好文分享!</p>
+<p>惜命最好的方式，竟然不是養生，而是控制情緒。別不信，這篇文章，驚醒了無數人，現在知道還不晚。</p>]]></description>
+</item><item>
+    <title>感恩與吃苦 - Gratitude and suffering</title>
+    <link>https://dyiwu.github.io/2022/01/grateful-suffering/</link>
+    <pubDate>Tue, 18 Jan 2022 21:56:20 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://dyiwu.github.io/2022/01/grateful-suffering/</guid>
+    <description><![CDATA[<p>好文分享!</p>
+<p>「我媽捨不得我吃苦，所以我不懂得吃苦。」<br>
+「我不懂得吃苦，我吃了一輩子苦。」</p>]]></description>
+</item><item>
     <title>Medical - 醫療</title>
     <link>https://dyiwu.github.io/2022/01/medical/</link>
     <pubDate>Sat, 15 Jan 2022 21:20:00 &#43;0800</pubDate>
@@ -62,25 +79,5 @@
     <author>Author</author>
     <guid>https://dyiwu.github.io/2021/01/install-hugo-loveit/</guid>
     <description><![CDATA[<p>Hugo with LoveIt theme installation</p>]]></description>
-</item><item>
-    <title>Install Linux Mint 20.1 Ulyssa Cinnamon</title>
-    <link>https://dyiwu.github.io/2021/01/install-LinuxMint20/</link>
-    <pubDate>Wed, 06 Jan 2021 18:33:30 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://dyiwu.github.io/2021/01/install-LinuxMint20/</guid>
-    <description><![CDATA[<h2 id="install-linux-mint-201-ulyssa-cinnamon">Install Linux Mint 20.1 Ulyssa Cinnamon</h2>]]></description>
-</item><item>
-    <title>老話 - Old Sayings</title>
-    <link>https://dyiwu.github.io/2020/11/old_sayings/</link>
-    <pubDate>Sat, 28 Nov 2020 23:18:33 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://dyiwu.github.io/2020/11/old_sayings/</guid>
-    <description><![CDATA[老話 - Old Sayings  風吹雞蛋殼，財去人安樂。不是你的就不是你的，不是你的就不該着。
-  雁過留聲，人過留名。
-  家雀的肚，老鼠的眼，吃的不多，看的不遠。
-  世事難行金作馬，錢能通鬼神，更能動世人。
-  拖拉機犁大田，直來直往。
-  旱地裡的泥鰍，鑽的深。
- ]]></description>
 </item></channel>
 </rss>
