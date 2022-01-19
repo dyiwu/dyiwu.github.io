@@ -34,7 +34,6 @@
 - 適應症：熱傷感染之預防及治療（特別是革蘭氏陰性細菌感染症、例如綠膿桿菌感染症）其他刀傷、外傷、創傷、傷口感染之預防及治療。 
 - 用法：厚敷。
 - <img src="https://drive.google.com/uc?export=view&id=1-UVrRne2I8gdvR1DAu2fSfEsoSg8JXdP" width="320" loading="lazy" />
-- xxxxxxxxxxx
-- [藥盒外觀](https://drive.google.com/uc?export=view&id=1-UVrRne2I8gdvR1DAu2fSfEsoSg8JXdP)
+- [外觀](https://drive.google.com/uc?export=view&id=1-UVrRne2I8gdvR1DAu2fSfEsoSg8JXdP )
 
 
