@@ -4,7 +4,16 @@
         <link>https://dyiwu.github.io/posts/</link>
         <description>All Posts | Chaos - 老碼農的筆記</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>dyiwu.liu@gmail.com (dyiwu)</managingEditor>
-            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 18 Jan 2022 22:12:00 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>dyiwu.liu@gmail.com (dyiwu)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 20 Jan 2022 17:15:00 &#43;0800</lastBuildDate><atom:link href="https://dyiwu.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>雄鷹 - Eagle</title>
+    <link>https://dyiwu.github.io/2022/01/eagle/</link>
+    <pubDate>Thu, 20 Jan 2022 17:15:00 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://dyiwu.github.io/2022/01/eagle/</guid>
+    <description><![CDATA[<p>好文分享!</p>
+<p>如果你是一隻雄鷹，就不要在乎麻雀怎麼看你。</p>
+<p>因為你飛行的速度、高度、角度，它看不見、也看不懂。</p>]]></description>
+</item><item>
     <title>控制情緒 - Control Emotion</title>
     <link>https://dyiwu.github.io/2022/01/control-emotion/</link>
     <pubDate>Tue, 18 Jan 2022 22:12:00 &#43;0800</pubDate>
@@ -70,12 +79,5 @@
     <author>Author</author>
     <guid>https://dyiwu.github.io/2021/03/investment-oriented-life-insurance/</guid>
     <description><![CDATA[<p>投資型人壽保險 - Investment-Oriented Life Insurance</p>]]></description>
-</item><item>
-    <title>Install Hugo with LoveIt theme</title>
-    <link>https://dyiwu.github.io/2021/01/install-hugo-loveit/</link>
-    <pubDate>Thu, 14 Jan 2021 08:53:00 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://dyiwu.github.io/2021/01/install-hugo-loveit/</guid>
-    <description><![CDATA[<p>Hugo with LoveIt theme installation</p>]]></description>
 </item></channel>
 </rss>

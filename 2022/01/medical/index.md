@@ -45,4 +45,6 @@
     厚敷。
 - [外觀圖片](https://drive.google.com/uc?export=view&id=1-UVrRne2I8gdvR1DAu2fSfEsoSg8JXdP )
 
+#### 血糖
+- [糖化血色素及平均血糖值對照表](https://drive.google.com/uc?export=view&id=1TZXtdOrEUQXdzB5L3ZTXk2oOHsQy6JWH )
 
